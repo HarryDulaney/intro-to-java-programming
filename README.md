@@ -1,4 +1,4 @@
-# Harry_Dulaney_Java_Stuffs
+# Intro To Java Programming
 End of Chapter Problem Solutions for "Intro to Java Programming" by Y Daniel Liang
 
 I am sharing my solutions to the practice problems in
