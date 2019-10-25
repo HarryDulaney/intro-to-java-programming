@@ -1,5 +1,8 @@
 package Ch_01;
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise01_12 {
 	public static void main(String[]args) {
 		double hrs = 1;

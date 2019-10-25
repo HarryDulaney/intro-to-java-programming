@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 //Palindrome number program
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise03_12 {
 	public static void main(String[] args) {
 		

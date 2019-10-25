@@ -15,6 +15,9 @@ package Ch_04;
 */
 import java.util.Scanner;
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise04_02 {
 	public static void main(String[] args) {
 		

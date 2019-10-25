@@ -6,6 +6,9 @@ package Ch_04;
  * following figure.
  */
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 import java.util.Scanner;
 
 public class Exercise04_01 {

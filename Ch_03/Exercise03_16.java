@@ -2,6 +2,10 @@ package Ch_03;
 
 //random point in a rectangle , center at (0,0)
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise03_16 {
 	public static void main(String[] args) {
 		 

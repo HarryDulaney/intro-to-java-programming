@@ -1,5 +1,8 @@
 package Ch_01;
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise01_03 {
 	public static void main(String[]args) {
 		System.out.println("     J"+ "     A"+"     V     V"+"     A");

@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 //Heads or tails
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise03_14 {
 	public static void main(String[]args) {
 		

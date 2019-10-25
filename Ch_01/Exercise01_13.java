@@ -8,6 +8,9 @@ package Ch_01;
  *  (Using Cramer's rule to solve 2 x 2 linear equations)
  */
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise01_13 {
 	public static void main(String[] args) {
 	

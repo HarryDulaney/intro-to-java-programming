@@ -1,5 +1,8 @@
 package Ch_03;
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise03_04 {
 	public static void main(String []args) {
 		

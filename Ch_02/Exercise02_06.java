@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 //Reads an integer and adds the digits in the integer
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise02_06 {
 	public static void main(String[]args) {
 		

@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 //Prompts the user for points in a triangle and displays the area of the triangle
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise02_19 {
 	public static void main(String[]args) {
 		

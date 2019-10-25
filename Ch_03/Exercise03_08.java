@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 //Sort the integers in non-decreasing order
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise03_08 {
 	public static void main(String[] args) {
 		

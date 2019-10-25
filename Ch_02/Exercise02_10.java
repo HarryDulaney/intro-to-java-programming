@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 //Heats what from an initial temperature to a final temperature
 
+
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise02_10 {
 	public static void main(String[]args) {
 		

@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 //Reads Celsius in double value from the console and converts it to Fahrenheit
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise02_01 {
 	public static void main(String[]args) {
 		double Celsius; 

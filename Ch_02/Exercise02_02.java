@@ -2,6 +2,9 @@ package Ch_02;
 
 import java.util.Scanner;
 
+/**
+ * @author Harry G. Dulaney IV
+ */
 public class Exercise02_02 {
 	public static void main(String []args) {
 		
