@@ -1,5 +1,7 @@
-# Intro To Java Programming
-## <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">End of Chapter Problem Solutions for "Intro to Java Programming" by Y Daniel Liang</a>
+# Intro To Java Programming by Y Daniel Liang 10th Edition Solutions
+## End of Chapter Problem Solutions 
+
+### <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Intro to Java Programming</a>
 
 
 I am sharing my solutions to the practice problems in
