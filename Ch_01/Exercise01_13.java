@@ -1,6 +1,6 @@
-package Chapter01;
+package Ch_01;
 
-/*(Algebra: solve 2 × 2 linear equations)
+/*(Algebra: solve 2 ï¿½ 2 linear equations)
  * Write a program that solves the following 
  * equation and displays the value for x and y: 
  *   3.4x+50.2y=44.5
