@@ -1,4 +1,4 @@
-package Chapter02;
+package Ch_03;
 
 /*2.19 (Geometry: area of a triangle) Write a 
  * program that prompts the user to enter three 
