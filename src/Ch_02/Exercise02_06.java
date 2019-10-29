@@ -1,34 +1,39 @@
 package Ch_02;
+/*2.6 (Sum the digits in an integer) 
+ * Write a program that reads an integer between 0 and 
+ * 1000 and adds all the digits in the integer. 
+ * For example, if an integer is 932, the sum of all its digits is 14.
+ */
 
 import java.util.Scanner;
 
-//Reads an integer and adds the digits in the integer
-
-
-/**
- * @author Harry G. Dulaney IV
- */
 public class Exercise02_06 {
-	public static void main(String[]args) {
+	public static void main(String[] args) {
 		
-System.out.println("Enter an integer between 0 and 1000");
+		int originalNumber;
 		
-		Scanner input = new Scanner(System.in);
+		Scanner input =  new Scanner(System.in);
 		
-		int x;
+		System.out.print("Enter an integer between 0 and 1000 now: ");
 		
-		x = input.nextInt();
+		originalNumber = input.nextInt();
 		
-		int a = x % 10;
+		System.out.println("The sum of all digits in " + originalNumber + " is " + sumdigits(originalNumber) );
 		
-		int b = (x / 10) % 10;
+	}
+	public static int sumdigits(int number) {
+		int sum = 0;
 		
-		int c = x/ 100;
+		for(int i = 1; i < 4 ; i++) {
+			
+			sum += number % 10;
+			
+			number = number / 10;
+			
+		}
 		
-		System.out.println(a+b+c);
 		
-	
-	
+		return sum;
 	}
 
 }

@@ -1,4 +1,4 @@
-package Ch_02;
+package Chapter02;
 
 /*2.19 (Geometry: area of a triangle) Write a 
  * program that prompts the user to enter three 
@@ -8,12 +8,6 @@ package Ch_02;
  */
 import java.util.*;
 
-
-/**
- * 
- * @author Harry G. Dulaney IV
- *
- */
 public class Exercise02_19 {
 	public static void main(String[] args) {
 		

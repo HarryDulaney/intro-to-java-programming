@@ -1,34 +1,46 @@
 package Ch_02;
 
-import java.util.Scanner;
-
+/*2.14 (Health application: computing BMI) Body Mass Index (BMI) 
+ * is a measure of health on weight. It can be calculated by taking 
+ * your weight in kilograms and dividing by the square of your height in 
+ * meters. Write a program that prompts the user to enter a weight in 
+ * pounds and height in inches and displays the BMI. Note that one pound 
+ * is 0.45359237 kilograms and one inch is 0.0254 meters.
+ * 
+ */
 /**
+ * 
  * @author Harry G. Dulaney IV
  */
+import java.util.Scanner;
+
+
+/**
+ * 
+ * @author Harry G. Dulaney IV
+ *
+ */
 public class Exercise02_14 {
-	public static void main(String[]args) {
-		
-		double weightPounds;
-		double heightInches;
-		double weightKilograms;
-		double heightMeters;
-		
-		System.out.println("Enter your weight in pounds:");
+	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		weightPounds = input.nextDouble();
 		
-		System.out.println("Enter your height in inches:");
+		System.out.print("Please enter your weight in pounds: ");
+		double weightInpounds = input.nextDouble();
 		
-		Scanner input1 = new Scanner(System.in);
-		heightInches = input1.nextDouble();
 		
-		weightKilograms = weightPounds * 0.45359237;
-		heightMeters = heightInches * 0.0254;
+		System.out.print("Please enter you height in inches: ");
+		double heightInInches = input.nextDouble();
 		
-		System.out.println("Your BMI is " + weightKilograms/(heightMeters * heightMeters));
+		double weightInkilograms = weightInpounds * 0.45359237;
 		
-	
+		double heightInmeters = heightInInches * 0.0254;
+		
+		double metersFactor = Math.pow(heightInmeters, 2);
+		
+		System.out.println("Your BMI is: " + weightInkilograms/metersFactor);
+		
+		
 	}
 
 }
