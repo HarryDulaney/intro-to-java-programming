@@ -40,7 +40,6 @@ public class Exercise02_14 {
 		
 		System.out.println("Your BMI is: " + weightInkilograms/metersFactor);
 		
-		
 	}
 
 }
