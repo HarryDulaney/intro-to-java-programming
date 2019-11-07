@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class Exercise02_08 {
 	public static void main(String[] arsg) {
 		
-		System.out.print("Enter the time zone offset to GMT now: ");
+		System.out.print("To display the time, enter the time zone offset to GMT now: ");
 		
 		Scanner input = new Scanner(System.in);
 		
-		long offset = input.nextLong();
+		int offset = input.nextInt();
 		
 		long totalMilliseconds = System.currentTimeMillis();
 		

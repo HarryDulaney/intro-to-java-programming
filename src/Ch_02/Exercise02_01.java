@@ -2,7 +2,9 @@ package Ch_02;
 
 import java.util.Scanner;
 
-//Reads Celsius in double value from the console and converts it to Fahrenheit
+/*
+ * Reads Celsius in double value from the console and converts it to Fahrenheit
+ */
 
 /**
  * @author Harry G. Dulaney IV

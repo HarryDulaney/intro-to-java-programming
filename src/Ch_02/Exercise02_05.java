@@ -25,9 +25,11 @@ public class Exercise02_05 {
 		
 		double total = subTotal + gratuity;
 		
-		System.out.println("The gratuity is: " + gratuity + " and the total including gratuity is: " + total);
+		System.out.print("The gratuity is: $");
+		System.out.printf("%.2f",gratuity);
+		System.out.print( " and the total including gratuity is: $" + total);
 		
-		
+	
 		
 		
 		
