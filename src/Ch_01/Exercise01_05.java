@@ -7,6 +7,11 @@ package Ch_01;
 45.5 - 3.5
 .
  */
+/**
+ * 
+ * @author Harry G. Dulaney IV
+ *
+ */
 
 public class Exercise01_05 {
 	public static void main(String[] args) {
