@@ -1,0 +1,67 @@
+!SESSION 2019-11-07 00:49:17.233 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_231
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data C:\Users\Jordan Lightgate\git\java-programming-daniel-liang-10th -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-11-07 00:49:22.026
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-11-07 00:49:32.768
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jordan Lightgate'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:34.318
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:35.871
+!MESSAGE No profile found: MainOne
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:35.902
+!MESSAGE Monitoring content of C:\Users\Jordan Lightgate\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:36.441
+!MESSAGE AWS toolkit core plugin initialized after 2123 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:36.462
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:49:37.265
+!MESSAGE Initialized a new Cognito identity us-east-1:92e99a7f-1b30-494c-b482-4b8d3f3206f8
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2019-11-07 00:49:42.440
+!MESSAGE Setup tasks were performed during startup updating 4 preferences. See 'C:\Users\Jordan Lightgate\eclipse\jee-2019-06\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2019-11-07 00:49:54.997 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_231
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-11-07 00:49:59.596
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-11-07 00:50:07.016
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jordan Lightgate'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:50:08.806
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:50:09.277
+!MESSAGE Monitoring content of C:\Users\Jordan Lightgate\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:50:09.910
+!MESSAGE AWS toolkit core plugin initialized after 1105 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2019-11-07 00:50:10.072
+!MESSAGE Found valid identity id cache us-east-1:92e99a7f-1b30-494c-b482-4b8d3f3206f8
