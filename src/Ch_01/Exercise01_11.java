@@ -10,7 +10,7 @@ package Ch_01;
  * Current population is 312,032,486 and a year is 365 days.
  */
 
-public class Exercise_01_11 {
+public class Exercise01_11 {
 	public static void main(String[] args) {
 		
 		
