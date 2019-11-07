@@ -75,9 +75,7 @@ public class Excercise07_15 {
 			System.out.print(finishedArray[i] + " ");
 		}
 		
-		
-		
-		
+	input.close();
 		
 	}
 	
