@@ -37,6 +37,8 @@ public class Exercise02_23 {
 		
 		System.out.print("\nThe cost of driving for this trip is: $");
 		System.out.printf("%.2f",tripCost);
+		
+		input.close();
 	}
 
 }

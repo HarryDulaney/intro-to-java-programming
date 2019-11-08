@@ -34,12 +34,20 @@ public class Exercise03_01 {
 		double discrim = Math.pow(b,2) - 4*a*c;
 		
 		if(discrim < 0) {
-			System.out.println("No real roots, the discriminate is negative");
+			System.out.println("The discriminate is negative, the equation has no real roots.");
 		}else if(discrim == 0) {
-			System.out.print("One real root: ");
+			
+			double oneRoot = (-1*b) + (Math.pow(discrim,0.5) / (2*a));
+			
+			System.out.print("One real root: " + oneRoot);
 			
 		}else {
-			System.out.print("Two real roots: ");
+			
+			double root, twoRoot;
+			root = (-1*b) + (Math.pow(discrim,0.5) / (2*a));
+			twoRoot = (-1*b) - (Math.pow(discrim,0.5) / (2*a));
+			
+			System.out.print("Two real roots: " + root + " " + twoRoot);
 		}
 	}
 
