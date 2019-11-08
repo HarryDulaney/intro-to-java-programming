@@ -2,6 +2,12 @@ package Ch_02;
 
 import java.util.Scanner;
 
+/*
+ * 2.23 (Cost of driving) Write a program that prompts the user to enter the distance to
+	drive, the fuel efficiency of the car in miles per gallon, and the price per gallon,
+	and displays the cost of the trip.
+ */
+
 
 /**
  * @author Harry G. Dulaney IV
@@ -20,18 +26,17 @@ public class Exercise02_23 {
 		
 		System.out.println("Enter the miles per gallon:");
 		
-		Scanner input1 = new Scanner(System.in);
-		milesPergallon = input1.nextDouble();
+		milesPergallon = input.nextDouble();
 		
 		System.out.println("Enter the price of gas per gallon:");
 		
-		Scanner input2 = new Scanner(System.in);
-		pricePergallon = input2.nextDouble();
+	
+		pricePergallon = input.nextDouble();
 		
 		double tripCost = (distance / milesPergallon) * pricePergallon;
 		
-		System.out.println("The cost of driving for this trip is: $" + tripCost );
-		
+		System.out.print("\nThe cost of driving for this trip is: $");
+		System.out.printf("%.2f",tripCost);
 	}
 
 }
