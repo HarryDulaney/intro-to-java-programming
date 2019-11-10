@@ -12,14 +12,10 @@ public class Exercise02_02 {
 		double length;
 		
 		System.out.println("Enter the radius and length of a cylinder");
-		
-		
+	
 		Scanner input = new Scanner(System.in);
 		length = input.nextDouble();
-		radius = input.nextDouble();
-		
-		
-		
+		radius = input.nextDouble();	
 		
 		double area;
 		double volume;

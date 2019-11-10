@@ -1,6 +1,6 @@
 package Ch_01;
 
-/*(Algebra: solve 2 � 2 linear equations)
+/*(Algebra: solve 2 x 2 linear equations)
  * Write a program that solves the following 
  * equation and displays the value for x and y: 
  *   3.4x+50.2y=44.5
@@ -24,12 +24,10 @@ public class Exercise01_13 {
 	double x = (e*d - b*f)/ (a*d - b*c);
 	double y = (a*f - e*c)/ (a*d - b*c);
 	
-	System.out.println("The value of x is: " + x );
 	
-	System.out.println("The value of y is: " + y);
-		
-	
-	
+	System.out.printf("The value for x is: %.2f",x);
+	System.out.println();
+	System.out.printf("The value of y is: %.2f",y);	
 
 	}
 }

@@ -19,9 +19,7 @@ public class Exercise02_04 {
 		
 		double numLbs =  input.nextDouble();
 		double numKilos = numLbs * 0.454;
-		
-		
-		
+
 		System.out.println(numLbs + " pounds is equal to " + numKilos + " kilograms" );
 
 	}
