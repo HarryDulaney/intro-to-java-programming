@@ -1,4 +1,4 @@
-package Ch_03;
+package ch_03;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class Exercise03_12 {
 		int numMiddle = (startNum / 10) % 10;
 		int numFirst = startNum/ 100;
 		
-		if ( numLast == numFirst) {
+		if (numLast == numFirst) {
 			System.out.println("This number is a Palindrome!");
 		}
 		else 

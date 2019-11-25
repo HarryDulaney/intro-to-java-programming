@@ -1,4 +1,4 @@
-package Ch_03;
+package ch_03;
 
 //random point in a rectangle , center at (0,0)
 

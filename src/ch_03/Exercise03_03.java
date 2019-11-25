@@ -1,12 +1,12 @@
-package Ch_03;
+package ch_03;
 
 import java.util.Scanner;
 
 /*
  * *3.3 (Algebra: solve 2 * 2 linear equations) A linear equation can be solved using
-Cramer’s rule given in Programming Exercise 1.13. Write a program that prompts
+Cramerï¿½s rule given in Programming Exercise 1.13. Write a program that prompts
 the user to enter a, b, c, d, e, and f and displays the result. If ad - bc is 0, report
-that “The equation has no solution.”
+that ï¿½The equation has no solution.ï¿½
  */
 
 /**
@@ -30,29 +30,28 @@ public class Exercise03_03 {
 		double y = 0;
 		double x = 0;
 		
-		if(a*c - b*c == 0) {
+		if(a*c - b*c < 0.000000001){
+			System.out.println("The equation has no solution :(");
+			System.out.println(a + " * " + c + " - " + b + " * "+ c + " = " + " 0 ");
 			
 		}else {
 		
 		x = (e*d - b*f)/ (a*d - b*c);
 		y = (a*f - e*c)/ (a*d - b*c);
 		
+		System.out.print("("+ e + " * " + d + " - " + b + " * " + f + ""
+				+ ") / (" + a + " * " + d + " - " + b + " * " + c + ")");
+		
+		System.out.print(" = x = " + x);
+
+		System.out.print("\nand");
+
+		System.out.print("\n("+ a + " * " + f + " - " + e + " * " + c + ""
+				+ ") / (" + a + " * " + d + " - " + b + " * " + c + ")");
+
+		System.out.print(" = y = " + y);
+		
 		}
-		
-		System.out.print(a);
-		System.out.print();
-
-		System.out.print();
-
-		System.out.print();
-
-		System.out.print();
-
-		
-		
-		
-		
-
 	}
 
 }
