@@ -1,68 +1,57 @@
 package ch_07;
-
-/* 7.14 (Computing gcd) Write a method that returns 
- * the gcd of an unspecified number of integers.
- * The method header is specified as follows:
- * Then write a test program that has the user input 5 numbers and displays the
- * gcd by calling the method.
+/*7.14 (Computing gcd) Write a method that returns the gcd of an 
+ * unspecified number of integers. The method header is specified as follows:
+ * public static int gcd(int... numbers)
+ * Write a test program that prompts the user to enter five numbers, 
+ * invokes the method to find the gcd of these numbers, and displays the gcd.
  */
 import java.util.Scanner;
 
 public class Exercise07_14 {
-	public static int gcd(int... numbers) {
-		
-		int gcd = 1;
-		int minNum = numbers[0];
-		
-		for(int i = 1; i < numbers.length; i++) {
-			
-			if (numbers[i] < minNum) {
-				
-				minNum = numbers[i];
-		}
-	
-		}
-		int count = 0;
-		for (int i = 2; i <= minNum; i++) {
-		
-			for (int x = 0; x < numbers.length; x++) {
-				
-				if(numbers[x] % i == 0) {
-					
-					count++;
-	
-				if(count == numbers.length)
-				gcd = i;	
-				}
-					
-				else {
-					count = 0;
-				}
-					
-					
-			}
-			
-
-		}
-		
-		return gcd;
-		
-		
-	}
-	
 	public static void main(String[] args) {
 		
-		Scanner inputer = new Scanner(System.in);
-		System.out.println("Enter five integers: ");
+		Scanner input = new Scanner(System.in);
 		
-		int[] numbers = new int [5];
-		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = inputer.nextInt();
+		int[] numsToFind = new int [5];
+				
+		System.out.println("Please enter 5 numbers now to find their GCD:");
+		
+		for(int i = 0; i < numsToFind.length; i++) {
+			
+			numsToFind[i] = input.nextInt();
 		}
 		
-		System.out.println(gcd(numbers));
 		
+		System.out.println("The GCD of these 5 integers is " + gcd(numsToFind));
 		
 	}
+	
+	public static int gcd(int...numbers) {
+		
+		int minNum = numbers[0];
+		for(int i = 1; i < numbers.length; i++) {
+			if(numbers[i] < minNum) {
+				minNum = numbers[i];
+			}
+		}
+		
+		int gcd = 1;
+		
+		boolean checkNum;
+		
+		for(int i = 2; i < minNum; i++){
+			checkNum = true;
+			
+			for(int j = 0; j < numbers.length; j++) {
+				
+				if(numbers[j] % i != 0) 
+					checkNum = false;
+				}
+				if(checkNum) {
+					gcd = i;}	
+			
+		} 
+		return gcd;
+     }
+	}
 
-}

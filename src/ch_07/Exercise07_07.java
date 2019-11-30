@@ -1,25 +1,30 @@
 package ch_07;
 
+/*7.7 (Count single digits) Write a program that generates 100 random 
+ * integers between 0 and 9 and displays the count for each number. 
+ * 
+ */
+
 public class Exercise07_07 {
 	public static void main(String[] args) {
 		
-		int [] randNumbers = new int [100];
-		int [] counts = new int[10];
+		int[] counts = new int [10];
 		
-		for (int i = 0; i < randNumbers.length; i++) {
-			
-			int randomNumber = (int)(Math.random() * 10);
-			
-			randNumbers[i] = randomNumber;
-			
-			counts[randomNumber]++;
-			
-		}
+		int randomNum = 0;
 		
+		for(int i = 0; i < 100; i++) {
+			
+			randomNum = (int)(Math.random() * 10);
+			
+			counts[randomNum]++;
+				}
+		int numRan = 0;
 		for(int i = 0; i < counts.length; i++) {
-			System.out.println("The number at " + i + "'s is: " + counts[i]);
+		System.out.print(counts[i] + " counts of ");
+		System.out.println(i);
 		}
 		
+	
 	}
 
 }

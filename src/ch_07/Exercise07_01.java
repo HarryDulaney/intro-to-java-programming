@@ -1,11 +1,10 @@
 package ch_07;
 
-/* 7.1 (Assign grades) Write a program that reads student 
- * scores, gets the best score, and then assigns grades based
- * on the following 
- * The program prompts the user to enter the total number of students,
- * then prompts the user to enter all of the scores, and concludes by
- * displaying the grades.
+/*7.1 (Assign grades) Write a program that reads student scores, 
+ * gets the best score, and then assigns grades based on the following scheme:
+*The program prompts the user to enter the total number of students, then 
+*prompts the user to enter all of the scores, and concludes by displaying the grades.
+ *
  */
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ public class Exercise07_01 {
 		
 		double[] scores = new double [input.nextInt()];
 		
-		System.out.println("Enter " + scores.length + " student scores: ");
+		System.out.println("Enter " + scores.length + " student scores seperated by a space: ");
 		
 		
 		for (int i = 0 ; i < scores.length ; i++) {
@@ -50,29 +49,13 @@ public class Exercise07_01 {
 					grades[i] = 'D';
 				}
 				else {
-					grades[i] = 'F';
-			}
+					grades[i] = 'F';	}
+				}
 		
-			}
-			
-			for ( int i = 0; i < scores.length; i++) {
-				System.out.println("Student score " + scores[i] + " is " 
-			+ grades[i]);
+			for (int i = 0; i < scores.length; i++) {
+				System.out.println("Student score " + scores[i] + " is " + grades[i]);
 			}
 			}
 		}
-		
 
-	
-			
-			
-			
-			
-			
-	
-		
-	
 
-					
-	
-	

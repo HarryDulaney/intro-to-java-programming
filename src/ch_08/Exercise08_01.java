@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 public class Exercise08_01 {
 	public static void main(String[] args) {
-		
 		Scanner input = new Scanner(System.in);
 		
 		double[][] superArray = new double[3][4];
@@ -20,7 +19,6 @@ public class Exercise08_01 {
 		
 		for(int i = 0; i < superArray.length; i++ ) {
 			for(int j = 0; j < superArray[i].length; j++) {
-				
 				superArray[i][j] = input.nextDouble();
 				}	
 		}
@@ -29,7 +27,7 @@ public class Exercise08_01 {
 		System.out.println("The sum of the elements in 1 is " + sumColumn(superArray,1));
 		System.out.println("The sum of the elements in 2 is " + sumColumn(superArray,2));
 		System.out.println("The sum of the elements in 3 is " + sumColumn(superArray,3));
-		
+		input.close();
 	}
 		
 	
