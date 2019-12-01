@@ -1,5 +1,7 @@
 package ch_07;
 
+import java.util.Arrays;
+
 /*7.15 (Eliminate duplicates) Write a method that returns
  * a new array by eliminating 
  * the duplicate values in the 
@@ -9,7 +11,6 @@ package ch_07;
  */
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Excercise07_15 {
 	

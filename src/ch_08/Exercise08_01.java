@@ -29,8 +29,6 @@ public class Exercise08_01 {
 		System.out.println("The sum of the elements in 3 is " + sumColumn(superArray,3));
 		input.close();
 	}
-		
-	
 	public static double sumColumn(double[][] m, int columnIndex) {
 		
 		double sum = 0;
