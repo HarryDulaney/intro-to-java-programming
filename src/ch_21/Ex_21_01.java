@@ -1,4 +1,6 @@
 package ch_21;
+
+import java.util.*;
 /*
  * 21.1 (Perform set operations on hash sets) Create two linked hash sets {"George",
  * "Jim", "John", "Blake", "Kevin", "Michael"} and {"George", "Katie",
@@ -7,12 +9,8 @@ package ch_21;
  * these set methods.)
  */
 
-import java.util.*;
-
 /**
- * 
  * @author Harry Dulaney IV
- *
  */
 public class Ex_21_01 {
 	public static void main(String[] args) {
