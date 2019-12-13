@@ -10,7 +10,7 @@ package ch_13;
 /**
  * @author Harry G. Dulaney IV
  */
-public class Exercise13_05 {
+public class E1305 {
 	public static void main(String[] args) {
 		
 		

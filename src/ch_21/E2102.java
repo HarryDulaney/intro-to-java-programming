@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 /**
  * @author Harry Dulaney IV
  */
-public class Ex_21_02 {
+public class E2102 {
 	public static void main(String[] args) {
 
 		HashSet<String> words = new HashSet<>();

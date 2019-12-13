@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * @author Harry Dulaney IV
  */
-public class Ex_21_01 {
+public class E2101 {
 	public static void main(String[] args) {
 
 		LinkedHashSet<String> names1 = new LinkedHashSet<>(); // Creates a LinkedHashSet object with a default capacity
