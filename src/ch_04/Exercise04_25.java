@@ -18,5 +18,6 @@ public class Exercise04_25 {
 		}
 		
 		System.out.println(plateNumber);
+		
 	}
 }
