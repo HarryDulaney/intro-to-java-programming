@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jdk1.8" />
+  <library name="jquery-3.5.1">
+    <archive path="C:/Users/Jordo/AppData/Roaming/JetBrains/IntelliJIdea2020.1/javascript/extLibs/http_code.jquery.com_jquery-3.5.1.js" />
+  </library>
+  <library name="w3">
+    <archive path="C:/Users/Jordo/AppData/Roaming/JetBrains/IntelliJIdea2020.1/javascript/extLibs/http_www.w3schools.com_w3css_4_w3.css" />
+  </library>
+</eclipse-userlibraries>
+

@@ -37,7 +37,6 @@ public class E2102 {
 		Collections.sort(arrWords);
 
 		System.out.print(arrWords);
-
 	}
 
 }

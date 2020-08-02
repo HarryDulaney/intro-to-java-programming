@@ -16,5 +16,6 @@ public class Ex_01_09 {
 		
 		System.out.println("The perimeter of a rectangle with a width of 4.5 and a height"
 			+ " of 7.9 is " + area);
+	
 	}
 }
