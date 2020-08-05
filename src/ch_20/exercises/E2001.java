@@ -1,4 +1,4 @@
-package ch_20;
+package ch_20.exercises;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,11 +17,11 @@ public class E2001 {
 
 	public static void main(String... args) {
 		List<String> words = new ArrayList<>();
-		File file = new File("/java-prog-dan-lang-10th/src/ch_20/W.txt");
+		File file = new File("Drive:\\Folders\\Folder\\java-prog-dan-lang-10th\\src\\resources\\W.txt");
 		try (Scanner fileInput = new Scanner(file)) {
 			while (fileInput.hasNext()) {
 				words.add(fileInput.next());
-
+			
 			}
 
 		} catch (FileNotFoundException e) {

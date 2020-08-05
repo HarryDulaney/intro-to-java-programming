@@ -24,24 +24,24 @@ public class E1401 extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		GridPane gridPane = new GridPane();
-		ImageView imgV01 = new ImageView(new Image("Space_Man_Moon_Man.png"));
+		ImageView imgV01 = new ImageView(new Image("resources/Space_Man_Moon_Man.png"));
 		imgV01.setFitHeight(200);
 		imgV01.setFitWidth(300);
 		imgV01.setSmooth(true);
 		imgV01.setCache(true);
 
-		ImageView imgV02 = new ImageView(new Image("GettyImages-10.png"));
+		ImageView imgV02 = new ImageView(new Image("resources/GettyImages-10.png"));
 		imgV02.setFitHeight(200);
 		imgV02.setFitWidth(300);
 		imgV02.setSmooth(true);
 		imgV02.setCache(true);
 
-		ImageView imgV03 = new ImageView(new Image("flyer1.jpg"));
+		ImageView imgV03 = new ImageView(new Image("resources/flyer1.jpg"));
 		imgV03.setFitHeight(200);
 		imgV03.setFitWidth(300);
 		imgV03.setSmooth(true);
 		imgV03.setCache(true);
-		ImageView imgV04 = new ImageView(new Image("fintech-pic.jpg"));
+		ImageView imgV04 = new ImageView(new Image("resources/fintech-pic.jpg"));
 		imgV04.setFitHeight(200);
 		imgV04.setFitWidth(300);
 		imgV04.setSmooth(true);

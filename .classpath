@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="Ch01-Intro-Computers-Programs-Java/|Ch01-Intro-Computers-Programs-Java/" kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/Develop/Developer-Tools/Java-Libraries/Testing/hamcrest-core-1.3.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/D:/Develop/Developer-Tools/Java-Libraries/Testing/hamcrest-core-1.3-javadoc.jar!/"/>
