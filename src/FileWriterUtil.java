@@ -1,5 +1,6 @@
 
 
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,12 +17,12 @@ import java.nio.file.Paths;
  */
 public class FileWriterUtil {
 
-	private static int totalFiles = 23; //TODO Number of end of chapter exercises to write from 1 to n 
-	private static final String CHAPTER = "25";//TODO Current Chapter here
+	private static int totalFiles = 37; //TODO Number of end of chapter exercises to write from 1 to n 
+	private static final String CHAPTER = "08";//TODO Current Chapter here
 
 	public static void main(String[] args) {
 
-		for (int i = 10; i <= totalFiles; i++) {
+		for (int i = 1; i < 10; i++) {
 			String exerciseId = "";
 			if (i < 10) {
 				exerciseId = "0" + i;

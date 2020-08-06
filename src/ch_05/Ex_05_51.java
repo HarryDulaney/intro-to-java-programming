@@ -18,37 +18,37 @@ package ch_05;
  *
  */
 public class Ex_05_51 {
-	public static void main(String[]args) {
-		
+	public static void main(String[] args) {
+
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		System.out.println("Enter string one: ");
 		String str1 = input.nextLine();
-		
+
 		final int lengthOne = str1.length();
 		System.out.println("Enter string two: ");
-		
+
 		String str2 = input.nextLine();
 		final int lengthTwo = str2.length();
 
-		if(str1.charAt(0) != str2.charAt(0)) {
-			
-		System.out.println(str1 + " and " + 
-		str2 + " have :(. ---> no common prefix <---");
-		
-		}else {
+		if (str1.charAt(0) != str2.charAt(0)) {
+
+			System.out.println(str1 + " and " + str2 + " have :(. ---> no common prefix <---");
+
+		} else {
 			int indexOfLCP = 0;
-			for(int i=0; i < (lengthOne > lengthTwo?lengthOne:lengthTwo);i++) {
-				
-				if(str1.charAt(i) == str2.charAt(i)) {
+			for (int i = 0; i < (lengthOne > lengthTwo ? lengthOne : lengthTwo); i++) {
+
+				if (str1.charAt(i) == str2.charAt(i)) {
 					indexOfLCP = i;
-				}else { break;}	
+				} else {
+					break;
+				}
 			}
-			System.out.print("The common prefix is: " + str1.substring(0,indexOfLCP+1));
+			System.out.print("The common prefix is: " + str1.substring(0, indexOfLCP + 1));
 
 		}
-		
-		
 
+		input.close();
 	}
 
 }
