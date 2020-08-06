@@ -2,10 +2,9 @@ package ch_14;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
+import javafx.scene.image.*;
+import javafx.scene.layout.*;
+import javafx.stage.*;
 /*
  * 14.1 (Display images) Write a program that displays four images in a grid pane, as
 shown in Figure 14.43a.
