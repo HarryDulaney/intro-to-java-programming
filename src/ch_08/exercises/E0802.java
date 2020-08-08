@@ -12,7 +12,6 @@ public class E0802 {
 	public static double sumMajorDiagonal(double[][] m) {
 		
 		double sum = 0;
-		
 		int row = 0;
 		
 			for (int column = 0; column < m.length; column++) {
