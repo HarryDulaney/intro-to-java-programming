@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * ***8.17 (Financial tsunami) Banks lend money to each other. In tough economic

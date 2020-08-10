@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  *  **8.12 (Financial application: compute tax)

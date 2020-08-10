@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * *8.15 (Geometry: same line?) Programming Exercise 6.39 gives a method for

@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * **8.14 (Explore matrix) Write a program that prompts the user to enter the

@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * *8.22 (Even number of 1s) Write a program that generates a 6-by-6

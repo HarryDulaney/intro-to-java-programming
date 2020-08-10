@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * *8.18 (Shuffle rows) Write a method that shuffles the rows in a

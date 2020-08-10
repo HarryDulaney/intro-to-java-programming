@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
  /**
   * *8.23 (Game: find the flipped cell) Suppose you are given a 6-by-6 matrix filled with
 0s and 1s. All rows and all columns have an even number of 1s. Let the user flip

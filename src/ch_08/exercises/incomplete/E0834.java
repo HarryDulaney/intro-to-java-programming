@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
  
 /**
  * *8.34 (Geometry: rightmost lowest point) In computational geometry, often you need

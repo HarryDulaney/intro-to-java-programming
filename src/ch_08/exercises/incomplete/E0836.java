@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * **8.36 (Latin square) A Latin square is an n-by-n array filled with n

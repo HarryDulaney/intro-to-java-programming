@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * *8.24 (Check Sudoku solution) Listing 8.4 checks whether a solution is valid

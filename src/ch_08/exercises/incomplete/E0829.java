@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
  /**
   * 8.29 (Identical arrays) The two-dimensional arrays m1 and m2 are identical if they
 have the same contents. Write a method that returns true if m1 and m2 are identical, using the following header:

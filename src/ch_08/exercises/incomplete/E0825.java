@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 
 /**
  * *8.25 (Markov matrix) An n * n matrix is called a positive Markov matrix if each

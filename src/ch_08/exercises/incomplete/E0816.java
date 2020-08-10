@@ -1,4 +1,4 @@
-package ch_08.exercises;
+package ch_08.exercises.incomplete;
 /**
  * *8.16 (Sort two-dimensional array) Write a method to sort a two-dimensional array
 using the following header:
