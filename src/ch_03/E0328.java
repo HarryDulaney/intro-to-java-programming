@@ -8,7 +8,7 @@ package ch_03;
  */
 import java.util.*;
 
-public class Ex3_28 {
+public class E0328 {
 	public static void main(String[] args) {
 		//This program only tests if rectangle two is inside rectangle one or if 
 		//rectangle two overlaps rectangle one per the instructions 
