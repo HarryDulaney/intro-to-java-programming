@@ -36,6 +36,7 @@ public class E0802 {
 				fourByfour[row][column] = input.nextDouble();	
 			}
 		}
+		input.close();
 		System.out.println("The sum of the elements in the major diagonal is"
 				+ ": " + sumMajorDiagonal(fourByfour));
 	}

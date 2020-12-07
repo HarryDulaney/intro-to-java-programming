@@ -26,7 +26,7 @@ public class E0201 {
 		
 		System.out.println(Fahrenheit);
 		
-		
+		input.close();
 		
 	}
 

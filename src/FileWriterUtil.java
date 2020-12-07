@@ -17,8 +17,8 @@ import java.nio.file.Paths;
  */
 public class FileWriterUtil {
 
-	private static int totalFiles = 37; //TODO Number of end of chapter exercises to write from 1 to n 
-	private static final String CHAPTER = "08";//TODO Current Chapter here
+	private static int totalFiles = 37; //TODO: Change to the number of blank-chapter-exercise.java files you need written
+	private static final String CHAPTER = "08";//TODO: Change to the number of the current chapter (effects the package name)
 
 	public static void main(String[] args) {
 

@@ -23,7 +23,7 @@ public class E0202 {
 		
 		area = radius * radius * 3.14159;
 		volume = area * length;
-		
+		input.close();
 		System.out.println("The area is " + area);
 		System.out.println("The volume is " + volume);
 		
