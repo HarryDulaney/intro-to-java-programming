@@ -12,7 +12,7 @@ exercise check tool; They are by no means the only solutions to these
 problems and I encourage anyone reading them to try to find new or different 
 methods of approaching these same problems.
 
-#### About 10th Edition Intro To Java Programming
+#### About 10th Edition Introduction To Java Programming (Comprehensive Version)
 "Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFXprovides a better teaching tool for demonstrating object-oriented programming."
 
 ### Jump to Chapter
