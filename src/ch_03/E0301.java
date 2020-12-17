@@ -24,7 +24,7 @@ import java.util.Scanner;
  *
  */
 
-public class Exercise03_01 {
+public class E0301 {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -55,6 +55,7 @@ public class Exercise03_01 {
 			
 			System.out.print("Two real roots: " + root + " " + twoRoot);
 		}
+		input.close();
 	}
 
 }

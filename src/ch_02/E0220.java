@@ -23,7 +23,7 @@ public class E0220 {
         double interest = balance * (rate/1200);
         double roundedInterest = Math.round(interest * 100000)/100000.0;
         System.out.println("The interest rate is: " + roundedInterest);
-
+        input.close();
 
 
 

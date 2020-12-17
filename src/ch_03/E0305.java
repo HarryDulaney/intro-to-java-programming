@@ -13,7 +13,7 @@ the future day of the week.
  * @author Harry G. Dulaney IV
  */
 
-public class Exercise03_05 {
+public class E0305 {
 
 	public static void main(String[] args) {
 

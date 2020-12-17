@@ -6,7 +6,7 @@ package ch_03;
 /**
  * @author Harry G. Dulaney IV
  */
-public class Exercise03_16 {
+public class E0316 {
 	public static void main(String[] args) {
 		 
 		

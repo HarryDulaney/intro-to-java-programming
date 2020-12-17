@@ -6,7 +6,7 @@ inches, you will enter 5 for feet and 10 for inches.
 
 */
 
-public class Exercise03_06 {
+public class E0306 {
 	public static void main(String[] args) {
 
 		java.util.Scanner input = new java.util.Scanner(System.in);

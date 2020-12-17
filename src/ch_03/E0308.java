@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author Harry G. Dulaney IV
  */
-public class Exercise03_08 {
+public class E0308 {
 	public static void main(String[] args) {
 		
 		System.out.println("Please enter a three integers:");

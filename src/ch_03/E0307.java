@@ -7,7 +7,7 @@ package ch_03;
 	as 2 dollars and 3 pennies.
  */
 
-public class Exercise03_07 {
+public class E0307 {
 	public static void main(String[]args) {
 		java.util.Scanner in = new java.util.Scanner(System.in);
 		

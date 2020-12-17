@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * @author Harry G. Dulaney IV
  */
-public class Exercise03_12 {
+public class E0312 {
 	public static void main(String[] args) {
 		
 		System.out.println("Please enter a three digit integer:");

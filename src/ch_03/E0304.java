@@ -4,7 +4,7 @@ package ch_03;
  * February, �, December for the number 1, 2, �, 12, accordingly.
  */
 
-public class Exercise03_04 {
+public class E0304 {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome :)! To the random month generator!");

@@ -14,7 +14,7 @@ that �The equation has no solution.�
  * @author Harry Dulaney IV
  *
  */
-public class Exercise03_03 {
+public class E0303 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

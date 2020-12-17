@@ -9,7 +9,7 @@ enter the sum of these three integers.
  * 
  */
 
-public class Exercise03_02 {
+public class E0302 {
 	
 	public static void main(String[] args) {
 		

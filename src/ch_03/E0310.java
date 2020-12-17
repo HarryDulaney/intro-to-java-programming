@@ -4,7 +4,7 @@ package ch_03;
 subtraction question. Revise the program to randomly generate an addition question
 with two integers less than 100.
  */
-public class Exercise03_10 {
+public class E0310 {
 
 	public static void main(String[] args) {
 
