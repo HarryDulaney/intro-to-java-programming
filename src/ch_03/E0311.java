@@ -65,7 +65,7 @@ public class E0311 {
 			break;
 		}
 		System.out.println(commonOutput + days);
-
+		in.close();
 	}
 
 }
