@@ -1,70 +1,79 @@
-
-
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * {@code FileWriterUtil.class } writes starter files per chapter and number of 
- * exercises. <p>TODO User sets the CHAPTER and NUMBER OF EXERCISES. Execute this utility inside the
- * the target folder in which you wish to write the starter files.</p>
+ * {@code FileWriterUtil.class } writes starter files per chapter and number of
+ * exercises.
+ * <p>
+ * TODO User sets the CHAPTER and NUMBER OF EXERCISES.
+ * 
+ * Execute this utility by running the command:
+ * " java FileWriterUtil <package name> <Chapter Number> <Number Of Exercises> " in the target folder
+ * </p>
  * 
  * @author Harry Dulaney
  */
 public class FileWriterUtil {
 
-	private static int totalFiles = 37; //TODO: Change to the number of blank-chapter-exercise.java files you need written
-	private static final String CHAPTER = "08";//TODO: Change to the number of the current chapter (effects the package name)
-
 	public static void main(String[] args) {
 
-		for (int i = 1; i < 10; i++) {
+		String packageName = args[0];
+		String CHAPTER = args[1];
+		int numExercies = Integer.valueOf(args[2]);
+
+		for (int i = 1; i <= numExercies; i++) {
 			String exerciseId = "";
 			if (i < 10) {
 				exerciseId = "0" + i;
-			}else {
+			} else {
 				exerciseId = "" + i;
 			}
-			
-			File file = new File(".");
 
-			String midPath = "src" + File.separatorChar + "ch_" + CHAPTER + File.separatorChar + "exercises";
-			Path path = file.toPath();
-			Path mid = Paths.get(midPath);
-			Path fullPath = path.resolve(mid);
+			File file = new File(new File(".").getAbsolutePath());
+			String currentDirectoryPath = file.getAbsolutePath();
+			Path pathCurrWd = Paths.get(currentDirectoryPath);
 
-			System.out.println(fullPath.toString());
+			System.out.println(pathCurrWd.toString());
 
-			String filename = "E" + CHAPTER + exerciseId;
-			String end = filename + ".java";
+			String filename = "";
 
-			fullPath = fullPath.resolve(end);
+			if (Integer.parseInt(CHAPTER) < 10) {
+				filename = "E0" + CHAPTER + exerciseId;
+
+			} else {
+				filename = "E" + CHAPTER + exerciseId;
+			}
+			String javaFileName = filename + ".java";
+
+			Path fullPath = pathCurrWd.resolve(javaFileName);
+
 			System.out.println(fullPath.toString());
 
 			try {
 				Files.createFile(fullPath);
-				
-				String contents = "package ch_" + CHAPTER + ".exercises;\n \npublic class " + filename
+
+				String contents = "package " + packageName + ";" + " \n \nimport java.util.*; \n \npublic class " + filename
 						+ "{\n     public static void main(String[] args) {\n    }\n}";
-				
+
 				try (FileOutputStream fOs = new FileOutputStream(fullPath.toFile())) {
 					byte[] bytes = contents.getBytes();
 					fOs.write(bytes);
-					
-				}catch(IOException ie) {
+
+				} catch (IOException ie) {
 					System.out.println("IOException while writing: " + filename);
 				}
 
+			} catch (FileAlreadyExistsException ex) {
+				System.out.println("Skipping write file because " + javaFileName + " already exists...");
 			} catch (IOException e) {
 				System.out.print("IO Exception occured while creating: " + fullPath.toString());
 				e.printStackTrace();
 			}
-			
-
 		}
 		System.out.println("FileWriter complete");
 

@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * Given a two dimensional array of points where each points represents a pixel
- * of an image and a integer "flag" which is 0 or 1. If flag is 0 rotate the image
+ * of an image
+ * and an integer "flag" which is 0 or 1. If flag is 0 rotate the image
  * 90 degrees clockwise. If flag is 1 rotate the image 90 degrees
  * counter-clockwise. Output the result to STDOUT.
  * 
@@ -19,13 +20,13 @@ public class RotateTwoDimArray {
 	private static int rows;
 	private static int columns;
 
-	static {													//	 (Counter-Clockwise)
-		flag = (int) Math.round(Math.random());                 // pixels     res    pixels     res    pixels     res   
+	static {											//	 (Counter-Clockwise - Array indexes)
+		flag = (int) Math.round(Math.random());         // pixels     res    pixels     res    pixels     res   
 //		pixels = new int[][] { { 1, 2, 3},   //3, 6, 9 // [0][0] -> [2][0], [0][1] -> [1][0], [0][2] -> [0][0]
 //								{4, 5, 6},   //2, 5, 8 // [1][0] -> [2][1], [1][1] -> [1][1], [1][2] -> [0][1]
 //								{7, 8, 9}};  //1, 4, 7 // [2][0] -> [2][2], [2][1] -> [1][2], [2][2] -> [0][2]
 //													
-												                	//(Clockwise)
+												                	//(Clockwise - Array indexes)
 													 // pixels     res    pixels     res    pixels     res   
 											//7,4,1  // [0][0] -> [0][2], [0][1] -> [1][2], [0][2] -> [2][2]
 											//8,5,2	 // [1][0] -> [0][1], [1][1] -> [1][1], [1][2] -> [2][1]

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*
+/**
  * **3.9 (Business: check ISBN-10) An ISBN-10 (International Standard Book
  * Number) consists of 10 digits: d1d2d3d4d5d6d7d8d9d10. The last digit, d10, is
  * a checksum, which is calculated from the other nine digits using the
@@ -15,6 +15,8 @@ import java.io.InputStreamReader;
  * Write a program that prompts the user to enter the first 9 digits and
  * displays the 10-digit ISBN (including leading zeros). Your program should
  * read the input as an integer.
+ *
+ * @author Harry Dulaney
  */
 public class E0309 {
 
