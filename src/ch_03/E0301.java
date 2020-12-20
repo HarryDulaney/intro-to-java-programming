@@ -3,8 +3,6 @@ package ch_03;
 import java.util.Scanner;
 
 /**
- *
- *
  * 3.1 (Algebra: solve quadratic equations) The two roots of a quadratic equation
  * ax2 + bx + c = 0 can be obtained using the following formula:
  * r1 = -b + 2b2 - 4ac / 2a

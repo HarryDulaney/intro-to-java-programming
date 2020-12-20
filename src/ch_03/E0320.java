@@ -16,7 +16,7 @@ import java.util.*;
  * @author Harry Dulaney
  */
 
-public class E0320 {
+public class E0320 extends E0321 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

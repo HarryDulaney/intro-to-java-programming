@@ -14,7 +14,6 @@ import java.util.*;
  * Enter weight and price for package 2: 25 11.99
  * Package 2 has a better price.
  *
- * @author Harry Dulaney
  */
 public class E0333 {
     public static void main(String[] args) {

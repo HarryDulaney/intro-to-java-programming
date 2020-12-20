@@ -8,7 +8,7 @@ import java.util.Scanner;
  * the user to enter a, b, c, d, e, and f and displays the result. If ad - bc is 0, report
  * that �The equation has no solution.�
  *
- * @author Harry Dulaney IV
+ * @author Harry Dulaney
  */
 public class E0303 {
 
@@ -26,7 +26,7 @@ public class E0303 {
         double y = 0;
         double x = 0;
 
-        if (a * c - b * c < 0.000000001) {
+        if (a * d - b * c < 0.000000001) {
             System.out.println("The equation has no solution :(");
             System.out.println(a + " * " + c + " - " + b + " * " + c + " = " + " 0 ");
 

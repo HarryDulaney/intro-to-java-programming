@@ -14,7 +14,6 @@ import java.util.*;
  * Enter the dollar amount: 100
  * $100.0 is 681.0 yuan
  *
- * @author Harry Dulaney
  */
 public class E0331{
      public static void main(String[] args) {

@@ -30,7 +30,6 @@ import java.util.*;
  * Enter three points for p0, p1, and p2: 3.4 2 6.5 9.5 5 2.5
  * (5.0, 2.5) is on the right side of the line from (3.4, 2.0) to (6.5, 9.5)
  *
- * @author Harry Dulaney
  */
 public class E0332 {
     public static void main(String[] args) {

@@ -8,7 +8,6 @@ import java.util.*;
  * Enter the time zone offset to GMT: -5
  * The current time is 4:50:34 AM
  *
- * @author Harry Dulaney
  */
 public class E0330 {
     public static void main(String[] args) {
