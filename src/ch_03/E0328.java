@@ -64,15 +64,11 @@ public class E0328 {
         if (isInside) {
             System.out.println("Rectangle two is inside of rectangle one");
 
-        } else if (isInside == false && overlap) {
+        } else if (overlap) {
             System.out.println("Rectangle two overlaps rectangle one");
 
-        } else if (isInside == false && overlap == false) {
-            System.out.println("Rectangle two does not overlap rectangle one and is not inside of rectangle one");
-
         } else {
-            System.out.println("Why what strange numbers you have entered.............");
-
+            System.out.println("Rectangle two does not overlap rectangle one and is not inside of rectangle one");
         }
 
 
@@ -94,14 +90,8 @@ public class E0328 {
 
     public static boolean checkIfoverlaps(double x1top, double x2top, double x1bottom, double x2bottom,
                                           double y1top, double y2top, double y1bottom, double y2bottom) {
-        if (x1top < x2bottom | x1bottom > x2top | y1top < y2bottom
-                | y1bottom > y2top) {
-
-            return false;
-
-        } else
-
-            return true;
+        return !(x1top < x2bottom | x1bottom > x2top | y1top < y2bottom
+                | y1bottom > y2top);
     }
 
 }

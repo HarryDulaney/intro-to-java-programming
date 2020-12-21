@@ -1,17 +1,19 @@
 # Introduction To Java Programming 10th Edition by Y. Daniel Liang 
-### Solutions to End of Chapter Exercises 
+### End of Chapter Exercises and Programming Activities
 _Scroll Down for Quick Links!_
 
-[Try my FileWriterUtil.java to save time creating all your .java Exercise files](https://github.com/HarryDulaney/java-programming-daniel-liang-10th/blob/master/src/FileWriterUtil.java)
 ### <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Intro to Java Programming by Daniel Liang</a>
 
-These are my solutions to the end of chapter exercise’s in
-Y Daniel Liang’s "Intro To Java Programming".
+This repo contains my solutions to the end of chapter exercise’s in
+Y. Daniel Liang’s _Introduction To Java Programming 10th Edition Comprehensive_. <br>
 
 #### About 10th Edition Introduction To Java Programming (Comprehensive Version)
 "Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFXprovides a better teaching tool for demonstrating object-oriented programming."
 
-### Jump to Chapter
+This edition included the [Exercise Check Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01) 
+to check your work.
+
+### Repo links by Chapter
 <ul>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_01"><strong>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_02"><strong>Chapter 2</strong></a> - Elementary Programming</li><br>
