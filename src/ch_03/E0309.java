@@ -27,7 +27,7 @@ public class E0309 {
 		try {
 			while ((line = reader.readLine()) != null) {
 				line = line.trim();
-				if (line.length() > 9 || line.length() < 9) {
+				if (line.length() != 9) {
 					throw new IllegalArgumentException(
 							"Please enter exactly the first nine digits of the isbn number...");
 				}

@@ -1,7 +1,13 @@
 package ch_20;
 
+import jdk.nashorn.internal.runtime.linker.JavaAdapterFactory;
+
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,22 +21,40 @@ import java.util.Scanner;
 
 public class E2001 {
 
-	public static void main(String... args) {
-		List<String> words = new ArrayList<>();
-		File file = new File("Drive:\\Folders\\Folder\\java-prog-dan-lang-10th\\src\\resources\\W.txt");
-		try (Scanner fileInput = new Scanner(file)) {
-			while (fileInput.hasNext()) {
-				words.add(fileInput.next());
-			
-			}
+    public static void main(String... args) {
+        String fileName = "resources/W.txt";
+        E2001 e2001 = new E2001();
+        File file = new File(".");
+        try {
+            file = e2001.getFileFromResources(fileName);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(":(" + " " + e.getLocalizedMessage());
+        }
 
-		} catch (FileNotFoundException e) {
-			System.out.println("File Not Found");
+        List<String> words = new ArrayList<>();
 
-		}
-		
-		System.out.println(words);
+        try (Scanner fileInput = new Scanner(file)) {
+            while (fileInput.hasNext()) {
+                words.add(fileInput.next());
 
+            }
 
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(words);
+
+    }
+
+    private File getFileFromResources(String fileName) throws URISyntaxException, FileNotFoundException {
+        ClassLoader classLoader = getClass().getClassLoader();
+        URL resourceFile = classLoader.getResource(fileName);
+        if (resourceFile == null) {
+            System.out.println("File Not Found");
+            throw new FileNotFoundException("File not found");
+        }
+        return new File(resourceFile.toURI());
+    }
 }

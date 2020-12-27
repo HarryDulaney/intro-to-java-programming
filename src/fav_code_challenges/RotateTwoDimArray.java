@@ -1,7 +1,6 @@
 package fav_code_challenges;
 
 import java.util.Arrays;
-
 /**
  * Given a two dimensional array of points where each points represents a pixel
  * of an image
@@ -20,17 +19,17 @@ public class RotateTwoDimArray {
 	private static int rows;
 	private static int columns;
 
-	static {											//	 (Counter-Clockwise - Array indexes)
-		flag = (int) Math.round(Math.random());         // pixels     res    pixels     res    pixels     res   
-//		pixels = new int[][] { { 1, 2, 3},   //3, 6, 9 // [0][0] -> [2][0], [0][1] -> [1][0], [0][2] -> [0][0]
-//								{4, 5, 6},   //2, 5, 8 // [1][0] -> [2][1], [1][1] -> [1][1], [1][2] -> [0][1]
-//								{7, 8, 9}};  //1, 4, 7 // [2][0] -> [2][2], [2][1] -> [1][2], [2][2] -> [0][2]
+	static {											//	 (Counter-Clockwise - Array indexes mapping)
+		flag = (int) Math.round(Math.random());         //       pixels               desired result
+//		pixels = new int[][] { { 1, 2, 3},   //3, 6, 9 // [0][0],[0][1],[0][2] -> [2][0],[1][0],[0][0]
+//								{4, 5, 6},   //2, 5, 8 // [1][0],[1][1],[1][2] -> [2][1],[1][1],[0][1]
+//								{7, 8, 9}};  //1, 4, 7 // [2][0],[2][1],[2][2] -> [2][2],[1][2],[0][2]
 //													
-												                	//(Clockwise - Array indexes)
-													 // pixels     res    pixels     res    pixels     res   
-											//7,4,1  // [0][0] -> [0][2], [0][1] -> [1][2], [0][2] -> [2][2]
-											//8,5,2	 // [1][0] -> [0][1], [1][1] -> [1][1], [1][2] -> [2][1]
-											//9,6,3  // [2][0] -> [0][0], [2][1] -> [1][0], [2][2] -> [2][0]
+														//(Clockwise - Array indexes mapping)
+													 //        pixels             result desired
+											//7,4,1  // [0][0],[0][1],[0][2] -> [0][2],[1][2],[2][2]
+											//8,5,2	 // [1][0],[1][1],[1][2] -> [0][1],[1][1],[2][1]
+											//9,6,3  // [2][0],[2][1],[2][2] -> [0][0],[1][0],[2][0]
 		
 		pixels = new int[][]{ { 8, 8, 8, 8, 8, 8, 8, 8 }, 
 							   	{ 7, 7, 7, 7, 7, 7, 7, 7 }, 
@@ -79,7 +78,7 @@ public class RotateTwoDimArray {
 	}
 
 	private static int[][] rotateClockwise(int[][] pixs, int row, int col) {
-		int[][] res = new int[col][row]; // rows become columns and vis versa
+		int[][] res = new int[col][row]; // rows become columns,columns become rows
 			
 		for (int r = 0,i = res[r].length-1; r < row && i >= 0; r++,i--) {
 			for (int c = 0; c < col;c++) {

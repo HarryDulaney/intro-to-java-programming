@@ -1,5 +1,10 @@
 package ch_04;
 
+/**
+ * *4.25 (Generate vehicle plate numbers) Assume a vehicle plate number consists of three
+ * uppercase letters followed by four digits. Write a program to generate a plate
+ * number.
+ */
 public class E0425 {
     public static void main(String[] args) {
 
