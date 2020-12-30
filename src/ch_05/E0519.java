@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * **5.19 (Display numbers in a pyramid pattern) Write a nested for loop that prints the
  * following output:
- * 1
+ *
  */
 public class E0519 {
     public static void main(String[] args) {
