@@ -2,13 +2,23 @@ package ch_06;
 
 import java.util.*;
 
+/**
+ * 6.6 (Display patterns) Write a method to display a pattern as follows:
+ * 1
+ * 2 1
+ * 3 2 1
+ * ...
+ * n n-1 ... 3 2 1
+ * The method header is
+ * public static void displayPattern(int n)
+ */
 public class E0606 {
     public static void displayPattern(int n) {
 
-        int padding = n - 1;
-        for (int r = 1; r <= n; r++) {
+        int pad = n - 1; //Track padding to loop for each line
+        for (int r = 1; r <= n; r++) { //Main loop
 
-            for (int p = 0; p < padding; p++) {
+            for (int p = 0; p < pad; p++) {
                 System.out.print("  ");
             }
 
@@ -17,7 +27,7 @@ public class E0606 {
                 System.out.print(i + " ");
             }
             System.out.println();
-            padding--;
+            pad--; // decrease padding as we increase r in for loop
         }
 
     }
