@@ -56,6 +56,6 @@ public class E0332 {
         }
 
         System.out.println(beg + det + end);
-
+        in.close();
     }
 }

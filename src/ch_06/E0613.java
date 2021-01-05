@@ -1,5 +1,5 @@
-package ch_06; 
- 
+package ch_06;
+
 import java.util.*;
 
 /**
@@ -19,7 +19,21 @@ import java.util.*;
  * 19 16.4023
  * 20 17.3546
  */
-public class E0613{
-     public static void main(String[] args) {
+public class E0613 {
+    public static void main(String[] args) {
+
+        System.out.println("i                 m(i)");
+        System.out.println("__________________________");
+        double res = 0;
+
+        for (int num = 1; num <= 20; num++) {
+            System.out.print(num + "          ");
+            res += num / (num + 1.0);
+            System.out.printf("         %.4f\n",res);
+
+
+        }
+
+
     }
 }
