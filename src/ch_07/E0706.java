@@ -10,6 +10,7 @@ import java.util.*;
  * Rewrite Listing 5.15 to display the first 50 prime numbers using this approach.
  * You need to use an array to store the prime numbers and later use them to check
  * whether they are possible divisors for n.
+ * @author Harry Dulaney
  */
 public class E0706 {
     public static void main(String[] args) {

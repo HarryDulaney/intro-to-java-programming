@@ -1,6 +1,7 @@
 package ch_07;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /*7.15 (Eliminate duplicates) Write a method that returns
  * a new array by eliminating
@@ -9,15 +10,10 @@ import java.util.Arrays;
  * Write a test program that reads in ten integers, invokes the method,
  * and displays the numbers separated by exactly one space.
  */
-
-import java.util.Scanner;
-
 public class E0715 {
 
     public static int[] eliminateDuplicates(int[] list) {
-
         int[] list2 = new int[list.length];
-
         int x = 0;
 
         for (int i = 0; i < list.length; i++) {
