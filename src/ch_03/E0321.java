@@ -36,7 +36,7 @@ import java.util.*;
  * year.)
  *
  *
- * @author Harry Dulaney
+ * @author Harry D.
  */
 public class E0321 {
     public static void main(String[] args) {

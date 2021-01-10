@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 /**
- * @author Harry G. Dulaney IV
+ * @author Harry D.
  */
 public class E0308 {
 	public static void main(String[] args) {

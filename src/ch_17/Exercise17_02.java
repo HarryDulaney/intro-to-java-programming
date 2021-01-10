@@ -11,9 +11,9 @@ import java.util.*;
  * @author Harry Dulaney
  */
 
-public class E1702 {
+public class Exercise17_02 {
     public static void main(String[] args) {
-        String filePath = "src" + File.separator + E1702.class.getPackage().getName() + File.separator +
+        String filePath = "src" + File.separator + Exercise17_02.class.getPackage().getName() + File.separator +
                 "Exercise17_02.dat";
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath), true)) {

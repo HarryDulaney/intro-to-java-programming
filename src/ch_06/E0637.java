@@ -11,6 +11,8 @@ import java.util.Scanner;
  * and format(34, 5) returns 00034. If the number is longer than the width,
  * the method returns the string representation for the number.
  * For example, format(34, 1) returns 34.
+ *
+ * @author Harry D.
  */
 public class E0637 {
     public static void main(String[] args) {
@@ -19,10 +21,10 @@ public class E0637 {
         System.out.println("Please enter an integer: ");
         int number = input.nextInt();
 
-        System.out.println("Enter the width expresed in integer format: ");
+        System.out.println("Enter the width expressed in integer format: ");
         int width = input.nextInt();
 
-        System.out.println("The formated number is: " + format(number, width));
+        System.out.println("The formatted number is: " + format(number, width));
 
     }
 

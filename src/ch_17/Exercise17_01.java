@@ -1,7 +1,6 @@
 package ch_17;
 
 import java.io.*;
-import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -11,10 +10,10 @@ import java.util.Random;
  *
  * @author Harry Dulaney
  */
-public class E1701 {
+public class Exercise17_01 {
     public static void main(String[] args) {
         String filePath =
-                "src" + File.separator + E1701.class.getPackage().getName() + File.separator +
+                "src" + File.separator + Exercise17_01.class.getPackage().getName() + File.separator +
                         "Exercise17_01.txt";
         File file = new File(filePath);
         PrintWriter printWriter = null;
@@ -24,6 +23,7 @@ public class E1701 {
             } else {
                 printWriter = new PrintWriter(file);
             }
+            System.out.println("Starting write out random Integer to: " + file.getAbsolutePath());
             StringBuilder sb = new StringBuilder();
             Random random = new Random();
 
@@ -33,6 +33,8 @@ public class E1701 {
             }
             printWriter.write(sb.toString());
             printWriter.close();
+            System.out.println("Write out completed successfully.");
+
 
 
         } catch (FileNotFoundException e) {

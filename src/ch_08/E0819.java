@@ -22,5 +22,13 @@ import java.util.*;
  */
 public class E0819 {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows and columns of a two-dimensional array and then the values in " +
+                "the array: ");
     }
+
+    public static boolean isConsecutiveFour(int[][] values) {
+        return true;
+    }
+
 }

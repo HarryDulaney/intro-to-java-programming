@@ -15,7 +15,7 @@ import java.util.*;
  *
  * @author Harry Dulaney
  */
-public class E1703 {
+public class Exercise17_03 {
     public static void main(String[] args) {
 
         String filePath = "src/ch_17/Exercise17_03.dat";
