@@ -5,6 +5,8 @@ package ch_06;
  * elapsed time in milliseconds since midnight of January 1, 1970. Write a program
  * that displays the date and time. Here is a sample run:
  * Current date and time is May 16, 2012 10:34:23
+ *
+ * @author Harry D.
  */
 public class E0633 {
     private static final int CURRENT_YEAR = 2021;
