@@ -11,4 +11,11 @@ package ch_25;
 public class E2501 {
     public static void main(String[] args) {
     }
+
+    public void breadthFirstTraversal() {
+
+    }
+
+    public int height() {
+    }
 }
