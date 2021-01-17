@@ -11,7 +11,7 @@ import java.util.*;
  * (6, 4) is outside the rectangle, as shown in Figure 3.7b.
  * <p>
  * (Hint: A point is in the rectangle if its horizontal distance to (0, 0) is less than or equal to 10 / 2 and its
- * vertical distance to (0, 0) is less than or equal to 5.0 / 2. Test your program to cover all cases.)
+ * vertical distance to (0, 0) is less than or equal to 5.0 / 2. Test_E2501 your program to cover all cases.)
  * <p>
  * Here are two sample runs.
  * <p>

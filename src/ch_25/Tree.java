@@ -1,31 +1,46 @@
 package ch_25;
 
 public interface Tree<E> extends Iterable<E> {
-	/** Returns true if element is in tree */ 
-	boolean search(E e);
-	
-	/** Insert element into BST and return successful */
-	boolean insert(E e);
-	
-	/** Delete e from BST and return success is true or false */
-	boolean delete(E e);
-	
-	/** Traverse in-order from root */
-	void inorder();
-	
-	/** Traverse post-order from root */
-	void postorder();
-	
-	/** Traverse pre-order from root */
-	void preorder();
-	
-	/** Returns the number of nodes */
-	 int getSize();
-	
-	/** Returns if tree is empty */
-	 boolean isEmpty();
-	
-	
-	
+    /**
+     * Return true if the element is in the tree
+     */
+    public boolean search(E e);
 
+    /**
+     * Insert element e into the binary search tree.
+     * Return true if the element is inserted successfully.
+     */
+    public boolean insert(E e);
+
+    /**
+     * Delete the specified element from the tree.
+     * Return true if the element is deleted successfully.
+     */
+    public boolean delete(E e);
+
+    /**
+     * Inorder traversal from the root
+     */
+    public void inorder();
+
+    /**
+     * Postorder traversal from the root
+     */
+    public void postorder();
+
+    /**
+     * Preorder traversal from the root
+     */
+    public void preorder();
+
+    /**
+     * Get the number of nodes in the tree
+     */
+    public int getSize();
+
+    /**
+     * Return true if the tree is empty
+     */
+    public boolean isEmpty();
 }
+

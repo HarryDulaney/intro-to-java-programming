@@ -25,7 +25,7 @@ public class E0315 {
     public static void main(String[] args) {
 
         int lottery = (int) (Math.random() * 1000);
-        // int lottery = 174; Test
+        // int lottery = 174; Test_E2501
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your lottery pick as an integer of three digits: ");
 
@@ -35,7 +35,7 @@ public class E0315 {
         int l2 = lottery % 100;
         int l3 = l2 / 10;
         l2 %= 10;
-        // Test
+        // Test_E2501
         System.out.println("l1 = " + l1);
         System.out.println("l2 = " + l2);
         System.out.println("l3 = " + l3);
@@ -44,7 +44,7 @@ public class E0315 {
         int g2 = guess % 100;
         int g3 = g2 / 10;
         g2 %= 10;
-        // Test
+        // Test_E2501
         System.out.println("g1 = " + g1);
         System.out.println("g2 = " + g2);
         System.out.println("g3 = " + g3);

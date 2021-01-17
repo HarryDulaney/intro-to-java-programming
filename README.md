@@ -29,27 +29,24 @@ to check your work.
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_12"><strong>Chapter 12</strong></a> - Exception Handling and Text I/O</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_16"><strong>Chapter 16</strong></a> - JavaFx UI Controls and Multimedia</li><br>
+		<li><strong>Chapter 15</strong> - Event-Driven Programming and Animations</li><br>
+		<li><strong>Chapter 16</strong> - JavaFx UI Controls and Multimedia</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_17"><strong>Chapter 17</strong></a> - Binary I/O</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
 		<span><i> Looking to contribute? There's more to do: </i></span><br><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 22</strong></a> - Developing Efficient Algorithms</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 23</strong></a> - Sorting</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 24</strong></a> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 26</strong></a> - AVL Trees </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 27</strong></a> - Hashing</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 28</strong></a> - Graphs and Applications</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 29</strong></a> - Weighted Graphs and Applications </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 31</strong></a> - Networking </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 32</strong></a> - Java Database Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 33</strong></a> - Java Server Faces</li><br>
-				
-		
-		
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 22</strong><!--</a>--> - Developing Efficient Algorithms</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 23</strong><!--</a>--> - Sorting</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 24</strong><!--</a>--> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 26</strong><!--</a>--> - AVL Trees </li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 27</strong><!--</a>--> - Hashing</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 28</strong><!--</a>--> - Graphs and Applications</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 29</strong><!--</a>--> - Weighted Graphs and Applications </li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 30</strong><!--</a>--> - Multithreading and Parallel Programming</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 31</strong><!--</a>--> - Networking </li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 32</strong><!--</a>--> - Java Database Programming</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>

@@ -5,7 +5,7 @@ package ch_08;
  * *8.7 (Points nearest to each other) Listing 8.3 gives a program that finds
  * two points in a two-dimensional space nearest to each other. Revise the
  * program so that it finds two points in a three-dimensional space nearest to
- * each other. Use a two-dimensional array to represent the points. Test the
+ * each other. Use a two-dimensional array to represent the points. Test_E2501 the
  * program using the following points: double[][] points = {{-1, 0, 3}, {-1, -1,
  * -1}, {4, 1, 1}, {2, 0.5, 9}, {3.5, 2, -1}, {3, 1.5, 3}, {-1.5, 4, 2}, {5.5,
  * 4, -0.5}};

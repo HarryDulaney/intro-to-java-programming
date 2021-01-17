@@ -52,7 +52,7 @@ public class E1706 {
     }
 
     /**
-     * Test loan objects boolean.
+     * Test_E2501 loan objects boolean.
      *
      * @param loans the loans
      * @param file  the file
