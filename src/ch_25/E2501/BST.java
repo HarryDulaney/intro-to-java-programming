@@ -12,6 +12,7 @@ import java.util.*;
  * public void breadthFirstTraversal()
  * - Returns the height of this binary tree *
  * public int height()
+ * {@link Test_E2501}
  */
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
@@ -28,19 +29,24 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
      * to right, and so on.
      */
     public void breadthFirstTraversal() {
-        if (this.root == null) return;
-        Queue<TreeNode<E>> queue = new LinkedList<>(); //Create a LinkedList
-        queue.add(this.root);
-        while (!queue.isEmpty()) {
-            TreeNode<E> current = queue.element();
+        if (Objects.isNull(this.root)) return;
+        LinkedList<TreeNode<E>> linkedList = new LinkedList<>(); //Use a Doubly LinkedList
+        linkedList.add(this.root); // Insert the BST root node
+        while (linkedList.size() != 0) { // All elements have been traversed when list is empty
+            TreeNode<E> current = linkedList.element(); // Handle the head element in the list
             if (Objects.nonNull(current.left)) {
-                queue.add(current.left);
+                linkedList.add(current.left); // Left (Breadth First)
             }
             if (Objects.nonNull(current.right)) {
-                queue.add(current.right);
+                linkedList.add(current.right); // Right (Breadth First)
             }
-            System.out.println(queue.remove().element + ", ");
+              //Remove the head element in the list
+            System.out.print(linkedList.remove().element + " ");
         }
+    }
+
+    public void breadthFirstTraversal(TreeNode<E> node) {
+
     }
 
 

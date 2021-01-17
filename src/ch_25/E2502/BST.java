@@ -18,6 +18,14 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected int size = 0;
 
     /* *************************************** Start  Ex25.2  ****************************************************/
+
+    /**
+     *
+     * @return
+     */
+    boolean isFullBST() {
+        return true;
+    }
     /* *************************************** End    Ex25.2  ****************************************************/
 
     /**
@@ -30,7 +38,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
      */
     public void breadthFirstTraversal() {
         if (this.root == null) return;
-        Queue<TreeNode<E>> queue = new LinkedList<>(); //Create a LinkedList
+        Queue<TreeNode<E>> queue = new LinkedList<>();
         queue.add(this.root);
         while (!queue.isEmpty()) {
             TreeNode<E> current = queue.element();
