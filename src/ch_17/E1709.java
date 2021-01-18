@@ -27,8 +27,10 @@ import java.util.Random;
 public class E1709 extends Application {
     final static File storage = new File("src" + File.separator + E1709.class.getPackage().getName() + File.separator +
             "address_store.dat");
-    static int numAddresses;
-    static long filePointer;
+
+    static int pointer;
+    static List<String> addresses = new ArrayList<>();
+
     static final int NAME_SIZE = 32;
     static final int STREET_SIZE = 32;
     static final int CITY_SIZE = 20;
@@ -44,13 +46,40 @@ public class E1709 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        retrieve(storage);
+        String s = retrieve(storage);
+        initAddressList(s);
+
         VBox rootBox = initUserInterface();
         Scene scene = new Scene(rootBox, 500, 170);
+
         primaryStage.setTitle("Exercise-17.09");
         primaryStage.setScene(scene);
+        primaryStage.setOnHiding(event -> {
+            try {
+                store(storage);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+                displayError("Something went wrong storing the address file. Please check the log messages in the " +
+                        "console output.");
+            }
+        });
+        primaryStage.setOnShowing(event -> {
+            if (addresses.size() > 0) {
+                setCurrentAddress(addresses.get(0));
+            }
+        });
         primaryStage.show();
     }
+
+    private void initAddressList(String s) {
+        int len = s.length();
+        while (len > 0) {
+            len = len - 91;
+            addresses.add(s.substring(len));
+            s = s.substring(0, len);
+        }
+    }
+
 
     private VBox initUserInterface() {
         VBox showBox = new VBox(5.0);
@@ -143,44 +172,34 @@ public class E1709 extends Application {
 
 
     private void add() {
-        try {
-            RandomAccessFile raf = new RandomAccessFile(storage, "rw");
-            raf.seek(raf.length() - 1);
-            String currentAddress = getAddressString();
-            raf.write(currentAddress.getBytes());
-
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
+        System.out.println(getAddressString());
+        addresses.add(getAddressString());
     }
 
     private void first() {
-
+        pointer = 0;
+        setCurrentAddress(addresses.get(pointer));
 
     }
 
     private void next() {
+        if (pointer < addresses.size()) {
+            ++pointer;
+        }
+        setCurrentAddress(addresses.get(pointer));
 
     }
 
     private void previous() {
-
+        if (pointer < 0) {
+            --pointer;
+        }
+        setCurrentAddress(addresses.get(pointer));
     }
 
 
     private void last() {
-        try {
-            RandomAccessFile raf = new RandomAccessFile(storage, "rw");
-            if (raf.length() < 2) {
-                return;
-            }
-            raf.seek(raf.length() - 92);
-            String s = raf.readLine();
-            setCurrentAddress(s);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        setCurrentAddress(addresses.get(addresses.size() - 1));
     }
 
     private void setCurrentAddress(String s) {
@@ -203,35 +222,51 @@ public class E1709 extends Application {
         alert.show();
     }
 
-    private void store(File f, String s) {
+    private void store(File f) throws IOException {
+        boolean b = false;
         if (!f.exists()) {
             try {
-                boolean b = f.createNewFile();
-
+                b = f.createNewFile();
             } catch (Exception e) {
-                e.printStackTrace();
-                displayError(e.getMessage());
+                try {
+                    f.setWritable(true);
+                    b = f.createNewFile();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         }
 
-        try {
-            RandomAccessFile raf = new RandomAccessFile(f, "rw");
-            raf.writeBytes(s);
+        try (RandomAccessFile raf = new RandomAccessFile(f, "rw")) {
+            for (String address : addresses) {
+                raf.writeUTF(address);
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            }
+
+
         }
-
     }
 
-    private void retrieve(File file) {
-        String addressString = "";
-        try {
-            RandomAccessFile raf = new RandomAccessFile(file, "r");
+    private String retrieve(File file) {
+        String read = "";
+        if (!file.exists()) {
+            return "";
+        } else {
+            try {
+                RandomAccessFile raf = new RandomAccessFile(file, "r");
+                while (true) {
+                    read = read.concat(raf.readUTF());
+                }
 
-        } catch (IOException ioException) {
-            displayError(ioException.getMessage());
+            } catch (EOFException eof) {
+                System.out.println("End of File reached!");
+                System.out.println("String retrieved: " + read);
+                return read;
+            } catch (IOException ioException) {
+                displayError(ioException.getMessage());
+            }
         }
+        return read;
     }
 
     String getAddressString() {

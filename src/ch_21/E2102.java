@@ -23,7 +23,7 @@ public class E2102 {
 
 		File file = new File(args[0]);
 		try (Scanner input = new Scanner(file)) {
-
+		//Loop
 			for (int i = 0; input.hasNext(); i++) {
 				words.add(input.next());
 			}
