@@ -38,11 +38,11 @@ public class E1709 extends Application {
     static final int ZIP_SIZE = 5;
     static final int TOTAL = 91;
 
-    TextField nameField;
-    TextField streetField;
-    TextField cityField;
-    TextField stateField;
-    TextField zipField;
+    static TextField nameField;
+    static TextField streetField;
+    static TextField cityField;
+    static TextField stateField;
+    static TextField zipField;
 
     @Override
     public void start(Stage primaryStage) {
@@ -54,7 +54,8 @@ public class E1709 extends Application {
 
         primaryStage.setTitle("Exercise-17.09");
         primaryStage.setScene(scene);
-        primaryStage.setOnHiding(event -> {
+        primaryStage.setOnCloseRequest(event -> {
+            System.out.println("Window close requested, saving Addresses now...");
             try {
                 store(storage);
             } catch (IOException ioException) {
@@ -71,10 +72,16 @@ public class E1709 extends Application {
         primaryStage.show();
     }
 
+    /**
+     * Create the List<String> addresses by
+     * parsing the String read from storage file
+     *
+     * @param s String which contains the contents of our storage File.
+     */
     private void initAddressList(String s) {
         int len = s.length();
         while (len > 0) {
-            len = len - 91;
+            len = len - TOTAL;
             addresses.add(s.substring(len));
             s = s.substring(0, len);
         }
@@ -85,46 +92,46 @@ public class E1709 extends Application {
         VBox showBox = new VBox(5.0);
 
         Label name = new Label("Name");
-        nameField = new TextField();
+        E1709.nameField = new TextField();
 
-        nameField.setMinWidth(400);
-        HBox topBox = new HBox(name, nameField);
+        E1709.nameField.setMinWidth(400);
+        HBox topBox = new HBox(name, E1709.nameField);
         topBox.setSpacing(10);
         topBox.setPadding(new Insets(5, 5, 5, 5));
 
         showBox.getChildren().add(topBox);
 
         Label street = new Label("Street");
-        streetField = new TextField();
+        E1709.streetField = new TextField();
 
-        streetField.setMinWidth(400);
-        HBox midBox = new HBox(street, streetField);
+        E1709.streetField.setMinWidth(400);
+        HBox midBox = new HBox(street, E1709.streetField);
         midBox.setSpacing(10);
         midBox.setPadding(new Insets(5, 5, 5, 5));
 
         showBox.getChildren().add(midBox);
 
         Label city = new Label("City");
-        cityField = new TextField();
+        E1709.cityField = new TextField();
 
-        HBox h1 = new HBox(city, cityField);
+        HBox h1 = new HBox(city, E1709.cityField);
         h1.setPadding(new Insets(2, 2, 2, 2));
         h1.setSpacing(10);
 
         Label state = new Label("State");
-        stateField = new TextField();
+        E1709.stateField = new TextField();
 
-        stateField.setMaxWidth(45);
+        E1709.stateField.setMaxWidth(45);
 
-        HBox h2 = new HBox(state, stateField);
+        HBox h2 = new HBox(state, E1709.stateField);
         h2.setPadding(new Insets(2, 2, 2, 2));
         h2.setSpacing(10);
 
         Label zip = new Label("Zip");
-        zipField = new TextField();
+        E1709.zipField = new TextField();
 
-        zipField.setMaxWidth(65);
-        HBox h3 = new HBox(zip, zipField);
+        E1709.zipField.setMaxWidth(65);
+        HBox h3 = new HBox(zip, E1709.zipField);
         h3.setPadding(new Insets(2, 2, 2, 2));
         h3.setSpacing(10);
 
@@ -134,9 +141,7 @@ public class E1709 extends Application {
         showBox.getChildren().add(bottomBox);
 
         Button addButton = new Button("Add");
-//        addButton.setOnAction(event -> add(new Address(streetField.getText(),
-//                nameField.getText(), cityField.getText(), stateField.getText(),
-//                zipField.getText())));
+        addButton.setOnAction(event -> add());
 
         Button firstButton = new Button("First");
         firstButton.setOnAction(event -> first());
@@ -151,10 +156,7 @@ public class E1709 extends Application {
         lastButton.setOnAction(event -> last());
 
         Button updateButton = new Button("Update");
-//        updateButton.setOnAction(event -> update(pointer, streetField.getText(),
-//                nameField.getText(), cityField.getText(), stateField.getText(),
-//                zipField.getText())));
-
+        updateButton.setOnAction(event -> update(pointer));
         HBox buttonBox = new HBox(addButton, firstButton, nextButton, previousButton, lastButton, updateButton);
         buttonBox.setSpacing(10.0);
         buttonBox.setAlignment(Pos.CENTER);
@@ -183,18 +185,23 @@ public class E1709 extends Application {
     }
 
     private void next() {
-        if (pointer < addresses.size()) {
+        if (pointer < addresses.size() - 1) {
             ++pointer;
+            setCurrentAddress(addresses.get(pointer));
+        } else {
+            displayError("End of address list reached.");
         }
-        setCurrentAddress(addresses.get(pointer));
 
     }
 
     private void previous() {
-        if (pointer < 0) {
+        if (pointer > 0) {
             --pointer;
+            setCurrentAddress(addresses.get(pointer));
+        } else {
+            displayError("Beginning of address list reached.");
+
         }
-        setCurrentAddress(addresses.get(pointer));
     }
 
 
@@ -202,16 +209,23 @@ public class E1709 extends Application {
         setCurrentAddress(addresses.get(addresses.size() - 1));
     }
 
-    private void setCurrentAddress(String s) {
-        nameField.setText(s.substring(0, 32));
-        streetField.setText(s.substring(32, 64));
-        cityField.setText(s.substring(64, 84));
-        stateField.setText(s.substring(84, 86));
-        zipField.setText(s.substring(86));
+    /**
+     * Sets the UI TextField values to the address values from the fixed-length
+     * String.
+     *
+     * @param fixLenStr String, of fixed length, holding the address values
+     */
+    private void setCurrentAddress(String fixLenStr) {
+        E1709.nameField.setText(fixLenStr.substring(0, 32));
+        E1709.streetField.setText(fixLenStr.substring(32, 64));
+        E1709.cityField.setText(fixLenStr.substring(64, 84));
+        E1709.stateField.setText(fixLenStr.substring(84, 86));
+        E1709.zipField.setText(fixLenStr.substring(86));
 
     }
 
-    private void update(int pointer, String[] addresses) {
+    private void update(int pointer) {
+        addresses.set(pointer, getAddressString());
         displayInfo("Updated the address!");
 
     }
@@ -222,7 +236,13 @@ public class E1709 extends Application {
         alert.show();
     }
 
-    private void store(File f) throws IOException {
+    /**
+     * Creates and writes to the File which acts as a
+     * persistent data storage for the class.
+     *
+     * @param f the File to store address values in.
+     */
+    protected void store(File f) throws IOException {
         boolean b = false;
         if (!f.exists()) {
             try {
@@ -237,17 +257,24 @@ public class E1709 extends Application {
             }
         }
 
-        try (RandomAccessFile raf = new RandomAccessFile(f, "rw")) {
+        try {
+            RandomAccessFile raf = new RandomAccessFile(f, "rw");
             for (String address : addresses) {
                 raf.writeUTF(address);
-
             }
 
+            raf.close();
 
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    private String retrieve(File file) {
+    /**
+     * @param file The address storage file
+     * @return a String holding the contents of the file
+     */
+    protected String retrieve(File file) {
         String read = "";
         if (!file.exists()) {
             return "";
@@ -260,7 +287,6 @@ public class E1709 extends Application {
 
             } catch (EOFException eof) {
                 System.out.println("End of File reached!");
-                System.out.println("String retrieved: " + read);
                 return read;
             } catch (IOException ioException) {
                 displayError(ioException.getMessage());
@@ -269,7 +295,11 @@ public class E1709 extends Application {
         return read;
     }
 
-    String getAddressString() {
+    /**
+     * @return A fixed length String containing the values of each
+     * TextField, pulled from the the UI.
+     */
+    protected String getAddressString() {
         String address = "";
         String name = nameField.getText();
 
