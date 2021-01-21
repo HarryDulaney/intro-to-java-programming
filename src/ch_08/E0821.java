@@ -61,7 +61,6 @@ public class E0821 {
             for (int j = 0; j < sumOfDistances.length; j++) {
 
                 sumOfDistances[i] += distances[i][j];   //Finds the sum of distances for each city, and stores it in the cities
-                //index which still corresponds to the original array
             }
         }
         int indexMin = indexOfMin(sumOfDistances);
