@@ -1,11 +1,9 @@
 package ch_07;
 
-/*7.22 (Find the number of uppercase letters in a string)
+/** 7.22 (Find the number of uppercase letters in a string)
  *  Write a program that passes a string to the command 
  *  line and displays the number uppercase of letters in the string.
  */
-
-
 public class E0722 {
 	public static void main(String[] args) {
 		

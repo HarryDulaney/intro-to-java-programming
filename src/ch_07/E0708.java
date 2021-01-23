@@ -1,3 +1,6 @@
+package ch_07;
+
+import java.util.Scanner;
 
 /**
  * 7.8 (Average an array) Write two overloaded methods that return the average
@@ -9,10 +12,6 @@
  *
  * @author Harry Dulaney
  */
-package ch_07;
-
-import java.util.Scanner;
-
 public class E0708 {
     public static int average(int[] array) {
 
@@ -24,8 +23,7 @@ public class E0708 {
             sum += array[i];
 
         }
-        int average = sum / elemInArray;
-        return average;
+        return sum / elemInArray;
 
     }
 
@@ -46,11 +44,11 @@ public class E0708 {
     public static void main(String[] args) {
 
         double[] values = new double[10];
-        Scanner inputer = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Please enter ten double values: ");
 
         for (int i = 0; i < 10; i++) {
-            values[i] = inputer.nextDouble();
+            values[i] = input.nextDouble();
         }
         double toPrint = average(values);
 
