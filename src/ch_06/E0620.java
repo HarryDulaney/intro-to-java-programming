@@ -7,6 +7,8 @@ import java.util.Scanner;
  * a string using the following header:
  * public static int countLetters(String s)
  * Write a test program that prompts the user to enter a string and displays the number of letters in the string.
+ *
+ * @author Harry D.
  */
 public class E0620 {
     public static void main(String[] args) {
