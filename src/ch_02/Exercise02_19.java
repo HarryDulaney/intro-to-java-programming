@@ -8,7 +8,7 @@ import java.util.*;
  * points (x1, y1), (x2, y2), (x3, y3) of a triangle and
  * displays its area
  *
- * @author Harry G. Dulaney IV
+ * @author Harry D.
  */
 public class Exercise02_19 {
     public static void main(String[] args) {
