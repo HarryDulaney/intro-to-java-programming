@@ -18,32 +18,41 @@ public class Exercise07_25 {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter values for a, b, and c: ");
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int c = in.nextInt();
+        double a = in.nextDouble();
+        double b = in.nextDouble();
+        double c = in.nextDouble();
 
+        double[] values = new double[]{a, b, c};
+        double[] rootVals = new double[2];
+
+        int numRoots = solveQuadratic(values, rootVals);
+        System.out.println("The number of real roots is " + numRoots);
+        if (numRoots != 0) {
+            System.out.print("The real roots values are: ");
+            for (double value : rootVals) {
+                if (value != 0.0) {
+                    System.out.print(value + " ");
+                }
+            }
+        }
         in.close();
     }
 
-//    public static int solveQuadratic(double[] eqn, double[] roots) {
+    public static int solveQuadratic(double[] eqn, double[] roots) {
 
-//        double dis = Math.pow(b, 2) - 4 * a * c;
-//
-//        if (dis < 0) {
-//            System.out.println("The discriminate is negative, the equation has no real roots.");
-//        } else if (dis == 0) {
-//
-//            double oneRoot = (-1 * b) + (Math.pow(dis, 0.5) / (2 * a));
-//
-//            System.out.print("One real root: " + oneRoot);
-//
-//        } else {
-//
-//            double root, twoRoot;
-//            root = (-1 * b) + (Math.pow(dis, 0.5) / (2 * a));
-//            twoRoot = (-1 * b) - (Math.pow(dis, 0.5) / (2 * a));
-//
-//            System.out.print("Two real roots: " + root + " " + twoRoot);
-//        }
+        double dis = Math.pow(eqn[1], 2) - 4 * eqn[0] * eqn[2];
+
+        if (dis < 0) {
+            return 0;
+        } else if (dis == 0) {
+            roots[0] = (-1 * eqn[1]) + (Math.pow(dis, 0.5) / (2 * eqn[0]));
+            return 1;
+
+        } else {
+            roots[0] = (-1 * eqn[1]) + (Math.pow(dis, 0.5) / (2 * eqn[0]));
+            roots[1] = (-1 * eqn[1]) - (Math.pow(dis, 0.5) / (2 * eqn[0]));
+            return 2;
+        }
 
     }
+}

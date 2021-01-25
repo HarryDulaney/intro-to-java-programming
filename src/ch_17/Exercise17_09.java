@@ -9,11 +9,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.naming.SizeLimitExceededException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * ***17.9 (Address book) Write a program that stores, retrieves, adds, and updates addresses
@@ -24,8 +22,8 @@ import java.util.Random;
  *
  * @author Harry Dulaney
  */
-public class E1709 extends Application {
-    final static File storage = new File("src" + File.separator + E1709.class.getPackage().getName() + File.separator +
+public class Exercise17_09 extends Application {
+    final static File storage = new File("src" + File.separator + Exercise17_09.class.getPackage().getName() + File.separator +
             "address_store.dat");
 
     static int pointer;
@@ -92,46 +90,46 @@ public class E1709 extends Application {
         VBox showBox = new VBox(5.0);
 
         Label name = new Label("Name");
-        E1709.nameField = new TextField();
+        Exercise17_09.nameField = new TextField();
 
-        E1709.nameField.setMinWidth(400);
-        HBox topBox = new HBox(name, E1709.nameField);
+        Exercise17_09.nameField.setMinWidth(400);
+        HBox topBox = new HBox(name, Exercise17_09.nameField);
         topBox.setSpacing(10);
         topBox.setPadding(new Insets(5, 5, 5, 5));
 
         showBox.getChildren().add(topBox);
 
         Label street = new Label("Street");
-        E1709.streetField = new TextField();
+        Exercise17_09.streetField = new TextField();
 
-        E1709.streetField.setMinWidth(400);
-        HBox midBox = new HBox(street, E1709.streetField);
+        Exercise17_09.streetField.setMinWidth(400);
+        HBox midBox = new HBox(street, Exercise17_09.streetField);
         midBox.setSpacing(10);
         midBox.setPadding(new Insets(5, 5, 5, 5));
 
         showBox.getChildren().add(midBox);
 
         Label city = new Label("City");
-        E1709.cityField = new TextField();
+        Exercise17_09.cityField = new TextField();
 
-        HBox h1 = new HBox(city, E1709.cityField);
+        HBox h1 = new HBox(city, Exercise17_09.cityField);
         h1.setPadding(new Insets(2, 2, 2, 2));
         h1.setSpacing(10);
 
         Label state = new Label("State");
-        E1709.stateField = new TextField();
+        Exercise17_09.stateField = new TextField();
 
-        E1709.stateField.setMaxWidth(45);
+        Exercise17_09.stateField.setMaxWidth(45);
 
-        HBox h2 = new HBox(state, E1709.stateField);
+        HBox h2 = new HBox(state, Exercise17_09.stateField);
         h2.setPadding(new Insets(2, 2, 2, 2));
         h2.setSpacing(10);
 
         Label zip = new Label("Zip");
-        E1709.zipField = new TextField();
+        Exercise17_09.zipField = new TextField();
 
-        E1709.zipField.setMaxWidth(65);
-        HBox h3 = new HBox(zip, E1709.zipField);
+        Exercise17_09.zipField.setMaxWidth(65);
+        HBox h3 = new HBox(zip, Exercise17_09.zipField);
         h3.setPadding(new Insets(2, 2, 2, 2));
         h3.setSpacing(10);
 
@@ -216,11 +214,11 @@ public class E1709 extends Application {
      * @param fixLenStr String, of fixed length, holding the address values
      */
     private void setCurrentAddress(String fixLenStr) {
-        E1709.nameField.setText(fixLenStr.substring(0, 32));
-        E1709.streetField.setText(fixLenStr.substring(32, 64));
-        E1709.cityField.setText(fixLenStr.substring(64, 84));
-        E1709.stateField.setText(fixLenStr.substring(84, 86));
-        E1709.zipField.setText(fixLenStr.substring(86));
+        Exercise17_09.nameField.setText(fixLenStr.substring(0, 32));
+        Exercise17_09.streetField.setText(fixLenStr.substring(32, 64));
+        Exercise17_09.cityField.setText(fixLenStr.substring(64, 84));
+        Exercise17_09.stateField.setText(fixLenStr.substring(84, 86));
+        Exercise17_09.zipField.setText(fixLenStr.substring(86));
 
     }
 

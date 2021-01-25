@@ -1,9 +1,6 @@
 package ch_17;
 
 import java.io.*;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -13,13 +10,13 @@ import java.util.*;
  *
  * @author Harry D.
  */
-public class E1705 {
+public class Exercise17_05 {
     public static void main(String[] args) {
         int[] a = new int[]{1, 2, 3, 4, 5}; //Arrays are stored as Object in Java
         Date date = new Date(); // Object of Date type,implements Serializable. Default constructor creates with the
         // current data/time.
         Double value = 5.5; // Implicit cast of double to wrapper type Double which implements Serializable.
-        File file = new File("src" + File.separator + E1705.class.getPackage().getName() + File.separator + "Exercise17_05" +
+        File file = new File("src" + File.separator + Exercise17_05.class.getPackage().getName() + File.separator + "Exercise17_05" +
                 ".dat");
 
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file))) {

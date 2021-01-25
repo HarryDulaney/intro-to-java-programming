@@ -1,4 +1,4 @@
-package ch_20;
+package ch_20.activities;
 
 import java.util.Stack;
 
@@ -18,7 +18,6 @@ import java.util.Stack;
  * operatorStack until operatorStack is empty. Table 20.1 shows how the
  * algorithm is applied to evaluate the expression (1 + 2) * 4 - 3.
  */
-
 public class EvalExpressionsCaseStudy20_10 {
 
 	public static void main(String[] args) {

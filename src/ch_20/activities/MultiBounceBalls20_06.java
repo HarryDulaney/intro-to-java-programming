@@ -1,4 +1,4 @@
-package ch_20;
+package ch_20.activities;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

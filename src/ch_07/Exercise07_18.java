@@ -11,6 +11,8 @@ import java.util.Scanner;
  * smaller values gradually “bubble” their way to the top and the larger
  * values “sink” to the bottom. Write a test program that reads in ten
  * double numbers, invokes the method, and displays the sorted numbers.
+ * <p>
+ * Example:  Enter ten decimal numbers: 751.015 111.122 65.991 751.001 577.772 111.231 500.100 753.613 375.846 111.321
  *
  * @author Harry D.
  */

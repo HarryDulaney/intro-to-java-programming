@@ -7,6 +7,6 @@ package ch_21;
  *
  * @author Harry D.
  */
-public class E2104 {
+public class Exercise21_04 {
     
 }

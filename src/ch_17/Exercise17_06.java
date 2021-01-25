@@ -1,11 +1,7 @@
 package ch_17;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
-import org.junit.*;
 
 /**
  * *17.6 (Store Loan objects) The Loan class in Listing 10.2 does not implement
@@ -18,14 +14,14 @@ import org.junit.*;
  *
  * @author Harry D.
  */
-public class E1706 {
+public class Exercise17_06 {
     /**
      * The entry point of application.
      *
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        String path = "src" + File.separator + E1706.class.getPackage().getName() + File.separator + "Exercise17_06" +
+        String path = "src" + File.separator + Exercise17_06.class.getPackage().getName() + File.separator + "Exercise17_06" +
                 ".dat";
 
         File outFile = new File(path);

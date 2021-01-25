@@ -13,9 +13,9 @@ import java.io.*;
  *
  * @author Harry D.
  */
-public class E1707 {
+public class Exercise17_07 {
     public static void main(String[] args) {
-        String path = "src" + File.separator + E1706.class.getPackage().getName() + File.separator + "Exercise17_07" +
+        String path = "src" + File.separator + Exercise17_06.class.getPackage().getName() + File.separator + "Exercise17_07" +
                 ".dat";
 
         File outFile = new File(path);

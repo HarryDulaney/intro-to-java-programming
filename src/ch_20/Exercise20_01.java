@@ -1,11 +1,7 @@
 package ch_20;
 
-import jdk.nashorn.internal.runtime.linker.JavaAdapterFactory;
-
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -18,15 +14,14 @@ import java.util.Scanner;
  * in ascending alphabetical order. The words must start with a letter. The text
  * file is passed as a command-line argument
  */
-
-public class E2001 {
+public class Exercise20_01 {
 
     public static void main(String... args) {
         String fileName = "resources/W.txt";
-        E2001 e2001 = new E2001();
+        Exercise20_01 exercise2001 = new Exercise20_01();
         File file = new File(".");
         try {
-            file = e2001.getFileFromResources(fileName);
+            file = exercise2001.getFileFromResources(fileName);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(":(" + " " + e.getLocalizedMessage());
