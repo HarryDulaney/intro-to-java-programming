@@ -3,7 +3,7 @@ package ch_08;
 import java.util.*;
 
 /**
- * **8.19 (Pattern recognition: four consecutive equal numbers) Write the following
+ * TODO: **8.19 (Pattern recognition: four consecutive equal numbers) Write the following
  * method that tests whether a two-dimensional array has four consecutive numbers
  * of the same value, either horizontally, vertically, or diagonally.
  * public static boolean isConsecutiveFour(int[][] values)
@@ -25,6 +25,8 @@ public class Exercise08_19 {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the number of rows and columns of a two-dimensional array and then the values in " +
                 "the array: ");
+
+        in.close();
     }
 
     public static boolean isConsecutiveFour(int[][] values) {

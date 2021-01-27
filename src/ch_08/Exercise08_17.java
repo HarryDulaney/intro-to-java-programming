@@ -3,7 +3,7 @@ package ch_08;
 import java.util.*;
 
 /**
- * ***8.17 (Financial tsunami) Banks lend money to each other. In tough economic times,
+ * TODO: ***8.17 (Financial tsunami) Banks lend money to each other. In tough economic times,
  * if a bank goes bankrupt, it may not be able to pay back the loan. A bank’s
  * total assets are its current balance plus its loans to other banks. The diagram in
  * Figure 8.8 shows five banks. The banks’ current balances are 25, 125, 175, 75,
