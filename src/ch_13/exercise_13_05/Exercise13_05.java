@@ -1,4 +1,4 @@
-package ch_13;
+package ch_13.exercise_13_05;
 
 /**
  * 13.5. (Enable GeometricObject comparable) Modify the GeometricObject class to implement
@@ -11,42 +11,42 @@ public class Exercise13_05 {
     public static void main(String[] args) {
 
 
-        Rectangle13_05 r1 = new Rectangle13_05(10.15, 11.55);
+        Rectangle r1 = new Rectangle(10.15, 11.55);
 
-        Rectangle13_05 r2 = new Rectangle13_05(31.22, 12.44);
+        Rectangle r2 = new Rectangle(31.22, 12.44);
 
         System.out.println("The larger of the two rectangles is the one:");
 
-        System.out.println("\n" + Rectangle13_05.max(r1, r2));
+        System.out.println("\n" + Rectangle.max(r1, r2));
 
-        Circle13_05 c1 = new Circle13_05(13.45);
+        Circle c1 = new Circle(13.45);
 
-        Circle13_05 c2 = new Circle13_05(10.15);
+        Circle c2 = new Circle(10.15);
 
         System.out.println("\nThe larger of the two circles is the one:");
-        System.out.println("\n" + Circle13_05.max(c1, c2));
+        System.out.println("\n" + Circle.max(c1, c2));
 
     }
 
 
 }
 
-class Circle13_05 extends GeometricObject13_05 {
+class Circle extends GeometricObject13_05 {
 
     private double radius;
 
-    public Circle13_05() {
+    public Circle() {
 
     }
 
-    public Circle13_05(double radius) {
+    public Circle(double radius) {
 
         this.radius = radius;
 
     }
 
-    public Circle13_05(double radius, String color,
-                       boolean filled) {
+    public Circle(double radius, String color,
+                  boolean filled) {
 
         this.radius = radius;
         setColor(color);
@@ -84,17 +84,17 @@ class Circle13_05 extends GeometricObject13_05 {
 
 }
 
-class Rectangle13_05 extends GeometricObject13_05 {
+class Rectangle extends GeometricObject13_05 {
 
     private double width;
     private double height;
 
-    Rectangle13_05() {
+    Rectangle() {
         width = 1;
         height = 1;
     }
 
-    Rectangle13_05(double newWidth, double newHeight) {
+    Rectangle(double newWidth, double newHeight) {
 
         width = newWidth;
         height = newHeight;
