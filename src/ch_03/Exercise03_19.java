@@ -15,7 +15,7 @@ import java.util.*;
 public class Exercise03_19 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the sides of a triangle seperated by spaces: ");
+        System.out.println("Enter the sides of a triangle separated by spaces: ");
         double s1 = in.nextDouble();
         double s2 = in.nextDouble();
         double s3 = in.nextDouble();

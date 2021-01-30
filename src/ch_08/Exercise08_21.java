@@ -67,6 +67,7 @@ public class Exercise08_21 {
 
         System.out.println("The central city is at (" + coor[indexMin][0] + ", " + coor[indexMin][1] + ")");
         System.out.println("And the total distance to all other cities is " + sumOfDistances[indexMin]);
+        input.close();
     }
 
     public static int indexOfMin(double[] arr) { //returns the index of the lowest sum
