@@ -49,7 +49,7 @@ public class Exercise04_18 {
             s2 = "Freshman";
         }
         else if (statusYear == '2') {
-            s2 = "Sophmore";}
+            s2 = "Sophomore";}
         else if(statusYear == '3') {
             s2 = "Junior";}
         else if(statusYear == '4') {

@@ -24,9 +24,9 @@ public class Exercise02_19 {
         double x3 = input.nextDouble();
         double y3 = input.nextDouble();
 
-        double s1 = findside(x1, y1, x2, y2);
-        double s2 = findside(x2, y2, x3, y3);
-        double s3 = findside(x1, y1, x3, y3);
+        double s1 = findSide(x1, y1, x2, y2);
+        double s2 = findSide(x2, y2, x3, y3);
+        double s3 = findSide(x1, y1, x3, y3);
 
         double s = (s1 + s2 + s3) / 2;
 
@@ -35,12 +35,8 @@ public class Exercise02_19 {
         System.out.println("The area of the triangle is: " + area);
     }
 
-    public static double findside(double x, double y, double w, double z) {
-
-        double side = Math.pow(Math.pow(x - w, 2) + Math.pow(y - z, 2), 0.5);
-
-
-        return side;
+    public static double findSide(double x0, double y0, double x1, double y1) {
+        return Math.pow(Math.pow(x0 - x1, 2) + Math.pow(y0 - y1, 2), 0.5);
     }
 
 
