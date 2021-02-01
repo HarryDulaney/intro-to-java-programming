@@ -1,6 +1,6 @@
 package ch_11;
 
-import ch_09.*;
+import ch_09.exercise09_07.Account;
 
 /**
  * @author Harry G. Dulaney IV
@@ -9,7 +9,7 @@ import ch_09.*;
 public class Exercise11_03 {
 	public static void main(String[] args) {
 
-		Account09_07 testAcct = new Account09_07(1, 100);
+		Account testAcct = new Account(1, 100);
 
 		SavingsAccount testSaves = new SavingsAccount(2, 500);
 
@@ -23,7 +23,7 @@ public class Exercise11_03 {
 
 }
 
-class SavingsAccount extends Account09_07 {
+class SavingsAccount extends Account {
 
 	public double minBalance;
 
@@ -57,7 +57,7 @@ class SavingsAccount extends Account09_07 {
 
 }
 
-class CheckingAccount extends Account09_07 {
+class CheckingAccount extends Account {
 
 	public double minBalance;
 

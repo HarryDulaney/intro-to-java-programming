@@ -54,7 +54,7 @@ public class Exercise08_17 {
         Scanner in = new Scanner(System.in);
 /*       It first reads two integers n and limit, where n indicates the number of banks and
          limit is the minimum total assets for keeping a bank safe. */
-        System.out.println("Test input (All input at once):");
+        System.out.println("Exercise09_09 input (All input at once):");
         String lineOne = in.nextLine();
         String[] lOne = lineOne.split(" ");
         int n = Integer.parseInt(lOne[0]);

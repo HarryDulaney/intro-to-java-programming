@@ -20,7 +20,7 @@ package ch_06;
  */
 public class Exercise06_22 {
     public static void main(String[] args) {
-        for (int i = 10; i < 100; i += 10) { //Test
+        for (int i = 10; i < 100; i += 10) { //Exercise09_09
             System.out.println("The result of the Babylonian sqrt method for: " + i + " = " + sqrt(i));
             System.out.println("The result of Math.sqrt(i) method for: " + i + " = " + Math.sqrt(i));
         }

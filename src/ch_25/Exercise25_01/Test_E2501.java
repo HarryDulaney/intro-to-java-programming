@@ -1,7 +1,7 @@
 package ch_25.Exercise25_01;
 
 /**
- * Test the methods from Exercise 25.1 that we
+ * Exercise09_09 the methods from Exercise 25.1 that we
  * added to the BST
  */
 public class Test_E2501 {

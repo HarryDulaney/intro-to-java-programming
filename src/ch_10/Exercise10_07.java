@@ -2,7 +2,7 @@ package ch_10;
 
 import java.util.Scanner;
 
-import ch_09.*;
+import ch_09.exercise09_07.Account;
 
 /**
  * 10.7 (Game: ATM machine) Use the Account class created in
@@ -17,18 +17,18 @@ import ch_09.*;
  * the system will prompt for an id again. Thus, once the system
  * starts, it will not stop.
  *
- * @author Harry G. Dulaney IV
+ * @author Harry D.
  */
 public class Exercise10_07 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        Account09_07[] atmAccounts = new Account09_07[10];
+        Account[] atmAccounts = new Account[10];
 
         for (int i = 0; i < atmAccounts.length; i++) {
 
-            atmAccounts[i] = new Account09_07(i, 100.00);
+            atmAccounts[i] = new Account(i, 100.00);
 
         }
 
@@ -67,7 +67,7 @@ public class Exercise10_07 {
     }
 
     public static void executeCommand(int userCommand, int accId,
-                                      Scanner j, Account09_07[] arr) {
+                                      Scanner j, Account[] arr) {
 
         switch (userCommand) {
 

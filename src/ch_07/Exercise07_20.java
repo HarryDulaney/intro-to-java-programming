@@ -34,7 +34,7 @@ public class Exercise07_20 {
     }
 
     /**
-     * The method for sorting the numbers
+     * Selection sort implementation using Max value
      */
     public static void selectionSort(double[] list) {
         for (int i = 0; i < list.length - 1; i++) {
