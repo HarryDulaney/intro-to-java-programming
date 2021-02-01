@@ -30,8 +30,10 @@ public class Exercise07_24 {
         int[] deck = getShuffledDeck();
         int[] suits = new int[4];// 0:Hearts; 1:Diamonds; 2:Clubs, 3:Spades
         int numPicks = 0;
+        int card = -1;
         while (suits[0] == 0 || suits[1] == 0 || suits[2] == 0 || suits[3] == 0) {
-            int card = pickACard(deck);
+            card = pickACard(deck);
+            printCard(card);
             numPicks++;
 
             if (card >= 0 && card <= 12) {
@@ -84,10 +86,9 @@ public class Exercise07_24 {
         int[] dck = new int[52];
 
         for (int i = 0, card = 1; i < 52; i++) {
-            dck[i] = card;
+            dck[i] = card++;
 
-            card++;
-            if (card > 13) {
+            if (card % 13 == 0) {
                 card = 1;
             }
 
