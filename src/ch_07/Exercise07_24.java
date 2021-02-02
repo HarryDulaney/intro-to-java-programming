@@ -1,5 +1,7 @@
 package ch_07;
 
+import java.util.Arrays;
+
 /**
  * **7.24 (Simulation: coupon collector’s problem) Coupon collector is a classic statistics
  * problem with many practical applications. The problem is to pick objects from
@@ -26,23 +28,24 @@ package ch_07;
  */
 public class Exercise07_24 {
     public static void main(String[] args) {
-        /* 0-12 : Hearts; 13-25: Diamonds; 26-38: Clubs; 39-51: Spades */
+        /* 1-13 : Hearts; 14-26: Diamonds; 27-39: Clubs; 40-52: Spades */
         int[] deck = getShuffledDeck();
-        int[] suits = new int[4];// 0:Hearts; 1:Diamonds; 2:Clubs, 3:Spades
+        // 0:Hearts; 1:Diamonds; 2:Clubs, 3:Spades
+        int[] suits = new int[4];
+
         int numPicks = 0;
-        int card = -1;
-        while (suits[0] == 0 || suits[1] == 0 || suits[2] == 0 || suits[3] == 0) {
-            card = pickACard(deck);
+        while (suits[0] != 1 || suits[1] != 1 || suits[2] != 1 || suits[3] != 1) {
+            int card = pickACard(deck);
             printCard(card);
             numPicks++;
 
-            if (card >= 0 && card <= 12) {
+            if (card >= 1 && card <= 13) {
                 suits[0] = 1;
-            } else if (card >= 13 && card <= 25) {
+            } else if (card >= 14 && card <= 26) {
                 suits[1] = 1;
-            } else if (card >= 26 && card <= 38) {
+            } else if (card >= 27 && card <= 39) {
                 suits[2] = 1;
-            } else if (card >= 39) {
+            } else if (card >= 40) {
                 suits[3] = 1;
             }
         }
@@ -50,31 +53,42 @@ public class Exercise07_24 {
     }
 
     static void printCard(int card) {
-        if (card == 0 || card == 13 || card == 26 || card == 39) {
-            System.out.print("Ace of ");
-        } else if (card == 10 || card == 23 || card == 36 || card == 49) {
-            System.out.print("Jack of ");
-        } else if (card == 11 || card == 24 || card == 37 || card == 50) {
-            System.out.print("Queen of ");
-        } else if (card == 12 || card == 25 || card == 38 || card == 51) {
-            System.out.print("King of ");
+        String suit = "";
+        if (card >= 1 && card <= 13) {
+            suit += "Hearts\n";
+        } else if (card >= 14 && card <= 26) {
+            suit += "Diamonds\n";
+        } else if (card >= 27 && card <= 39) {
+            suit += "Clubs\n";
+        } else if (card >= 40) {
+            suit += "Spades\n";
         }
-        if (card >= 0 && card <= 12) {
-            System.out.print("Hearts\n");
+        if (card > 13) {
+            while (card >= 13) {
+                card -= 13;
+            }
+        }
 
-        } else if (card >= 13 && card <= 25) {
-            System.out.print("Diamonds\n");
-
-
-        } else if (card >= 26 && card <= 38) {
-            System.out.print("Clubs\n");
-
-
-        } else if (card >= 39) {
-            System.out.print("Spades\n");
-
+        String value = "";
+        switch (card) {
+            case 1:
+                value += "Ace of ";
+                break;
+            case 11:
+                value += "Jack of ";
+                break;
+            case 12:
+                value += "Queen of ";
+                break;
+            case 13:
+                value += "King of ";
+                break;
+            default:
+                value = card + " of ";
 
         }
+
+        System.out.print(value + suit);
 
     }
 
@@ -85,16 +99,18 @@ public class Exercise07_24 {
     static int[] getShuffledDeck() {
         int[] dck = new int[52];
 
-        for (int i = 0, card = 1; i < 52; i++) {
-            dck[i] = card++;
-
-            if (card % 13 == 0) {
-                card = 1;
-            }
-
-
+        for (int i = 0; i < 52; i++) {
+            dck[i] = (i + 1);// i + 1 so that deck[0] == 1 and deck[51] = 52
         }
-        return dck;
+        //Shuffle the deck
+        for (int i = 0; i < 260; i++) {
+            int random1 = (int) (Math.random() * 52);
+            int random2 = (int) (Math.random() * 52);
+            int temp = dck[random1];
+            dck[random1] = dck[random2];
+            dck[random2] = temp;
+        }
 
+        return dck;
     }
 }
