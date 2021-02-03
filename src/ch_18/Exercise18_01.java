@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
  *
  * @author Harry Dulaney
  */
-public class E1801 {
+public class Exercise18_01 {
 
-    static boolean runTest = false;
+    static boolean runTest = false; // Change to true to the Test instead of user input.
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -48,22 +48,23 @@ public class E1801 {
         return result;
 
     }
-}
 
+    private static class Test {
 
-class Test {
+        public static boolean testFactorial() {
+            BigInteger correctResult = new BigInteger("30414093201713378043612608166064768844377641568960512000000000000");
+            BigInteger res = Exercise18_01.findFactorial(50);
+            try {
+                assertEquals(correctResult, res);
+            } catch (AssertionError error) {
+                error.printStackTrace();
+                return false;
+            }
+            return true;
 
-    public static boolean testFactorial() {
-        BigInteger correctResult = new BigInteger("30414093201713378043612608166064768844377641568960512000000000000");
-        BigInteger res = E1801.findFactorial(50);
-        try {
-            assertEquals(correctResult, res);
-        } catch (AssertionError error) {
-            error.printStackTrace();
-            return false;
         }
-        return true;
 
     }
-
 }
+
+

@@ -8,7 +8,7 @@ package ch_18;
  *
  * @author Harry D.
  */
-public class E1807 {
+public class Exercise18_07 {
     static int fibCalls = 0;
 
     public static void main(String[] args) {

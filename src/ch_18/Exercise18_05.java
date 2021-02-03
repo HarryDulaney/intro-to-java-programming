@@ -8,7 +8,7 @@ package ch_18;
  *
  * @author Harry D.
  */
-public class E1805 {
+public class Exercise18_05 {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
             System.out.printf("\nm(" + i + ") = %.4f", m(i));

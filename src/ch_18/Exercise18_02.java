@@ -43,7 +43,7 @@ import java.util.Scanner;
  * return fib(index - 1) + fib(index - 2);
  * }}
  */
-public class E1802 {
+public class Exercise18_02 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an index in the Fibonacci sequence: ");

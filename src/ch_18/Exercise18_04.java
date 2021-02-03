@@ -7,7 +7,7 @@ package ch_18;
  *
  * @author Harry Dulaney
  */
-public class E1804 {
+public class Exercise18_04 {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {

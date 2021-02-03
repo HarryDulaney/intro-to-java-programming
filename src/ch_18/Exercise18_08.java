@@ -7,7 +7,7 @@ package ch_18;
  * For example, reverseDisplay(12345) displays 54321. Write a test program
  * that prompts the user to enter an integer and displays its reversal.
  */
-public class E1808 {
+public class Exercise18_08 {
     public static void main(String[] args) {
 
     }

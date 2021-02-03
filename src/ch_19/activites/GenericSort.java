@@ -1,4 +1,4 @@
-package ch_19;
+package ch_19.activites;
 
 public class GenericSort {
     public static void main(String[] args) {
