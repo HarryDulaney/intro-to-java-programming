@@ -14,8 +14,8 @@ import java.util.Scanner;
  * the equation
  * r1 = -b + Sqrt(b^2 - 4ac) / 2a
  * r2 = -b - Sqrt(b2 - 4ac) / 2a
- * These methods are useful only if the discriminant is non-negative. Let these methods return 0 if the discriminant
- * is negative.
+ * These methods are useful only if the discriminant is non-negative.
+ * Let these methods return 0 if the discriminant is negative.
  * <p>
  * Draw the UML diagram for the class and then implement the class {@link ch_09.exercise09_10.QuadraticEquation UML
  * Diagram}.

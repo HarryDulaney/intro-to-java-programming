@@ -45,10 +45,7 @@ package ch_09.exercise09_11;
  * <p>
  * Methods getX() and getY() that return the solution for the equation.
  * <p>
- * Draw the UML diagram for the class and then implement the class. Write
- * a test program that prompts the user to enter a, b, c, d, e, and f and
- * displays the result. If ad minus bc is 0, report that "The equation has
- * no solution."
+ * Draw the UML diagram for the class and then implement the class.
  */
 public class LinearEquation {
 
@@ -60,7 +57,7 @@ public class LinearEquation {
     private double f;
 
 
-    LinearEquation(double A, double B, double C, double D, double E, double F) {
+    public LinearEquation(double A, double B, double C, double D, double E, double F) {
 
         a = A;
         b = B;

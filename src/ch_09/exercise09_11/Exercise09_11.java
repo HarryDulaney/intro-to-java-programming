@@ -2,6 +2,11 @@ package ch_09.exercise09_11;
 
 import java.util.Scanner;
 
+/**
+ * Write a test program that prompts the user to enter a, b, c, d, e, and f and
+ * displays the result. If ad minus bc is 0, report that "The equation has
+ * no solution."
+ */
 public class Exercise09_11 {
     public static void main(String[] args) {
 
