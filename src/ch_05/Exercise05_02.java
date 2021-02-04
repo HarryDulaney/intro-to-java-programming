@@ -47,7 +47,7 @@ public class Exercise05_02 {
 	    
 
 	    System.out.println("Correct Count is " + correctCount + 
-	      "\nTest_E2501 time is " + testTime / 1000 + " seconds\n" + output);
+	      "\nExercise25_01 time is " + testTime / 1000 + " seconds\n" + output);
 	  
   }
 }

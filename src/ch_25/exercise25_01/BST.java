@@ -1,4 +1,4 @@
-package ch_25.Exercise25_01;
+package ch_25.exercise25_01;
 
 import ch_25.AbstractTree;
 
@@ -11,7 +11,7 @@ import java.util.*;
  * public void breadthFirstTraversal()
  * - Returns the height of this binary tree *
  * public int height()
- * {@link Test_E2501}
+ * {@link Exercise25_01}
  */
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
@@ -39,13 +39,9 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
             if (Objects.nonNull(current.right)) {
                 linkedList.add(current.right); // Right (Breadth First)
             }
-              //Remove the head element in the list
+            //Remove the head element in the list
             System.out.print(linkedList.remove().element + " ");
         }
-    }
-
-    public void breadthFirstTraversal(TreeNode<E> node) {
-
     }
 
 
@@ -65,18 +61,18 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     int height(TreeNode<E> current) {
         if (Objects.isNull(current)) {
             return 0;
+        }
+        int d1 = height(current.left);
+        int d2 = height(current.right);
+
+        if (d1 > d2) {
+            return d1 + 1;
         } else {
-            int d1 = height(current.left);
-            int d2 = height(current.right);
+            return d2 + 1;
 
-            if (d1 > d2) {
-                return d1 + 1;
-            } else {
-                return d2 + 1;
-
-            }
         }
     }
+
     /* *************************************** End  Ex25.1  ****************************************************/
 
     /**

@@ -23,7 +23,7 @@ public class Exercise07_06 {
         while (count < NUMBER_OF_PRIMES) {
         // Assume the number is prime
             boolean isPrime = true; // Is the current number prime?
-        // Test_E2501 whether number is prime
+        // Exercise25_01 whether number is prime
             for (int divisor = 2; divisor <= number / 2; divisor++) {
                 if (number % divisor == 0) { // If true, number is not prime
                     isPrime = false; // Set isPrime to false

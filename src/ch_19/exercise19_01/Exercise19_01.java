@@ -1,8 +1,7 @@
-package ch_19;
+package ch_19.exercise19_01;
 
 import ch_19.activites.GenericStack;
 
-import java.util.Scanner;
 
 /**
  * 19.1 (Revising Listing 19.1) Revise the GenericStack class in Listing 19.1 to implement

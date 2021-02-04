@@ -14,7 +14,7 @@ import java.util.*;
  * less than or equal to 10. The formula for computing the distance is 2(x2 -
  * x1)2 + (y2 - y1)2.
  * <p>
- * (Test_E2501 your program to cover all cases.) <br>
+ * (Exercise25_01 your program to cover all cases.) <br>
  * Two sample runs are
  * shown below.
  * </p>

@@ -7,7 +7,7 @@ import java.util.*;
  * the user to enter the center x-, y-coordinates, width, and
  * height of two rectangles and determines whether the second
  * rectangle is inside the first or overlaps with the first, as shown
- * in Figure 3.9. Test_E2501 your program to cover all cases.
+ * in Figure 3.9. Exercise25_01 your program to cover all cases.
  *
  * @author Harry Dulaney
  */

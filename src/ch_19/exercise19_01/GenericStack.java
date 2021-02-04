@@ -1,7 +1,6 @@
 package ch_19.exercise19_01;
 
 import java.util.Arrays;
-import java.util.function.ObjDoubleConsumer;
 
 public class GenericStack<E> {
     private static final int startCapacity = 2;

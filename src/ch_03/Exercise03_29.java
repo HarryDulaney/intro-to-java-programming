@@ -10,7 +10,7 @@ import java.util.Scanner;
  * (Hint: circle2 is inside circle1 if the distance between the two centers  <= |r1 - r2|
  * and circle2 overlaps circle1 if the distance between the two centers <= r1 + r2.
  * <p>
- * Test_E2501 your program to cover all cases.)
+ * Exercise25_01 your program to cover all cases.)
  * <p>
  * <p>
  * Enter circle1's center x-, y-coordinates, and radius: 0.5 5.1 13

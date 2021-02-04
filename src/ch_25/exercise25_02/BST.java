@@ -1,4 +1,4 @@
-package ch_25.Exercise25_02;
+package ch_25.exercise25_02;
 
 import ch_25.AbstractTree;
 
@@ -12,7 +12,6 @@ import java.util.*;
  * <p>
  * boolean isFullBST()
  */
-
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
     protected int size = 0;

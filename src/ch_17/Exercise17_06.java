@@ -48,7 +48,7 @@ public class Exercise17_06 {
     }
 
     /**
-     * Test_E2501 loan objects boolean.
+     * Exercise25_01 loan objects boolean.
      *
      * @param loans the loans
      * @param file  the file
