@@ -11,6 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.awt.event.TextListener;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -33,7 +34,7 @@ public class Exercise20_02 extends Application {
         textArea.setPrefSize(400, 200);
         textArea.setMaxWidth(400);
         textArea.setMinWidth(400);
-        textArea.setPadding(new Insets(5,5,5,5));
+        textArea.setPadding(new Insets(5, 5, 5, 5));
 
         HBox inBox = new HBox();
         Label label = new Label("Enter a number: ");
@@ -41,10 +42,15 @@ public class Exercise20_02 extends Application {
         textFieldNumberIn.setPrefWidth(100);
         textFieldNumberIn.setMaxWidth(100);
         textFieldNumberIn.setMinWidth(100);
-        textFieldNumberIn.setPadding(new Insets(5,5,5,5));
-
+        textFieldNumberIn.setPadding(new Insets(5, 5, 5, 5));
 
         textFieldNumberIn.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (oldValue.contains(newValue)) {
+                return;
+            }
+            if (NUMBERS.contains(Integer.valueOf(newValue))) {
+                return;
+            }
             if (!newValue.equals("")) {
                 NUMBERS.add(Integer.parseInt(newValue));
                 refreshUI(NUMBERS);
