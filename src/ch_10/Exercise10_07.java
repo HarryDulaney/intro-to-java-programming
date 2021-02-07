@@ -31,21 +31,27 @@ public class Exercise10_07 {
             atmAccounts[i] = new Account(i, 100.00);
 
         }
-
-        for (; ; ) {
+        LOOP:
+        for (; ; ) { // Enter 1234 to end the program
 
             System.out.print("Please enter an account ID#: ");
 
 
             int idOfAcc = input.nextInt();
+            if (idOfAcc == 1234) {
+                break;
+            }
 
             while (idOfAcc < 0 | idOfAcc > 9) {
 
                 System.out.println("Incorrect ID# please enter a correct ID# ");
 
                 idOfAcc = input.nextInt();
-
+                if (idOfAcc == 1234) {
+                    break LOOP;
+                }
             }
+
 
             int userInput = 0;
 
@@ -72,7 +78,7 @@ public class Exercise10_07 {
         switch (userCommand) {
 
             case 1:
-                System.out.println("The balance in account " + accId + " is " +
+                System.out.printf("The balance in account " + accId + " is $%.2f \n",
                         arr[accId].getBalance());
                 break;
 

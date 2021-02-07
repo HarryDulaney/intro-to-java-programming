@@ -1,7 +1,7 @@
 package ch_10;
 
 /**
- * @author Harry G. Dulaney IV
+ * @author Harry D.
  */
 public class Exercise10_26 {
 	public static void main(String[] args) {

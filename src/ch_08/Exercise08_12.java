@@ -56,16 +56,39 @@ public class Exercise08_12 {
 
     }
 
-
+    /**
+     * * tax = brackets[0][0] * rates[0] +
+     * * (brackets[0][1] – brackets[0][0]) * rates[1] +
+     * * (brackets[0][2] – brackets[0][1]) * rates[2] +
+     * * (brackets[0][3] – brackets[0][2]) * rates[3] +
+     * * (brackets[0][4] – brackets[0][3]) * rates[4] +
+     * * (400000 – brackets[0][4]) * rates[5]
+     *
+     * @param income  taxableIncome
+     * @param bracket the tax bracket
+     * @param rates   array of rate tiers
+     * @return amount of tax: double
+     */
     static double calcTax(double income, int[] bracket, double[] rates) {
-        double tax = bracket[0] * rates[0];
-        int i = 1;
-        while (income < bracket[i]) {
-            tax += (bracket[i] - bracket[i - 1]) * rates[i];
-            i++;
-        }
-        tax += (income - bracket[i]) * rates[i + 1];
+        double tax = 0;
+        if (income <= bracket[0]) {
+            tax = income * rates[0];
+        } else if (income <= bracket[1]) {
+            tax = bracket[0] * rates[0] + (income - bracket[0]) * rates[1];
+        } else if (income <= bracket[2]) {
+            tax = bracket[0] * rates[0] + (bracket[1] - bracket[0]) * rates[1] + (income - bracket[1]) * rates[2];
+        } else if (income <= bracket[3]) {
+            tax = bracket[0] * rates[0] + (bracket[1] - bracket[0]) * rates[1] + (bracket[2] - bracket[1]) * rates[2]
+                    + (income - bracket[2]) * rates[3];
+        } else if (income <= bracket[4]) {
+            tax = bracket[0] * rates[0] + (bracket[1] - bracket[0]) * rates[1] + (bracket[2] - bracket[1]) * rates[2]
+                    + (bracket[3] - bracket[2]) * rates[3] + (income - bracket[4]) * rates[4];
+        } else
+            tax = bracket[0] * rates[0] + (bracket[1] - bracket[0]) * rates[1] + (bracket[2] - bracket[1]) * rates[2]
+                    + (bracket[3] - bracket[2]) * rates[3] + (bracket[4] - bracket[3]) * rates[4] + (income - bracket[4]) * rates[5];
+
         return tax;
+
     }
 }
 
