@@ -1,5 +1,7 @@
 package ch_10.exercise10_08;
 
+import java.util.Arrays;
+
 /**
  * Write a test program that uses the Tax class to print the 2001 and 2009 tax tables for taxable
  * income from $50,000 to $60,000 with intervals of $1,000 for all four statuses.
