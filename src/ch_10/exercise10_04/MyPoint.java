@@ -51,12 +51,12 @@ public class MyPoint {
         this.y = y;
     }
 
-    protected double distance(MyPoint point) {
+    public double distance(MyPoint point) {
         return distance(point.x, point.y);
 
     }
 
-    protected double distance(double x, double y) {
+    public double distance(double x, double y) {
         return Math.sqrt(Math.pow(this.x - x, 2) + Math.pow(this.y - y, 2));
     }
 

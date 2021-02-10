@@ -31,7 +31,7 @@ public class Exercise13_05 {
 
 }
 
-class Circle extends GeometricObject13_05 {
+class Circle extends GeometricObject {
 
     private double radius;
 
@@ -84,7 +84,7 @@ class Circle extends GeometricObject13_05 {
 
 }
 
-class Rectangle extends GeometricObject13_05 {
+class Rectangle extends GeometricObject {
 
     private double width;
     private double height;

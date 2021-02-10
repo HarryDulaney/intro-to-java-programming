@@ -29,7 +29,7 @@ public class Exercise04_03 {
 
         double radius = 6_371.01; // Mean radius of Planet Earth
 
-        // Find distance between points for Triangle One
+        // Find distance between points for Triangle2D One
         double atlantaToCharlotte, charlotteToSavannah, savannahToAtlanta;
 
         atlantaToCharlotte = radius * Math.acos(Math.sin(-84.27822) * Math.sin(-81.5197542)
@@ -44,7 +44,7 @@ public class Exercise04_03 {
         Triangle triangle1 = new Triangle(atlantaToCharlotte, charlotteToSavannah, savannahToAtlanta);
         triangle1.computeArea();
 
-        // Find the distance need for Triangle two
+        // Find the distance need for Triangle2D two
         double savannahToOrlando, orlandoToAtlanta;
 
         savannahToOrlando = radius * Math.acos(Math.sin(-81.17461) * Math.sin(-81.5197542)

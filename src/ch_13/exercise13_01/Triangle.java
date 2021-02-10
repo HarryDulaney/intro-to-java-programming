@@ -32,7 +32,7 @@ import java.util.Scanner;
 							  ^
 //|_________________________________________________________________|
 /*																  	|
-* 					     Triangle							    |
+* 					     Triangle2D							    |
 * _________________________________________________________________|
 * 																	|
 *     -side1: double         		 								|
@@ -40,8 +40,8 @@ import java.util.Scanner;
 * 	   -side3: double	      										| 	  	    		
 * _________________________________________________________________|
 *																	|
-* 		+Triangle()											|
-*		+Triangle(side1:double,side2:double,side3:double)		|
+* 		+Triangle2D()											|
+*		+Triangle2D(side1:double,side2:double,side3:double)		|
 * 		+getSide1(): double											|
 * 		+setSide1(side1: double): void								|
 * 		+getSide2(): double											|
@@ -54,12 +54,12 @@ import java.util.Scanner;
 * 																	|				
 *__________________________________________________________________|*/
 
-/*13.1 (Triangle class) Design a new Triangle class that extends the abstract
- *GeometricObject class. Draw the UML diagram for the classes Triangle
- *and GeometricObject and then implement the Triangle class. Write a test
+/*13.1 (Triangle2D class) Design a new Triangle2D class that extends the abstract
+ *GeometricObject class. Draw the UML diagram for the classes Triangle2D
+ *and GeometricObject and then implement the Triangle2D class. Write a test
  *program that prompts the user to enter three sides of the triangle, a color, and a
  *Boolean value to indicate whether the triangle is filled. The program should create
- *a Triangle object with these sides and set the color and filled properties using
+ *a Triangle2D object with these sides and set the color and filled properties using
  *the input. The program should display the area, perimeter, color, and true or false
  *to indicate whether it is filled or not.
  *
