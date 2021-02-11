@@ -1,4 +1,6 @@
-package ch_17;
+package ch_17.exercise17_06;
+
+import ch_17.exercise17_01.Exercise17_01;
 
 import java.io.*;
 import java.util.Arrays;
@@ -21,8 +23,12 @@ public class Exercise17_06 {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        String path = "src" + File.separator + Exercise17_06.class.getPackage().getName() + File.separator + "Exercise17_06" +
-                ".dat";
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        String path =
+                "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator +
+                        "Exercise17_06" +
+                        ".dat";
+
 
         File outFile = new File(path);
 

@@ -1,4 +1,6 @@
-package ch_17;
+package ch_17.exercise17_08;
+
+import ch_17.exercise17_01.Exercise17_01;
 
 import java.io.*;
 import java.util.*;
@@ -15,8 +17,11 @@ import java.util.*;
 public class Exercise17_08 {
     public static void main(String[] args) throws FileNotFoundException {
         int runs = 0;
-        File file = new File("src" + File.separator + Exercise17_08.class.getPackage().getName() + File.separator +
-                "Exercise17_08.dat");
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        String path = "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator +
+                "Exercise17_08.dat";
+
+        File file = new File(path);
         if (!file.exists()) {
             runs = 1;
             writeFile(runs, file);

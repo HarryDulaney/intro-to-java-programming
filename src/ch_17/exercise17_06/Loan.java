@@ -1,4 +1,4 @@
-package ch_17;
+package ch_17.exercise17_06;
 
 
 import java.io.Serializable;

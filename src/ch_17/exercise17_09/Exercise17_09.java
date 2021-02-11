@@ -1,5 +1,6 @@
-package ch_17;
+package ch_17.exercise17_09;
 
+import ch_17.exercise17_01.Exercise17_01;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -20,11 +21,16 @@ import java.util.List;
  * the size of name, street, city, state, and zip is 32, 32, 20, 2, 5 bytes, respectively.
  * FIGURE 17.20 The application can store, retrieve, and update addresses rom a file.
  *
- * @author Harry Dulaney
+ * @author Harry D.
  */
 public class Exercise17_09 extends Application {
-    final static File storage = new File("src" + File.separator + Exercise17_09.class.getPackage().getName() + File.separator +
-            "address_store.dat");
+    static String[] packageParts;
+    final static File storage;
+
+    static {
+        packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        storage = new File("src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "address_store.dat");
+    }
 
     static int pointer;
     static List<String> addresses = new ArrayList<>();

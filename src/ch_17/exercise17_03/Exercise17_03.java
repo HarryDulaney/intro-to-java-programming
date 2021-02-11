@@ -1,5 +1,6 @@
-package ch_17;
+package ch_17.exercise17_03;
 
+import ch_17.exercise17_01.Exercise17_01;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.*;
@@ -13,12 +14,14 @@ import java.util.*;
  * writeInt(int) in DataOutputStream. The file contains an unspecified
  * number of integers. Write a program to find the sum of the integers
  *
- * @author Harry Dulaney
+ * @author Harry D.
  */
 public class Exercise17_03 {
     public static void main(String[] args) {
 
-        String filePath = "src/ch_17/Exercise17_03.dat";
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        String filePath =
+                "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "Exercise17_03.dat";
         if (!(new File(filePath).exists())) {
             try (FileOutputStream fis = new FileOutputStream(filePath)) {
                 DataOutputStream dos = new DataOutputStream(fis);

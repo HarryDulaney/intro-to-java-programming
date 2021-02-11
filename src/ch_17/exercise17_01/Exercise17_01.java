@@ -1,4 +1,4 @@
-package ch_17;
+package ch_17.exercise17_01;
 
 import java.io.*;
 import java.util.Random;
@@ -8,18 +8,19 @@ import java.util.Random;
  * it does not exist. Append new data to it if it already exists. Write 100 integers
  * created randomly into the file using text I/O. Integers are separated by a space.
  *
- * @author Harry Dulaney
+ * @author Harry D
  */
 public class Exercise17_01 {
     public static void main(String[] args) {
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
         String filePath =
-                "src" + File.separator + Exercise17_01.class.getPackage().getName() + File.separator +
+                "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator +
                         "Exercise17_01.txt";
         File file = new File(filePath);
         PrintWriter printWriter = null;
         try {
             if (file.exists()) {
-                printWriter = new PrintWriter(new FileOutputStream(new File(filePath), true));
+                printWriter = new PrintWriter(new FileOutputStream(new File(filePath), false));
             } else {
                 printWriter = new PrintWriter(file);
             }
@@ -34,7 +35,6 @@ public class Exercise17_01 {
             printWriter.write(sb.toString());
             printWriter.close();
             System.out.println("Write out completed successfully.");
-
 
 
         } catch (FileNotFoundException e) {

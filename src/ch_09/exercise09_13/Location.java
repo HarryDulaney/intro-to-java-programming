@@ -1,9 +1,5 @@
 package ch_09.exercise09_13;
 
-import ch_17.Loan;
-
-import java.time.LocalDateTime;
-
 /**
  * **9.13 (The Location class) Design a class named Location for locating a maximal
  * value and its location in a two-dimensional array.

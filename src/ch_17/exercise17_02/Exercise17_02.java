@@ -1,4 +1,6 @@
-package ch_17;
+package ch_17.exercise17_02;
+
+import ch_17.exercise17_01.Exercise17_01;
 
 import java.io.*;
 import java.util.*;
@@ -13,8 +15,8 @@ import java.util.*;
 
 public class Exercise17_02 {
     public static void main(String[] args) {
-        String filePath = "src" + File.separator + Exercise17_02.class.getPackage().getName() + File.separator +
-                "Exercise17_02.dat";
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        String filePath = "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "Exercise17_02.dat";
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath), true)) {
 

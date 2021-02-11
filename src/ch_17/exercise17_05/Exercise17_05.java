@@ -1,4 +1,6 @@
-package ch_17;
+package ch_17.exercise17_05;
+
+import ch_17.exercise17_01.Exercise17_01;
 
 import java.io.*;
 import java.util.*;
@@ -16,9 +18,10 @@ public class Exercise17_05 {
         Date date = new Date(); // Object of Date type,implements Serializable. Default constructor creates with the
         // current data/time.
         Double value = 5.5; // Implicit cast of double to wrapper type Double which implements Serializable.
-        File file = new File("src" + File.separator + Exercise17_05.class.getPackage().getName() + File.separator + "Exercise17_05" +
-                ".dat");
+        String[] packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
+        String filePath = "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "Exercise17_05.dat";
 
+        File file = new File(filePath);
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file))) {
             objectOutputStream.writeObject(a);
             objectOutputStream.writeObject(date);

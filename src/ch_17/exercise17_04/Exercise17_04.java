@@ -1,4 +1,4 @@
-//package ch_17;
+package ch_17.exercise17_04;
 
 
 import java.io.*;
@@ -12,12 +12,12 @@ import java.util.*;
  * sizes of the text file and the binary file. Use the following command to run the
  * program:
  * <p>
- * java Exercise17_04 Welcome.java Welcome.utf
+ * java ch_17.exercise17_04.Exercise17_04 Welcome.java Welcome.utf
  * <p>
  * <p>
- * To run ->  open ch_17 folder in Terminal,
- * run -> javac Exercise17_04.java
- * run -> java Exercise17_04 textfile.txt nameForOutFile.utf
+ * To Run:  open ch_17 folder in Terminal,
+ * cmdline: javac ch_17.exercise17_04.Exercise17_04.java
+ * cmdline: java ch_17.exercise17_04.Exercise17_04 textfile.txt nameForOutFile.utf
  *
  * @author Harry D.
  */
