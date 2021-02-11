@@ -1,9 +1,6 @@
 package ch_15;
 
 import javafx.application.Application;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -43,7 +40,6 @@ public class Exercise15_01 extends Application {
         HBox cardBox = new HBox();
         HBox buttonBar = new HBox();
         vbox.setFillWidth(true);
-
 
         Image i1 = new Image(cards[randomCard()]);
         Image i2 = new Image(cards[randomCard()]);

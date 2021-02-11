@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
  * find the factorial for a large number (e.g., 100!).
  * Implement the factorial method using recursion.
  * Write a program that prompts the user to enter an integer and displays its factorial.
- *
- * @author Harry Dulaney
  */
 public class Exercise18_01 {
 
