@@ -1,6 +1,5 @@
 package ch_17.exercise17_09;
 
-import ch_17.exercise17_01.Exercise17_01;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -24,13 +23,10 @@ import java.util.List;
  * @author Harry D.
  */
 public class Exercise17_09 extends Application {
-    static String[] packageParts;
-    final static File storage;
-
-    static {
-        packageParts = Exercise17_01.class.getPackage().getName().split("\\.");
-        storage = new File("src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "address_store.dat");
-    }
+    static String[] packageParts = Exercise17_09.class.getPackage().getName().split("\\.");
+    final static String path =
+            "src" + File.separator + packageParts[0] + File.separator + packageParts[1] + File.separator + "address_store.dat";
+    static File storage;
 
     static int pointer;
     static List<String> addresses = new ArrayList<>();
@@ -50,6 +46,7 @@ public class Exercise17_09 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        storage = new File(path);
         String s = retrieve(storage);
         initAddressList(s);
 
@@ -183,8 +180,12 @@ public class Exercise17_09 extends Application {
     }
 
     private void first() {
-        pointer = 0;
-        setCurrentAddress(addresses.get(pointer));
+        if (addresses.size() > 0) {
+            pointer = 0;
+            setCurrentAddress(addresses.get(pointer));
+        } else {
+            displayError("Create an address to add to the list.");
+        }
 
     }
 
@@ -281,7 +282,11 @@ public class Exercise17_09 extends Application {
     protected String retrieve(File file) {
         String read = "";
         if (!file.exists()) {
-            return "";
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                displayError("File does note exist and encountered an error while creating it.");
+            }
         } else {
             try {
                 RandomAccessFile raf = new RandomAccessFile(file, "r");
