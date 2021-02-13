@@ -27,10 +27,13 @@ public class Exercise18_10 {
 
     public static int count(String str, char a) {
         if (str.length() > 0) {
-            count += str.charAt(str.length() - 1) == a ? 1 : 0;
-            count(str.substring(0, str.length() - 1), a);
+            if (str.charAt(str.length() - 1) == a) {
+                return 1 + count(str.substring(0, str.length() - 1), a);
+            } else {
+                return count(str.substring(0, str.length() - 1), a);
+            }
         }
-        return count;
+        return 0;
 
     }
 }
