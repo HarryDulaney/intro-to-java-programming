@@ -56,6 +56,7 @@ public class Exercise05_20 {
         while (d <= n / 2) {
             if (n % d == 0) {
                 notPrime = true;
+                break;
             }
             ++d;
         }
