@@ -6,15 +6,13 @@ package ch_10;
 public class Exercise10_26 {
 	public static void main(String[] args) {
 		
-		String str = "";
-		
-		for(int i = 0; i < args.length;i++) {
-			
-			str += args[i];
-			
+		StringBuilder str = new StringBuilder();
+
+		for (String arg : args) {
+			str.append(arg);
 		}
 		
-		String str2 = str.replaceAll(" ", "");
+		String str2 = str.toString().replaceAll(" ", "");
 			
 		str2 = str2.replaceAll("[+]","%+%");
 		str2 = str2.replaceAll("[-]", "%-%");
