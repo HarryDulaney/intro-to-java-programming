@@ -14,13 +14,12 @@ public class Exercise06_24 {
 
 
     public static void main(String[] args) {
-        String time = getCurrentTime();
-        String date = getCurrentDate();
+        String time = getCurrentTime(System.currentTimeMillis());
+        String date = getCurrentDate(System.currentTimeMillis());
         System.out.println("The current date is " + date + ". And the current time is " + time);
     }
 
-    private static String getCurrentDate() {
-        long millis = System.currentTimeMillis();
+    public static String getCurrentDate(long millis) {
         long seconds = millis / 1000;
         long min = seconds / 60;
         long hours = min / 60;
@@ -30,8 +29,7 @@ public class Exercise06_24 {
         return month + "/" + getDaysElapsedCurrentMonth + "/" + year;
     }
 
-    private static String getCurrentTime() {
-        long millis = System.currentTimeMillis();
+    private static String getCurrentTime(long millis) {
         long seconds = millis / 1000;
         long currentSecond = seconds % 60;
 
@@ -45,7 +43,7 @@ public class Exercise06_24 {
 
     }
 
-    static int getYear(int totalDays) {
+    public static int getYear(int totalDays) {
         int year = 1970;
         while (totalDays > 365) {
             totalDays -= numberOfDaysInAYear(year);
@@ -64,7 +62,7 @@ public class Exercise06_24 {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
-    static int getCurrentMonth(int year, int daysElapsedInYear) {
+    public static int getCurrentMonth(int year, int daysElapsedInYear) {
         int month = 0;
         while (daysElapsedInYear > 0) {
             month++;

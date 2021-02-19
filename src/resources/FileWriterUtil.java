@@ -1,3 +1,5 @@
+package resources;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,13 +9,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * {@code FileWriterUtil.class } writes starter files per chapter and number of
+ * {@code resources.FileWriterUtil.class } writes starter files per chapter and number of
  * exercises.
  * <p>
  * TODO User sets the CHAPTER and NUMBER OF EXERCISES.
  * 
  * Execute this utility by running the command:
- * " java FileWriterUtil <package name> <Chapter Number> <Number Of Exercises> " in the target folder
+ * " java resources.FileWriterUtil <package name> <Chapter Number> <Number Of Exercises> " in the target folder
  * </p>
  * 
  * @author Harry Dulaney

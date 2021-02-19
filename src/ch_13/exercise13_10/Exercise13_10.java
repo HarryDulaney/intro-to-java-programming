@@ -1,47 +1,47 @@
 package ch_13.exercise13_10;
 
 
-//__________________________UML DIAGRAM_____________________________*
-/*																	|
- * 						/GeometricObject/							|
- *-------------------------------------------------------------------|
- * -color: String													|
- * -filled: boolean													|
- * -dateCreated : java.util.Date										|
- *																	|
- *-------------------------------------------------------------------|
- * 	 #GeometricObject()												|
- * 	 #GeometricObject(color:String,filled:boolean)					|
- * 	 																|
- * 																	|
- * 	+getColor(): String												|
- * 	+setColor(color: String): void									|
- * 	+isFilled(): boolean											|
- * 	+setFilled(filled: boolean): void								|
- * 	+getDateCreated(): java.util.Date								|
- *  																	|
- *  	+toString(): String												|
- * 	/+getArea()/: double/											|
- * 	/+getPerimeter(): double/										|
- * __________________________________________________________________| */
+//_________________________ UML DIAGRAM ____________________________*
+/*																	*
+ * 						  GeometricObject 							*
+ *------------------------------------------------------------------*
+ * -color: String													*
+ * -filled: boolean													*
+ * -dateCreated : java.util.Date									*
+ *																	*
+ *------------------------------------------------------------------*
+ * 	 #GeometricObject()												*
+ * 	 #GeometricObject(color:String,filled:boolean)					*
+ * 	 																*
+ * 																	*
+ * 	+getColor(): String												*
+ * 	+setColor(color: String): void									*
+ * 	+isFilled(): boolean											*
+ * 	+setFilled(filled: boolean): void								*
+ * 	+getDateCreated(): java.util.Date								*
+ *  																*
+ *  	+toString(): String											*
+ * 	/+getArea()/: double/											*
+ * 	/+getPerimeter(): double/										*
+ * _________________________________________________________________| */
 /*					  ^
 				      ^
 			    	  ^
 					  ^	 
 /*_________________UML Diagram__________________*
  *______________________________________________*
- *               Rectangle		        	*
+ *                 Rectangle	        	    *
  *______________________________________________*
  * 							  			 		*
  *  width: double 								*
  *  						    				*
  *  height: double								*						
- *  						  					*			   ____________________________________
- * 	Rectangle()									*			  |	           <<interface>>           |
- * 						  					    * 			  |java.lang.Comparable<Rectangle>|
- *  Rectangle(newWidth:double, newHeight:Double)* >>>>>>>>>>> |____________________________________|
- *  											*			  |	+compareTo(obj:Rectangle):int |
- * 	getArea(): double							*			  |____________________________________|			
+ *  						  					*			            _____________________________________
+ * 	Rectangle()									*			            *	        <<interface>>           *
+ * 						  					    * 			            *  java.lang.Comparable<Rectangle>  *
+ *  Rectangle(newWidth:double, newHeight:Double)* >>>>>>>>>>>>>>>>>>>>>>*___________________________________*
+ *  											*			            *	+compareTo(obj:Rectangle):int   *
+ * 	getArea(): double							*			            *___________________________________*
  * 	getPerimeter(): double						*
  * 												*
  * 	+toString(): String							*
@@ -50,7 +50,7 @@ package ch_13.exercise13_10;
  * _____________________________________________*
  */
 
-/*********************************************/
+/* ******************************************* */
 
 /**
  * 13.10. (Enable Rectangle comparable) Rewrite the Rectangle class in
