@@ -27,7 +27,7 @@ public class MyStringBuilder1 {
     public MyStringBuilder1 append(MyStringBuilder1 s) {
         int oldLength = this.values.length;
         this.values = Arrays.copyOf(values, this.values.length + s.values.length);
-        for (int i = (oldLength - 1), j = 0; j < s.values.length; i++, j++) {
+        for (int i = oldLength, j = 0; j < s.values.length; i++, j++) {
             this.values[i] = s.values[j];
         }
         return new MyStringBuilder1(String.valueOf(this.values));
@@ -36,11 +36,10 @@ public class MyStringBuilder1 {
     public MyStringBuilder1 append(int i) {
         int oldLength = values.length;
         String temp = i + "";
-        if (oldLength < oldLength + 1) {
-            values = Arrays.copyOf(values, values.length + temp.length());
-        }
+        values = Arrays.copyOf(values, values.length + temp.length());
+
         char[] integer = temp.toCharArray();
-        for (int x = oldLength - 1, j = 0; j < integer.length; x++, j++) {
+        for (int x = oldLength, j = 0; j < integer.length; x++, j++) {
             values[x] = integer[j];
 
         }
