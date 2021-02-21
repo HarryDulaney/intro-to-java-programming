@@ -26,24 +26,23 @@ public class MyStringBuilder1 {
 
     public MyStringBuilder1 append(MyStringBuilder1 s) {
         int oldLength = this.values.length;
-        this.values = Arrays.copyOf(values, this.values.length + s.values.length);
-        for (int i = oldLength, j = 0; j < s.values.length; i++, j++) {
-            this.values[i] = s.values[j];
-        }
-        return new MyStringBuilder1(String.valueOf(this.values));
+        char[] nuValues = new char[oldLength + s.length()];
+        System.arraycopy(this.values, 0, nuValues, 0, oldLength);
+        System.arraycopy(s.values, 0, nuValues, oldLength, s.length());
+        this.values = nuValues;
+        return this;
     }
 
     public MyStringBuilder1 append(int i) {
         int oldLength = values.length;
         String temp = i + "";
-        values = Arrays.copyOf(values, values.length + temp.length());
-
+        char[] nuVals = new char[values.length + temp.length()];
         char[] integer = temp.toCharArray();
-        for (int x = oldLength, j = 0; j < integer.length; x++, j++) {
-            values[x] = integer[j];
+        System.arraycopy(this.values, 0, nuVals, 0, this.values.length);
+        System.arraycopy(integer, 0, nuVals, oldLength, integer.length);
+        this.values = nuVals;
+        return this;
 
-        }
-        return new MyStringBuilder1(String.valueOf(values));
     }
 
     public int length() {
@@ -63,11 +62,14 @@ public class MyStringBuilder1 {
     }
 
     public MyStringBuilder1 substring(int begin, int end) {
-        return new MyStringBuilder1(String.valueOf(values).substring(begin, end));
+        char[] nuVals = new char[end - begin];
+        System.arraycopy(this.values, begin, nuVals, 0, nuVals.length);
+        this.values = nuVals;
+        return this;
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(values);
+        return String.valueOf(values);
     }
 }

@@ -15,7 +15,7 @@ public class Exercise10_27 {
         MyStringBuilder1 stringBuilder2 = new MyStringBuilder1("AddedSomeStringhere");
         stringBuilder1.append(stringBuilder2);
         System.out.println(stringBuilder1.toString());
-        System.out.println(stringBuilder1.substring(3, stringBuilder1.length()));
+        System.out.println(stringBuilder1.substring(3,11));
 
     }
 }
