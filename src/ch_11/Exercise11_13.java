@@ -31,7 +31,6 @@ public class Exercise11_13 {
 
         System.out.print("The distinct integers are ");
         for (Integer integer : testList) {
-
             System.out.print(integer + " ");
         }
         input.close();

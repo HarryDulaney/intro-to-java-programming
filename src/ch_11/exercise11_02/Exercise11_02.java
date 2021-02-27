@@ -152,7 +152,7 @@ public class Exercise11_02 {
         Person person = new Person();
         person.setName("Garry Barryman");
         Student student = new Student(Student.SENIOR);
-        student.setName("Jingle Jam");
+        student.setName("Jingle PB&J");
         Employee employee = new Employee("Delray Beach,FL", 45_750.00, new MyDate());
         employee.setName("Sarah Stodenbyer");
         Faculty faculty = new Faculty(new double[]{9.0, 5.0}, 5);
