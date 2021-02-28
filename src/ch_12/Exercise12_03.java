@@ -7,7 +7,6 @@ import java.util.Scanner;
  * Creates an array with 100 randomly chosen integers
  * Prompts the user to enter the index of the array, then displays the corresponding element value.
  * If the specified index is out of bounds, display the message Out of Bounds.
- *
  */
 public class Exercise12_03 {
     public static void main(String[] args) {
@@ -15,7 +14,6 @@ public class Exercise12_03 {
         int[] randomArray = new int[100];
 
         for (int i = 0; i < randomArray.length; i++) {
-
             randomArray[i] = (int) (1 + Math.random() * 10_000);
         }
 
@@ -24,15 +22,12 @@ public class Exercise12_03 {
         System.out.println("Enter an index in the array for which to display it's value: ");
 
         try {
-
             int indexValue = input.nextInt();
-
             System.out.println(randomArray[indexValue]);
 
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Out Of Bounds");
         }
-
 
         input.close();
     }

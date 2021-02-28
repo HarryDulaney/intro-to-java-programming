@@ -1,42 +1,37 @@
-# Intro To Java Programming Edition 10 by Y. Daniel Liang 
-### End of Chapter Exercises and Programming Activities
-_Scroll Down for Quick Links!_
+# INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_ 
 
-### <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Intro to Java Programming by Daniel Liang</a>
+### This repo contains my solutions to the end-of-chapter exercise’s in <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming</a>
 
-This repo contains my solutions to the end of chapter exercise’s in
-Y. Daniel Liang’s _Introduction To Java Programming Comprehensive Version Edition 10_. <br>
+#### _About the 10th Edition_ 
+"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
+. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."
 
-#### About 10th Edition 
-"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFXprovides a better teaching tool for demonstrating object-oriented programming."
+[Click Here for the Exercise Check Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01)
 
-This edition included the [Exercise Check Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01) 
-to check your work.
-
-### Repo links by Chapter
+### Navigate the solutions by chapter
 <ul>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_01"><strong>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_02"><strong>Chapter 2</strong></a> - Elementary Programming</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_03"><strong>Chapter 3</strong></a> - Selections</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_04"><strong>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_05"><strong>Chapter 5</strong></a> - Loops</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_06"><strong>Chapter 6</strong></a> - Methods</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_07"><strong>Chapter 7</strong></a> - Single-Dimensional Arrays</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_08"><strong>Chapter 8</strong></a> - MultiDimensional Arrays</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_09"><strong>Chapter 9</strong></a> - Objects and Classes</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_10"><strong>Chapter 10</strong></a> - Object-Oriented Thinking</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_11"><strong>Chapter 11</strong></a> - Inheritance and Polymorphism</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_12"><strong>Chapter 12</strong></a> - Exception Handling and Text I/O</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_01"><strong>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_02"><strong>Chapter 2</strong></a> - Elementary Programming</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_03"><strong>Chapter 3</strong></a> - Selections</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_04"><strong>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_05"><strong>Chapter 5</strong></a> - Loops</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_06"><strong>Chapter 6</strong></a> - Methods</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_07"><strong>Chapter 7</strong></a> - Single-Dimensional Arrays</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_08"><strong>Chapter 8</strong></a> - MultiDimensional Arrays</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_09"><strong>Chapter 9</strong></a> - Objects and Classes</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_10"><strong>Chapter 10</strong></a> - Object-Oriented Thinking</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_11"><strong>Chapter 11</strong></a> - Inheritance and Polymorphism</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_12"><strong>Chapter 12</strong></a> - Exception Handling and Text I/O</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
 		<li><strong>Chapter 16</strong> - JavaFx UI Controls and Multimedia</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_17"><strong>Chapter 17</strong></a> - Binary I/O</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_17"><strong>Chapter 17</strong></a> - Binary I/O</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 22</strong><!--</a>--> - Developing Efficient Algorithms</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 23</strong><!--</a>--> - Sorting</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 24</strong><!--</a>--> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
