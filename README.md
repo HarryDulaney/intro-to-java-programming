@@ -25,7 +25,8 @@
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
-		<li><strong>Chapter 16</strong> - JavaFx UI Controls and Multimedia</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_16"><strong>Chapter
+		 16</strong></a> - JavaFx UI Controls and Multimedia</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_17"><strong>Chapter 17</strong></a> - Binary I/O</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>

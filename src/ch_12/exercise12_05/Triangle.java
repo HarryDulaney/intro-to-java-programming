@@ -1,5 +1,6 @@
-package ch_11.exercise11_01;
+package ch_12.exercise12_05;
 
+import ch_11.exercise11_01.GeometricObject;
 
 public class Triangle extends GeometricObject {
 
@@ -16,11 +17,14 @@ public class Triangle extends GeometricObject {
 
     }
 
-    public Triangle(double newSide1, double newSide2, double newSide3) {
-
-        this.side1 = newSide1;
-        this.side2 = newSide2;
-        this.side3 = newSide3;
+    /**
+     * Construct a triangle with the specified sides
+     */
+    public Triangle(double side1, double side2, double side3)
+    /* throws IllegalTriangleException */ {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
 
     }
 
@@ -55,3 +59,4 @@ public class Triangle extends GeometricObject {
                 " side3 = " + this.side3;
     }
 }
+
