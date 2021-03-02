@@ -20,12 +20,8 @@ public class Triangle extends GeometricObject {
     /**
      * Construct a triangle with the specified sides
      */
-    public Triangle(double side1, double side2, double side3)
-    /* throws IllegalTriangleException */ {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
-
+    public Triangle(double side1, double side2, double side3) throws IllegalTriangleException {
+        setSides(side1, side2, side3);
     }
 
     public double getArea() {
@@ -38,6 +34,22 @@ public class Triangle extends GeometricObject {
         double p = this.side1 + this.side2 + this.side3;
 
         return p;
+
+    }
+
+    private void setSides(double side1, double side2, double side3) throws IllegalTriangleException {
+        if (side1 + side2 < side3) {
+            throw new IllegalTriangleException(side1, side2, side3);
+        } else if (side2 + side3 < side1) {
+            throw new IllegalTriangleException(side1, side2, side3);
+        } else if (side1 + side3 < side2) {
+            throw new IllegalTriangleException(side1, side2, side3);
+        } else {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+
+        }
 
     }
 
