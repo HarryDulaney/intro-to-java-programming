@@ -33,7 +33,10 @@ import java.util.Scanner;
 public class Exercise12_12 {
     public static void main(String[] args) {
         ArrayList<String> lines = new ArrayList<>();
-
+        if (args.length < 1) {
+            System.out.println("Usage: java Exercise12_12 sourceFile");
+            return;
+        }
         File file = new File(args[0]);
 
         if (file.exists()) {

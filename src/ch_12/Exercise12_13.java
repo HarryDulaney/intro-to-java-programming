@@ -10,8 +10,6 @@ import java.util.Scanner;
  * Write a program that will count the number of characters,
  * words, and lines in a file. Words are separated by whitespace characters.
  * The file name should be passed as a command-line argument, as shown in Figure 12.13.
- *
- * @author Harry D.
  */
 public class Exercise12_13 {
     public static void main(String[] args) throws IOException {
