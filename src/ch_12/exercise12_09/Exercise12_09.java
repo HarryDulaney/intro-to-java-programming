@@ -1,36 +1,34 @@
-package ch_12;
+package ch_12.exercise12_09;
 
 import java.util.Scanner;
 
 /**
- * *12.7 (NumberFormatException) Write the bin2Dec(String binaryString)
- * method to convert a binary string into a decimal number. Implement the
- * bin2Dec method to throw a NumberFormatException if the string is not a
+ * 12.9 (BinaryFormatException) Exercise 12.7 implements the bin2Dec method
+ * to throw a BinaryFormatException if the string is not a binary string.
+ * Define a custom exception called BinaryFormatException. Implement the
+ * bin2Dec method to throw a BinaryFormatException if the string is not a
  * binary string.
  */
-public class Exercise12_07 {
-
+public class Exercise12_09 {
     public static void main(String[] args) {
         //Test
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter a binary number as a string: ");
-        String bStr = in.nextLine().trim();
+
+        String binaryString1 = "1010";
+        String binaryString2 = "1014";
         try {
 
-            System.out.println("Binary number: " + bStr + " converted to decimal is " + bin2Dec(bStr));
+            System.out.println("Binary number: " + binaryString1 + " converted to decimal is " + bin2Dec(binaryString1));
+            System.out.println("Binary number: " + binaryString2 + " converted to decimal is " + bin2Dec(binaryString2));
 
         } catch (NumberFormatException numberFormatException) {
-            System.out.println("Runtime Exception Caught: " + numberFormatException.getMessage());
+            System.out.println(numberFormatException);
         }
-        in.close();
-
-
     }
 
     public static int bin2Dec(String binaryString) {
         int decimalValue = 0;
         if (!checkBinaryChars(binaryString)) {
-            throw new NumberFormatException("Binary String contains invalid characters.");
+            throw new BinaryFormatException(binaryString);
         }
         char[] binChars = binaryString.toCharArray();
 
@@ -59,6 +57,5 @@ public class Exercise12_07 {
         }
         return 0;
     }
-
 
 }
