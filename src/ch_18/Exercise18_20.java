@@ -20,30 +20,49 @@ import javafx.stage.Stage;
  */
 public class Exercise18_20 extends Application {
 
-    private double widthStart = 170.0;
-    private double space = 10.0;
-    Stage stage;
-
     @Override
     public void start(Stage primaryStage) {
-        stage = primaryStage;
-        Pane pane = new Pane();
-        pane.setCenterShape(true);
-        drawCircles(widthStart - space, pane);
+        RecursiveCirclePane circlePane = new RecursiveCirclePane();
+        Scene scene = new Scene(circlePane, 340, 340);
+        circlePane.widthProperty().addListener(cl -> circlePane.resetCircles());
+        circlePane.heightProperty().addListener(cl -> circlePane.resetCircles());
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        circlePane.paint();
 
     }
 
-    private Circle drawCircles(double radius, Pane pane) {
-        if (radius < 10.0) {
-            Scene scene = new Scene(pane, 340, 340);
-            stage.setScene(scene);
-            stage.show();
-            return new Circle();
+    static class RecursiveCirclePane extends Pane {
+        private final double distanceBetween = 10.0;
+
+        RecursiveCirclePane() {
+
         }
-        Circle circle = new Circle(widthStart, widthStart, radius);
-        circle.setStroke(Color.BLACK);
-        circle.setFill(Color.TRANSPARENT);
-        pane.getChildren().add(circle);
-        return drawCircles(radius - 10, pane);
+
+        private void resetCircles() {
+            this.getChildren().clear();
+            paint();
+        }
+
+        protected void paint() {
+            this.setCenterShape(true);
+            double initialRadius = (((getWidth() + getHeight()) / 2) / 2) - distanceBetween;
+            drawCircles(initialRadius);
+
+        }
+
+
+        protected void drawCircles(double radius) {
+            if (radius > 9.0) {
+                Circle circle = new Circle(getWidth() / 2, getHeight() / 2, radius);
+                circle.setStroke(Color.BLACK);
+                circle.setFill(Color.TRANSPARENT);
+                this.getChildren().add(circle);
+                drawCircles(radius - distanceBetween);
+            }
+        }
     }
+
 }
+
