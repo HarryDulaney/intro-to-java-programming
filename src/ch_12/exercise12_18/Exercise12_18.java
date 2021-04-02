@@ -14,8 +14,9 @@ import java.util.List;
  * command to run the program:
  * java Exercise12_18 srcRootDirectory
  *
- * @implNote  package statements are already written in testFile*.java files. Delete the statement to start over and
- * run a Test.
+ * @implNote  package statements may already be written in testFile*.java files.
+ * Remove the package statement to start over
+ * test this class. Hint: Use Exercise12_20.java to remove package statements.
  */
 public class Exercise12_18 {
     private final static String USAGE = "java Exercise12_18 srcRootDirectory";
