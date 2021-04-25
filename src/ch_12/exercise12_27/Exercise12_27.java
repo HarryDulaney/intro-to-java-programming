@@ -1,7 +1,5 @@
 package ch_12.exercise12_27;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,6 +7,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,12 +23,19 @@ import java.util.regex.Pattern;
  * when you pass the symbol * from the command line, it refers to all files in
  * the directory (see Supplement III.V). Use the following command to run your
  * program.
- * java Exercise12_27 *
+ * <p>
+ * To test:
+ * for files in /exercise12_27 , open and rename strings by removing the '0' padding in the suffix.
+ * <p>
+ * (From inside: java-prog-dan-lang-10th/src/ch_12/exercise12_27/ ) cmd: javac Exercise12_27.java
+ * cmd: cd ../..
+ * cmd: java ch_12.exercise12_27.Exercise12_27 *
+ *
  */
 public class Exercise12_27 {
     private static final Pattern PATTERN = Pattern.compile("Exercise\\d_\\d");
     private static final String PREFIX = "Exercise";
-    private static Logger logger = LoggerFactory.getLogger(Exercise12_27.class);
+    private static Logger logger = LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public static void main(String[] args) {
 
@@ -82,6 +90,7 @@ public class Exercise12_27 {
                 stringBuffer.insert(0, 0);// pad first number with a "0"
                 stringBuffer.insert(stringBuffer.length() - 1, 0); // pad last number with "0"
                 nuList.add(PREFIX + stringBuffer.toString());
+                logger.log(Level.INFO, PREFIX + stringBuffer.toString());
             } else {
                 nuList.add(line);
             }
