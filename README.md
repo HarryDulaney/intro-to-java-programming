@@ -6,8 +6,9 @@
 
 [Click Here to open the Exercise Check Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01)
 ____
-### <em>Contributors:</em> 
-##### Harry Dulaney
+### <em>Contributors:</em>
+
+### Harry Dulaney
 ____
 ### <em>Pull requests:</em>  
 _I am always excited to get pull requests and will review them quickly._
