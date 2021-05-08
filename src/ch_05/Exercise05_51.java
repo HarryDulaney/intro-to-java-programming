@@ -32,7 +32,7 @@ public class Exercise05_51 {
 
         } else {
             int indexOfLCP = 0;
-            for (int i = 0; i < (lengthOne > lengthTwo ? lengthOne : lengthTwo); i++) {
+            for (int i = 0; i < (Math.max(lengthOne, lengthTwo)); i++) {
 
                 if (str1.charAt(i) == str2.charAt(i)) {
                     indexOfLCP = i;

@@ -13,7 +13,7 @@ public class Exercise05_14 {
 		System.out.println("Enter the second positive integer: ");
 		int n2 = input.nextInt();
 		
-		int gcd = n1 < n2 ? n1 : n2;
+		int gcd = Math.min(n1, n2);
 		
 		while( n1 % gcd != 0 || n2 % gcd != 0) {
 			gcd--;
