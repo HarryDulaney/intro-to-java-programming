@@ -1,8 +1,8 @@
 package ch_12;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -12,27 +12,26 @@ import java.util.Scanner;
  * that contains the word.
  * <p>
  * Because http://cs.armstrong.edu/liang is no longer active I substituted that with:
- * http://liveexample.pearsoncmg.com/liang/intro10e
- * <p>
- * And searched for the words: "Object-Oriented" instead of "Computer Programming" because it would yield zero results.
+ * "https://en.wikipedia.org/wiki/Computer"
  */
 public class Exercise12_33 {
+    private static final String SEARCH_WORD = "Computer Programming";
+
     public static void main(String[] args) {
-        String startURL = "https://liveexample.pearsoncmg.com/liang/intro10e/toc.html";
+        String startURL = "https://en.wikipedia.org/wiki/Computer";
         crawl(startURL);
     }
 
-    public static void crawl(String url) {
+    public static void crawl(String startingURL) {
         ArrayList<String> listOfPendingURLs = new ArrayList<>();
         ArrayList<String> listOfTraversedURLs = new ArrayList<>();
-        listOfPendingURLs.add(url);
-
+        listOfPendingURLs.add(startingURL);
         while (!listOfPendingURLs.isEmpty() &&
                 listOfTraversedURLs.size() <= 100) {
             String urlString = listOfPendingURLs.remove(0);
             if (!listOfTraversedURLs.contains(urlString)) {
                 listOfTraversedURLs.add(urlString);
-                System.out.println("Craw " + urlString);
+                System.out.println("Crawling:  " + urlString);
                 for (String s : getSubURLs(urlString)) {
                     if (!listOfTraversedURLs.contains(s))
                         listOfPendingURLs.add(s);
@@ -44,21 +43,30 @@ public class Exercise12_33 {
     public static ArrayList<String> getSubURLs(String urlString) {
         ArrayList<String> list = new ArrayList<>();
         try {
-            URL url = new URL(urlString);
+            java.net.URL url = new java.net.URL(urlString);
             Scanner input = new Scanner(url.openStream());
-            while (input.hasNextLine()) {
+            int current = 0;
+            while (input.hasNext()) {
                 String line = input.nextLine();
-                int startIdxLink = line.indexOf("<a href=\"");
-                int endIdxLink = line.indexOf("</a>") + startIdxLink;
-                String link = line.substring(startIdxLink, endIdxLink);
-                for (int i = endIdxLink; i >= link.length() - startIdxLink; i--) {
-
+                if (line.contains(SEARCH_WORD) || line.contains(SEARCH_WORD.toLowerCase())) {
+                    System.out.println("Search phrase found on page: " + urlString);
+                    System.exit(0);
                 }
-
+                current = line.indexOf("https:", current);
+                while (current > 0) {
+                    int endIndex = line.indexOf("\"", current);
+                    if (endIndex > 0) { // Ensure that a correct URL is found
+                        list.add(line.substring(current, endIndex));
+                        current = line.indexOf("https:", endIndex);
+                    } else {
+                        current = -1;
+                    }
+                }
             }
         } catch (Exception ex) {
             System.out.println("Error: " + ex.getMessage());
         }
         return list;
     }
+
 }
