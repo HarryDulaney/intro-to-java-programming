@@ -4,15 +4,18 @@
 "Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
 . Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."
 
-[Click Here to open the Exercise Check Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01)
+### **Links:**
+### <i><a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a></i>
+### <i><a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a></i>
+
 ____
 ### <em>Contributors:</em>
 
 ### Harry Dulaney
 ____
 ### <em>Pull requests:</em>  
-_I am always excited to get pull requests and will review them quickly._
-##### - These should be used for adding new solutions to the repo that do not already exist.
+_Please feel free to make pull requests. I will do my best to review them quickly._
+##### Pull Requests should be used for adding new solutions to the repo that do not already exist.
 ____
 ### <em>Issue's:</em>  
 _Please feel free to open new Issues._
