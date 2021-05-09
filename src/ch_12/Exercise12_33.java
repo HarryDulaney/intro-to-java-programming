@@ -1,8 +1,7 @@
 package ch_12;
 
+import java.io.BufferedInputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -45,13 +44,22 @@ public class Exercise12_33 {
         try {
             java.net.URL url = new java.net.URL(urlString);
             Scanner input = new Scanner(url.openStream());
-            int current = 0;
-            while (input.hasNext()) {
+            int lineNumber = 0;
+            while (input.hasNextLine()) {
+                lineNumber++;
                 String line = input.nextLine();
-                if (line.contains(SEARCH_WORD) || line.contains(SEARCH_WORD.toLowerCase())) {
-                    System.out.println("Search phrase found on page: " + urlString);
+                /* Solution Start */
+                if (line.contains(SEARCH_WORD) /*|| line.contains(SEARCH_WORD.toLowerCase())*/) {
+                    System.out.println("Search phrase found on page: " + urlString + " @ lineNumber: " + lineNumber);
+                    System.out.println(line);
                     System.exit(0);
                 }
+            }
+            /* Solution End*/
+
+            int current = 0;
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
                 current = line.indexOf("https:", current);
                 while (current > 0) {
                     int endIndex = line.indexOf("\"", current);
