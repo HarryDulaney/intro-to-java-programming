@@ -1,10 +1,6 @@
 package ch_13;
 
-import org.junit.Assert;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Random;
 
 /**

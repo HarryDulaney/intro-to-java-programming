@@ -1,4 +1,4 @@
-package ch_13.exercise_13_05;
+package ch_13.exercise13_05;
 
 /**
  * 13.5. (Enable GeometricObject comparable) Modify the GeometricObject class to implement

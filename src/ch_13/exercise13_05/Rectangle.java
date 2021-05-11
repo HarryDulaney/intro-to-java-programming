@@ -1,4 +1,4 @@
-package ch_13.exercise_13_05;
+package ch_13.exercise13_05;
 
 public
 class Rectangle extends GeometricObject {

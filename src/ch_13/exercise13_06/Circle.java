@@ -1,7 +1,6 @@
-package ch_13.exercise_13_05;
+package ch_13.exercise13_06;
 
-public
-class Circle extends GeometricObject {
+public class Circle extends GeometricObject {
 
     private double radius;
 
@@ -10,9 +9,7 @@ class Circle extends GeometricObject {
     }
 
     public Circle(double radius) {
-
         this.radius = radius;
-
     }
 
     public Circle(double radius, String color,
@@ -34,16 +31,12 @@ class Circle extends GeometricObject {
 
     @Override
     public double getArea() {
-        ;
         return radius * radius * Math.PI;
     }
 
     @Override
     public double getPerimeter() {
-
-
         return 2 * radius * Math.PI;
-
     }
 
     @Override
