@@ -2,8 +2,7 @@ package ch_13.exercise13_08;
 
 import java.util.ArrayList;
 
-public
-class MyStack implements Cloneable {
+public class MyStack implements Cloneable {
 
     private ArrayList<Object> list = new ArrayList<Object>();
 

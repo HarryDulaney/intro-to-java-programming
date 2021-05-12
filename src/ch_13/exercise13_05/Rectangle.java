@@ -1,17 +1,16 @@
-package ch_13.exercise_13_05;
+package ch_13.exercise13_05;
 
-public
-class Rectangle extends GeometricObject {
+public class Rectangle extends GeometricObject {
 
     private double width;
     private double height;
 
-    Rectangle() {
+    public Rectangle() {
         width = 1;
         height = 1;
     }
 
-    Rectangle(double newWidth, double newHeight) {
+    public Rectangle(double newWidth, double newHeight) {
 
         width = newWidth;
         height = newHeight;
