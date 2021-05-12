@@ -1,6 +1,7 @@
-package ch_13.exercise13_07;
+package ch_13.exercise13_09;
 
-public abstract class GeometricObject implements Colorable {
+
+public abstract class GeometricObject {
 
     private String color = "white";
     private boolean filled;

@@ -1,6 +1,6 @@
 package ch_13.exercise13_07;
 
-public class Square extends GeometricObject implements Colorable {
+public class Square extends GeometricObject {
 
     private double height;
 
@@ -16,7 +16,7 @@ public class Square extends GeometricObject implements Colorable {
 
     @Override
     public double getArea() {
-        return this.height * this.height;
+        return height * height;
     }
 
     @Override
