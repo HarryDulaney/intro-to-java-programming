@@ -25,19 +25,32 @@ _Please feel free to open new Issues._
 ____
 # Quick Solution Navigator:
 <ul>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_01"><strong>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_02"><strong>Chapter 2</strong></a> - Elementary Programming</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_03"><strong>Chapter 3</strong></a> - Selections</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_04"><strong>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_05"><strong>Chapter 5</strong></a> - Loops</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_06"><strong>Chapter 6</strong></a> - Methods</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_07"><strong>Chapter 7</strong></a> - Single-Dimensional Arrays</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_08"><strong>Chapter 8</strong></a> - MultiDimensional Arrays</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_09"><strong>Chapter 9</strong></a> - Objects and Classes</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_10"><strong>Chapter 10</strong></a> - Object-Oriented Thinking</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_11"><strong>Chapter 11</strong></a> - Inheritance and Polymorphism</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_12"><strong>Chapter 12</strong></a> - Exception Handling and Text I/O</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_01"><strong
+>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_02"><strong
+>Chapter 2</strong></a> - Elementary Programming (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_03"><strong
+>Chapter 3</strong></a> - Selections (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_04"><strong
+>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_05"><strong
+>Chapter 5</strong></a> - Loops (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_06"><strong
+>Chapter 6</strong></a> - Methods (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_07"><strong
+>Chapter 7</strong></a> - Single-Dimensional Arrays (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_08"><strong
+>Chapter 8</strong></a> - MultiDimensional Arrays (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_09"><strong
+>Chapter 9</strong></a> - Objects and Classes (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_10"><strong
+>Chapter 10</strong></a> - Object-Oriented Thinking (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_11"><strong
+>Chapter 11</strong></a> - Inheritance and Polymorphism (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_12"><strong
+>Chapter 12</strong></a> - Exception Handling and Text I/O (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_16"><strong>Chapter
