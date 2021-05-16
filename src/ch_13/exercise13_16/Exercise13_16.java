@@ -1,4 +1,4 @@
-package ch_13;
+package ch_13.exercise13_16;
 
 /**
  * 13.16 (Create a rational-number calculator) Write a program similar to Listing 7.9,
@@ -9,4 +9,7 @@ package ch_13;
  * method.
  */
 public class Exercise13_16 {
+    public static void main(String[] args) {
+        System.out.println("See RationalNumCalculator.java....");
+    }
 }

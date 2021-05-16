@@ -1,20 +1,16 @@
-package ch_13.exercise13_14;
+package ch_13.exercise13_15;
+
+import java.math.BigInteger;
 
 /**
- * 13.14 (Demonstrate the benefits of encapsulation) Rewrite the RationalNumCalculator class in
- * Listing 13.13 using a new internal representation for the numerator and denominator.
- * Create an array of two integers as follows:
- * private long[] r = new long[2];
- * Use r[0] to represent the numerator and r[1] to represent the denominator.
- * The signatures of the methods in the RationalNumCalculator class are not changed, so a client
- * application that uses the previous RationalNumCalculator class can continue to use this new
- * <p>
- * RationalNumCalculator class without being recompiled.
+ * 13.15 (Use BigInteger for the RationalNumCalculator class) Redesign and implement the
+ * RationalNumCalculator class in Listing 13.13 using BigInteger for the numerator and
+ * denominator.
  */
 public class Rational extends Number implements Comparable<Rational> {
-    // Data fields for numerator = r[0],  and denominator = r[1]
-    private long[] r = new long[2];
-
+    // Data fields for numerator and denominator
+    private BigInteger numerator = BigInteger.ZERO;
+    private BigInteger denominator = BigInteger.ONE;
 
     /**
      * Construct a rational with default properties
@@ -28,10 +24,8 @@ public class Rational extends Number implements Comparable<Rational> {
      */
     public Rational(long numerator, long denominator) {
         long gcd = gcd(numerator, denominator);
-        long n = ((denominator > 0) ? 1 : -1) * numerator / gcd;
-        long d = Math.abs(denominator) / gcd;
-        r[0] = n;
-        r[1] = d;
+        this.numerator = BigInteger.valueOf(((denominator > 0) ? 1 : -1) * numerator / gcd);
+        this.denominator = BigInteger.valueOf(Math.abs(denominator) / gcd);
     }
 
     /**
@@ -46,30 +40,29 @@ public class Rational extends Number implements Comparable<Rational> {
                 gcd = k;
         }
         return gcd;
-
     }
 
     /**
      * Return numerator
      */
     public long getNumerator() {
-        return r[0];
+        return numerator.longValue();
     }
 
     /**
      * Return denominator
      */
     public long getDenominator() {
-        return r[1];
+        return denominator.longValue();
     }
 
     /**
      * Add a rational number to this rational
      */
     public Rational add(Rational secondRational) {
-        long n = r[0] * secondRational.getDenominator() +
-                r[1] * secondRational.getNumerator();
-        long d = r[1] * secondRational.getDenominator();
+        long n = numerator.longValue() * secondRational.getDenominator() +
+                denominator.longValue() * secondRational.getNumerator();
+        long d = denominator.longValue() * secondRational.getDenominator();
         return new Rational(n, d);
     }
 
@@ -77,9 +70,9 @@ public class Rational extends Number implements Comparable<Rational> {
      * Subtract a rational number from this rational
      */
     public Rational subtract(Rational secondRational) {
-        long n = r[0] * secondRational.getDenominator()
-                - r[1] * secondRational.getNumerator();
-        long d = r[1] * secondRational.getDenominator();
+        long n = numerator.longValue() * secondRational.getDenominator()
+                - denominator.longValue() * secondRational.getNumerator();
+        long d = denominator.longValue() * secondRational.getDenominator();
         return new Rational(n, d);
     }
 
@@ -87,8 +80,8 @@ public class Rational extends Number implements Comparable<Rational> {
      * Multiply a rational number by this rational
      */
     public Rational multiply(Rational secondRational) {
-        long n = r[0] * secondRational.getNumerator();
-        long d = r[1] * secondRational.getDenominator();
+        long n = numerator.longValue() * secondRational.getNumerator();
+        long d = denominator.longValue() * secondRational.getDenominator();
         return new Rational(n, d);
     }
 
@@ -96,17 +89,17 @@ public class Rational extends Number implements Comparable<Rational> {
      * Divide a rational number by this rational
      */
     public Rational divide(Rational secondRational) {
-        long n = r[0] * secondRational.getDenominator();
-        long d = r[1] * secondRational.getNumerator();
+        long n = numerator.longValue() * secondRational.getDenominator();
+        long d = denominator.longValue() * secondRational.numerator.longValue();
         return new Rational(n, d);
     }
 
     @Override
     public String toString() {
-        if (r[1] == 1)
-            return r[0] + "";
+        if (denominator.intValue() == 1)
+            return numerator + "";
         else
-            return r[0] + "/" + r[1];
+            return numerator + "/" + denominator;
     }
 
     @Override // Override the equals method in the Object class
@@ -129,7 +122,7 @@ public class Rational extends Number implements Comparable<Rational> {
 
     @Override // Implement the doubleValue method in Number
     public double doubleValue() {
-        return r[0] * 1.0 / r[1];
+        return numerator.longValue() * 1.0 / denominator.longValue();
     }
 
     @Override // Implement the abstract longValue method in Number
