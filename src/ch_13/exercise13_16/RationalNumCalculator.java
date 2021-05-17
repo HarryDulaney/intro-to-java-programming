@@ -11,8 +11,8 @@ import java.math.BigInteger;
  * Section 10.10.3, Replacing and Splitting Strings, to retrieve the numerator string and
  * denominator string, and convert strings into integers using the Integer.parseInt
  * method.
- *
- * Usage: java RationalNumCalculator 11/453 * 7/44
+ * <p>
+ * Usage: java RationalNumCalculator "1/5 * 7/8"
  */
 public class RationalNumCalculator {
 
@@ -20,7 +20,7 @@ public class RationalNumCalculator {
 
         if (args.length != 3) {
             System.out.println(
-                    "Usage: java RNumCalculator operand1 operator operand2");
+                    "Usage: java RNumCalculator \"operand1 operator operand2\" ");
             System.exit(0);
         }
         if (args[0].contains("/") || args[2].contains("/")) {
