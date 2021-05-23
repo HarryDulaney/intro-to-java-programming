@@ -1,29 +1,36 @@
-# INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_ 
-### This repo contains solutions to the end-of-chapter exercise’s in <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming</a>
-#### _About the 10th Edition_ 
-"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
-. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."
+# INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_
+### This repo contains solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
+##### _The goal of this repo is to solve the end-of-chapter exercises by satisfying the requirements of the <i><a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a> that comes with the book</i>._ 
+#### - About the 10th Edition - 
+_"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
+. Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of 
+object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."_
 
-### **Links:**
-### <i><a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a></i>
-### <i><a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a></i>
+### **Companion Content:**
+- ### <a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a>
+- ### <a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a>
+- ### <a href="https://liveexample.pearsoncmg.com/javarevel2e.html">Hints to Quizzes and Programming Projects</a>
+- ### <a href='#checkpoint-answers'>Checkpoint Answers</a>
+
+
 
 ____
 ### <em>Contributors:</em>
 
-### Harry Dulaney
+### Harry Dulaney, _Your Name Here_
 ____
 ### <em>Pull requests:</em>  
 _Please feel free to make pull requests. I will do my best to review them quickly._
-##### Pull Requests should be used for adding new solutions to the repo that do not already exist.
+- ##### Pull Requests should be used for adding new solutions to the repo that do not already exist.
 ____
 ### <em>Issue's:</em>  
 _Please feel free to open new Issues._
-##### - To request a specific Exercise that you need answered be sure to include the Chapter and Exercise number. 
-##### - To request a change to an existing solution. 
-##### - If you find a solution that you think is incorrect or can be improved. 
+- ##### To request a specific Exercise that you need answered be sure to include the Chapter and Exercise number. 
+- ##### To request a change to an existing solution. 
+- ##### If you find a solution that you think is incorrect or can be improved. 
 ____
-# Quick Solution Navigator:
+
+<h1>Exercise Solutions:</h1>
 <ul>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_01"><strong
 >Chapter 1</strong></a> - Introduction to Computers, Programs, and Java (Complete)</li><br>
@@ -72,3 +79,56 @@ ____
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 32</strong><!--</a>--> - Java Database Programming</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/src/">--><strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
+
+____
+
+<h1 id="checkpoint-answers">Checkpoint Answers</h1>
+
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter1.html">Chapter 1 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter2.html">Chapter 2 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter3.html">Chapter 3 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter4.html">Chapter 4 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter5.html">Chapter 5 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter6.html">Chapter 6 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter7.html">Chapter 7 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter8.html">Chapter 8 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter9.html">Chapter 9 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter10.html">Chapter 10 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter11.html">Chapter 11 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter12.html">Chapter 12 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter13.html">Chapter 13 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter14.html">Chapter 14 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter15.html">Chapter 15 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter16.html">Chapter 16 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter17.html">Chapter 17 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter18.html">Chapter 18 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter19.html">Chapter 19 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter20.html">Chapter 20 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter21.html">Chapter 21 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter22.html">Chapter 22 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter23.html">Chapter 23 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter24.html">Chapter 24 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter25.html">Chapter 25 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter26.html">Chapter 26 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter27.html">Chapter 27 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter28.html">Chapter 28 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter29.html">Chapter 29 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter30.html">Chapter 30 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter31.html">Chapter 31 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter32.html">Chapter 32 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter33.html">Chapter 33 Check Point Questions</a>
+
+<h2>Bonus Chapters</h2>
+
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter34.html">Chapter 34 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter35.html">Chapter 35 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter36.html">Chapter 36 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter37.html">Chapter 37 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter38.html">Chapter 38 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter39.html">Chapter 39 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter40.html">Chapter 40 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter41.html">Chapter 41 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter42.html">Chapter 42 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter43.html">Chapter 43 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter44.html">Chapter 44 Check Point Questions</a>
+- ##### <a href="https://liveexample.pearsoncmg.com/checkpoint/Chapter45.html">Chapter 45 Check Point Questions</a>
