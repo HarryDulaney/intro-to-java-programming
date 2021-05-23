@@ -18,28 +18,32 @@ public class Rational extends Number implements Comparable<Rational> {
     public Rational() {
         this(0, 1);
     }
+    /**
+     * Construct a rational with default property of 1 for denominator
+     */
+    public Rational(long numerator) {
+        this(numerator, 1);
+    }
+
 
     /**
      * Construct a rational with specified numerator and denominator
      */
     public Rational(long numerator, long denominator) {
-        long gcd = gcd(numerator, denominator);
-        this.numerator = BigInteger.valueOf(((denominator > 0) ? 1 : -1) * numerator / gcd);
-        this.denominator = BigInteger.valueOf(Math.abs(denominator) / gcd);
+        BigInteger gcd = gcd(numerator, denominator);
+        this.numerator = BigInteger.valueOf(((denominator > 0) ? 1 : -1) * numerator).divide(gcd);
+        this.denominator = BigInteger.valueOf(Math.abs(denominator)).divide(gcd);
     }
 
     /**
      * Find GCD of two numbers
+     *
+     * @return BigInteger value of gcd
      */
-    private static long gcd(long n, long d) {
-        long n1 = Math.abs(n);
-        long n2 = Math.abs(d);
-        int gcd = 1;
-        for (int k = 1; k <= n1 && k <= n2; k++) {
-            if (n1 % k == 0 && n2 % k == 0)
-                gcd = k;
-        }
-        return gcd;
+    private static BigInteger gcd(long n, long d) {
+        BigInteger b1 = BigInteger.valueOf(n);
+        BigInteger b2 = BigInteger.valueOf(d);
+        return b1.gcd(b2);
     }
 
     /**
