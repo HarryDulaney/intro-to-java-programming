@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+  <h:head>
+    <title>Calculator</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <h:panelGrid columns="6">
+        <h:outputLabel value="Number 1"/>
+        <h:inputText id="number1InputText" size ="4" 
+                     style="text-align: right" 
+                     value="#{calculator.number1}"/>
+        <h:outputLabel value="Number 2" />
+        <h:inputText id="number2InputText" size ="4"
+                     style="text-align: right" 
+                     value="#{calculator.number2}"/>
+        <h:outputLabel value="Result" />
+        <h:inputText id="resultInputText" size ="4"
+                     style="text-align: right" 
+                     value="#{calculator.result}"/>
+      </h:panelGrid>
+
+      <h:panelGrid columns="4">
+        <h:commandButton value="Add" 
+                         action ="#{calculator.add}"/>
+         <h:commandButton value="Subtract" 
+                          action ="#{calculator.subtract}"/>
+        <h:commandButton value="Multiply" 
+                         action ="#{calculator.multiply}"/>
+        <h:commandButton value="Divide" 
+                         action ="#{calculator.divide}"/>
+      </h:panelGrid>
+    </h:form>
+  </h:body>
+</html>
+

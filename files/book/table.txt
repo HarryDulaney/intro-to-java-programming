@@ -1,0 +1,5 @@
+'John', 'F', 'Adams'
+'Kate', 'R', 'Dawson'
+'Cindy', 'J', 'Fox'
+'George', 'D', 'Adams'
+'Peter', 'S', 'Tse'

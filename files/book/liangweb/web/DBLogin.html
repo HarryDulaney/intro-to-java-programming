@@ -1,0 +1,28 @@
+<!-- DBLogin.html -->
+<html>
+  <head>
+    <title>
+      DBLogin
+    </title>
+  </head>
+  <body>
+    <form method = "post" action = "DBLoginInitialization.jsp">
+    JDBC Driver
+    <select name = "driver" size = "1">
+      <option>sun.jdbc.odbc.JdbcOdbcDriver</option>
+      <option>com.mysql.jdbc.Driver</option>
+      <option>oracle.jdbc.driver.OracleDriver</option>
+    </select><br /><br />
+    JDBC URL
+    <select name = "url" size = "1">
+      <option>jdbc:odbc:ExampleMDBDataSource</option>
+      <option>jdbc:mysql://localhost/javabook</option>
+      <option>jdbc:oracle:thin:@liang.armstrong.edu:1521:orcl</option>
+    </select><br /><br />
+    Username <input name = "username" /><br /><br />
+    Password <input name = "password" /><br /><br />
+    <input type = "submit" name = "Submit" value = "Login" />
+    <input type = "reset" value = "Reset" />
+    </form>
+  </body>
+</html>

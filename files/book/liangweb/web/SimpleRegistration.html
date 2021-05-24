@@ -1,0 +1,38 @@
+<!-- SimpleRegistration.html -->
+<html>
+  <head>
+    <title>Simple Registration without Confirmation</title>
+  </head>
+  <body>
+    Please register to your instructor's student address book.
+
+    <form method = "post" action = "SimpleRegistration">
+      <p>Last Name <font color = "#FF0000">*</font>
+         <input type = "text" name = "lastName">&nbsp;
+         First Name <font color = "#FF0000">*</font>
+         <input type = "text" name = "firstName">&nbsp;
+         MI <input type = "text" name = "mi" size = "3">
+      </p>
+      <p>Telephone 
+         <input type = "text" name = "telephone" size = "20">&nbsp;
+         Email 
+         <input type = "text" name = "email" size = "28">&nbsp;
+      </p>
+      <p>Street <input type = "text" name = "street" size = "50">
+      </p>
+      <p>City <input type = "text" name = "city" size = "23">&nbsp;
+         State 
+         <select size = "1" name = "state">
+           <option value = "GA">Georgia-GA</option>
+           <option value = "OK">Oklahoma-OK</option>
+           <option value = "IN">Indiana-IN</option>
+         </select>&nbsp;
+         Zip <input type = "text" name = "zip" size = "9">
+      </p>
+      <p><input type = "submit" name = "Submit" value = "Submit">
+         <input type = "reset" value = "Reset">
+      </p>
+    </form>
+    <p><font color = "#FF0000">* required fields</font></p>
+  </body>
+</html>

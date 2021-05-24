@@ -56,7 +56,8 @@ ____
 >Chapter 11</strong></a> - Inheritance and Polymorphism (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_12"><strong
 >Chapter 12</strong></a> - Exception Handling and Text I/O (Complete)</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_13"><strong>Chapter 13</strong></a> - Abstract Classes and Interfaces</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_13"><strong
+>Chapter 13</strong></a> - Abstract Classes and Interfaces (Complete) </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_16"><strong>Chapter

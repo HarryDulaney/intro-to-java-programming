@@ -51,10 +51,10 @@ public class Exercise05_22 {
         System.out.println("Annual Interest Rate (as a percent (ex. enter '7' for 7%)): ");
         double rate = in.nextDouble();
 
-        // Obtain monthly interest rate
-        double monthlyInterestRate = rate / 1200; //As decimal number
+        /* Monthly interest rate */
+        double monthlyInterestRate = rate / 1200;
 
-        // Calculate payment
+        /* Monthly payment */
         double monthlyPayment = loanAmount * monthlyInterestRate / (1
                 - 1 / Math.pow(1 + monthlyInterestRate, numYears * 12));
         System.out.printf("Monthly Payment: %.2f", monthlyPayment);

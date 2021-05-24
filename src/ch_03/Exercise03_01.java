@@ -1,5 +1,6 @@
 package ch_03;
 
+
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
  * the result based on the discriminant. If the discriminant is positive, display two
  * roots. If the discriminant is 0, display one root. Otherwise, display �The equation
  * has no real roots�.
- * Note that you can use Math.pow(x, 0.5) to compute 2x. Here are some
+ * Note that you can use Math.pow(x, 0.5) to compute SQRT(x). Here are some
  * sample runs.
  *
  * @author Harry Dulaney IV
@@ -32,23 +33,20 @@ public class Exercise03_01 {
         b = input.nextDouble();
         c = input.nextDouble();
 
-        double discrim = Math.pow(b, 2) - 4 * a * c;
+        double discriminant = (b * b) - (4 * a * c);
 
-        if (discrim < 0) {
+        if (discriminant < 0) {
             System.out.println("The discriminate is negative, the equation has no real roots.");
-        } else if (discrim == 0) {
+        } else if (discriminant > 0) {
+            double r1 = ((-1 * b) + Math.pow(discriminant, 0.5)) / (2 * a);
+            double r2 = ((-1 * b) - Math.pow(discriminant, 0.5)) / (2 * a);
 
-            double oneRoot = (-1 * b) + (Math.pow(discrim, 0.5) / (2 * a));
+            System.out.print("Two real roots: " + r1 + ", " + r2);
 
-            System.out.print("One real root: " + oneRoot);
 
         } else {
-
-            double root, twoRoot;
-            root = (-1 * b) + (Math.pow(discrim, 0.5) / (2 * a));
-            twoRoot = (-1 * b) - (Math.pow(discrim, 0.5) / (2 * a));
-
-            System.out.print("Two real roots: " + root + " " + twoRoot);
+            double r = ((-1 * b) + Math.pow(discriminant, 0.5)) / (2 * a);
+            System.out.print("One real root: " + r);
         }
         input.close();
     }

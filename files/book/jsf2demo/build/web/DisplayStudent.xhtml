@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+  <h:head>
+    <title>Display Student</title>
+    <h:outputStylesheet name="tablestyle.css"/>
+  </h:head>
+  <h:body>
+    <h:form>
+      <h:outputLabel value="Choose a Course: " />
+      <h:selectOneMenu value="#{courseName.choice}">
+        <f:selectItems value="#{courseName.titles}" />
+      </h:selectOneMenu> 
+      
+      <h:commandButton style="margin-left: 20px" 
+                       value="Display Students" />
+
+      <br /> <br />
+      <h:dataTable value="#{courseName.students}" var="student"
+                   rowClasses="oddTableRow, evenTableRow"
+                   headerClass="tableHeader"
+                   styleClass="table">
+        <h:column>
+          <f:facet name="header">SSN</f:facet>
+          #{student.ssn}
+        </h:column>
+
+        <h:column>
+          <f:facet name="header">First Name</f:facet>
+          #{student.firstName}
+        </h:column>
+
+        <h:column>
+          <f:facet name="header">MI</f:facet>
+          #{student.mi}
+        </h:column>
+
+        <h:column>
+          <f:facet name="header">Last Name</f:facet>
+          #{student.lastName}
+        </h:column>
+        
+        <h:column>
+          <f:facet name="header">Phone</f:facet>
+          #{student.phone}
+        </h:column>
+
+        <h:column>
+          <f:facet name="header">Birth Date</f:facet>
+          #{student.birthDate}
+        </h:column>
+
+        <h:column>
+          <f:facet name="header">Dept</f:facet>
+          #{student.deptId}
+        </h:column>
+      </h:dataTable>
+    </h:form>
+  </h:body>
+</html>
+

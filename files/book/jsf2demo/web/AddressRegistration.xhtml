@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+  <h:head>
+    <title>Student Registration Form</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <!-- Use h:graphicImage -->
+      <h3>Student Registration Form
+        <h:graphicImage name="usIcon.gif" library="image"/>
+      </h3>
+
+      Please register to your instructor's student address book.
+      <!-- Use h:panelGrid -->
+      <h:panelGrid columns="6">
+        <h:outputLabel value="Last Name" style="color:red"/>
+        <h:inputText id="lastNameInputText" 
+                     value="#{addressRegistration.lastName}"/>
+        <h:outputLabel value="First Name" style="color:red"/>
+        <h:inputText id="firstNameInputText" 
+                     value="#{addressRegistration.firstName}"/>
+        <h:outputLabel value="MI" />
+        <h:inputText id="miInputText" size="1"
+                     value="#{addressRegistration.mi}"/>
+      </h:panelGrid>
+
+      <h:panelGrid columns="4">
+        <h:outputLabel value="Telephone"/>
+        <h:inputText id="telephoneInputText" 
+                     value="#{addressRegistration.telephone}"/>
+        <h:outputLabel value="Email"/>
+        <h:inputText id="emailInputText" 
+                     value="#{addressRegistration.email}"/>
+      </h:panelGrid>
+
+      <h:panelGrid columns="4">
+        <h:outputLabel value="Street"/>
+        <h:inputText id="streetInputText" 
+                     value="#{addressRegistration.street}"/>
+      </h:panelGrid>
+
+      <h:panelGrid columns="6">
+        <h:outputLabel value="City"/>
+        <h:inputText id="cityInputText" 
+                     value="#{addressRegistration.city}"/>
+        <h:outputLabel value="State"/>
+        <h:selectOneMenu id="stateSelectOneMenu"
+                         value="#{addressRegistration.state}">
+          <f:selectItem itemLabel="Georgia-GA" itemValue="GA" />
+          <f:selectItem itemLabel="Oklahoma-OK" itemValue="OK" />
+          <f:selectItem itemLabel="Indiana-IN" itemValue="IN"/>
+        </h:selectOneMenu> 
+        <h:outputLabel value="Zip"/>
+        <h:inputText id="zipInputText" 
+                     value="#{addressRegistration.zip}"/>
+      </h:panelGrid>
+
+      <!-- Use command button -->
+      <h:commandButton value="Register" 
+                       action="#{addressRegistration.processSubmit()}"/>
+      <br />
+      <h:outputText escape="false" style="color:red"
+                    value="#{addressRegistration.requiredFields}" />
+    </h:form>
+  </h:body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for Notepad -->
+
+<jnlp spec="1.0+"
+      codebase="http://www.cs.armstrong.edu/liang/intro8e/book/" 
+      href="Notepad.jnlp">
+   <information>
+      <title>Notepad Demo</title>
+      <vendor>The Java(tm) Tutorial</vendor>
+      <description>Notepad Demo</description>
+      <homepage href="http://download.oracle.com/docs/cd/E17409_01/javase/tutorial/deployment/webstart/running.html"/>
+      <description kind="short">ClickMeApp uses 3 custom classes plus several
+       standard ones</description>
+      <offline-allowed/>
+   </information>
+   <resources>     
+   	<jar href="Notepad.jar"/>   
+	<j2se version="1.6+"
+	      href="http://java.sun.com/products/autodl/j2se"/>
+   </resources>
+   <application-desc main-class="Notepad"/>
+</jnlp>

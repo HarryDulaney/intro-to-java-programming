@@ -127,4 +127,13 @@ public class Complex extends Number implements Cloneable {
     public double doubleValue() {
         return a + b * i;
     }
+
+    @Override
+    public String toString() {
+        if (b == 0)
+            return String.format("%2.1f", a);
+        else
+            return String.format("%2.1f + %2.4fi", a, b);
+    }
+
 }
