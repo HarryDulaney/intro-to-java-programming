@@ -30,7 +30,7 @@ public class RationalNumCalculator {
                 long n = Long.parseLong(operand1[0]);
                 long d = Long.parseLong(operand1[1]);
                 r1 = new Rational(n, d);
-            } else {
+            } else { //Not a rational number
                 r1 = new Rational(Long.parseLong(args[0]), 1); // args[0] is not a rational number. So set to number_value(args[0]) / 1
             }
             Rational r2 = new Rational();
@@ -56,7 +56,7 @@ public class RationalNumCalculator {
                 case '/':
                     result = r1.divide(r2);
             }
-            System.out.println("Rational Number calculator result: " + result.intValue()); //Actually returns double value
+            System.out.println("Rational Number calculator result: " + result.intValue());
 
         } else {
             int result = 0;

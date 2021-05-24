@@ -1,8 +1,4 @@
-package ch_13;
-
-import ch_13.exercise13_05.GeometricObject;
-import ch_13.exercise13_05.Rectangle;
-import ch_13.exercise13_05.Circle;
+package ch_13.exercise13_12;
 
 import java.util.Random;
 

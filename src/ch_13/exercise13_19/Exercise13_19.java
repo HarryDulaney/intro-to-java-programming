@@ -1,6 +1,4 @@
-package ch_13;
-
-import ch_13.exercise13_15.Rational;
+package ch_13.exercise13_19;
 
 import java.util.Scanner;
 
@@ -8,7 +6,7 @@ import java.util.Scanner;
  * 13.19 (Convert decimals to fractions) Write a program that prompts the user to enter
  * a decimal number and displays the number in a fraction. Hint: read the decimal
  * number as a string, extract the integer part and fractional part from the string,
- * and use the BigInteger implementation of the Rational class in Programming
+ * and use the BigInteger implementation of the {@linkplain Rational} class in Programming
  * Exercise 13.15 to obtain a rational number for the decimal number. Here are some
  * sample runs:
  * Enter a decimal number: 3.25
