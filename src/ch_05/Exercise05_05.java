@@ -15,7 +15,6 @@ import java.util.*;
  * <p>
  * 1 kilogram == 2.2 pounds
  *
- * @author Harry Dulaney
  */
 public class Exercise05_05 {
     public static void main(String[] args) {
