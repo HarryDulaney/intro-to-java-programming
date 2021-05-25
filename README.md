@@ -4,7 +4,7 @@
 #### - About the 10th Edition - 
 _"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
 . Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of 
-object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."_
+object-oriented, GUI programming, advanced GUI and Web programming using Java..."_
 
 ### **Companion Content:**
 - ### <a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a>
