@@ -23,7 +23,6 @@ public class Exercise05_10 {
                     count = 0;
                 }
 
-
             }
 
         }

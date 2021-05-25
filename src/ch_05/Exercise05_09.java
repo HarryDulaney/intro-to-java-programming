@@ -47,7 +47,6 @@ public class Exercise05_09 {
                 continue;
             }
 
-
             if (tempScore < highScore && tempScore > secondHigh) {
                 secondHigh = tempScore;
                 secondName = tempName;
@@ -55,13 +54,9 @@ public class Exercise05_09 {
             numStudents--;
 
         }
-
-
         System.out.println("The top two students are: ");
         System.out.print(highName + "'s score of " + highScore);
         System.out.print(" and " + secondName + "'s score of " + secondHigh);
-
-
     }
 
 }
