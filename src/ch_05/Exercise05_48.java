@@ -9,7 +9,7 @@ import java.util.*;
  * Enter a string: Beijing Chicago
  * BiigCiao
  *
- * @author Harry Dulaney
+ * By: Harry Dulaney
  */
 public class Exercise05_48 {
     public static void main(String[] args) {

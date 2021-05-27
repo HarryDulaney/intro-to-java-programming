@@ -1,7 +1,8 @@
 package ch_05;
 
 /**
- * 5.3 (Conversion from kilograms to pounds) Write a program that displays the following table (note that 1 kilogram is 2.2 pounds):
+ * 5.3 (Conversion from kilograms to pounds)
+ * Write a program that displays the following table (note that 1 kilogram is 2.2 pounds):
  * Kilograms Pounds
  * 1 2.2
  * 3 6.6
