@@ -8,7 +8,6 @@ package ch_03;
  *
  * @author Harry Dulaney IV
  */
-
 public class Exercise03_07 {
     public static void main(String[] args) {
         java.util.Scanner in = new java.util.Scanner(System.in);

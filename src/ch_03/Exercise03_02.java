@@ -10,7 +10,6 @@ import java.util.Scanner;
  *
  * @author Harry Dulaney IV
  */
-
 public class Exercise03_02 {
 
     public static void main(String[] args) {
