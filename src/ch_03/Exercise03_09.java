@@ -69,7 +69,7 @@ public class Exercise03_09 {
             line = line + d10;
         }
         System.out.println("The ISBN-10 number is: " + line);
-
+        input.close();
     }
 
 }

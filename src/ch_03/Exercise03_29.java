@@ -19,7 +19,6 @@ import java.util.Scanner;
  *
  * @author Harry Dulaney
  */
-
 public class Exercise03_29 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
