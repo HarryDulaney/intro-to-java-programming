@@ -7,8 +7,7 @@ import java.util.Scanner;
  * gives the source code to compute taxes for single filers. Complete Listing
  * 3.5 to compute the taxes for all filing statuses
  * 
- * @author Harry Dulaney 
- * 
+ *
  */
 public class Exercise03_13 {
 

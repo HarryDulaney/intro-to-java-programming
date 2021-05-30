@@ -1,8 +1,10 @@
 package ch_04;
 
-// displays a random upper-case character
 
-
+/**
+ * 4.16 (Random character) Write a program that displays a random uppercase letter
+ * using the Math.random() method.
+ */
 public class Exercise04_16 {
     public static void main(String[] args) {
 
@@ -10,9 +12,9 @@ public class Exercise04_16 {
         //So we need to generate a random number in range 65 to 90
         //And then print its char value
 
-        int random = 65 + (int)(Math.random() * 26);
+        int random = 65 + (int) (Math.random() * 26);
 
-        System.out.println((char)(random));
+        System.out.println((char) (random));
 
     }
 

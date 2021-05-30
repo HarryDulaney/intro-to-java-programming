@@ -17,10 +17,7 @@ import java.util.Scanner;
  * <p>
  * 3. If one digit in the user input matches a digit in the lottery number, the
  * award is $1,000
- *
- * @author Harry Dulaney
  */
-
 public class Exercise03_15 {
     public static void main(String[] args) {
 

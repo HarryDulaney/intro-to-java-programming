@@ -6,7 +6,6 @@ package ch_03;
  * units such as 1 dollar and 1 penny, and plural words for more than one unit such
  * as 2 dollars and 3 pennies.
  *
- * @author Harry Dulaney IV
  */
 public class Exercise03_07 {
     public static void main(String[] args) {

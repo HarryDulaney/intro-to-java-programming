@@ -18,7 +18,6 @@ import java.util.Scanner;
  * Note that you can use Math.pow(x, 0.5) to compute SQRT(x). Here are some
  * sample runs.
  *
- * @author Harry Dulaney IV
  */
 public class Exercise03_01 {
     public static void main(String[] args) {

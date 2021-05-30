@@ -9,8 +9,6 @@ import java.util.Scanner;
  * right. Here is a sample run of this program:
  * <p>
  * Enter a three-digit integer: 121 121 is a palindrome
- *
- * @author Harry Dulaney
  */
 public class Exercise03_12 {
     public static void main(String[] args) {
