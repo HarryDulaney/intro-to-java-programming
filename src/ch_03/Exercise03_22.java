@@ -1,6 +1,5 @@
 package ch_03;
 
-import java.awt.*;
 import java.util.*;
 
 /**
@@ -24,8 +23,6 @@ import java.util.*;
  * <p>
  * Enter a point with two coordinates: 9 9
  * Point (9.0, 9.0) is not in the circle
- *
- * @author Harry Dulaney
  */
 public class Exercise03_22 {
     public static void main(String[] args) {

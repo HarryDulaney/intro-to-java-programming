@@ -24,7 +24,6 @@ import java.util.*;
  * Enter x1, y1, x2, y2, x3, y3, x4, y4: 2 2 7 6.0 4.0 2.0 -1.0 -2.0
  * The two lines are parallel
  *
- * @author Harry Dulaney
  */
 public class Exercise03_25 {
     public static void main(String[] args) {

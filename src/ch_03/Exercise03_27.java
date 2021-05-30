@@ -23,8 +23,7 @@ import java.util.*;
  * The point is in the triangle
  * <p>
  *
- * @author Harry Dulaney
- */
+*/
 public class Exercise03_27 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

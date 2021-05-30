@@ -16,7 +16,6 @@ import java.util.Scanner;
  * Here are sample runs: scissor (0), rock (1), paper (2): 1 The computer is
  * scissor. You are rock. You won
  *
- * @author Harry Dulaney
  */
 public class Exercise03_17 {
 

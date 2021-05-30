@@ -71,6 +71,7 @@ public class Exercise14_03 extends Application {
         vbox.getChildren().add(cardBox);
         vbox.getChildren().add(buttonBar);
         Scene scene = new Scene(vbox);
+        primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
 

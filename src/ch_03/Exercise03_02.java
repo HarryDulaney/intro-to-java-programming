@@ -8,7 +8,6 @@ import java.util.Scanner;
  * Revise the program to generate three single-digit integers and prompt the user to
  * enter the sum of these three integers.
  *
- * @author Harry Dulaney IV
  */
 public class Exercise03_02 {
 

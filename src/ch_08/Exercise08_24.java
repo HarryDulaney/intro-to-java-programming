@@ -7,7 +7,6 @@ import java.util.*;
  * Rewrite the program by checking whether every row, every column,
  * and every small box has the numbers 1 to 9.
  *
- * @author Harry Dulaney
  */
 public class Exercise08_24 {
     static boolean useTestData = true;

@@ -55,6 +55,7 @@ public class Exercise14_04 extends javafx.application.Application {
 
 
         Scene scene = new Scene(gridPane, 250, 100);
+        primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
 

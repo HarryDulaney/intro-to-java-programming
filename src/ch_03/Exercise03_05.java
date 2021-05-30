@@ -8,7 +8,6 @@ import java.util.Scanner;
  * prompt the user to enter the number of days after today for a future day and display
  * the future day of the week.
  *
- * @author Harry G. Dulaney IV
  */
 public class Exercise03_05 {
 

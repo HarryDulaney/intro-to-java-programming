@@ -1,27 +1,26 @@
 # INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_
 ### This repo contains solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
-##### _The goal of this repo is to solve the end-of-chapter exercises by satisfying the requirements of the <i><a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a> that comes with the book</i>._ 
 #### - About the 10th Edition - 
 _"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
 . Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of 
-object-oriented, GUI programming, advanced GUI and Web programming using Java. Liang approaches Java GUI programming using JavaFX, not only because JavaFX is much simpler for new Java programmers to learn and use but because it has replaced Swing as the new GUI tool for developing cross-platform-rich Internet applications on desktop computers, on hand-held devices, and on the Web. Additionally, for instructors, JavaFX provides a better teaching tool for demonstrating object-oriented programming."_
+object-oriented, GUI programming, advanced GUI and Web programming using Java..."_
 
 ### **Companion Content:**
 - ### <a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a>
 - ### <a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a>
 - ### <a href="https://liveexample.pearsoncmg.com/javarevel2e.html">Hints to Quizzes and Programming Projects</a>
 - ### <a href='#checkpoint-answers'>Checkpoint Answers</a>
+- ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/ExampleByChapters.html">Example Programs By Chapter</a>
+- ### <a href="http://liveexample.pearsoncmg.com/liang/animation/animation.html">Algorithm Animations</a>
+- ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/supplement/Supplement1dcodingguidelines.html">Java Coding Style Guidelines</a>
 
 
 
-____
-### <em>Contributors:</em>
-
-### Harry Dulaney, _Your Name Here_
 ____
 ### <em>Pull requests:</em>  
-_Please feel free to make pull requests. I will do my best to review them quickly._
+_Please feel free to make pull requests. They are reviewed quickly_
 - ##### Pull Requests should be used for adding new solutions to the repo that do not already exist.
+
 ____
 ### <em>Issue's:</em>  
 _Please feel free to open new Issues._

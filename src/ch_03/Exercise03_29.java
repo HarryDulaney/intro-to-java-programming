@@ -17,7 +17,6 @@ import java.util.Scanner;
  * Enter circle2's center x-, y-coordinates, and radius: 1 1.7 4.5
  * circle2 is inside circle1
  *
- * @author Harry Dulaney
  */
 public class Exercise03_29 {
     public static void main(String[] args) {

@@ -20,8 +20,6 @@ import java.util.*;
  * <p>
  * Enter a point with two coordinates: 6 4
  * Point (6.0, 4.0) is not in the rectangle
- *
- * @author Harry Dulaney
  */
 public class Exercise03_23 {
     public static void main(String[] args) {

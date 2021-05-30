@@ -11,10 +11,7 @@ import java.util.*;
  * Write a program that prompts the user to enter the weight of the package and
  * display the shipping cost. If the weight is greater than 50, display a
  * message “the package cannot be shipped.”
- *
- * @author Harry Dulaney
  */
-
 public class Exercise03_18 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -48,6 +48,7 @@ public class Exercise14_01 extends Application {
 
         gridPane.getChildren().addAll(imgV01, imgV02, imgV03, imgV04);
         Scene scene = new Scene(gridPane);
+        primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
 

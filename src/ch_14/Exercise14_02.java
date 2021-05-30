@@ -46,6 +46,7 @@ public class Exercise14_02 extends Application {
             }
         }
         Scene scene = new Scene(gameBoard, 315, 315);
+        primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

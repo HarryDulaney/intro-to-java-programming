@@ -6,7 +6,6 @@ package ch_03;
  * inches, you will enter 5 for feet and 10 for inches.
  * <p>
  *
- * @author Harry Dulaney IV
  */
 public class Exercise03_06 {
     public static void main(String[] args) {
