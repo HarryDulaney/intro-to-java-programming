@@ -10,7 +10,6 @@ import java.util.*;
  * Exercise17_02.dat if it does not exist. Append new data to it if it already exists.
  * Write 100 integers created randomly into the file using binary I/O.
  *
- * @author Harry Dulaney
  */
 
 public class Exercise17_02 {

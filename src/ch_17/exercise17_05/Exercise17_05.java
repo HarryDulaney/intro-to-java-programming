@@ -10,7 +10,6 @@ import java.util.*;
  * int values 1, 2, 3, 4, and 5, a Date object for the current time, and the double
  * value 5.5 into the file named Exercise17_05.dat.
  *
- * @author Harry D.
  */
 public class Exercise17_05 {
     public static void main(String[] args) {

@@ -15,7 +15,6 @@ import java.io.*;
  * know how many Loan objects are there in the file, use EOFException to end
  * the loop.
  *
- * @author Harry D.
  */
 public class Exercise17_07 {
     public static void main(String[] args) {

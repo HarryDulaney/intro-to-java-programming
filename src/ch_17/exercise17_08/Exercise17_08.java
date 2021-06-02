@@ -12,7 +12,6 @@ import java.util.*;
  * count in Exercise17_08.dat.
  * <p>
  *
- * @author Harry Dulaney
  */
 public class Exercise17_08 {
     public static void main(String[] args) throws FileNotFoundException {

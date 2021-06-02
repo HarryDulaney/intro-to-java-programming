@@ -1,0 +1,46 @@
+### **Companion Content:**
+- ### <a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a>
+- ### <a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a>
+- ### <a href="https://liveexample.pearsoncmg.com/javarevel2e.html">Hints to Quizzes and Programming Projects</a>
+- ### <a href='#checkpoint-answers'>Checkpoint Answers</a>
+- ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/ExampleByChapters.html">Example Programs By Chapter</a>
+- ### <a href="http://liveexample.pearsoncmg.com/liang/animation/animation.html">Algorithm Animations</a>
+- ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/supplement/Supplement1dcodingguidelines.html">Java Coding Style Guidelines</a>
+
+
+
+____
+### <em>Pull requests:</em>
+_Please feel free to make pull requests. They are reviewed quickly_
+- ##### Pull Requests should be used for adding new solutions to the repo that do not already exist.
+
+____
+### <em>Issue's:</em>
+_Please feel free to open new Issues._
+- ##### To request a specific Exercise that you need answered be sure to include the Chapter and Exercise number.
+- ##### To request a change to an existing solution.
+- ##### If you find a solution that you think is incorrect or can be improved.
+____
+
+<h1>Exercise Solutions:</h1>
+<ul>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_01"><strong
+>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_02"><strong
+>Chapter 2</strong></a> - Elementary Programming (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_03"><strong
+>Chapter 3</strong></a> - Selections (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_04"><strong
+>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_05"><strong
+>Chapter 5</strong></a> - Loops (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_06"><strong
+>Chapter 6</strong></a> - Methods (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_07"><strong
+>Chapter 7</strong></a> - Single-Dimensional Arrays (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_08"><strong
+>Chapter 8</strong></a> - MultiDimensional Arrays (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_09"><strong
+>Chapter 9</strong></a> - Objects and Classes (Complete)</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/src/ch_10"><strong
+>Chapter 10</strong></a> - Object-Ori
