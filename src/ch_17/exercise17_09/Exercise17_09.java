@@ -20,7 +20,6 @@ import java.util.List;
  * the size of name, street, city, state, and zip is 32, 32, 20, 2, 5 bytes, respectively.
  * FIGURE 17.20 The application can store, retrieve, and update addresses rom a file.
  *
- * @author Harry D.
  */
 public class Exercise17_09 extends Application {
     static String[] packageParts = Exercise17_09.class.getPackage().getName().split("\\.");

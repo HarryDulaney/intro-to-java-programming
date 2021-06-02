@@ -19,7 +19,6 @@ import java.util.*;
  * cmdline: javac ch_17.exercise17_04.Exercise17_04.java
  * cmdline: java ch_17.exercise17_04.Exercise17_04 textfile.txt nameForOutFile.utf
  *
- * @author Harry D.
  */
 public class Exercise17_04 {
     public static void main(String[] args) {
