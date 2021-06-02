@@ -5,9 +5,7 @@ package ch_03;
  * between 1 and 12 and displays the English month name January,
  * February, �, December for the number 1, 2, �, 12, accordingly.
  *
- * @author Harry Dulaney IV
  */
-
 public class Exercise03_04 {
     public static void main(String[] args) {
 

@@ -36,7 +36,6 @@ import java.util.*;
  * year.)
  *
  *
- * @author Harry D.
  */
 public class Exercise03_21 {
     public static void main(String[] args) {

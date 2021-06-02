@@ -1,53 +1,50 @@
 package ch_05;
 
-/*5.2 (Repeat additions) Listing 5.4
- * SubtractionQuizLoop.java generates five random subtraction questions.
- * Revise the program to generate ten random addition questions for two 
- * integers between 1 and 15. 
- * Display the correct count and test time.
- */
 import java.util.Scanner;
 
+/**
+ * 5.2 (Repeat additions) Listing 5.4
+ * SubtractionQuizLoop.java generates five random subtraction questions.
+ * Revise the program to generate ten random addition questions for two
+ * integers between 1 and 15.
+ * Display the correct count and test time.
+ */
 public class Exercise05_02 {
-  public static void main(String[] args) {
-	  
-	  final int NUMBER_OF_QUESTIONS = 10; // Number of questions
-	    int correctCount = 0; // Count the number of correct answers
-	    int count = 0; // Count the number of questions
-	    long startTime = System.currentTimeMillis();
-	    String output = " "; // output string is initially empty
-	    
-	    Scanner input = new Scanner(System.in);
-	    
-	    while (count < NUMBER_OF_QUESTIONS) {
-	      
-	      int number1 = 1 + (int)(Math.random() * 15);
-	      int number2 = 1 + (int)(Math.random() * 15);
-	     
-	      System.out.println("What is " + number1 + " + " + number2 + "? ");
-	      int answer = input.nextInt();
+    private static final int NUMBER_OF_QUESTIONS = 2;
 
-	      if (number1 + number2 == answer) {
-	        System.out.println("You are correct!\n");
-	        correctCount++;
-	      }
-	      else
-	        System.out.println("Your answer is wrong.\n" + number1 
-	          + " + " + number2 + " should be " + (number1 + number2) + "\n");
+    public static void main(String[] args) {
+        int correctAnswers = 0;
+        int count = 0; // Number of questions asked
+        long startTime = System.currentTimeMillis();
+        String result = "";
 
-	     
-	      count++;
+        Scanner in = new Scanner(System.in);
 
-	      output += "\n" + number1 + "+" + number2 + "=" + answer + 
-	        ((number1 + number2 == answer) ? " correct" : " wrong");
-	    }
+        while (count < NUMBER_OF_QUESTIONS) {
 
-	    long endTime = System.currentTimeMillis();
-	    long testTime = endTime - startTime;
-	    
+            int n1 = 1 + (int) (Math.random() * 15);
+            int n2 = 1 + (int) (Math.random() * 15);
 
-	    System.out.println("Correct Count is " + correctCount + 
-	      "\nExercise25_01 time is " + testTime / 1000 + " seconds\n" + output);
-	  
-  }
+            System.out.println("What is " + n1 + " + " + n2 + "? ");
+            int answer = in.nextInt();
+
+            if (n1 + n2 == answer) {
+                System.out.println("Correct answer!\n");
+                correctAnswers++;
+
+            } else {
+                System.out.println("Wrong answer...");
+                System.out.println("(Answer) " + n1 + " + " + n2 + " = " + (n1 + n2));
+
+            }
+            count++;
+        }
+
+        long endTime = System.currentTimeMillis();
+        long totalTimeMillis = endTime - startTime;
+
+
+        System.out.println("Total correct answers is " + correctAnswers);
+        System.out.println("Total runtime was: " + (totalTimeMillis / 1000) + " seconds.");
+    }
 }

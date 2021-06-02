@@ -15,10 +15,7 @@ import java.util.Scanner;
  * <p>
  * Enter investment amount: 1000.56 Enter annual interest rate in percentage:
  * 4.25 Enter number of years: 1 Accumulated value is $1043.92
- *
- * @author Harry Dulaney
  */
-
 public class Exercise02_21 {
 
     public static void main(String[] args) {

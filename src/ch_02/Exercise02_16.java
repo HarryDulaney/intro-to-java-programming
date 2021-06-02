@@ -1,12 +1,11 @@
 package ch_02;
-/*
-2.16 (Geometry: area of a hexagon) Write a program that prompts the user to enter the
-side of a hexagon and displays its area.
-*/
 
 import java.util.Scanner;
 
-
+/**
+ * 2.16 (Geometry: area of a hexagon) Write a program that prompts the user to enter the
+ * side of a hexagon and displays its area.
+ */
 public class Exercise02_16 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

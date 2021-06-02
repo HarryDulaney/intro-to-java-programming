@@ -8,7 +8,6 @@ import java.util.Random;
  * it does not exist. Append new data to it if it already exists. Write 100 integers
  * created randomly into the file using text I/O. Integers are separated by a space.
  *
- * @author Harry D
  */
 public class Exercise17_01 {
     public static void main(String[] args) {

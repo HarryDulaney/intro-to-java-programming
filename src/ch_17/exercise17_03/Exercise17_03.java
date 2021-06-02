@@ -14,7 +14,6 @@ import java.util.*;
  * writeInt(int) in DataOutputStream. The file contains an unspecified
  * number of integers. Write a program to find the sum of the integers
  *
- * @author Harry D.
  */
 public class Exercise17_03 {
     public static void main(String[] args) {

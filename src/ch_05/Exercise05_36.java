@@ -10,6 +10,7 @@ import java.util.*;
  * Write a program that prompts the user to enter the first 9 digits and
  * displays the 10-digit ISBN (including leading zeros). Your program should
  * read the input as an integer.}
+ * By: Harry Dulaney
  */
 public class Exercise05_36 {
     public static void main(String[] args) {

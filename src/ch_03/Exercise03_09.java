@@ -19,7 +19,6 @@ import java.util.Scanner;
  * displays the 10-digit ISBN (including leading zeros). Your program should
  * read the input as an integer.
  *
- * @author Harry Dulaney
  */
 public class Exercise03_09 {
 
@@ -69,7 +68,7 @@ public class Exercise03_09 {
             line = line + d10;
         }
         System.out.println("The ISBN-10 number is: " + line);
-
+        input.close();
     }
 
 }

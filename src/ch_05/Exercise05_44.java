@@ -20,7 +20,7 @@ public class Exercise05_44 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
+        System.out.print("Enter a short integer: ");
         short number = in.nextShort();
 
         String bits = "";

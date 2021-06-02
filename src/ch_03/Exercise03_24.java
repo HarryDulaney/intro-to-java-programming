@@ -11,8 +11,6 @@ import java.util.*;
  * Here is a sample run of the program:
  * <p>
  * The card you picked is Jack of Hearts
- *
- * @author Harry Dulaney
  */
 public class Exercise03_24 {
     public static void main(String[] args) {

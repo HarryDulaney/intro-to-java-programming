@@ -14,7 +14,6 @@ import java.util.Arrays;
  * Exercise17_06.dat.
  * <p>
  *
- * @author Harry D.
  */
 public class Exercise17_06 {
     /**

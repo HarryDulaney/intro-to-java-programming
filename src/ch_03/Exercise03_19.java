@@ -10,7 +10,6 @@ import java.util.*;
  * The input is valid if the sum of every pair of two edges is greater than the
  * remaining edge
  *
- * @author Harry Dulaney
  */
 public class Exercise03_19 {
     public static void main(String[] args) {

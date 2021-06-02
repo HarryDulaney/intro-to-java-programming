@@ -9,7 +9,6 @@ import java.util.Scanner;
  * Revise the program to randomly generate an addition question with two
  * integers less than 100.
  *
- * @author Harry Dulaney
  */
 public class Exercise03_10 {
 

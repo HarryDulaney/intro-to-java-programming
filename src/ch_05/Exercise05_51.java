@@ -11,7 +11,7 @@ package ch_05;
  * Enter the second string: Macon
  * Atlanta and Macon have no common prefix
  *
- * @author Harry Dulaney IV
+ * By: Harry Dulaney
  */
 public class Exercise05_51 {
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class Exercise05_51 {
 
         } else {
             int indexOfLCP = 0;
-            for (int i = 0; i < (lengthOne > lengthTwo ? lengthOne : lengthTwo); i++) {
+            for (int i = 0; i < (Math.max(lengthOne, lengthTwo)); i++) {
 
                 if (str1.charAt(i) == str2.charAt(i)) {
                     indexOfLCP = i;

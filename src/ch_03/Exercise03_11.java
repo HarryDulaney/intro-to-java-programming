@@ -9,7 +9,6 @@ import java.util.Scanner;
  * should display that February 2012 had 29 days. If the user entered month 3
  * and year 2015, the program should display that March 2015 had 31 days.
  *
- * @author Harry Dulaney
  */
 public class Exercise03_11 {
 

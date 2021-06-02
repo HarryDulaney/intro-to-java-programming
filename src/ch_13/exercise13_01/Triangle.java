@@ -54,7 +54,7 @@ import java.util.Scanner;
 * 																	|				
 *__________________________________________________________________|*/
 
-/*13.1 (Triangle2D class) Design a new Triangle2D class that extends the abstract
+/** 13.1 (Triangle2D class) Design a new Triangle2D class that extends the abstract
  *GeometricObject class. Draw the UML diagram for the classes Triangle2D
  *and GeometricObject and then implement the Triangle2D class. Write a test
  *program that prompts the user to enter three sides of the triangle, a color, and a
@@ -64,8 +64,6 @@ import java.util.Scanner;
  *to indicate whether it is filled or not.
  *
  */
-
-
 public class Triangle extends GeometricObject {
 
     private double side1;

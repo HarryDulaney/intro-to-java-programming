@@ -12,15 +12,11 @@ import java.util.*;
  * speed. The program displays the wind-chill temperature if the input is valid;
  * otherwise, it displays a message indicating whether the temperature and/or
  * wind speed is invalid.
- *
- * @author Harry Dulaney
  */
-
 public class Exercise03_20 extends Exercise03_21 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-
         System.out.println("Enter the temperature in Fahrenheit between -58°F and 41°F: ");
         double temp = input.nextDouble();
 

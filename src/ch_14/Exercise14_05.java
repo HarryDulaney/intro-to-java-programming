@@ -36,6 +36,7 @@ public class Exercise14_05 extends Application {
 
         }
         Scene scene = new Scene(pane, 225, 225);
+        primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

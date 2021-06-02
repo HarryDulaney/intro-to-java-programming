@@ -7,14 +7,11 @@ import java.util.*;
  * program that prompts the user to enter three
  * points (x1, y1), (x2, y2), (x3, y3) of a triangle and
  * displays its area
- *
- * @author Harry D.
- */
+ **/
 public class Exercise02_19 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-
         System.out.println("Enter three points for a triangle: ");
 
         double x1 = input.nextDouble();
