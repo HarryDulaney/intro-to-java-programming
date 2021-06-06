@@ -1,0 +1,292 @@
+A property that represents the dialog expandable content area. Any Node
+     * can be placed in this area, but it will only be shown when the user
+     * clicks the 'Show Details' expandable button. This button will be added
+     * automatically when the expandable content property is non-null.
+     */
+    public final ObjectProperty<Node> expandableContentProperty() {
+        return expandableContentProperty;
+    }
+
+    /**
+     * Returns the dialog expandable content node, if one is set, or null
+     * otherwise.
+     */
+    public final Node getExpandableContent() {
+        return expandableContentProperty.get();
+    }
+
+    /**
+     * Sets the dialog expandable content node, or null if no expandable content
+     * needs to be shown.
+     */
+    public final void setExpandableContent(Node content) {
+        this.expandableContentProperty.set(content);
+    }
+
+
+    // --- expanded
+    private final BooleanProperty expandedProperty = new SimpleBooleanProperty(this, "expanded", false) {
+        protected void invalidated() {
+            final Node expandableContent = getExpandableContent();
+
+            if (expandableContent != null) {
+                expandableContent.setVisible(isExpanded());
+            }
+
+            requestLayout();
+        }
+    };
+
+    /**
+     * Represents whether the dialogPane is expanded.
+     */
+    public final BooleanProperty expandedProperty() {
+        return expandedProperty;
+    }
+
+    /**
+     * Returns whether or not the dialogPane is expanded.
+     *
+     * @return true if dialogPane is expanded.
+     */
+    public final boolean isExpanded() {
+        return expandedProperty().get();
+    }
+
+    /**
+     * Sets whether the dialogPane is expanded. This only makes sense when there
+     * is {@link #expandableContentProperty() expandable content} to show.
+     *
+     * @param value true if dialogPane should be expanded.
+     */
+    public final void setExpanded(boolean value) {
+        expandedProperty().set(value);
+    }
+
+
+
+    /**************************************************************************
+     *
+     * Public API
+     *
+     **************************************************************************/
+
+    // --- button types
+    /**
+     * Observable list of button types used for the dialog button bar area
+     * (created via the {@link #createButtonBar()} method). Modifying the contents
+     * of this list will immediately change the buttons displayed to the user
+     * within the dialog pane.
+     *
+     * @return The {@link ObservableList} of {@link ButtonType button types}
+     *         available to the user.
+     */
+    public final ObservableList<ButtonType> getButtonTypes() {
+        return buttons;
+    }
+
+    /**
+     * This method provides a way in which developers may retrieve the actual
+     * Node for a given {@link ButtonType} (assuming it is part of the
+     * {@link #getButtonTypes() button types} list).
+     *
+     * @param buttonType The {@link ButtonType} for which a Node representation is requested.
+     * @return The Node used to represent the button type, as created by
+     *         {@link #createButton(ButtonType)}, and only if the button type
+     *         is part of the {@link #getButtonTypes() button types} list, otherwise null.
+     */
+    public final Node lookupButton(ButtonType buttonType) {
+        return buttonNodes.get(buttonType);
+    }
+
+    /**
+     * This method can be overridden by subclasses to provide the button bar.
+     * Note that by overriding this method, the developer must take on multiple
+     * responsibilities:
+     *
+     * <ol>
+     *   <li>The developer must immediately iterate through all
+     *   {@link #getButtonTypes() button types} and call
+     *   {@link #createButton(ButtonType)} for each of them in turn.
+     *   <li>The developer must add a listener to the
+     *   {@link #getButtonTypes() button types} list, and when this list changes
+     *   update the button bar as appropriate.
+     *   <li>Similarly, the developer must watch for changes to the
+     *   {@link #expandableContentProperty() expandable content} property,
+     *   adding and removing the details button (created via
+     *   {@link #createDetailsButton()} method).
+     * </ol>
+     *
+     * <p>The default implementation of this method creates and returns a new
+     * {@link ButtonBar} instance.
+     */
+    protected Node createButtonBar() {
+        ButtonBar buttonBar = new ButtonBar();
+        buttonBar.setMaxWidth(Double.MAX_VALUE);
+
+        updateButtons(buttonBar);
+        getButtonTypes().addListener((ListChangeListener<? super ButtonType>) c -> updateButtons(buttonBar));
+        expandableContentProperty().addListener(o -> updateButtons(buttonBar));
+
+        return buttonBar;
+    }
+
+    /**
+     * This method can be overridden by subclasses to create a custom button that
+     * will subsequently inserted into the DialogPane button area (created via
+     * the {@link #createButtonBar()} method, but mostly commonly it is an instance
+     * of {@link ButtonBar}.
+     *
+     * @param buttonType The {@link ButtonType} to create a button from.
+     * @return A JavaFX {@link Node} that represents the given {@link ButtonType},
+     *         most commonly an instance of {@link Button}.
+     */
+    protected Node createButton(ButtonType buttonType) {
+        final Button button = new Button(buttonType.getText());
+        final ButtonData buttonData = buttonType.getButtonData();
+        ButtonBar.setButtonData(button, buttonData);
+        button.setDefaultButton(buttonType != null && buttonData.isDefaultButton());
+        button.setCancelButton(buttonType != null && buttonData.isCancelButton());
+        button.addEventHandler(ActionEvent.ACTION, ae -> {
+            if (ae.isConsumed()) return;
+            if (dialog != null) {
+                dialog.impl_setResultAndClose(buttonType, true);
+            }
+        });
+
+        return button;
+    }
+
+    /**
+     * This method can be overridden by subclasses to create a custom details button.
+     *
+     * <p>To override this method you must do two things:
+     * <ol>
+     *   <li>The button will need to have its own code set to handle mouse / keyboard
+     *       interaction and to toggle the state of the
+     *       {@link #expandedProperty() expanded} property.
+     *   <li>If your button changes its visuals based on whether the dialog pane
+     *       is expanded or collapsed, you should add a listener to the
+     *       {@link #expandedProperty() expanded} property, so that you may update
+     *       the button visuals.
+     * </ol>
+     */
+    protected Node createDetailsButton() {
+        final Hyperlink detailsButton = new Hyperlink();
+        final String moreText = ControlResources.getString("Dialog.detail.button.more"); //$NON-NLS-1$
+        final String lessText = ControlResources.getString("Dialog.detail.button.less"); //$NON-NLS-1$
+
+        InvalidationListener expandedListener = o -> {
+            final boolean isExpanded = isExpanded();
+            detailsButton.setText(isExpanded ? lessText : moreText);
+            detailsButton.getStyleClass().setAll("details-button", (isExpanded ? "less" : "more")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        };
+
+        // we call the listener immediately to ensure the state is correct at start up
+        expandedListener.invalidated(null);
+        expandedProperty().addListener(expandedListener);
+
+        detailsButton.setOnAction(ae -> setExpanded(!isExpanded()));
+        return detailsButton;
+    }
+
+    private double oldHeight = -1;
+
+    /** {@inheritDoc} */
+    @Override protected void layoutChildren() {
+        final boolean hasHeader = hasHeader();
+
+        // snapped insets code commented out to resolve RT-39738
+        final double w = Math.max(minWidth(-1), getWidth());// - (snappedLeftInset() + snappedRightInset());
+
+        final double minHeight = minHeight(w);
+        final double prefHeight = prefHeight(w);
+        final double maxHeight = maxHeight(w);
+        final double currentHeight = getHeight();
+        final double dialogHeight = dialog == null ? 0 : dialog.dialog.getSceneHeight();
+        double h;
+
+        if (prefHeight > currentHeight && prefHeight > minHeight && (prefHeight <= dialogHeight || dialogHeight == 0)) {
+            h = prefHeight;
+            resize(w, h);
+        } else {
+            boolean isDialogGrowing = currentHeight > oldHeight;
+
+            if (isDialogGrowing) {
+                double _h = currentHeight < prefHeight ?
+                        Math.min(prefHeight, currentHeight) : Math.max(prefHeight, dialogHeight);
+                h = Utils.boundedSize(_h, minHeight, maxHeight);
+            } else {
+                h = Utils.boundedSize(Math.min(currentHeight, dialogHeight), minHeight, maxHeight);
+            }
+            resize(w, h);
+        }
+
+        h -= (snappedTopInset() + snappedBottomInset());
+
+        oldHeight = h;
+
+        final double leftPadding = snappedLeftInset();
+        final double topPadding = snappedTopInset();
+        final double rightPadding = snappedRightInset();
+        final double bottomPadding = snappedBottomInset();
+
+        // create the nodes up front so we can work out sizing
+        final Node header = getActualHeader();
+        final Node content = getActualContent();
+        final Node graphic = getActualGraphic();
+        final Node expandableContent = getExpandableContent();
+
+        final double graphicPrefWidth = hasHeader || graphic == null ? 0 : graphic.prefWidth(-1);
+        final double headerPrefHeight = hasHeader ? header.prefHeight(w) : 0;
+        final double buttonBarPrefHeight = buttonBar == null ? 0 : buttonBar.prefHeight(w);
+        final double graphicPrefHeight = hasHeader || graphic == null ? 0 : graphic.prefHeight(-1);
+
+        final double expandableContentPrefHeight;
+        final double contentAreaHeight;
+        final double contentAndGraphicHeight;
+
+        final double availableContentWidth = w - graphicPrefWidth - leftPadding - rightPadding;
+
+        if (isExpanded()) {
+            // precedence goes to content and then expandable content
+            contentAreaHeight = isExpanded() ? content.prefHeight(availableContentWidth) : 0;
+            contentAndGraphicHeight = hasHeader ? contentAreaHeight : Math.max(graphicPrefHeight, contentAreaHeight);
+            expandableContentPrefHeight = h - (headerPrefHeight + contentAndGraphicHeight + buttonBarPrefHeight);
+        } else {
+            // content gets the lowest precedence
+            expandableContentPrefHeight = isExpanded() ? expandableContent.prefHeight(w) : 0;
+            contentAreaHeight = h - (headerPrefHeight + expandableContentPrefHeight + buttonBarPrefHeight);
+            contentAndGraphicHeight = hasHeader ? contentAreaHeight : Math.max(graphicPrefHeight, contentAreaHeight);
+        }
+
+        double x = leftPadding;
+        double y = topPadding;
+
+        if (! hasHeader) {
+            if (graphic != null) {
+                graphic.resizeRelocate(x, y, graphicPrefWidth, graphicPrefHeight);
+                x += graphicPrefWidth;
+            }
+        } else {
+            header.resizeRelocate(x, y, w - (leftPadding + rightPadding), headerPrefHeight);
+            y += headerPrefHeight;
+        }
+
+        content.resizeRelocate(x, y, availableContentWidth, contentAreaHeight);
+        y += hasHeader ? contentAreaHeight : contentAndGraphicHeight;
+
+        if (expandableContent != null) {
+            expandableContent.resizeRelocate(leftPadding, y, w - rightPadding, expandableContentPrefHeight);
+            y += expandableContentPrefHeight;
+        }
+
+        if (buttonBar != null) {
+            buttonBar.resizeRelocate(leftPadding,
+                                     y,
+                                     w - (leftPadding + rightPadding),
+                                     buttonBarPrefHeight);
+        }
+    }
+
+    /** {@inheritDoc}

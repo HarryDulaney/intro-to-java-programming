@@ -1,0 +1,305 @@
+
+                // value of super.getStyleOrigin() is not valid until after the call to set(v) returns,
+                // by which time invalidated will have been called.
+                // This value is initialized to USER in case someone calls set on the imageUrlProperty, which
+                // is possible:
+                //     CssMetaData metaData = ((StyleableProperty)dialogPane.graphicProperty()).getCssMetaData();
+                //     StyleableProperty prop = metaData.getStyleableProperty(dialogPane);
+                //     prop.set(someUrl);
+                //
+                // TODO: Note that prop != dialogPane, which violates the contract between StyleableProperty and CssMetaData.
+                //
+                StyleOrigin origin = StyleOrigin.USER;
+
+                @Override
+                public void applyStyle(StyleOrigin origin, String v) {
+                    this.origin = origin;
+
+                    // Don't want applyStyle to throw an exception which would leave this.origin set to the wrong value
+                    if (graphicProperty == null || graphicProperty.isBound() == false) super.applyStyle(origin, v);
+
+                    // Origin is only valid for this invocation of applyStyle, so reset it to USER in case someone calls set.
+                    this.origin = StyleOrigin.USER;
+                }
+
+                @Override
+                protected void invalidated() {
+                    // need to call super.get() here since get() is overridden to return the graphicProperty's value
+                    final String url = super.get();
+
+                    if (url == null) {
+                        ((StyleableProperty<Node>)(WritableValue<Node>)graphicProperty()).applyStyle(origin, null);
+                    } else {
+                        // RT-34466 - if graphic's url is the same as this property's value, then don't overwrite.
+                        final Node graphicNode = DialogPane.this.getGraphic();
+                        if (graphicNode instanceof ImageView) {
+                            final ImageView imageView = (ImageView)graphicNode;
+                            final Image image = imageView.getImage();
+                            if (image != null) {
+                                final String imageViewUrl = image.impl_getUrl();
+                                if (url.equals(imageViewUrl)) return;
+                            }
+
+                        }
+
+                        final Image img = StyleManager.getInstance().getCachedImage(url);
+
+                        if (img != null) {
+                            //
+                            // Note that it is tempting to try to re-use existing ImageView simply by setting
+                            // the image on the current ImageView, if there is one. This would effectively change
+                            // the image, but not the ImageView which means that no graphicProperty listeners would
+                            // be notified. This is probably not what we want.
+                            //
+
+                            //
+                            // Have to call applyStyle on graphicProperty so that the graphicProperty's
+                            // origin matches the imageUrlProperty's origin.
+                            //
+                            ((StyleableProperty<Node>)(WritableValue<Node>)graphicProperty()).applyStyle(origin, new ImageView(img));
+                        }
+                    }
+                }
+
+                @Override
+                public String get() {
+                    //
+                    // The value of the imageUrlProperty is that of the graphicProperty.
+                    // Return the value in a way that doesn't expand the graphicProperty.
+                    //
+                    final Node graphic = getGraphic();
+                    if (graphic instanceof ImageView) {
+                        final Image image = ((ImageView)graphic).getImage();
+                        if (image != null) {
+                            return image.impl_getUrl();
+                        }
+                    }
+                    return null;
+                }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    //
+                    // The origin of the imageUrlProperty is that of the graphicProperty.
+                    // Return the origin in a way that doesn't expand the graphicProperty.
+                    //
+                    return graphicProperty != null ? ((StyleableProperty<Node>)(WritableValue<Node>)graphicProperty).getStyleOrigin() : null;
+                }
+
+                @Override
+                public Object getBean() {
+                    return DialogPane.this;
+                }
+
+                @Override
+                public String getName() {
+                    return "imageUrl";
+                }
+
+                @Override
+                public CssMetaData<DialogPane,String> getCssMetaData() {
+                    return StyleableProperties.GRAPHIC;
+                }
+
+            };
+        }
+        return imageUrl;
+    }
+
+
+    // --- header
+    private final ObjectProperty<Node> header = new SimpleObjectProperty<Node>(null) {
+        WeakReference<Node> headerRef = new WeakReference<>(null);
+        @Override protected void invalidated() {
+            Node oldHeader = headerRef.get();
+            if (oldHeader != null) {
+                getChildren().remove(oldHeader);
+            }
+
+            Node newHeader = getHeader();
+            headerRef = new WeakReference<>(newHeader);
+            updateHeaderArea();
+        }
+    };
+
+    /**
+     * Node which acts as the dialog pane header.
+     *
+     * @return the header of the dialog pane.
+     */
+    public final Node getHeader() {
+        return header.get();
+    }
+
+    /**
+     * Assigns the dialog pane header. Any Node can be used.
+     *
+     * @param header The new header of the DialogPane.
+     */
+    public final void setHeader(Node header) {
+        this.header.setValue(header);
+    }
+
+    /**
+     * Property representing the header area of the dialog pane. Note that if this
+     * header is set to a non-null value, that it will take up the entire top
+     * area of the DialogPane. It will also result in the DialogPane switching its
+     * layout to the 'header' layout - as outlined in the {@link DialogPane} class
+     * javadoc.
+     */
+    public final ObjectProperty<Node> headerProperty() {
+        return header;
+    }
+
+
+
+    // --- header text
+    private final StringProperty headerText = new SimpleStringProperty(this, "headerText") {
+        @Override protected void invalidated() {
+            updateHeaderArea();
+            requestLayout();
+        }
+    };
+
+    /**
+     * Sets the string to show in the dialog header area. Note that the header text
+     * is lower precedence than the {@link #headerProperty() header node}, meaning
+     * that if both the header node and the headerText properties are set, the
+     * header text will not be displayed in a default DialogPane instance.
+     *
+     * <p>When headerText is set to a non-null value, this will result in the
+     * DialogPane switching its layout to the 'header' layout - as outlined in
+     * the {@link DialogPane} class javadoc.</p>
+     */
+    public final void setHeaderText(String headerText) {
+        this.headerText.set(headerText);
+    }
+
+    /**
+     * Returns the currently-set header text for this DialogPane.
+     */
+    public final String getHeaderText() {
+        return headerText.get();
+    }
+
+    /**
+     * A property representing the header text for the dialog pane. The header text
+     * is lower precedence than the {@link #headerProperty() header node}, meaning
+     * that if both the header node and the headerText properties are set, the
+     * header text will not be displayed in a default DialogPane instance.
+     *
+     * <p>When headerText is set to a non-null value, this will result in the
+     * DialogPane switching its layout to the 'header' layout - as outlined in
+     * the {@link DialogPane} class javadoc.</p>
+     */
+    public final StringProperty headerTextProperty() {
+        return headerText;
+    }
+
+
+    // --- content
+    private final ObjectProperty<Node> content = new SimpleObjectProperty<Node>(null) {
+        WeakReference<Node> contentRef = new WeakReference<>(null);
+        @Override protected void invalidated() {
+            Node oldContent = contentRef.get();
+            if (oldContent != null) {
+                getChildren().remove(oldContent);
+            }
+
+            Node newContent = getContent();
+            contentRef = new WeakReference<>(newContent);
+            updateContentArea();
+        }
+    };
+
+    /**
+     * Returns the dialog content as a Node (even if it was set as a String
+     * using {@link #setContentText(String)} - this was simply transformed into a
+     * {@link Node} (most probably a {@link Label}).
+     *
+     * @return dialog's content
+     */
+    public final Node getContent() {
+        return content.get();
+    }
+
+    /**
+     * Assign dialog content. Any Node can be used
+     *
+     * @param content
+     *            dialog's content
+     */
+    public final void setContent(Node content) {
+        this.content.setValue(content);
+    }
+
+    /**
+     * Property representing the content area of the dialog.
+     */
+    public final ObjectProperty<Node> contentProperty() {
+        return content;
+    }
+
+
+    // --- content text
+    private final StringProperty contentText = new SimpleStringProperty(this, "contentText") {
+        @Override protected void invalidated() {
+            updateContentArea();
+            requestLayout();
+        }
+    };
+
+    /**
+     * Sets the string to show in the dialog content area. Note that the content text
+     * is lower precedence than the {@link #contentProperty() content node}, meaning
+     * that if both the content node and the contentText properties are set, the
+     * content text will not be displayed in a default DialogPane instance.
+     */
+    public final void setContentText(String contentText) {
+        this.contentText.set(contentText);
+    }
+
+    /**
+     * Returns the currently-set content text for this DialogPane.
+     */
+    public final String getContentText() {
+        return contentText.get();
+    }
+
+    /**
+     * A property representing the content text for the dialog pane. The content text
+     * is lower precedence than the {@link #contentProperty() content node}, meaning
+     * that if both the content node and the contentText properties are set, the
+     * content text will not be displayed in a default DialogPane instance.
+     */
+    public final StringProperty contentTextProperty() {
+        return contentText;
+    }
+
+
+    // --- expandable content
+    private final ObjectProperty<Node> expandableContentProperty = new SimpleObjectProperty<Node>(null) {
+        WeakReference<Node> expandableContentRef = new WeakReference<>(null);
+        @Override protected void invalidated() {
+            Node oldExpandableContent = expandableContentRef.get();
+            if (oldExpandableContent != null) {
+                getChildren().remove(oldExpandableContent);
+            }
+
+            Node newExpandableContent = getExpandableContent();
+            expandableContentRef = new WeakReference<Node>(newExpandableContent);
+            if (newExpandableContent != null) {
+                newExpandableContent.setVisible(isExpanded());
+                newExpandableContent.setManaged(isExpanded());
+
+                if (!newExpandableContent.getStyleClass().contains("expandable-content")) { //$NON-NLS-1$
+                    newExpandableContent.getStyleClass().add("expandable-content"); //$NON-NLS-1$
+                }
+
+                getChildren().add(newExpandableContent);
+            }
+        }
+    };
+
+    /**
+     * 

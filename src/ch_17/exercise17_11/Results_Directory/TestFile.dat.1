@@ -1,0 +1,321 @@
+/*
+ * Copyright (c) 2014, 2015, Oracle and/or its affiliates. All rights reserved.
+ * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+package javafx.scene.control;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.WeakHashMap;
+
+import com.sun.javafx.scene.control.skin.Utils;
+import com.sun.javafx.scene.control.skin.resources.ControlResources;
+import javafx.beans.DefaultProperty;
+import javafx.beans.InvalidationListener;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.beans.value.WritableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import javafx.css.CssMetaData;
+import javafx.css.StyleOrigin;
+import javafx.css.Styleable;
+import javafx.css.StyleableObjectProperty;
+import javafx.css.StyleableProperty;
+import javafx.css.StyleableStringProperty;
+import javafx.event.ActionEvent;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+
+import com.sun.javafx.css.StyleManager;
+import com.sun.javafx.css.converters.StringConverter;
+
+/**
+ * DialogPane should be considered to be the root node displayed within a
+ * {@link Dialog} instance. In this role, the DialogPane is responsible for the
+ * placement of {@link #headerProperty() headers}, {@link #graphicProperty() graphics},
+ * {@link #contentProperty() content}, and {@link #getButtonTypes() buttons}.
+ * The default implementation of DialogPane (that is, the DialogPane class itself)
+ * handles the layout via the normal {@link #layoutChildren()} method. This
+ * method may be overridden by subclasses wishing to handle the layout in an
+ * alternative fashion).
+ *
+ * <p>In addition to the {@link #headerProperty() header} and
+ * {@link #contentProperty() content} properties, there exists
+ * {@link #headerTextProperty() header text} and
+ * {@link #contentTextProperty() content text} properties. The way the *Text
+ * properties work is that they are a lower precedence compared to the Node
+ * properties, but they are far more convenient for developers in the common case,
+ * as it is likely the case that a developer more often than not simply wants to
+ * set a string value into the header or content areas of the DialogPane.
+ *
+ * <p>It is important to understand the implications of setting non-null values
+ * in the {@link #headerProperty() header} and {@link #headerTextProperty() headerText}
+ * properties. The key points are as follows:
+ *
+ * <ol>
+ *   <li>The {@code header} property takes precedence over the {@code headerText}
+ *       property, so if both are set to non-null values, {@code header} will be
+ *       used and {@code headerText} will be ignored.</li>
+ *   <li>If {@code headerText} is set to a non-null value, and a
+ *       {@link #graphicProperty() graphic} has also been set, the default position
+ *       for the graphic shifts from being located to the left of the content area
+ *       to being to the right of the header text.</li>
+ *   <li>If {@code header} is set to a non-null value, and a
+ *       {@link #graphicProperty() graphic} has also been set, the graphic is
+ *       removed from its default position (to the left of the content area),
+ *       and <strong>is not</strong> placed to the right of the custom header
+ *       node. If the graphic is desired, it should be manually added in to the
+ *       layout of the custom header node manually.</li>
+ * </ol>
+ *
+ * <p>DialogPane operates on the concept of {@link ButtonType}. A ButtonType is
+ * a descriptor of a single button that should be represented visually in the
+ * DialogPane. Developers who create a DialogPane therefore must specify the
+ * button types that they want to display, and this is done via the
+ * {@link #getButtonTypes()} method, which returns a modifiable
+ * {@link ObservableList}, which users can add to and remove from as desired.
+ *
+ * <p>The {@link ButtonType} class defines a number of pre-defined button types,
+ * such as {@link ButtonType#OK} and {@link ButtonType#CANCEL}. Many users of the
+ * JavaFX dialogs API will find that these pre-defined button types meet their
+ * needs, particularly due to their built-in support for
+ * {@link ButtonData#isDefaultButton() default} and
+ * {@link ButtonData#isCancelButton() cancel} buttons, as well as the benefit of
+ * the strings being translated into all languages which JavaFX is translated to.
+ * For users that want to define their own {@link ButtonType} (most commonly to
+ * define a button with custom text), they may do so via the constructors available
+ * on the {@link ButtonType} class.
+ *
+ * <p>Developers will quickly find that the amount of configurability offered
+ * via the {@link ButtonType} class is minimal. This is intentional, but does not
+ * mean that developers can not modify the buttons created by the {@link ButtonType}
+ * that have been specified. To do this, developers simply call the
+ * {@link #lookupButton(ButtonType)} method with the ButtonType (assuming it has
+ * already been set in the {@link #getButtonTypes()} list. The returned Node is
+ * typically of type {@link Button}, but this depends on if the
+ * {@link #createButton(ButtonType)} method has been overridden.
+ *
+ * <p>The DialogPane class offers a few methods that can be overridden by
+ * subclasses, to more easily enable custom functionality. These methods include
+ * the following:
+ *
+ * <ul>
+ *   <li>{@link #createButton(ButtonType)}
+ *   <li>{@link #createDetailsButton()}
+ *   <li>{@link #createButtonBar()}
+ * </ul>
+ *
+ * <p>These methods are documented, so please take note of the expectations
+ * placed on any developer who wishes to override these methods with their own
+ * functionality.
+ *
+ * @see Dialog
+ * @since JavaFX 8u40
+ */
+@DefaultProperty("buttonTypes")
+public class DialogPane extends Pane {
+
+    /**************************************************************************
+     *
+     * Static fields
+     *
+     **************************************************************************/
+
+    /**
+     * Creates a Label node that works well within a Dialog.
+     * @param text The text to display
+     */
+    static Label createContentLabel(String text) {
+        Label label = new Label(text);
+        label.setMaxWidth(Double.MAX_VALUE);
+        label.setMaxHeight(Double.MAX_VALUE);
+        label.getStyleClass().add("content");
+        label.setWrapText(true);
+        label.setPrefWidth(360);
+        return label;
+    }
+
+
+
+    /**************************************************************************
+     *
+     * Private fields
+     *
+     **************************************************************************/
+
+    private final GridPane headerTextPanel;
+    private final Label contentLabel;
+    private final StackPane graphicContainer;
+    private final Node buttonBar;
+
+    private final ObservableList<ButtonType> buttons = FXCollections.observableArrayList();
+
+    private final Map<ButtonType, Node> buttonNodes = new WeakHashMap<>();
+
+    private Node detailsButton;
+
+    // this is not a property - we have a package-scope setDialog method that
+    // sets this field. It is set by Dialog if the DialogPane is set inside a Dialog.
+    private Dialog<?> dialog;
+
+
+
+    /**************************************************************************
+     *
+     * Constructors
+     *
+     **************************************************************************/
+
+    /**
+     * Creates a new DialogPane instance with a style class of 'dialog-pane'.
+     */
+    public DialogPane() {
+        getStyleClass().add("dialog-pane");
+
+        headerTextPanel = new GridPane();
+        getChildren().add(headerTextPanel);
+
+        graphicContainer = new StackPane();
+
+        contentLabel = createContentLabel("");
+        getChildren().add(contentLabel);
+
+        buttonBar = createButtonBar();
+        if (buttonBar != null) {
+            getChildren().add(buttonBar);
+        }
+
+        buttons.addListener((ListChangeListener<ButtonType>) c -> {
+            while (c.next()) {
+                if (c.wasRemoved()) {
+                    for (ButtonType cmd : c.getRemoved()) {
+                        buttonNodes.remove(cmd);
+                    }
+                }
+                if (c.wasAdded()) {
+                    for (ButtonType cmd : c.getAddedSubList()) {
+                        if (! buttonNodes.containsKey(cmd)) {
+                            buttonNodes.put(cmd, createButton(cmd));
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+
+
+    /**************************************************************************
+     *
+     * Properties
+     *
+     **************************************************************************/
+
+    // --- graphic
+    private final ObjectProperty<Node> graphicProperty = new StyleableObjectProperty<Node>() {
+        // The graphic is styleable by css, but it is the
+        // imageUrlProperty that handles the style value.
+        @Override public CssMetaData getCssMetaData() {
+            return StyleableProperties.GRAPHIC;
+        }
+
+        @Override public Object getBean() {
+            return DialogPane.this;
+        }
+
+        @Override public String getName() {
+            return "graphic";
+        }
+
+        WeakReference<Node> graphicRef = new WeakReference<>(null);
+
+        protected void invalidated() {
+            Node oldGraphic = graphicRef.get();
+            if (oldGraphic != null) {
+                getChildren().remove(oldGraphic);
+            }
+
+            Node newGraphic = getGraphic();
+            graphicRef = new WeakReference<>(newGraphic);
+            updateHeaderArea();
+        }
+    };
+
+    /**
+     * The dialog graphic, presented either in the header, if one is showing, or
+     * to the left of the {@link #contentProperty() content}.
+     *
+     * @return An ObjectProperty wrapping the current graphic.
+     */
+    public final ObjectProperty<Node> graphicProperty() {
+        return graphicProperty;
+    }
+
+    public final Node getGraphic() {
+        return graphicProperty.get();
+    }
+
+    /**
+     * Sets the dialog graphic, which will be displayed either in the header, if
+     * one is showing, or to the left of the {@link #contentProperty() content}.
+     *
+     * @param graphic
+     *            The new dialog graphic, or null if no graphic should be shown.
+     */
+    public final void setGraphic(Node graphic) {
+        this.graphicProperty.set(graphic);
+    }
+
+
+    // --- imageUrl (this is NOT public API, except via CSS)
+    // Note that this code is a copy/paste from Labeled
+    private StyleableStringProperty imageUrl = null;
+    /**
+     * The imageUrl property is set from CSS and then the graphic property is
+     * set from the invalidated method. This ensures that the same image isn't
+     * reloaded.
+     */
+    private StyleableStringProperty imageUrlProperty() {
+        if (imageUrl == null) {
+            imageUrl = new StyleableStringProperty() {
+                //
+                // If imageUrlProperty is invalidated, this is the origin of the style that
+                // triggered the invalidation. This is used in the invalidated() method where the

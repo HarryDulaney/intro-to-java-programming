@@ -70,11 +70,12 @@ public class Exercise14_12 extends Application {
 
         hBox.getChildren().addAll(projectBox, quizBox, midtermBox, finalBarBox);
         hBox.setAlignment(Pos.BOTTOM_CENTER);
-        hBox.setPadding(new Insets(10,10,10,10));
+        hBox.setPadding(new Insets(10, 10, 10, 10));
 
         Scene scene = new Scene(hBox);
         primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }

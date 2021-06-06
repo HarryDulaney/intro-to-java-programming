@@ -64,6 +64,5 @@ public class Exercise15_02 extends Application {
         rectangle.setRotate(rotation);
         LOGGER.info("Rotation value is: " + rotation);
 
-
     }
 }
