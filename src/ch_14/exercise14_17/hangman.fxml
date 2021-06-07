@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0"
+    prefWidth="358.0" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fill="#1f93ff00" layoutX="202.0" layoutY="89.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="69.49998474121094" endY="-56.69999313354492" layoutX="132.0" layoutY="89.0" startX="-69.59999084472656" startY="-56.69999313354492" />
+      <Line endX="67.99998474121094" endY="-33.00001525878906" layoutX="134.0" layoutY="99.0" startX="67.99998474121094" startY="-66.19999694824219" />
+      <Line endX="-80.99958801269531" endY="192.99993896484375" layoutX="142.0" layoutY="99.0" startX="-80.09999084472656" startY="-67.19999694824219" />
+      <Arc fill="#1f93ff00" layoutX="61.0" layoutY="319.0" length="190.0" radiusX="55.0" radiusY="27.0" startAngle="-4.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" />
+      <Line endX="57.99998474121094" endY="71.80000305175781" layoutX="144.0" layoutY="109.0" startX="57.99998474121094" startY="2.9999847412109375" />
+      <Line endX="113.20001220703125" endY="18.599990844726562" layoutX="154.0" layoutY="119.0" startX="64.40000915527344" startY="-13.400009155273438" />
+      <Line endX="-1.52587890625E-5" endY="80.59999084472656" layoutX="164.0" layoutY="129.0" startX="37.49998474121094" startY="52.30000305175781" />
+      <Line endX="11.600021362304688" endY="-35.80000305175781" layoutX="172.0" layoutY="139.0" startX="-32.39997863769531" startY="-1.4000091552734375" />
+      <Line endX="89.19999694824219" endY="39.40000915527344" layoutX="154.0" layoutY="167.0" startX="49.20707702636719" startY="13.592880249023438" />
+   </children>
+</Pane>
