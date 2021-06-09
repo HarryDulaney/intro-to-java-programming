@@ -14,7 +14,7 @@ import javafx.stage.Stage;
  */
 public class Exercise14_06 extends javafx.application.Application {
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 
     @Override

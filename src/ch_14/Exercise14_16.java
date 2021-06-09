@@ -13,39 +13,47 @@ import javafx.stage.Stage;
  * are automatically resized when the window is resized.
  */
 public class Exercise14_16 extends Application {
-    private static final double WIDTH = 400;
-    private static final double HEIGHT = 400;
+    private static final double WIDTH = 200;
+    private static final double HEIGHT = 200;
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         Pane pane = new Pane();
 
-        double offSet = 3;
-        for (int i = 0; i < 2; i++, offSet /= 2) {
-            Line verticalLine = new Line();
-            verticalLine.setStroke(Color.RED);
-            verticalLine.startXProperty().bind(pane.widthProperty().divide(offSet));
-            verticalLine.startYProperty().bind(pane.layoutYProperty());
-            verticalLine.endXProperty().bind(pane.widthProperty().divide(offSet));
-            verticalLine.endYProperty().bind(pane.heightProperty());
-            pane.getChildren().add(verticalLine);
+        Line line1 = new Line(0, 0, 0, 0);
+        line1.startYProperty().bind(pane.heightProperty().divide(3));
+        line1.endXProperty().bind(pane.widthProperty());
+        line1.endYProperty().bind(pane.heightProperty().divide(3));
+        line1.setStroke(Color.BLUE);
 
-        }
-        offSet = 3;
-        for (int i = 0; i < 2; i++, offSet /= 2) {
-            Line horizontalLine = new Line();
-            horizontalLine.setStroke(Color.BLUE);
-            horizontalLine.startXProperty().bind(pane.layoutXProperty());
-            horizontalLine.startYProperty().bind(pane.heightProperty().divide(offSet));
-            horizontalLine.endXProperty().bind(pane.widthProperty());
-            horizontalLine.endYProperty().bind(pane.heightProperty().divide(offSet));
-            pane.getChildren().add(horizontalLine);
-        }
+        Line line2 = new Line(0, 0, 0, 0);
+        line2.startYProperty().bind(pane.heightProperty().multiply(2).divide(3));
+        line2.endXProperty().bind(pane.widthProperty());
+        line2.endYProperty().bind(pane.heightProperty().multiply(2).divide(3));
+        line2.setStroke(Color.BLUE);
+
+        Line line3 = new Line(0, 0, 0, 0);
+        line3.startXProperty().bind(pane.widthProperty().divide(3));
+        line3.endXProperty().bind(pane.widthProperty().divide(3));
+        line3.endYProperty().bind(pane.heightProperty());
+        line3.setStroke(Color.RED);
+
+        Line line4 = new Line(0, 0, 0, 0);
+        line4.startXProperty().bind(pane.widthProperty().multiply(2).divide(3));
+        line4.endXProperty().bind(pane.widthProperty().multiply(2).divide(3));
+        line4.endYProperty().bind(pane.heightProperty());
+        line4.setStroke(Color.RED);
+
+        pane.getChildren().addAll(line1, line2, line3, line4);
 
         Scene scene = new Scene(pane, WIDTH, HEIGHT);
         primaryStage.setScene(scene);
         primaryStage.setTitle(getClass().getName());
         primaryStage.show();
-
     }
+
 }

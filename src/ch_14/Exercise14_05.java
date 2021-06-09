@@ -19,7 +19,7 @@ public class Exercise14_05 extends Application {
     static Font font = Font.font("Times New Roman", FontWeight.BOLD, 28);
 
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 
     @Override

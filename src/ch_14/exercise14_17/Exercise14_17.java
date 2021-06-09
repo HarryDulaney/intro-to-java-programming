@@ -39,50 +39,51 @@ public class Exercise14_17 extends Application {
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
-//        Pane pane = new Pane();
-//        ObservableList<Node> list = pane.getChildren();
-//
-//        Arc arc = new Arc(WIDTH / 4, HEIGHT - HEIGHT / 12, WIDTH / 5, HEIGHT / 12, 0, 180);
-//        arc.setFill(Color.TRANSPARENT);
-//        arc.setStroke(Color.BLACK);
-//        list.add(arc);
-//
-//        Line pole = new Line(arc.getCenterX(), arc.getCenterY() - arc.getRadiusY(), arc.getCenterX(), pane.getHeight() / 12);
-//        list.add(pole);
-//
-//        Line holder = new Line(pole.getEndX(), pole.getEndY(), pane.getWidth() / 1.5, pole.getEndY());
-//        list.add(holder);
-//        Line hang = new Line(holder.getEndX(), holder.getEndY(), holder.getEndX(), pane.getHeight() / 6);
-//        list.add(hang);
-//
-//        double radius = WIDTH / 10;
-//        Circle c = new Circle(holder.getEndX(), pane.getHeight() / 6 + radius, radius);
-//        c.setFill(Color.TRANSPARENT);
-//        c.setStroke(Color.BLACK);
-//        list.add(c);
+        /*
+        Pane pane = new Pane();
+        ObservableList<Node> list = pane.getChildren();
 
-//        Line leftArm = new Line(pane.getWidth() / 2, pane.getHeight() / 2,
-//        c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle)),
-//        c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle));
-//        list.add(leftArm);
-//
-//        Line rightArm = new Line(pane.getWidth() / 1.2, pane.getHeight() / 2,
-//        c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle),
-//        c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle));
-//        list.add(rightArm);
-//
-//        Line body = new Line(c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle)),
-//        c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle)),
-//        c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle), pane.getHeight() / 1.6);
-//        list.add(body);
-//
-//        Line leftLeg = new Line(body.getEndX(), body.getEndY(),
-//                pane.getWidth() / 2, pane.getHeight() / 1.3);
-//        list.add(leftLeg);
-//
-//        Line rightLeg = new Line(body.getEndX(), body.getEndY(),
-//                pane.getWidth() / 1.2, pane.getHeight() / 1.3);
-//        list.add(rightLeg);
+        Arc arc = new Arc(WIDTH / 4, HEIGHT - HEIGHT / 12, WIDTH / 5, HEIGHT / 12, 0, 180);
+        arc.setFill(Color.TRANSPARENT);
+        arc.setStroke(Color.BLACK);
+        list.add(arc);
+
+        Line pole = new Line(arc.getCenterX(), arc.getCenterY() - arc.getRadiusY(), arc.getCenterX(), pane.getHeight() / 12);
+        list.add(pole);
+
+        Line holder = new Line(pole.getEndX(), pole.getEndY(), pane.getWidth() / 1.5, pole.getEndY());
+        list.add(holder);
+        Line hang = new Line(holder.getEndX(), holder.getEndY(), holder.getEndX(), pane.getHeight() / 6);
+        list.add(hang);
+
+        double radius = WIDTH / 10;
+        Circle c = new Circle(holder.getEndX(), pane.getHeight() / 6 + radius, radius);
+        c.setFill(Color.TRANSPARENT);
+        c.setStroke(Color.BLACK);
+        list.add(c);
+
+        Line leftArm = new Line(pane.getWidth() / 2, pane.getHeight() / 2,
+                c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle)),
+                c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle));
+        list.add(leftArm);
+
+        Line rightArm = new Line(pane.getWidth() / 1.2, pane.getHeight() / 2,
+                c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle),
+                        c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle));
+        list.add(rightArm);
+
+        Line body = new Line(c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle)),
+                c.getCenterY() - c.getRadius() * Math.sin(Math.toRadians(angle)),
+                c.getCenterX() + c.getRadius() * Math.cos(Math.toRadians(angle), pane.getHeight() / 1.6);
+        list.add(body);
+
+        Line leftLeg = new Line(body.getEndX(), body.getEndY(),
+                pane.getWidth() / 2, pane.getHeight() / 1.3);
+        list.add(leftLeg);
+
+        Line rightLeg = new Line(body.getEndX(), body.getEndY(),
+                pane.getWidth() / 1.2, pane.getHeight() / 1.3);
+        list.add(rightLeg); */
 
     }
 }

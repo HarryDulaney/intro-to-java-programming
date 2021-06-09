@@ -19,7 +19,7 @@ import java.util.Random;
  */
 public class Exercise14_07 extends javafx.application.Application {
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 
     @Override

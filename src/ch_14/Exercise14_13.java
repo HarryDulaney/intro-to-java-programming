@@ -26,7 +26,7 @@ public class Exercise14_13 extends Application {
     double nextSliceStart = 0;
 
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class Exercise14_13 extends Application {
         finals.setType(ArcType.ROUND);
         finals.setFill(Color.ORANGE);
         finals.setStroke(Color.ORANGE);
-        Text finalsText = new Text(centerX + 15, centerY + (radius-15), "Finals -- 40%");
+        Text finalsText = new Text(centerX + 15, centerY + (radius - 15), "Finals -- 40%");
 
 
         pane.getChildren().add(circle);
