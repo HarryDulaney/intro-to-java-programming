@@ -46,6 +46,7 @@ public class Exercise03_34 {
         }
 
         System.out.println(beg + det + end);
+        in.close();
 
     }
 }

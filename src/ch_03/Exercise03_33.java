@@ -23,16 +23,16 @@ public class Exercise03_33 {
         Scanner in = new Scanner(System.in);
         System.out.print("\nEnter weight(Integer) and price(Float) for package 1: ");
         int weightP1 = in.nextInt();
-        double $P1 = in.nextDouble();
+        double p1 = in.nextDouble();
         System.out.print("\nEnter weight and price for package 2: ");
         int weightP2 = in.nextInt();
-        double $P2 = in.nextDouble();
+        double p2 = in.nextDouble();
         int low = 0, high = 0, lcm = 0;
 
         String betterPrice = "";
         if (weightP1 <= 0 || weightP2 <= 0) {
             System.out.println("Weight must be a positive number. ");
-        } else if ($P1 <= 0 || $P2 <= 0) {
+        } else if (p1 <= 0 || p2 <= 0) {
             System.out.println("Price must be a positive number. ");
 
         } else { // Find greater number
@@ -43,7 +43,7 @@ public class Exercise03_33 {
                 low = weightP1;
                 high = weightP2;
             } else { //Weights are equal, return lowest price.
-                betterPrice += ($P1 < $P2 ? "1" : "2");
+                betterPrice += (p1 < p2 ? "1" : "2");
                 System.out.println("Package " + betterPrice + " has a better price.");
                 System.exit(0);
             }
@@ -55,10 +55,10 @@ public class Exercise03_33 {
             int adjustP1 = lcm / weightP1; //Divide by LCM to get multiple
             int adjustP2 = lcm / weightP2;
 
-            double adjustedPrice1 = $P1 * adjustP1; //Use multiple to adjust the price for weight difference
-            double adjustedPrice2 = $P2 * adjustP2;
+            double adjustedPrice1 = p1 * adjustP1; //Use multiple to adjust the price for weight difference
+            double adjustedPrice2 = p2 * adjustP2;
 
-            betterPrice += (adjustedPrice1 < adjustedPrice2 ? "1" : "2");
+            betterPrice += adjustedPrice1 < adjustedPrice2 ? "1" : "2";
         }
 
 

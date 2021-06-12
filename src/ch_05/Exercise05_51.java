@@ -1,5 +1,7 @@
 package ch_05;
 
+import java.util.Scanner;
+
 /**
  * *5.51 (Longest common prefix) Write a program that prompts the user to enter two
  * strings and displays the largest common prefix of the two strings. Here are some
@@ -16,7 +18,7 @@ package ch_05;
 public class Exercise05_51 {
     public static void main(String[] args) {
 
-        java.util.Scanner input = new java.util.Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter string one: ");
         String str1 = input.nextLine();
 
