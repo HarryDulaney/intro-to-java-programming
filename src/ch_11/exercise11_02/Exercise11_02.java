@@ -1,5 +1,6 @@
 package ch_11.exercise11_02;
 
+import ch_10.exercise10_14.MyDate;
 /*__________________________UML DIAGRAM_____________________________*
  *   																|
  * 						     Person     							|
@@ -119,10 +120,6 @@ package ch_11.exercise11_02;
  * 																	|
  * 																	|
  * _________________________________________________________________| */
-
-
-import ch_10.exercise10_14.MyDate;
-
 /**
  * 11.2 (The Person, Student, Employee, Faculty, and Staff classes) Design a
  * class named Person and its two subclasses named Student and Employee.
