@@ -1,8 +1,7 @@
 package ch_11.exercise11_02;
 
-import ch_10.exercise10_14.MyDate;
-/*__________________________UML DIAGRAM_____________________________*
- *   																|
+//__________________________UML DIAGRAM_____________________________*
+/*																	|
  * 						     Person     							|
  *------------------------------------------------------------------|
  *                      -name: String						        |
@@ -22,16 +21,16 @@ import ch_10.exercise10_14.MyDate;
  * 																	|
  * 																	|
  * _________________________________________________________________|
+ */
 
-
-/__________________________________________________________________*
-/																	|
+//__________________________________________________________________*
+/*																	|
  * 						     Person     							|
  *------------------------------------------------------------------|
-                                ^
-                                ^
-/___________________________UML DIAGRAM_____________________________*
-/   																|
+								^
+								^
+//__________________________UML DIAGRAM_____________________________*
+/*																	|
  * 						     Employee     							|
  *------------------------------------------------------------------|
  *                      -office: String						        |
@@ -48,17 +47,17 @@ import ch_10.exercise10_14.MyDate;
  * 																	|
  * 																	|
  * 																	|
- * _________________________________________________________________|
+ * _________________________________________________________________| */
 
 
-/__________________________________________________________________*
-/																	|
+//__________________________________________________________________*
+/*																	|
  * 						     Person     							|
  *------------------------------------------------------------------|
-                                ^
-                                ^
-/ __________________________UML DIAGRAM_____________________________*
-/   																|
+								^
+								^
+//__________________________UML DIAGRAM_____________________________*
+/*																	|
  * 						     Student     							|
  *------------------------------------------------------------------|
  *                      +STATUS: String	:                           |
@@ -73,16 +72,16 @@ import ch_10.exercise10_14.MyDate;
  * 																	|
  * 																	|
  * 																	|
- * _________________________________________________________________|
+ * _________________________________________________________________| */
 
-/___________________________________________________________________*
- *																	|
+//__________________________________________________________________*
+/*																	|
  * 						     Employee     							|
  *------------------------------------------------------------------|
-                                ^
-                                ^
-/___________________________UML DIAGRAM_____________________________*
- *																	|
+								^
+								^
+//__________________________UML DIAGRAM_____________________________*
+/*																	|
  * 						     Faculty     							|
  *------------------------------------------------------------------|
  *                         -rank:int                                |
@@ -96,16 +95,16 @@ import ch_10.exercise10_14.MyDate;
  * 																	|
  * 																	|
  * 																	|
- * _________________________________________________________________|
+ * _________________________________________________________________| */
 
-/___________________________________________________________________*
- *  																|
+//__________________________________________________________________*
+/*																	|
  * 						     Employee     							|
  *------------------------------------------------------------------|
-                                ^
-                                ^
-/___________________________UML DIAGRAM_____________________________*
- *																	|
+								^
+								^
+//__________________________UML DIAGRAM_____________________________*
+/*																	|
  * 						     Staff       							|
  *------------------------------------------------------------------|
  *                      +title: String                              |
@@ -120,6 +119,10 @@ import ch_10.exercise10_14.MyDate;
  * 																	|
  * 																	|
  * _________________________________________________________________| */
+
+
+import ch_10.exercise10_14.MyDate;
+
 /**
  * 11.2 (The Person, Student, Employee, Faculty, and Staff classes) Design a
  * class named Person and its two subclasses named Student and Employee.
@@ -145,22 +148,22 @@ import ch_10.exercise10_14.MyDate;
  */
 public class Exercise11_02 {
 
-    public static void main(String[] args) {
-        Person person = new Person();
-        person.setName("Garry Barryman");
-        Student student = new Student(Student.SENIOR);
-        student.setName("Jingle PB&J");
-        Employee employee = new Employee("Delray Beach,FL", 45_750.00, new MyDate());
-        employee.setName("Sarah Stodenbyer");
-        Faculty faculty = new Faculty(new double[]{9.0, 5.0}, 5);
-        faculty.setName("Milly Millyman");
-        Staff staff = new Staff("Boston,MA", 750_000.00, new MyDate(), "CEO");
-        staff.setName("Madonna Firehat");
+	public static void main(String[] args) {
+		Person person = new Person();
+		person.setName("Garry Barryman");
+		Student student = new Student(Student.SENIOR);
+		student.setName("Jingle PB&J");
+		Employee employee = new Employee("Delray Beach,FL", 45_750.00, new MyDate());
+		employee.setName("Sarah Stodenbyer");
+		Faculty faculty = new Faculty(new double[]{9.0, 5.0}, 5);
+		faculty.setName("Milly Millyman");
+		Staff staff = new Staff("Boston,MA", 750_000.00, new MyDate(), "CEO");
+		staff.setName("Madonna Firehat");
 
-        System.out.println(person.toString());
-        System.out.println(student.toString());
-        System.out.println(employee.toString());
-        System.out.println(faculty.toString());
-        System.out.println(staff.toString());
-    }
+		System.out.println(person.toString());
+		System.out.println(student.toString());
+		System.out.println(employee.toString());
+		System.out.println(faculty.toString());
+		System.out.println(staff.toString());
+	}
 }
