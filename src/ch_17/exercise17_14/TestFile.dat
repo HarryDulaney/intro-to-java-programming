@@ -1,0 +1,308 @@
+ */
+    @Override protected double computeMinWidth(double height) {
+        double headerMinWidth = hasHeader() ? getActualHeader().minWidth(height) + 10 : 0;
+        double contentMinWidth = getActualContent().minWidth(height);
+        double buttonBarMinWidth = buttonBar == null ? 0 : buttonBar.minWidth(height);
+        double graphicMinWidth = getActualGraphic().minWidth(height);
+
+        double expandableContentMinWidth = 0;
+        final Node expandableContent = getExpandableContent();
+        if (isExpanded() && expandableContent != null) {
+            expandableContentMinWidth = expandableContent.minWidth(height);
+        }
+
+        double minWidth = snappedLeftInset() +
+                (hasHeader() ? 0 : graphicMinWidth) +
+                Math.max(Math.max(headerMinWidth, expandableContentMinWidth), Math.max(contentMinWidth, buttonBarMinWidth)) +
+                snappedRightInset();
+
+        return snapSize(minWidth);
+    }
+
+    /** {@inheritDoc} */
+    @Override protected double computeMinHeight(double width) {
+        final boolean hasHeader = hasHeader();
+
+        double headerMinHeight = hasHeader ? getActualHeader().minHeight(width) : 0;
+        double buttonBarMinHeight = buttonBar == null ? 0 : buttonBar.minHeight(width);
+
+        Node graphic = getActualGraphic();
+        double graphicMinWidth = hasHeader ? 0 : graphic.minWidth(-1);
+        double graphicMinHeight = hasHeader ? 0 : graphic.minHeight(width);
+
+        // min height of a label is based on one line (wrapping is ignored)
+        Node content = getActualContent();
+        double contentAvailableWidth = width == Region.USE_COMPUTED_SIZE ? Region.USE_COMPUTED_SIZE :
+                hasHeader ? width : (width - graphicMinWidth);
+        double contentMinHeight = content.minHeight(contentAvailableWidth);
+
+        double expandableContentMinHeight = 0;
+        final Node expandableContent = getExpandableContent();
+        if (isExpanded() && expandableContent != null) {
+            expandableContentMinHeight = expandableContent.minHeight(width);
+        }
+
+        double minHeight = snappedTopInset() +
+                headerMinHeight +
+                Math.max(graphicMinHeight, contentMinHeight) +
+                expandableContentMinHeight +
+                buttonBarMinHeight +
+                snappedBottomInset();
+
+        return snapSize(minHeight);
+    }
+
+    /** {@inheritDoc} */
+    @Override protected double computePrefWidth(double height) {
+        double headerPrefWidth = hasHeader() ? getActualHeader().prefWidth(height) + 10 : 0;
+        double contentPrefWidth = getActualContent().prefWidth(height);
+        double buttonBarPrefWidth = buttonBar == null ? 0 : buttonBar.prefWidth(height);
+        double graphicPrefWidth = getActualGraphic().prefWidth(height);
+
+        double expandableContentPrefWidth = 0;
+        final Node expandableContent = getExpandableContent();
+        if (isExpanded() && expandableContent != null) {
+            expandableContentPrefWidth = expandableContent.prefWidth(height);
+        }
+
+        double prefWidth = snappedLeftInset() +
+               (hasHeader() ? 0 : graphicPrefWidth) +
+               Math.max(Math.max(headerPrefWidth, expandableContentPrefWidth), Math.max(contentPrefWidth, buttonBarPrefWidth)) +
+               snappedRightInset();
+
+        return snapSize(prefWidth);
+    }
+
+    /** {@inheritDoc} */
+    @Override protected double computePrefHeight(double width) {
+        final boolean hasHeader = hasHeader();
+
+        double headerPrefHeight = hasHeader ? getActualHeader().prefHeight(width) : 0;
+        double buttonBarPrefHeight = buttonBar == null ? 0 : buttonBar.prefHeight(width);
+
+        Node graphic = getActualGraphic();
+        double graphicPrefWidth = hasHeader ? 0 : graphic.prefWidth(-1);
+        double graphicPrefHeight = hasHeader ? 0 : graphic.prefHeight(width);
+
+        Node content = getActualContent();
+        double contentAvailableWidth = width == Region.USE_COMPUTED_SIZE ? Region.USE_COMPUTED_SIZE :
+                hasHeader ? width : (width - graphicPrefWidth);
+        double contentPrefHeight = content.prefHeight(contentAvailableWidth);
+
+        double expandableContentPrefHeight = 0;
+        final Node expandableContent = getExpandableContent();
+        if (isExpanded() && expandableContent != null) {
+            expandableContentPrefHeight = expandableContent.prefHeight(width);
+        }
+
+        double prefHeight = snappedTopInset() +
+               headerPrefHeight +
+               Math.max(graphicPrefHeight, contentPrefHeight) +
+               expandableContentPrefHeight +
+               buttonBarPrefHeight +
+               snappedBottomInset();
+
+        return snapSize(prefHeight);
+    }
+
+
+
+    /**************************************************************************
+     *
+     * Private implementation
+     * @param buttonBar
+     *
+     **************************************************************************/
+
+    private void updateButtons(ButtonBar buttonBar) {
+        buttonBar.getButtons().clear();
+
+        // show details button if expandable content is present
+        if (hasExpandableContent()) {
+            if (detailsButton == null) {
+                detailsButton = createDetailsButton();
+            }
+            ButtonBar.setButtonData(detailsButton, ButtonData.HELP_2);
+            buttonBar.getButtons().add(detailsButton);
+            ButtonBar.setButtonUniformSize(detailsButton, false);
+        }
+
+        boolean hasDefault = false;
+        for (ButtonType cmd : getButtonTypes()) {
+            Node button = buttonNodes.computeIfAbsent(cmd, dialogButton -> createButton(cmd));
+
+            // keep only first default button
+            if (button instanceof Button) {
+                ButtonData buttonType = cmd.getButtonData();
+
+                ((Button)button).setDefaultButton(!hasDefault && buttonType != null && buttonType.isDefaultButton());
+                ((Button)button).setCancelButton(buttonType != null && buttonType.isCancelButton());
+
+                hasDefault |= buttonType != null && buttonType.isDefaultButton();
+            }
+            buttonBar.getButtons().add(button);
+        }
+    }
+
+    private Node getActualContent() {
+        Node content = getContent();
+        return content == null ? contentLabel : content;
+    }
+
+    private Node getActualHeader() {
+        Node header = getHeader();
+        return header == null ? headerTextPanel : header;
+    }
+
+    private Node getActualGraphic() {
+        return headerTextPanel;
+    }
+
+    private void updateHeaderArea() {
+        Node header = getHeader();
+        if (header != null) {
+            if (! getChildren().contains(header)) {
+                getChildren().add(header);
+            }
+
+            headerTextPanel.setVisible(false);
+            headerTextPanel.setManaged(false);
+        } else {
+            final String headerText = getHeaderText();
+
+            headerTextPanel.getChildren().clear();
+            headerTextPanel.getStyleClass().clear();
+
+            // recreate the headerTextNode and add it to the children list.
+            headerTextPanel.setMaxWidth(Double.MAX_VALUE);
+
+            if (headerText != null && ! headerText.isEmpty()) {
+                headerTextPanel.getStyleClass().add("header-panel"); //$NON-NLS-1$
+            }
+
+            // on left of header is the text
+            Label headerLabel = new Label(headerText);
+            headerLabel.setWrapText(true);
+            headerLabel.setAlignment(Pos.CENTER_LEFT);
+            headerLabel.setMaxWidth(Double.MAX_VALUE);
+            headerLabel.setMaxHeight(Double.MAX_VALUE);
+            headerTextPanel.add(headerLabel, 0, 0);
+
+            // on the right of the header is a graphic, if one is specified
+            graphicContainer.getChildren().clear();
+
+            if (! graphicContainer.getStyleClass().contains("graphic-container")) { //$NON-NLS-1$)
+                graphicContainer.getStyleClass().add("graphic-container"); //$NON-NLS-1$
+            }
+
+            final Node graphic = getGraphic();
+            if (graphic != null) {
+                graphicContainer.getChildren().add(graphic);
+            }
+            headerTextPanel.add(graphicContainer, 1, 0);
+
+            // column constraints
+            ColumnConstraints textColumn = new ColumnConstraints();
+            textColumn.setFillWidth(true);
+            textColumn.setHgrow(Priority.ALWAYS);
+            ColumnConstraints graphicColumn = new ColumnConstraints();
+            graphicColumn.setFillWidth(false);
+            graphicColumn.setHgrow(Priority.NEVER);
+            headerTextPanel.getColumnConstraints().setAll(textColumn , graphicColumn);
+
+            headerTextPanel.setVisible(true);
+            headerTextPanel.setManaged(true);
+        }
+    }
+
+    private void updateContentArea() {
+        Node content = getContent();
+        if (content != null) {
+            if (! getChildren().contains(content)) {
+                getChildren().add(content);
+            }
+
+            if (! content.getStyleClass().contains("content")) {
+                content.getStyleClass().add("content");
+            }
+
+            contentLabel.setVisible(false);
+            contentLabel.setManaged(false);
+        } else {
+            final String contentText = getContentText();
+            final boolean visible = contentText != null && !contentText.isEmpty();
+            contentLabel.setText(visible ? contentText : "");
+            contentLabel.setVisible(visible);
+            contentLabel.setManaged(visible);
+        }
+    }
+
+    boolean hasHeader() {
+        return getHeader() != null || isTextHeader();
+    }
+
+    private boolean isTextHeader() {
+        String headerText = getHeaderText();
+        return headerText != null && !headerText.isEmpty();
+    }
+
+    boolean hasExpandableContent() {
+        return getExpandableContent() != null;
+    }
+
+    void setDialog(Dialog<?> dialog) {
+        this.dialog = dialog;
+    }
+
+
+
+    /***************************************************************************
+     *                                                                         *
+     * Stylesheet Handling                                                     *
+     *                                                                         *
+     **************************************************************************/
+
+     /**
+      * @treatAsPrivate implementation detail
+      */
+    private static class StyleableProperties {
+
+        private static final CssMetaData<DialogPane,String> GRAPHIC =
+            new CssMetaData<DialogPane,String>("-fx-graphic",
+                StringConverter.getInstance()) {
+
+            @Override
+            public boolean isSettable(DialogPane n) {
+                // Note that we care about the graphic, not imageUrl
+                return n.graphicProperty == null || !n.graphicProperty.isBound();
+            }
+
+            @Override
+            public StyleableProperty<String> getStyleableProperty(DialogPane n) {
+                return n.imageUrlProperty();
+            }
+        };
+
+        private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
+        static {
+            final List<CssMetaData<? extends Styleable, ?>> styleables = new ArrayList<>(Region.getClassCssMetaData());
+            Collections.addAll(styleables,
+                GRAPHIC
+            );
+            STYLEABLES = Collections.unmodifiableList(styleables);
+        }
+    }
+
+    /**
+     * @return The CssMetaData associated with this class, which may include the
+     * CssMetaData of its super classes.
+     */
+    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+        return StyleableProperties.STYLEABLES;
+    }
+
+    /** {@inheritDoc} */
+    @Override public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+        return getClassCssMetaData();
+    }
+}
