@@ -78,7 +78,7 @@ public class Exercise17_13 extends Application {
 
                 File[] sourceFiles = new File[numOutFiles];
                 for (int i = 0; i < sourceFiles.length; i++) {
-                    String nextFileName = fileInput + "." + i;
+                    String nextFileName = fileInput + "." + (i + 1);
                     sourceFiles[i] = new File(PARENT_PATH, nextFileName);
                 }
                 try {
