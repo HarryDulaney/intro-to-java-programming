@@ -26,18 +26,18 @@ public class Exercise14_21 extends Application {
         Circle c1 = new Circle();
         c1.setRadius(15);
         c1.setFill(Color.BLACK);
-        c1.setCenterX(10 + (Math.random() * WIDTH));
-        c1.setCenterY(10 + Math.random() * HEIGHT);
+        c1.setCenterX(10 + Math.random() * (WIDTH - 15));
+        c1.setCenterY(10 + Math.random() * (HEIGHT - 15));
         pane.getChildren().add(c1);
 
         Circle c2 = new Circle();
         c2.setRadius(15);
         c2.setFill(Color.BLACK);
-        c2.setCenterX(10 + Math.random() * WIDTH);
-        c2.setCenterY(10 + Math.random() * HEIGHT);
+        c2.setCenterX(10 + Math.random() * (WIDTH - 15));
+        c2.setCenterY(10 + Math.random() * (HEIGHT - 15));
         pane.getChildren().add(c2);
 
-        Line line = new Line(c1.getCenterX(), c1.getCenterY(), c2.getCenterX(), c2.getCenterY());
+        Line line = drawConnectLine(c1.getCenterX(), c1.getCenterY(), c2.getCenterX(), c2.getCenterY());
         Text text = new Text(findDistanceFromCenters(c1, c2));
         text.setX((c1.getCenterX() + c2.getCenterX()) / 2);
         text.setY((c1.getCenterY() + c2.getCenterY()) / 2);
@@ -51,6 +51,11 @@ public class Exercise14_21 extends Application {
         primaryStage.show();
 
     }
+
+    private Line drawConnectLine(double x1, double y1, double x2, double y2) {
+        return new Line(x1, y1, x2, y2);
+    }
+
 
     public static void main(String[] args) {
         Application.launch(args);
