@@ -101,8 +101,8 @@ public class MyRectangle2D {
         MyPoint rec2TopLeft = new MyPoint(this.getX() - this.getWidth() / 2, this.getY() + this.getHeight() / 2);
         MyPoint rec2BottomRight = new MyPoint(this.getX() + r.getWidth() / 2, this.getY() - this.getHeight() / 2);
 
-        return (rec1TopLeft.getX() < rec2BottomRight.getX() || rec2TopLeft.getX() < rec1BottomRight.getX()) &&
-                (rec1TopLeft.getY() > rec2BottomRight.getY() || rec2TopLeft.getY() > rec1BottomRight.getY());
+        return (rec1TopLeft.getX() < rec2BottomRight.getX() && rec2TopLeft.getX() < rec1BottomRight.getX()) &&
+                (rec1TopLeft.getY() > rec2BottomRight.getY() && rec2TopLeft.getY() > rec1BottomRight.getY());
 
     }
 
