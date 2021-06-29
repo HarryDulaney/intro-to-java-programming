@@ -2,7 +2,7 @@ package ch_14;
 
 import ch_10.exercise10_13.MyRectangle2D;
 import javafx.application.Application;
-import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -41,9 +41,7 @@ public class Exercise14_23 extends Application {
         System.arraycopy(rect2, 0, myArgs, 4, 4);
         in.close();
 
-
         Application.launch(myArgs);
-
 
     }
 

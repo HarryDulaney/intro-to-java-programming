@@ -1,18 +1,17 @@
-package ch_04;
+package ch_14;
 
-import java.util.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 /**
- * *4.6 (Random points on a circle) Write a program that generates three random points
- * on a circle centered at (0, 0) with radius 40 and display three angles in a triangle
- * formed by these three points, as shown in Figure 4.7a.
- * (Hint: Generate a random angle a in radians between 0 and 2pi, as shown in Figure 4.7b and the point determined by
- * this angle is (r*cos(a), r*sin(a)).)]
- * <p>
- * x = r × cos(α) and y = r × sin(α)
+ * *14.25 (Random points on a circle) Modify {@linkplain ch_04.Exercise04_06} to create five
+ * random points on a circle, form a polygon by connecting the points clockwise,
+ * and display the circle and the polygon, as shown in Figure 14.51b.
  */
-public class Exercise04_06 {
-    public static void main(String[] args) {
+public class Exercise14_25 extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
         double radius = 40;
         //Point 1
         //Generate random angle in radians between 0 and 2*PI (2*PI radians == 360 degrees)
@@ -62,8 +61,9 @@ public class Exercise04_06 {
         System.out.println("The three angles are " +
                 Math.round(A * 100) / 100.0 + " " + Math.round(B * 100) / 100.0 + " " +
                 Math.round(C * 100) / 100.0);
-
     }
 
-
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
