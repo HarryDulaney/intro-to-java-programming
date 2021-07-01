@@ -21,8 +21,8 @@ import javafx.stage.Stage;
  * Hint: Use the Node’s contains method to test whether a point is inside a node.
  */
 public class Exercise14_24 extends Application {
-    private static final double WIDTH = 300;
-    private static final double HEIGHT = 300;
+    private static final double WIDTH = 200;
+    private static final double HEIGHT = 200;
 
 
     @Override

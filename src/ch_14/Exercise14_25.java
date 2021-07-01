@@ -1,6 +1,11 @@
 package ch_14;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 /**
@@ -9,61 +14,50 @@ import javafx.stage.Stage;
  * and display the circle and the polygon, as shown in Figure 14.51b.
  */
 public class Exercise14_25 extends Application {
+    private final double RADIUS = 80;
+    private final double WIDTH = 200;
+    private final double HEIGHT = 200;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        double radius = 40;
-        //Point 1
-        //Generate random angle in radians between 0 and 2*PI (2*PI radians == 360 degrees)
-        double randomAngle = 0.5 + Math.random() * 361;
-        System.out.println(randomAngle);
-        double angleRadians = Math.toRadians(randomAngle);
-        //Find point on circle with radius 40
-        double x1 = radius * Math.cos(angleRadians);
-        double y1 = radius * Math.sin(angleRadians);
-        System.out.println("x = " + x1 + ", " + "y = " + y1);
+        double[][] pointsInCircle = new double[5][2];
+        Circle circle = new Circle(100,100, RADIUS);
+        circle.setFill(Color.TRANSPARENT);
+        circle.setStroke(Color.BLACK);
 
-        //Point 2
-        double randomAngle2 = 0.5 + Math.random() * 361;
-        System.out.println(randomAngle2);
-        double angleRadians2 = Math.toRadians(randomAngle2);
+        for (int i = 0; i < 5; i++) {
+            pointsInCircle[i] = randomPointOnCircle(circle.getCenterX(), circle.getCenterY(), RADIUS);
+        }
+        drawCircleWithPolygonPoints(pointsInCircle, primaryStage, circle);
 
-        double x2 = radius * Math.cos(angleRadians2);
-        double y2 = radius * Math.sin(angleRadians2);
-        System.out.println("x = " + x2 + ", " + "y = " + y2);
+    }
 
-        //Point 3
-        double randomAngle3 = 0.5 + Math.random() * 361;
-        System.out.println(randomAngle3);
-        double angleRadians3 = Math.toRadians(randomAngle3);
+    private void drawCircleWithPolygonPoints(double[][] points, Stage stage, Circle circle) {
+        Pane pane = new Pane();
+        pane.getChildren().add(circle);
 
-        double x3 = radius * Math.cos(angleRadians3);
-        double y3 = radius * Math.sin(angleRadians3);
-        System.out.println("x = " + x3 + ", " + "y = " + y3);
+        for (int i = 0; i < points.length - 1; i++) {
+            Line line = new Line(points[i][0], points[i][1], points[i + 1][0], points[i + 1][1]);
+            pane.getChildren().add(line);
+        }
 
-        // Compute three sides of the triangle with given points
-        double a = Math.sqrt((x2 - x3) * (x2 - x3)
-                + (y2 - y3) * (y2 - y3));
-        double b = Math.sqrt((x1 - x3) * (x1 - x3)
-                + (y1 - y3) * (y1 - y3));
-        double c = Math.sqrt((x1 - x2) * (x1 - x2)
-                + (y1 - y2) * (y1 - y2));
+        Scene scene = new Scene(pane, WIDTH, HEIGHT);
+        stage.setScene(scene);
+        stage.setTitle(getClass().getName());
+        stage.show();
 
-        // Compute the angles of the triangle using values for three sides
-        double A = Math.toDegrees(Math.acos((a * a - b * b - c * c)
-                / (-2 * b * c)));
-        double B = Math.toDegrees(Math.acos((b * b - a * a - c * c)
-                / (-2 * a * c)));
-        double C = Math.toDegrees(Math.acos((c * c - b * b - a * a)
-                / (-2 * a * b)));
+    }
 
-        // Display result
-        System.out.println("The three angles are " +
-                Math.round(A * 100) / 100.0 + " " + Math.round(B * 100) / 100.0 + " " +
-                Math.round(C * 100) / 100.0);
+    private double[] randomPointOnCircle(double centerX, double centerY, double radius) {
+        double angle = Math.random() * 2 * Math.PI,
+                A = Math.sqrt(Math.random()) * radius,
+                B = Math.cos(angle) * A,
+                C = Math.sin(angle) * A;
+        return new double[]{centerX + B, centerY + C};
     }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }
