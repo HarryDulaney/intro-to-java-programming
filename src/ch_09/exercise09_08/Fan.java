@@ -45,9 +45,9 @@ package ch_09.exercise09_08;
  * Draw the UML diagram for the class and then implement the class.
  */
 public class Fan {
-    protected static int SLOW = 1;
-    protected static int MEDIUM = 2;
-    protected static int FAST = 3;
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
 
     private int speed;
     private boolean on;
