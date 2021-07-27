@@ -1,4 +1,4 @@
-package ch_17.exercise17_18;
+package ch_17.exercise17_19;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -6,17 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * 17.18 (View bits) Write the following method that displays the bit representation for the
- * last byte in an integer:
- * public static String getBits(int value)
- * For a hint, see {@link ch_05.Exercise05_44} Programming Exercise 5.44.
+ * 17.19 (View hex) Write a program that prompts the user to enter a file name, reads bytes
+ * from the file, and displays each byte’s hex representation. (Hint: You can first
+ * convert the byte value into an 8-bit string, then convert the bit string into a two-digit hex string.)
  * <p>
- * Write a program that prompts the
- * user to enter a file name, reads bytes from the file, and displays each byte’s binary
- * representation.
- * Example input: src/ch_17/exercise17_17/Exercise17_17.dat
+ * Example test input: src/ch_17/exercise17_19/testFile.txt
  */
-public class Exercise17_18 {
+public class Exercise17_19 {
     static BufferedInputStream bufferedInputStream;
     static ArrayList<String> strBytes;
 
@@ -30,22 +26,22 @@ public class Exercise17_18 {
             int b;
             while ((b = bufferedInputStream.read()) != -1) {
                 String val = getBits(b);
-                strBytes.add(val);
+                System.out.println("Read byte value = " + val);
+                int asInteger = Integer.parseInt(val, 2);
+                strBytes.add(Integer.toHexString(asInteger).toUpperCase());
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("The contents of the file, converted to bytes are: ");
+        System.out.println("The byte contents of the file, converted to hex are: ");
         System.out.println(strBytes.toString());
-
-        in.close();
     }
 
     public static String getBits(int value) {
         StringBuilder bits = new StringBuilder();
-        long i;
-        for (i = 128; i > 0; i /= 2) {
-            bits.append((value & i) != 0 ? "1" : "0");
+        for (int i = 0; i < 8; i++) {
+            bits.insert(0, (value & 1));
+            value >>= 1;
         }
         return bits.toString();
     }

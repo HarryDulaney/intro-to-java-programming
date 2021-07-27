@@ -36,12 +36,12 @@ public class BitOutputStream implements Closeable {
     public BitOutputStream(File file) throws FileNotFoundException {
         this.file = file;
         fileOutputStream = new FileOutputStream(file);
-        posCounter = 0;
+        posCounter = 1;
         aByte = 0b00000000;
     }
 
     void handleByteCapacity() {
-        if (posCounter == 7) { // aByte is full
+        if (posCounter == 8) { // aByte is full (Bit at position 8 is always 0 (non-negative))
             try {
                 System.out.println("aByte is full, writing to FileOutputStream: " + Integer.toBinaryString(aByte));
                 fileOutputStream.write(aByte); // Write to OutputStream
@@ -57,21 +57,21 @@ public class BitOutputStream implements Closeable {
     }
 
     public void writeBit(char bit) {
-        if (bit != '0' && bit != '1') {
+        if (bit != '0' && bit != '1' && bit != '\n' && bit != '\t') {
             throw new IllegalArgumentException("writeBit method only excepts char parameters of '0' or '1' ");
         } else {
             handleByteCapacity(); // Check if aByte is full (when posCounter is 8), if so, write to file and reset aByte
             aByte = (byte) (aByte << 1); // Shift over bit values to left by one. For Example: (00001111 << 1) = 00011110
             if (bit == '1') { // If bit is '1' perform logic to change right-most 0 to 1
                 aByte = (byte) (aByte | 0b00000001); // Use bit masking to turn the last bit on.
+            } else {
+                aByte += (char) bit;
             }
             // Print the aByte result formatted as a String for clarity
-            System.out.println("bit is " + bit + " -> aByte is " + Integer.toBinaryString(aByte));
+//            System.out.println("bit is " + bit + " -> aByte is " + Integer.toBinaryString(aByte));
             posCounter += 1;
 
         }
-
-
     }
 
     public void writeBit(String bit) {
@@ -79,13 +79,12 @@ public class BitOutputStream implements Closeable {
         for (char b : bits) {
             writeBit(b);
         }
-
     }
 
     @Override
     public void close() throws IOException {
         if (posCounter != 0) {
-            while (posCounter != 8) {
+            while (posCounter < 8) {
                 aByte = (byte) (aByte << 1);
                 posCounter++;
             }
