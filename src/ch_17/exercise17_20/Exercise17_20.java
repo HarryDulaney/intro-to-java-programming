@@ -15,8 +15,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -97,54 +96,59 @@ public class Exercise17_20 extends Application {
     private void saveBytesToFile(String text) throws IOException {
         int counter = 0;
         ArrayList<String> splitBytes = new ArrayList<>();
-        String temp = "";
+        StringBuilder strByte = new StringBuilder();
         for (char ch : text.toCharArray()) {
             if (counter < 8) {
-                temp += ch;
+                strByte.append(ch);
                 counter++;
             } else {
-                splitBytes.add(temp);
+                splitBytes.add(strByte.toString());
                 counter = 0;
-                temp = "";
+                strByte = new StringBuilder();
             }
         }
-PrintWriter printWriter = new PrintWriter(filePath, StandardCharsets.UTF_8.name());
+        FileOutputStream fOs = new FileOutputStream(filePath);
+        StringBuilder stringBuilder = new StringBuilder();
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fOs);
         char ch = 0;
         for (String bits : splitBytes) {
-            ch = getCharFromByte(bits);
-            printWriter.write(ch);
+            ch = (char) getCharFromByte(bits);
+            stringBuilder.append(ch);
         }
-        printWriter.flush();
-        printWriter.close();
+
+        outputStreamWriter.write(stringBuilder.toString());
+        outputStreamWriter.close();
 
     }
 
     private String readBytesFromFile() throws IOException {
         StringBuilder result = new StringBuilder();
-        Scanner in = new Scanner(Paths.get(filePath), StandardCharsets.UTF_8.name());
-        while (in.hasNextLine()) {
-            String line = in.nextLine();
-            for (char ch : line.toCharArray()) {
-                result.append(getBits(ch));
-            }
+        FileInputStream fIs = new FileInputStream(filePath);
+        InputStreamReader iSr = new InputStreamReader(fIs);
+        Reader in = new BufferedReader(iSr);
+        int ch;
+        while ((ch = in.read()) != -1) {
+            String valueAsByte = getBits(ch);
+            result.append(valueAsByte);
         }
         in.close();
 
         return result.toString();
+
     }
 
     public static String getBits(int value) {
-        String bits = "";
-        for (int i = 0; i < 8; i++) {
-            bits += (value & 1);
-            value >>= 1;
+        StringBuilder bits = new StringBuilder();
+        long i;
+        for (i = 128; i > 0; i /= 2) {
+            bits.append((value & i) != 0 ? "1" : "0");
         }
-        return bits;
+        return bits.toString();
     }
 
-    public static char getCharFromByte(String value) {
+    public static int getCharFromByte(String value) {
         int numVal = Integer.parseInt(value, 2);
-        return (char) numVal;
+        return numVal;
     }
 
 
