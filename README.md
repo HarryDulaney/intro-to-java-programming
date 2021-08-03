@@ -57,11 +57,12 @@ ____
 >Chapter 12</strong></a> - Exception Handling and Text I/O (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_13"><strong
 >Chapter 13</strong></a> - Abstract Classes and Interfaces (Complete) </li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_14"><strong>Chapter 14</strong></a> - JavaFx Basics</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_14"><strong>Chapter 
+14</strong></a> - JavaFx Basics (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_16"><strong>Chapter
 		 16</strong></a> - JavaFx UI Controls and Multimedia</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_17"><strong>Chapter 17</strong></a> - Binary I/O</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_17"><strong>Chapter 17</strong></a> - Binary I/O (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
