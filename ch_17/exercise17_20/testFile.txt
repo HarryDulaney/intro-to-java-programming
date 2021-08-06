@@ -1,1 +1,3 @@
-Hello read and write bytes!
+Hello read and write Binary Values!
+Read and write Binary Values!
+Binary Values????

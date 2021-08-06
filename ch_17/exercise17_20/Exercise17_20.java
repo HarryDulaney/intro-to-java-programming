@@ -15,12 +15,10 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 
 /**
  * **17.20 (Binary editor) Write a GUI application that lets the user enter a file name in the
@@ -59,8 +57,9 @@ public class Exercise17_20 extends Application {
         HBox buttonBox = new HBox(5);
         Button saveButton = new Button("Save the change");
         saveButton.setOnAction(e -> {
+            filePath = textField.getText().trim();
             try {
-                saveBytesToFile(editBoxString.get());
+                saveBytesToFile(editBoxString.get(),new File(filePath));
                 editBox.clear();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -78,9 +77,9 @@ public class Exercise17_20 extends Application {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
                     if (filePath == null) {
-                        filePath = textField.getText();
+                        filePath = textField.getText().trim();
                     }
-                    String bytes = readBytesFromFile();
+                    String bytes = readBytesFromFile(filePath);
                     editBoxString.set(bytes);
 
                 } catch (IOException ioException) {
@@ -94,61 +93,75 @@ public class Exercise17_20 extends Application {
 
     }
 
-    private void saveBytesToFile(String text) throws IOException {
-        int counter = 0;
-        ArrayList<String> splitBytes = new ArrayList<>();
-        StringBuilder strByte = new StringBuilder();
-        for (char ch : text.toCharArray()) {
-            if (counter < 8) {
-                strByte.append(ch);
-                counter++;
-            } else {
-                splitBytes.add(strByte.toString());
-                counter = 0;
-                strByte = new StringBuilder();
-            }
-        }
-        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-        StringBuilder result = new StringBuilder();
-        for (String byteString : splitBytes) {
-            int posValue = 128;
-            char valueAsByte = 0;
-            for (char c : byteString.toCharArray()) {
-                if (c == '1') {
-                    valueAsByte += posValue;
-                }
-                posValue /= 2;
-            }
-            result.append(valueAsByte);
-        }
-        outputStreamWriter.write(result.toString());
-        outputStreamWriter.close();
+    private void saveBytesToFile(String text, File file) throws IOException {
+        BitOutputStream bitOutputStream = new BitOutputStream(file);
+        bitOutputStream.writeBit(text);
 
     }
 
-    private String readBytesFromFile() throws IOException {
-        StringBuilder result = new StringBuilder();
-        byte[] bytes = Files.readAllBytes(Paths.get(filePath));
-        for (byte b : bytes) {
-            String strByte = getBits(b);
-            result.append(strByte);
+    private String readBytesFromFile(String file) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(file);
+        String s = "";
+        int value;
+        while ((value = fileInputStream.read()) != -1) {
+            s += getBits(value);
         }
-
-        return result.toString();
+        fileInputStream.close();
+        return s;
 
     }
 
-    public static String getBits(byte value) {
-        StringBuilder bits = new StringBuilder();
-        long i;
-        for (i = 128; i > 0; i /= 2) {
-            bits.append((value & i) != 0 ? "1" : "0");
+    public static String getBits(int value) {
+        String result = "";
+        int mask = 1;
+        for (int i = 7; i >= 0; i--) {
+            int temp = value >> i;
+            int bit = temp & mask;
+            result = result + bit;
         }
-        return bits.toString();
+        return result;
     }
 
     public static void main(String[] args) {
         Application.launch(args);
     }
+
+    public static class BitOutputStream {
+        private FileOutputStream output;
+        private int value;
+        private int count = 0;
+        private int mask = 1;
+
+        public BitOutputStream(File file) throws IOException {
+            output = new FileOutputStream(file);
+        }
+
+        public void writeBit(char bit) throws IOException {
+            count++;
+            value = value << 1;
+
+            if (bit == '1')
+                value = value | mask;
+
+            if (count == 8) {
+                output.write(value);
+                count = 0;
+            }
+        }
+
+        public void writeBit(String bitString) throws IOException {
+            for (int i = 0; i < bitString.length(); i++)
+                writeBit(bitString.charAt(i));
+        }
+
+        public void close() throws IOException {
+            if (count > 0) {
+                value = value << (8 - count);
+                output.write(value);
+            }
+
+            output.close();
+        }
+    }
+
 }

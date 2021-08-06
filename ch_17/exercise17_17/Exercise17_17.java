@@ -30,7 +30,7 @@ public class Exercise17_17 {
         File testFile = new File("ch_17/exercise17_17", "Exercise17_17.dat");
         try {
             BitOutputStream bitOutputStream = new BitOutputStream(testFile);
-            bitOutputStream.writeBit("010000100100001001101");
+            bitOutputStream.writeBit("01000010010000100110100011001001011110011");
             bitOutputStream.close();
         } catch (IOException ioException) {
             ioException.printStackTrace();
