@@ -39,9 +39,7 @@ public class BitOutputStream implements Closeable {
     }
 
     public void writeBit(char bit) {
-        if (bit != '0' && bit != '1' && bit != '\n' && bit != '\t') {
-            throw new IllegalArgumentException("writeBit method only excepts char parameters of '0' or '1' ");
-        } else {
+        if (isValid(bit)) {
             posCounter++;
             value = value << 1; // Shift over bit values to left by one. For Example: (00001111 << 1) = 00011110
             if (bit == '1') { // If bit is '1' perform logic to change right-most 0 to 1
@@ -62,9 +60,17 @@ public class BitOutputStream implements Closeable {
             }
 
             // Print the value result formatted as a String for clarity
-//            System.out.println("bit is " + bit + " -> aByte is " + Integer.toBinaryString(aByte));
-
+//            System.out.println("bit is " + bit + " -> value is " + Integer.toBinaryString(aByte));
+        } else {
+            throw new IllegalArgumentException("writeBit method only excepts char parameters of '0' or '1' ");
         }
+    }
+
+    private boolean isValid(char bit) {
+        return bit == '0' ||
+                bit == '1' ||
+                bit == '\n' ||
+                bit == '\t';
     }
 
     public void writeBit(String bit) {
@@ -76,11 +82,11 @@ public class BitOutputStream implements Closeable {
     @Override
     public void close() throws IOException {
         if (posCounter > 0) {
-            value = value << (8 - posCounter);
+            int shift = 8 - posCounter;
+            value = value << shift;
             fileOutputStream.write(value);
             System.out.println("Filling rest of the byte value with zeros and writing to FileOutputStream:  " + Integer.toBinaryString(value));
         }
-        fileOutputStream.flush();
         fileOutputStream.close();
     }
 

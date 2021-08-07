@@ -15,10 +15,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * **17.20 (Binary editor) Write a GUI application that lets the user enter a file name in the
@@ -31,7 +28,11 @@ import java.io.IOException;
  */
 public class Exercise17_20 extends Application {
     private static String filePath = null;
-    SimpleStringProperty editBoxString = new SimpleStringProperty();
+    private SimpleStringProperty editBoxString = new SimpleStringProperty();
+
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -59,7 +60,7 @@ public class Exercise17_20 extends Application {
         saveButton.setOnAction(e -> {
             filePath = textField.getText().trim();
             try {
-                saveBytesToFile(editBoxString.get(),new File(filePath));
+                writeFile(editBoxString.get(), new File(filePath));
                 editBox.clear();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -76,57 +77,36 @@ public class Exercise17_20 extends Application {
         scene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
-                    if (filePath == null) {
-                        filePath = textField.getText().trim();
-                    }
-                    String bytes = readBytesFromFile(filePath);
+                    filePath = textField.getText().trim();
+
+                    String bytes = readFile(new File(filePath));
                     editBoxString.set(bytes);
 
                 } catch (IOException ioException) {
+                    System.out.println("FilePath: " + filePath);
                     ioException.printStackTrace();
                 }
             }
         });
+
         primaryStage.setScene(scene);
         primaryStage.setTitle(getClass().getName());
         primaryStage.show();
 
     }
 
-    private void saveBytesToFile(String text, File file) throws IOException {
+    private void writeFile(String text, File file) throws IOException {
         BitOutputStream bitOutputStream = new BitOutputStream(file);
         bitOutputStream.writeBit(text);
 
     }
 
-    private String readBytesFromFile(String file) throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(file);
-        String s = "";
-        int value;
-        while ((value = fileInputStream.read()) != -1) {
-            s += getBits(value);
-        }
-        fileInputStream.close();
-        return s;
-
+    private String readFile(File file) throws IOException {
+        BitInputStream bitOutputStream = new BitInputStream(file);
+        return bitOutputStream.readAllBytes();
     }
 
-    public static String getBits(int value) {
-        String result = "";
-        int mask = 1;
-        for (int i = 7; i >= 0; i--) {
-            int temp = value >> i;
-            int bit = temp & mask;
-            result = result + bit;
-        }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        Application.launch(args);
-    }
-
-    public static class BitOutputStream {
+    public static class BitOutputStream implements Closeable {
         private FileOutputStream output;
         private int value;
         private int count = 0;
@@ -139,10 +119,8 @@ public class Exercise17_20 extends Application {
         public void writeBit(char bit) throws IOException {
             count++;
             value = value << 1;
-
             if (bit == '1')
                 value = value | mask;
-
             if (count == 8) {
                 output.write(value);
                 count = 0;
@@ -154,14 +132,54 @@ public class Exercise17_20 extends Application {
                 writeBit(bitString.charAt(i));
         }
 
+        @Override
         public void close() throws IOException {
             if (count > 0) {
                 value = value << (8 - count);
                 output.write(value);
             }
-
             output.close();
         }
+
+        void t() {
+        }
+
     }
 
+    public static class BitInputStream implements Closeable {
+        private FileInputStream input;
+        private String stringValue;
+        private static final int EOF = -1;
+
+        public BitInputStream(File file) throws IOException {
+            input = new FileInputStream(file);
+        }
+
+        private String readAllBytes() throws IOException {
+            stringValue = "";
+            int intValue;
+            while ((intValue = input.read()) != EOF) {
+                stringValue += readBits(intValue);
+            }
+            input.close();
+            return stringValue;
+
+        }
+
+        private String readBits(int value) {
+            String bits = "";
+            int mask = 1;
+            for (int i = 7; i >= 0; i--) {
+                int temp = value >> i;
+                int bit = temp & mask;
+                bits = bits + bit;
+            }
+            return bits;
+        }
+
+        @Override
+        public void close() throws IOException {
+            input.close();
+        }
+    }
 }
