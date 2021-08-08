@@ -15,12 +15,9 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 
 /**
  * *17.21 (Hex editor) Write a GUI application that lets the user enter a file name in the
@@ -59,7 +56,7 @@ public class Exercise17_21 extends Application {
         Button saveButton = new Button("Save the change");
         saveButton.setOnAction(e -> {
             try {
-                saveHexToFile(editBoxString.get());
+                write(editBoxString.get(), filePath);
                 editBox.clear();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -76,10 +73,8 @@ public class Exercise17_21 extends Application {
         scene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
-                    if (filePath == null) {
-                        filePath = textField.getText();
-                    }
-                    String hexValuesInString = readHexFromFile();
+                    filePath = textField.getText().trim();
+                    String hexValuesInString = read(filePath);
                     editBoxString.set(hexValuesInString);
 
                 } catch (IOException ioException) {
@@ -93,44 +88,28 @@ public class Exercise17_21 extends Application {
 
     }
 
-    private void saveHexToFile(String text) throws IOException {
-        int counter = 0;
-        ArrayList<String> splitHexValues = new ArrayList<>();
-        StringBuilder strByte = new StringBuilder();
-        for (char ch : text.toCharArray()) {
-            if (counter < 8) {
-                strByte.append(ch);
-                counter++;
-            } else {
-                splitHexValues.add(strByte.toString());
-                counter = 0;
-                strByte = new StringBuilder();
-            }
+    private void write(String hexValues, String filePath) throws IOException {
+        FileOutputStream output = new FileOutputStream(filePath);
+        byte[] bytes = new byte[hexValues.length() / 2];
+        for (int i = 0; i < hexValues.length(); i += 2) {
+            bytes[i / 2] = (byte) ((Character.digit(hexValues.charAt(i), 16) << 4) + Character.digit(hexValues.charAt(i + 1),
+                    16));
         }
-        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-        StringBuilder result = new StringBuilder();
-//        for (String hexString : ) {
-//
-//        }
-        outputStreamWriter.write(result.toString());
-        outputStreamWriter.close();
-
+        output.write(bytes);
     }
 
-    private String readHexFromFile() throws IOException {
-        StringBuilder result = new StringBuilder();
-        byte[] bytes = Files.readAllBytes(Paths.get(filePath));
-        for (byte b : bytes) {
-            String strByte = getHex(b);
-            result.append(strByte);
+    private String read(String filePath) throws IOException {
+        FileInputStream input = new FileInputStream(filePath);
+        String asChars = "";
+        int next;
+        while ((next = input.read()) != -1) {
+            asChars += String.format("%H", next);
+
         }
-        return result.toString();
+        input.close();
+        return asChars;
     }
 
-    public static String getHex(int value) {
-        return Integer.toHexString(value);
-    }
 
     public static void main(String[] args) {
         Application.launch(args);
