@@ -15,9 +15,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * *17.21 (Hex editor) Write a GUI application that lets the user enter a file name in the
@@ -90,21 +88,21 @@ public class Exercise17_21 extends Application {
 
     private void write(String hexValues, String filePath) throws IOException {
         FileOutputStream output = new FileOutputStream(filePath);
-        byte[] bytes = new byte[hexValues.length() / 2];
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
         for (int i = 0; i < hexValues.length(); i += 2) {
-            bytes[i / 2] = (byte) ((Character.digit(hexValues.charAt(i), 16) << 4) + Character.digit(hexValues.charAt(i + 1),
-                    16));
+            char value = (char) ((Character.digit(hexValues.charAt(i), 16) << 4) + Character.digit(hexValues.charAt(i + 1), 16));
+           writer.write(value);
         }
-        output.write(bytes);
+        writer.close();
     }
 
     private String read(String filePath) throws IOException {
         FileInputStream input = new FileInputStream(filePath);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input));
         String asChars = "";
         int next;
-        while ((next = input.read()) != -1) {
+        while ((next = reader.read()) != -1) {
             asChars += String.format("%H", next);
-
         }
         input.close();
         return asChars;
