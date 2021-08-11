@@ -11,10 +11,10 @@ import java.util.*;
  * Pass the Java file name from the command line.
  * <p>
  * Assume that the Java source code is correct and line comments and paragraph comments do not overlap
- * @author Harry D.
- *  Run this solution in a command line terminal:
- *                           compile  ->  javac Exercise21_03.java
- *       check keywords in Exercise21_02.java ->  java Exercise21_03 Exercise21_02.java
+ * <p>
+ * Run this solution in a command line terminal:
+ * compile  ->  javac Exercise21_03.java
+ * check keywords in Exercise21_02.java ->  java Exercise21_03 Exercise21_02.java
  */
 public class Exercise21_03 {
     static boolean inString;

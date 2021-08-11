@@ -13,7 +13,6 @@ import java.util.Set;
  * a set to store the vowels A, E, I, O, and U.
  * {textfile.txt}
  *
- * @author Harry D.
  */
 public class Exercise21_04 {
     static int numVowels;

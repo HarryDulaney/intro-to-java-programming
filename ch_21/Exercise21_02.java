@@ -8,13 +8,10 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-/*
+/**
  * 21.2 (Display non-duplicate words in ascending order) Write a program that reads
  * words from a text file and displays all the non-duplicate words in ascending order. 
  * The text file is passed as a command-line argument.
- */
-/**
- * @author Harry Dulaney IV
  */
 public class Exercise21_02 {
 	public static void main(String[] args) {

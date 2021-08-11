@@ -9,7 +9,6 @@ import java.util.*;
  * (You can clone the sets to preserve the original sets from being changed by
  * these set methods.)
  *
- * @author Harry D.
  */
 public class Exercise21_01 {
     public static void main(String[] args) {
