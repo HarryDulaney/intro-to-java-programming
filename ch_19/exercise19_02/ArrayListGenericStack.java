@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * UML Diagram:
  *
- * <img src="resources/uml-diagrams/exercise19_02.png" />
+ * <img src="../../resources/uml-diagrams/exercise19_02.png"/>
  *
  * @param <E> Type held by the ArrayListGenericStack instance.
  */
