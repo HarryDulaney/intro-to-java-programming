@@ -64,7 +64,7 @@ ____
 		 16</strong></a> - JavaFx UI Controls and Multimedia</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_17"><strong>Chapter 17</strong></a> - Binary I/O (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_19"><strong>Chapter 19</strong></a> - Generics</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_19"><strong>Chapter 19</strong></a> - Generics (Complete)</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 22</strong><!--</a>--> - Developing Efficient Algorithms</li><br>
