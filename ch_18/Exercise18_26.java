@@ -181,9 +181,9 @@ public class Exercise18_26 extends Application {
     }
 
     public void clear() {
-        for (int row = 0; row < board.length; row++) {
-            for (int col = 0; col < board[row].length; col++) {
-                board[row][col].unselect();
+        for (GameCell[] gameCells : board) {
+            for (GameCell gameCell : gameCells) {
+                gameCell.unselect();
             }
         }
     }
