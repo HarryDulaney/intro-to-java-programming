@@ -44,7 +44,7 @@ public class Exercise18_30 {
     }
 
     static void countOccurrences(File[] files, String word, int fileIndex) throws IOException {
-        if (files.length - 1 == fileIndex) {
+        if (files.length == fileIndex) {
             return;
         }
         if (files[fileIndex].isFile()) {
