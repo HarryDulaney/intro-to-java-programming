@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 /**
  * 18.23 (Binary to decimal) Write a recursive method that parses a binary number as a
- * string into a decimal integer. The method header is:
+ * string into a decimal integer.
+ * The method header is:
  * public static int bin2Dec(String binaryString)
  * <p>
  * Write a test program that prompts the user to enter a binary string and displays
@@ -18,9 +19,7 @@ public class Exercise18_23 {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the binary number to convert to decimal: ");
         String binaryNum = in.next();
-
         System.out.println(binaryNum + " binary number is equivalent to the decimal integer: " + bin2Dec(binaryNum));
-
         in.close();
 
     }
