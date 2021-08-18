@@ -9,14 +9,18 @@ import java.io.*;
  * Pass the parameters from the command line as follows:
  * <p>
  * java Exercise18_30 dirName word
+ * For Example:
+ * cmd:>> javac Exercise18_30.java
+ * >>>>>> java Exercise18_30 ch_14 static
  */
 public class Exercise18_30 {
+    static int occurrences = 0;
+
     public static void main(String[] args) {
         if (args.length < 2) {
             System.err.println("Usage: java Exercise18_30 dirName word");
             System.exit(0);
         }
-        int occurrences = 0;
 
         String directory = args[0];
         String word = args[1];
@@ -25,35 +29,35 @@ public class Exercise18_30 {
         if (dir.isDirectory()) {
             File[] files = dir.listFiles();
             if (files != null && files.length > 0) {
-                for (File f : files) {
-                    if (f.isFile()) {
-                        try {
-                            occurrences += countOccurrences(word, f);
-                        } catch (IOException ioException) {
-                            ioException.printStackTrace();
-                        }
-                    }
+                try {
+                    countOccurrences(files, word, 0);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
                 }
             }
 
         } else {
             System.out.println("Please specify a Directory for 'dirName'. ");
         }
-        System.out.println("The word: " + word + " occurs " + occurrences + " times in: " + dir.getName());
+        System.out.println("The word: \"" + word + "\" occurs " + occurrences + " times in: " + dir.getName());
 
     }
 
-    static int countOccurrences(String word, File file) throws IOException {
-        int occur = 0;
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            if (line.contains(word)) {
-                occur++;
+    static void countOccurrences(File[] files, String word, int fileIndex) throws IOException {
+        if (files.length - 1 == fileIndex) {
+            return;
+        }
+        if (files[fileIndex].isFile()) {
+            FileReader fileReader = new FileReader(files[fileIndex]);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.contains(word)) {
+                    occurrences++;
+                }
             }
         }
-        return occur;
+        countOccurrences(files, word, fileIndex + 1);
     }
 
 }
