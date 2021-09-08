@@ -23,8 +23,10 @@ import java.util.LinkedList;
  * Add the buttons Sort, Shuffle, and Reverse to sort, shuffle, and reverse the list.
  */
 public class Exercise20_02 extends Application {
-    LinkedList<Integer> NUMBERS = new LinkedList<>();
+    LinkedList<Integer> numbersList = new LinkedList<>();
     TextArea textArea;
+    static double width = 400;
+    static double height = 250;
 
     @Override
     public void start(Stage primaryStage) {
@@ -48,12 +50,12 @@ public class Exercise20_02 extends Application {
             if (oldValue.contains(newValue)) {
                 return;
             }
-            if (NUMBERS.contains(Integer.valueOf(newValue))) {
+            if (numbersList.contains(Integer.valueOf(newValue))) {
                 return;
             }
-            if (!newValue.equals("")) {
-                NUMBERS.add(Integer.parseInt(newValue));
-                refreshUI(NUMBERS);
+            if (newValue.length() > 0) {
+                numbersList.add(Integer.parseInt(newValue));
+                refreshUI(numbersList);
             }
         });
 
@@ -65,13 +67,14 @@ public class Exercise20_02 extends Application {
         vBox.getChildren().addAll(inBox, textFieldNumberIn);
         vBox.getChildren().add(textArea);
         Button sortButton = new Button("Sort");
-        sortButton.setOnAction(event -> sortNumbers(NUMBERS));
+
+        sortButton.setOnAction(event -> sortNumbers(numbersList));
 
         Button shuffleButton = new Button("Shuffle");
-        shuffleButton.setOnAction(e -> shuffleNumbers(NUMBERS));
+        shuffleButton.setOnAction(e -> shuffleNumbers(numbersList));
 
         Button reverseButton = new Button("Reverse");
-        reverseButton.setOnAction(e -> reverseNumbers(NUMBERS));
+        reverseButton.setOnAction(e -> reverseNumbers(numbersList));
 
         HBox buttonBox = new HBox();
         buttonBox.getChildren().addAll(sortButton, shuffleButton, reverseButton);
@@ -79,7 +82,7 @@ public class Exercise20_02 extends Application {
         buttonBox.setSpacing(8);
         vBox.getChildren().add(buttonBox);
 
-        Scene scene = new Scene(vBox, 420, 250);
+        Scene scene = new Scene(vBox, width, height);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -93,19 +96,19 @@ public class Exercise20_02 extends Application {
     private void reverseNumbers(LinkedList<Integer> numbers) {
         Collections.reverse(numbers);
         textArea.setText(Arrays.toString(numbers.toArray()));
-        //        NUMBERS = numbers;
+        numbersList = numbers;
     }
 
     private void shuffleNumbers(LinkedList<Integer> numbers) {
         Collections.shuffle(numbers);
-        //        NUMBERS = numbers;
         textArea.setText(Arrays.toString(numbers.toArray()));
+        numbersList = numbers;
     }
 
     private void sortNumbers(LinkedList<Integer> numbers) {
         Collections.sort(numbers);
-//        NUMBERS = numbers;
         textArea.setText(Arrays.toString(numbers.toArray()));
+        numbersList = numbers;
 
     }
 }
