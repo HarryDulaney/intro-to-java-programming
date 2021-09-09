@@ -22,9 +22,7 @@ public class Exercise15_07 extends javafx.application.Application {
         pane.getChildren().add(circle);
 
         pane.setOnMousePressed(event -> circle.setFill(Color.BLACK));
-
         pane.setOnMouseReleased(event -> circle.setFill(Color.WHITE));
-
 
         Scene scene = new Scene(pane, 400, 250);
         primaryStage.setTitle(getClass().getName());
