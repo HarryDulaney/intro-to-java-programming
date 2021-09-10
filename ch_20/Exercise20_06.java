@@ -9,13 +9,14 @@ import java.util.LinkedList;
  * the get(index) method.
  */
 public class Exercise20_06 {
-    static Integer size = 500_000;// I adjusted the test case to this because 5 million takes forever with get method
+    static Integer size = 5_000_000;
+    private static final boolean PRINT_TEST = false;
 
     public static void main(String[] args) {
         LinkedList<Integer> testList = new LinkedList<>();
 
         for (int i = 0; i < size; i++) {
-            testList.add((int) (1 + Math.random() * 9999));
+            testList.add(i);
         }
         System.out.println("Start Iterator test...");
         double time1 = testIterator(testList);
@@ -30,15 +31,11 @@ public class Exercise20_06 {
     static double testIterator(LinkedList<Integer> list) {
         Iterator<Integer> listIterator = list.iterator();
         long startTime = System.currentTimeMillis();
-        int nextLine = 0;
         while (listIterator.hasNext()) {
-
             Integer i = listIterator.next();
-            if (nextLine % 1000 == 0) {
-                System.out.print(i + " ");
+            if (PRINT_TEST) {
+                System.out.println(i + " ");
             }
-            nextLine++;
-
         }
 
         long endTime = System.currentTimeMillis();
@@ -49,13 +46,11 @@ public class Exercise20_06 {
 
     static double testGetMethod(LinkedList<Integer> list) {
         long startTime = System.currentTimeMillis();
-        int nextLine = 0;
         for (int i = 0; i < list.size(); i++) {
             Integer j = list.get(i);
-            if (nextLine % 1000 == 0) {
-                System.out.print(j + " ");
+            if (PRINT_TEST) {
+                System.out.println(j + " ");
             }
-            nextLine++;
         }
 
         long endTime = System.currentTimeMillis();
