@@ -4,31 +4,26 @@ import ch_25.AbstractTree;
 
 import java.util.*;
 
-/**
- * *25.1 (Add new methods in BST)
- * Add the following new methods in BST.
- * - Displays the nodes in a breadth-first traversal
- * public void breadthFirstTraversal()
- * - Returns the height of this binary tree
- * public int height()
- * {@link Exercise25_01}
- */
+
+// *25.1 (Add new methods in BST) Add the following new methods in BST.
+/* Displays the nodes in a breadth-first traversal */
+// public void breadthFirstTraversal()
+/* Returns the height of this binary tree */
+// public int height()
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
     protected int size = 0;
 
-    /* ************************************************************* Start  Ex25.1  ********************************************************************/
-
-    /**
-     * Displays the nodes in a breadth-first traversal
-     * <p>
-     * <p>
-     * BREADTH-FIRST TRAVERSAL:
+    /* ************************************************************* Exercise25_01 (Start) ****************************************************************** */
+    /* BREADTH-FIRST TRAVERSAL:
      * - Nodes are visited level by level. -
      * -> First, the root is visited.
      * -> Next, all the children of the root from left to right.
      * -> Next, the grandchildren of the root from left to right,
-     * and so on.
+     * and so on. */
+
+    /**
+     * Displays the nodes in a breadth-first traversal
      */
     public void breadthFirstTraversal() {
         // If node is null stop the traversal
@@ -58,8 +53,6 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
     /**
      * Returns the height of this binary tree
-     *
-     * @return height of this binary tree
      */
     public int height() {
         return height(root);
@@ -83,7 +76,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
         }
     }
-    /* ***************************************************************** End  Ex25.1  ****************************************************************************/
+    /* ***************************************************************** Exercise25_01 (End) ******************************************************************** */
 
     /**
      * Create a default binary search tree

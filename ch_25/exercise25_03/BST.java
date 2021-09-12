@@ -1,44 +1,59 @@
-package ch_25.exercise25_02;
+package ch_25.exercise25_03;
 
 import ch_25.AbstractTree;
+import ch_25.GenericStack;
 
 import java.util.*;
 
 /**
- * 25.2 (Test full binary tree) A full binary tree is a binary tree with the leaves on the
- * same level. Add a method in the BST class to return true if the tree is a full
- * binary tree. (Hint: The number of nodes in a full binary tree is 2depth - 1.)
- * > Returns true if the tree is a 'full' binary tree
- * <p>
- * boolean isFullBST()
+ * **25.3 (Implement inorder traversal without using recursion) Implement the inorder
+ * method in BST using a stack instead of recursion. Write a test program that
+ * prompts the user to enter 10 integers, stores them in a BST, and invokes the
+ * inorder method to display the elements.
  */
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
     protected int size = 0;
-
-    /* *************************************** Exercise25_02 (Start) ********************************************** */
-
-    public boolean isFullBST() {
-        return isFullBST(root);
-    }
-
-    public boolean isFullBST(TreeNode<E> root) {
-        if (root == null) {
-            return true;
-        } else if (root.left == null && root.right == null) {
-            return true;
-        } else if (root.left != null && root.right != null) {
-            return isFullBST(root.left) && isFullBST(root.right);
-        }
-        return false;
-    }
-    /* *************************************** Exercise25_02 (End) *********************************************** */
+    /* *************************************** Exercise25_03 (Start) ********************************************** */
 
     /**
-     * Create a default binary search tree
+     * Inorder traversal without recursion
      */
+    @Override
+    public void inorder() {
+        // If node is null return
+        GenericStack<TreeNode<E>> stack = new GenericStack<>();
+        // Initialize root node
+        TreeNode<E> current = root;
+        while (current != null || stack.getSize() > 0) {
+            // Find the left most Node of the current Node
+            while (current != null) {
+                /* place pointer to a tree node on
+                   the stack before traversing
+                  the node's left sub-tree */
+                stack.push(current);
+                current = current.left;
+            }
+
+            /* Current must be NULL at this point */
+            current = stack.pop();
+            // Display node value
+            System.out.print(current.element + " ");
+
+            /* we have visited the node and its
+               left subtree.  Now, it's right
+               subtree's turn */
+            current = current.right;
+        }
+    }
+
+
+    /* *************************************** Exercise25_03 (End) *********************************************** */
+
+
     public BST() {
     }
+
 
     /**
      * Create a binary search tree from an array of objects
@@ -101,21 +116,6 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         return new TreeNode<>(e);
     }
 
-    @Override
-    /** Inorder traversal from the root */
-    public void inorder() {
-        inorder(root);
-    }
-
-    /**
-     * Inorder traversal from a subtree
-     */
-    protected void inorder(TreeNode<E> root) {
-        if (root == null) return;
-        inorder(root.left);
-        System.out.print(root.element + " ");
-        inorder(root.right);
-    }
 
     /**
      * Postorder traversal from the root
