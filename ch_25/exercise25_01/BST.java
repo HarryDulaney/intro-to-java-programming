@@ -9,7 +9,7 @@ import java.util.*;
  * Add the following new methods in BST.
  * - Displays the nodes in a breadth-first traversal
  * public void breadthFirstTraversal()
- * - Returns the height of this binary tree *
+ * - Returns the height of this binary tree
  * public int height()
  * {@link Exercise25_01}
  */
@@ -17,33 +17,44 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
     protected int size = 0;
 
-    /* *************************************** Start  Ex25.1  ****************************************************/
+    /* ************************************************************* Start  Ex25.1  ********************************************************************/
 
     /**
      * Displays the nodes in a breadth-first traversal
      * <p>
      * <p>
-     * With breadth-first traversal, the nodes are visited level by level. First the root is visited,
-     * then all the children of the root from left to right, then the grandchildren of the root from left
-     * to right, and so on.
+     * BREADTH-FIRST TRAVERSAL:
+     * - Nodes are visited level by level. -
+     * -> First, the root is visited.
+     * -> Next, all the children of the root from left to right.
+     * -> Next, the grandchildren of the root from left to right,
+     * and so on.
      */
     public void breadthFirstTraversal() {
-        if (Objects.isNull(this.root)) return;
-        LinkedList<TreeNode<E>> linkedList = new LinkedList<>(); //Use a Doubly LinkedList
-        linkedList.add(this.root); // Insert the BST root node
-        while (linkedList.size() != 0) { // All elements have been traversed when list is empty
-            TreeNode<E> current = linkedList.element(); // Handle the head element in the list
-            if (Objects.nonNull(current.left)) {
-                linkedList.add(current.left); // Left (Breadth First)
+        // If node is null stop the traversal
+        if (this.root == null) {
+            return;
+        }
+        //Use a Doubly-linked list to store the nodes
+        LinkedList<TreeNode<E>> linkedList = new LinkedList<>();
+        // Start with root node
+        linkedList.add(this.root);
+        // All elements have been traversed when list is empty
+        while (!linkedList.isEmpty()) {
+            // Retrieve the first element in the list
+            TreeNode<E> current = linkedList.element();
+            if (current.left != null) {
+                // Left
+                linkedList.add(current.left);
             }
-            if (Objects.nonNull(current.right)) {
-                linkedList.add(current.right); // Right (Breadth First)
+            if (current.right != null) {
+                // Right
+                linkedList.add(current.right);
             }
             //Remove the head element in the list
-            System.out.print(linkedList.remove().element + " ");
+            System.out.print(linkedList.poll() + ", ");
         }
     }
-
 
     /**
      * Returns the height of this binary tree
@@ -59,7 +70,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
      * @return the height of the longest path from root to leaf node aka height
      */
     int height(TreeNode<E> current) {
-        if (Objects.isNull(current)) {
+        if (current == null) {
             return 0;
         }
         int d1 = height(current.left);
@@ -72,8 +83,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
         }
     }
-
-    /* *************************************** End  Ex25.1  ****************************************************/
+    /* ***************************************************************** End  Ex25.1  ****************************************************************************/
 
     /**
      * Create a default binary search tree
@@ -107,15 +117,15 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     }
 
     /**
-     * Insert element e into the binary search tree.
+     * Insert element e into the binary search tree
      * Return true if the element is inserted successfully.
      */
     @Override
     public boolean insert(E e) {
-        if (root == null)
+        if (root == null) {
             root = createNewNode(e); // Create a new root
-        else {
-// Locate the parent node
+        } else {
+            // Locate the parent node
             TreeNode<E> parent = null;
             TreeNode<E> current = root;
             while (current != null)
@@ -127,7 +137,6 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
                     current = current.right;
                 } else
                     return false; // Duplicate node not inserted
-
             // Create the new node and attach it to the parent node
             if (e.compareTo(parent.element) < 0)
                 parent.left = createNewNode(e);
@@ -137,6 +146,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         size++;
         return true; // Element inserted successfully
     }
+
 
     protected TreeNode<E> createNewNode(E e) {
         return new TreeNode<>(e);

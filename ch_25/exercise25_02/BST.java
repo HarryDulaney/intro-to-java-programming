@@ -18,12 +18,19 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
     /* *************************************** Start  Ex25.2  ****************************************************/
 
-    /**
-     *
-     * @return
-     */
-    boolean isFullBST() {
-        return true;
+    public boolean isFullBST() {
+        return isFullBST(root);
+    }
+
+    public boolean isFullBST(TreeNode<E> root) {
+        if (root == null) {
+            return true;
+        } else if (root.left == null && root.right == null) {
+            return true;
+        } else if (root.left != null && root.right != null) {
+            return isFullBST(root.left) && isFullBST(root.right);
+        }
+        return false;
     }
     /* *************************************** End    Ex25.2  ****************************************************/
 

@@ -1,8 +1,8 @@
 package ch_25.exercise25_01;
 
 /**
- * Exercise09_09 the methods from Exercise 25.1 that we
- * added to the BST
+ * Test Exercise25_01 (Add methods to BST):
+ * see: {@link BST}
  */
 public class Exercise25_01 {
 
@@ -24,7 +24,7 @@ public class Exercise25_01 {
 
         System.out.println("The height of the Binary Search Tree is " + test.height());
 
-        System.out.println("Breadth-First Traversal results in: ");
+        System.out.println("Breadth-First Traversal results are: ");
         test.breadthFirstTraversal();
 
     }
