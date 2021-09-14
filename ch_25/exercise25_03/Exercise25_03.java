@@ -20,6 +20,8 @@ public class Exercise25_03 {
         for (String str : line) {
             binarySearchTree.insert(Integer.valueOf(str));
         }
+        System.out.println("Root is: " + binarySearchTree.root.element);
         binarySearchTree.inorder();
+
     }
 }
