@@ -1,5 +1,8 @@
 # INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_
-### This repo contains solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
+### This repo contains my solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a> 
+### I've included links below to all the freely accessible compainion material and quick links to navigate through my solutions by chapter. 
+### If you would like to contribute, please see: <a href="#contribute">Ways to Contribute</a>
+____
 #### - About the 10th Edition - 
 _"Daniel Liang teaches concepts of problem-solving and object-oriented programming using a fundamentals-first approach
 . Beginning programmers learn critical problem-solving techniques then move on to grasp the key concepts of 
@@ -17,19 +20,29 @@ object-oriented, GUI programming, advanced GUI and Web programming using Java...
 
 
 ____
-### <em>Pull requests:</em>  
-_Please feel free to make pull requests in the follow scenarios_
-- ##### Adding new solutions to the repo that do not already exist.
-- ##### Adding new documentation/ comments to existing exercise solutions.
+<span id="contribute"><span/>
+
+## Ways to Contribute: 
+### <em id="prs">Pull requests:</em>  
+- _When to use Pull Requests_
+	- To add new solutions, that do not already exist.
+	- To add new documentation and/or comments to existing exercise solutions.
+
+- _How to use Pull Requests_
+	1. Fork the Master branch
+	2. Create a feature branch (with a descriptive name) using the fork from step 1.
+	3. Make your changes to your new branch (Only commit and push the files you plan to merge).
+	4. Make a Pull Request into our intro-to-java-programming Master branch. 
+	
 
 
 
-____
 ### <em>Issue's:</em>  
 _Please feel free to open new Issues._
-- ##### To request a specific Exercise that you need answered be sure to include the Chapter and Exercise number. 
-- ##### To request a change to an existing solution. 
-- ##### You find an error in an existing solution.
+- To request a specific Exercise that you need answered.
+	- Be sure to include the Chapter and Exercise number. 
+- To request a change to an existing solution. 
+- You find an error in an existing solution.
 ____
 
 <h1>Exercise Solutions:</h1>
