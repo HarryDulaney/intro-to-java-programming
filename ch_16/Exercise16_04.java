@@ -22,17 +22,17 @@ public class Exercise16_04 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        TextField tfMile = new TextField();
-        TextField tfKilometer = new TextField();
-        tfMile.setAlignment(Pos.BOTTOM_RIGHT);
-        tfKilometer.setAlignment(Pos.BOTTOM_RIGHT);
+        TextField mileTextField = new TextField();
+        TextField kiloTextField = new TextField();
+        mileTextField.setAlignment(Pos.BOTTOM_RIGHT);
+        kiloTextField.setAlignment(Pos.BOTTOM_RIGHT);
 
         GridPane pane = new GridPane();
         pane.setAlignment(Pos.CENTER);
         pane.add(new Label("Miles"), 0, 0);
-        pane.add(tfMile, 1, 0);
+        pane.add(mileTextField, 1, 0);
         pane.add(new Label("Kilometers"), 0, 1);
-        pane.add(tfKilometer, 1, 1);
+        pane.add(kiloTextField, 1, 1);
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, WIDTH, HEIGHT);
@@ -40,16 +40,16 @@ public class Exercise16_04 extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        tfMile.setOnAction(e -> {
-            double mile = new Double(tfMile.getText().trim()).doubleValue();
+        mileTextField.setOnAction(e -> {
+            double mile = new Double(mileTextField.getText().trim()).doubleValue();
             double kilometer = mile / 0.6241;
-            tfKilometer.setText(new Double(kilometer).toString());
+            kiloTextField.setText(new Double(kilometer).toString());
         });
 
-        tfKilometer.setOnAction(e -> {
-            double kilometer = new Double(tfKilometer.getText().trim()).doubleValue();
+        kiloTextField.setOnAction(e -> {
+            double kilometer = new Double(kiloTextField.getText().trim()).doubleValue();
             double mile = 0.6241 * kilometer;
-            tfMile.setText(new Double(mile).toString());
+            mileTextField.setText(new Double(mile).toString());
         });
     }
 }
