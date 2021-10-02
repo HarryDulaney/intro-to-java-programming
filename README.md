@@ -38,11 +38,11 @@ ____
 
 
 ### <em>Issue's:</em>  
-_Please feel free to open new Issues._
-- To request a specific Exercise that you need answered.
-	- Be sure to include the Chapter and Exercise number. 
-- To request a change to an existing solution. 
-- You find an error in an existing solution.
+- _Please feel free to open new Issues._
+  - To request a specific Exercise that you need answered.
+      - Be sure to include the Chapter and Exercise number. 
+  - To request a change to an existing solution. 
+  - You find an error in an existing solution.
 ____
 
 <h1>Exercise Solutions:</h1>

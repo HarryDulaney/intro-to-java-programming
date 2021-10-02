@@ -1,13 +1,15 @@
 package ch_14.exercise14_17;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
-
-import java.io.FileInputStream;
-import java.io.IOException;
 
 /**
  * 14.17 (Game: hangman) Write a program that displays a drawing for the popular hangman game, as shown in Figure 14.48a.
