@@ -64,8 +64,8 @@ public class Exercise18_35 extends Application {
             if (!newValue.isEmpty()) {
                 orderOfFractal = Integer.parseInt(newValue);
                 double baseHSize = HEIGHT / 2 - 50;
-                double centerX = drawPane.getWidth() / 2 - baseHSize / 2; // Center X of the Pane
-                double centerY = drawPane.getHeight() / 2 - baseHSize / 2; // Center Y of the Pane
+                double centerX = drawPane.getWidth() / 2 - baseHSize / 2; // X of point where base H is centered in Pane
+                double centerY = drawPane.getHeight() / 2 - baseHSize / 2; // Y of point where base H is center in Pane
                 drawHTree(orderOfFractal, centerX, centerY, baseHSize);
             }
         });
