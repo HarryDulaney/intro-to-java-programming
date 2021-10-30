@@ -21,12 +21,11 @@ import java.util.Stack;
 public class EvalExpressionsCaseStudy20_10 {
 
 	public static void main(String[] args) {
-//		if (args.length != 1) {
-//			System.out.println(
-//					"Please input your expression like this:" + "\njava EvalExpressionsCaseStudy20_10 <[expression]>");
-//			System.exit(0);
-//		}
-		args = new String[] { "(1 + 2) * 4 - 3" };
+		if (args.length != 1) {
+			System.out.println(
+					"Please input your expression like this:" + "\njava EvalExpressionsCaseStudy20_10 (1 + 2) * 4 - 3");
+			System.exit(0);
+		}
 
 		try {
 			System.out.println(evalExpression(args[0]));
