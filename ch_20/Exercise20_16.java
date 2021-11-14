@@ -13,7 +13,7 @@ public class Exercise20_16 {
     public static void main(String[] args) {
         if (args.length < 1) {
             System.out.println(
-                    "Usage: java Exercise20_16 expression");
+                    "Usage: java Exercise20_16 {expression}");
             System.exit(1);
         }
 
@@ -32,7 +32,6 @@ public class Exercise20_16 {
     public static String infixToPostfix(String expression) {
         String result = "";
 
-        Stack<Integer> operandStack = new Stack<>();
         Stack<Character> operatorStack = new Stack<>();
         java.util.StringTokenizer tokens =
                 new java.util.StringTokenizer(expression, "()+-/*%", true);
