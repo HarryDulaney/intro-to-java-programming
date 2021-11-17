@@ -14,10 +14,12 @@ import java.util.Scanner;
  * abmnsxy
  * <p>
  * _____________________________________________
- * Time complexity is O(n) because the program
- * will always loop through the entire input string.
- * The time will always grow proportionally to the size
- * of the input string.
+ * If input string is length 20:
+ * ---- T(n) = 20 * (input string loop) * (substring loop) = O(n^2) -----
+ * Time complexity is O(n^2).
+ * As the length of the input grows, the time complexity will grow
+ * exponentially because we use an inner loop to traverse each
+ * sub-string of input string.
  */
 public class Exercise22_01 {
     public static void main(String[] args) {
