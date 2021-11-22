@@ -19,7 +19,7 @@ import java.util.Scanner;
  * Time complexity is O(n^2).
  * As the length of the input grows, the time complexity will grow
  * exponentially because we use an inner loop to traverse each
- * sub-string of input string.
+ * sub-string of the input string.
  */
 public class Exercise22_01 {
     public static void main(String[] args) {

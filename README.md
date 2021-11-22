@@ -86,8 +86,8 @@ ____
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_22"><strong>Chapter 22</strong></a> - Developing Efficient Algorithms</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 23</strong><!--</a>--> - Sorting</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 24</strong><!--</a>--> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_23"><strong>Chapter 23</strong></a> - Sorting</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_24"><strong>Chapter 24</strong></a> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 26</strong><!--</a>--> - AVL Trees </li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 27</strong><!--</a>--> - Hashing</li><br>
