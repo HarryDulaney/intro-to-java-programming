@@ -1,4 +1,4 @@
-package ch_20.exercise20_09;
+package ch_20;
 
 
 import javafx.animation.KeyFrame;

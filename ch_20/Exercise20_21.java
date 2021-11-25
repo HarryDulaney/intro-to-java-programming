@@ -25,7 +25,7 @@ public class Exercise20_21 {
 
         selectionSort(list, new GeometricObjectComparator());
         for (int i = 0; i < list.length; i++) {
-            System.out.println("Area of GeometricObject: list[" + i + "] = " + list[i].getArea());
+            System.out.println("Area of GeometricObject @ list[" + i + "] = " + list[i].getArea());
         }
     }
 

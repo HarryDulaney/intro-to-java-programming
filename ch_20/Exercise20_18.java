@@ -1,4 +1,4 @@
-package ch_20.exercise20_18;
+package ch_20;
 
 import java.io.File;
 
