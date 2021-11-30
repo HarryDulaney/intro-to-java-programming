@@ -19,7 +19,7 @@ public class Exercise21_08 {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println(
-                    "Usage: java Exercise21_08 file/path/here.txt");
+                    "Usage: java Exercise21_08 ch_21/exercise21_08/test.txt");
             System.exit(1);
         }
 
