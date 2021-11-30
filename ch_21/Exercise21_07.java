@@ -12,16 +12,20 @@ import java.util.*;
  * using the Collections.sort method.
  * <p>
  * What would be wrong if you stored the instances of WordOccurrence in a tree set?
- * Answer: A TreeSet automatically sorts the entries in ascending order by words.
- * We want to sort ascending order by count.
+ * --------------------------------------------------------------------------------
+ * Answer: The entries would not be sorted correctly in a TreeSet because
+ * a TreeSet sorts based on natural ordering or according to the defined Comparator.
+ * But this question asks us that WordOccurrence should implement the Comparable interface,
+ * which would not affect the sort order of a TreeSet.
  */
 public class Exercise21_07 {
     public static void main(String[] args) {
         // Set text in a string
         String text = "Good morning. Have a good class. " +
                 "Have a good visit. Have fun!";
-        // Create a TreeMap to hold words as key and count as value
+        // Create a HashMap to hold words as key and count as value
         Map<String, Integer> map = new HashMap<>();
+        TreeSet<String> set = new TreeSet<>();
         String[] words = text.split("[ \n\t\r.,;:!?(){]");
         for (int i = 0; i < words.length; i++) {
             String key = words[i].toLowerCase();
