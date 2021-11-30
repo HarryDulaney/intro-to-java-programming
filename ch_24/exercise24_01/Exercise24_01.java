@@ -1,10 +1,5 @@
 package ch_24.exercise24_01;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-
 /**
  * 24.1 (Add set operations in MyList) Define the following methods in MyList and
  * implement them in MyAbstractList:
