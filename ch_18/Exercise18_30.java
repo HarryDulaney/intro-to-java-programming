@@ -30,7 +30,7 @@ public class Exercise18_30 {
             File[] files = dir.listFiles();
             if (files != null && files.length > 0) {
                 try {
-                    countOccurrences(files, word, 0);
+                    wordSearch(files, word, 0);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
@@ -43,10 +43,12 @@ public class Exercise18_30 {
 
     }
 
-    static void countOccurrences(File[] files, String word, int fileIndex) throws IOException {
+    static void wordSearch(File[] files, String word, int fileIndex) throws IOException {
+        /* Recursion Stopping condition */
         if (files.length == fileIndex) {
             return;
         }
+
         if (files[fileIndex].isFile()) {
             FileReader fileReader = new FileReader(files[fileIndex]);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -57,7 +59,7 @@ public class Exercise18_30 {
                 }
             }
         }
-        countOccurrences(files, word, fileIndex + 1);
+        wordSearch(files, word, fileIndex + 1);
     }
 
 }

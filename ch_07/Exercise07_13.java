@@ -1,7 +1,5 @@
 package ch_07;
 
-import java.util.*;
-
 /**
  * *7.13 (Random number chooser) Write a method that returns a random number between
  * 1 and 54, excluding the numbers passed in the argument. The method header is
@@ -13,7 +11,6 @@ public class Exercise07_13 {
         System.out.println("Random number is " + getRandom(12, 13, 47));
     }
 
-
     public static int getRandom(int... numbers) {
         int randomInt = (int) (1 + Math.random() * 54);
         for (int num : numbers) {
@@ -24,5 +21,4 @@ public class Exercise07_13 {
         return randomInt;
 
     }
-
 }

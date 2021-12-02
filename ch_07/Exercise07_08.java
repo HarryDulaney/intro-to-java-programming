@@ -14,19 +14,15 @@ import java.util.Scanner;
  */
 public class Exercise07_08 {
     public static int average(int[] array) {
-
         int elemInArray = array.length;
         int sum = 0;
 
-
         for (int i = 0; i < elemInArray; i++) {
             sum += array[i];
-
         }
+
         return sum / elemInArray;
-
     }
-
 
     public static double average(double[] array) {
 
@@ -42,7 +38,6 @@ public class Exercise07_08 {
     }
 
     public static void main(String[] args) {
-
         double[] values = new double[10];
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter ten double values: ");
@@ -51,9 +46,6 @@ public class Exercise07_08 {
             values[i] = input.nextDouble();
         }
         double toPrint = average(values);
-
         System.out.println(toPrint);
-
-
     }
 }

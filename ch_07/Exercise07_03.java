@@ -1,12 +1,11 @@
 package ch_07;
 
-/*
-**7.3 (Count occurrence of numbers) Write a program that reads the integers between 1
-and 100 and counts the occurrences of each. Assume the input ends with 0.
- */
-
 import java.util.Scanner;
 
+/**
+ * *7.3 (Count occurrence of numbers) Write a program that reads the integers between 1
+ * and 100 and counts the occurrences of each. Assume the input ends with 0.
+ */
 public class Exercise07_03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -15,8 +14,7 @@ public class Exercise07_03 {
         int temp;
         int count = 0;
         System.out.print("Enter the integers between 1 and 100: ");
-        do
-        {
+        do {
             temp = input.nextInt();
             nums[count] = temp;
             count++;

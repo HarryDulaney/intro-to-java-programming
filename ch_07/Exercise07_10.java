@@ -22,8 +22,7 @@ public class Exercise07_10 {
             nums[i] = in.nextDouble();
         }
         int x = indexOfSmallestElement(nums);
-        System.out.println("Index of the smallest element is " + x + " with a value of " + nums[x])
-        ;
+        System.out.println("Index of the smallest element is " + x + " with a value of " + nums[x]);
     }
 
     public static int indexOfSmallestElement(double[] array) {

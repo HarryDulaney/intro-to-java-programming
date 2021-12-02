@@ -10,6 +10,7 @@ import java.util.*;
  * Rewrite Listing 5.15 to display the first 50 prime numbers using this approach.
  * You need to use an array to store the prime numbers and later use them to check
  * whether they are possible divisors for n.
+ *
  * @author Harry Dulaney
  */
 public class Exercise07_06 {
@@ -21,20 +22,20 @@ public class Exercise07_06 {
         System.out.println("The first 50 prime numbers are \n");
         // Repeatedly find prime numbers
         while (count < NUMBER_OF_PRIMES) {
-        // Assume the number is prime
+            // Assume the number is prime
             boolean isPrime = true; // Is the current number prime?
-        // Exercise25_01 whether number is prime
+            // Exercise25_01 whether number is prime
             for (int divisor = 2; divisor <= number / 2; divisor++) {
                 if (number % divisor == 0) { // If true, number is not prime
                     isPrime = false; // Set isPrime to false
                     break; // Exit the for loop
                 }
             }
-        // Display the prime number and increase the count
+            // Display the prime number and increase the count
             if (isPrime) {
                 count++; // Increase the count
                 if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
-        // Display the number and advance to the new line
+                    // Display the number and advance to the new line
                     System.out.println(number);
                 } else
                     System.out.print(number + " ");

@@ -21,7 +21,6 @@ import java.util.*;
  * Write a test program that prompts the user to enter ten numbers and displays the
  * mean and standard deviation,as shown in the following sample run:
  */
-
 public class Exercise07_11 {
     static double mean;
 

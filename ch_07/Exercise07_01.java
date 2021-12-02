@@ -15,21 +15,16 @@ import java.util.Scanner;
  */
 public class Exercise07_01 {
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
         System.out.print("Enter number of students now: ");
         final int numOfStudents = in.nextInt();
-
         int[] grades = new int[numOfStudents];
 
         System.out.println("Now enter " + numOfStudents + " space separated scores: ");
 
-
         for (int i = 0; i < numOfStudents; i++) {
             grades[i] = in.nextInt();
         }
-
-
         printLetterGrades(grades, findBestGrade(grades));
 
     }
