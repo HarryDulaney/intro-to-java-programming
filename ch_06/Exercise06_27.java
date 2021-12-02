@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * **6.27 (Emirp) An emirp (prime spelled backward) is a non-palindromic prime number
  * whose reversal is also a prime. For example, 17 is a prime and 71 is a prime, so 17
@@ -26,8 +24,6 @@ public class Exercise06_27 {
 
             ++i;
         }
-
-
     }
 
     private static boolean isEmips(int n) {

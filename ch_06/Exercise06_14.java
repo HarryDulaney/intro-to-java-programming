@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * *6.14 (Estimate p) p can be computed using the following series:
  * m(i) = 4(1 - 1/3 + 1/5 -1/7 + 1/9 - 1/11 ..... (-1)^i+1 /(2i - 1)
@@ -20,7 +18,6 @@ import java.util.*;
  */
 public class Exercise06_14 {
     public static void main(String[] args) {
-
         System.out.println("i               m(i)");
         System.out.println("----------------------");
         double sum = 0;
@@ -31,8 +28,6 @@ public class Exercise06_14 {
             System.out.printf("       %.4f\n", pi(i));
 
         }
-
-
     }
 
     static double pi(double num) {

@@ -9,7 +9,6 @@ package ch_06;
  * @author Harry Dulaney
  */
 public class Exercise06_16 {
-
     public static void main(String[] args) {
         System.out.println("Year           Total Days");
         System.out.print("__________________________");

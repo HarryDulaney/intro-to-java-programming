@@ -1,7 +1,5 @@
 package ch_06;
 
-import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
-
 import java.util.*;
 
 /**
@@ -29,5 +27,4 @@ public class Exercise06_35 {
         return 5 * Math.pow(side, 2) / (4 * Math.tan(Math.PI / 5));
 
     }
-
 }

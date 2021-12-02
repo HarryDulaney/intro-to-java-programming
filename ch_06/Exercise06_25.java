@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * **6.25 (Convert milliseconds to hours, minutes, and seconds) Write a method that converts milliseconds to hours, minutes, and seconds using the following header:
  * public static String convertMillis(long millis)
@@ -16,7 +14,6 @@ public class Exercise06_25 {
         System.out.println(convertMillis(555550000));
 
     }
-
 
     public static String convertMillis(long millis) {
         long seconds = millis / 1000;

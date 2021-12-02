@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * *6.13 (Sum series) Write a method to compute the following series:
  * m(i) =
@@ -21,7 +19,6 @@ import java.util.*;
  */
 public class Exercise06_13 {
     public static void main(String[] args) {
-
         System.out.println("i                 m(i)");
         System.out.println("__________________________");
         double res = 0;
@@ -29,11 +26,8 @@ public class Exercise06_13 {
         for (int num = 1; num <= 20; num++) {
             System.out.print(num + "          ");
             res += num / (num + 1.0);
-            System.out.printf("         %.4f\n",res);
-
+            System.out.printf("         %.4f\n", res);
 
         }
-
-
     }
 }

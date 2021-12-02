@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.Arrays;
-
 /**
  * *6.15 (Financial application: print a tax table) Listing 3.5 gives a program to compute
  * tax. Write a method for computing tax using the following header:

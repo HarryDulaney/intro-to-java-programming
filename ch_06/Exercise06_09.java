@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * 6.9 (Conversions between feet and meters) Write a class that contains the following
  * two methods:
@@ -23,9 +21,7 @@ import java.util.*;
  * 10.0 3.050 | 65.0 213.115
  */
 public class Exercise06_09 {
-
     public static void main(String[] args) {
-
         System.out.println("Feet                Meters              |            Meters                  Feet");
         System.out.println(
                 "___________________________________________________________________________________");

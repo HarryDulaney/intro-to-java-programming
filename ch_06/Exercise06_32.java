@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * **6.32 (Game: chance of winning at craps) Revise Exercise 6.30 to run it 10,000 times
  * and display the number of winning games.

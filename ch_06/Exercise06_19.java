@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.Scanner;
-
 /**
  * *6.19 (The MyTriangle class) Create a class named MyTriangle that contains the
  * following two methods:
@@ -21,9 +19,7 @@ import java.util.Scanner;
  * @author Harry D.
  */
 public class Exercise06_19 {
-
     public static void main(String[] args) {
-
         double x1 = -1.356;
         double y1 = 1.743;
         double x2 = -1.377;

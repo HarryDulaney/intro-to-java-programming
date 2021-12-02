@@ -1,7 +1,5 @@
 package ch_06;
 
-import java.util.*;
-
 /**
  * **6.30 (Game: craps) Craps is a popular dice game played in casinos. Write a program
  * to play a variation of the game, as follows:

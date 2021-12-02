@@ -1,7 +1,5 @@
 package ch_06;
 
-import javafx.scene.transform.Scale;
-
 import java.util.Scanner;
 
 /**

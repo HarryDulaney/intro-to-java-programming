@@ -1,8 +1,5 @@
 package ch_06;
 
-import java.text.DecimalFormat;
-import java.util.*;
-
 /**
  * **6.28 (Mersenne prime) A prime number is called a Mersenne prime if it can be written
  * in the form 2p - 1 for some positive integer p. Write a program that finds all
@@ -14,7 +11,6 @@ import java.util.*;
  * ...
  *
  * @author Harry Dulaney
- *
  */
 public class Exercise06_28 {
     public static void main(String[] args) {

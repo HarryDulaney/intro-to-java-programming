@@ -23,11 +23,8 @@ public class Exercise06_36 {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the number of sides: ");
         int numSides = in.nextInt();
-
         System.out.print("\nEnter the side: ");
         double s = in.nextDouble();
-
-
         System.out.println("The area of the polygon is " + area(numSides, s));
     }
 

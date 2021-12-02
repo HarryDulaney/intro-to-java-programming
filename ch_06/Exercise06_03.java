@@ -44,5 +44,4 @@ public class Exercise06_03 {
         return n1.equals(n2);
 
     }
-
 }

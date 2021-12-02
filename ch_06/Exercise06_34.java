@@ -12,15 +12,12 @@ import java.util.*;
 public class Exercise06_34 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
         System.out.print("Enter year: ");
         int year = in.nextInt();
-
         System.out.print("Enter month as number between 1 and 12: ");
         int month = in.nextInt();
 
         printCalendarHeader(month, year);
-
         printFirstDay(month, year);
         printCalendar(month, year);
     }

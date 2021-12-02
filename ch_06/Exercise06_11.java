@@ -61,7 +61,7 @@ public class Exercise06_11 {
             commission += (5000 * .10);
             salesAmount -= 5000;
 
-           commission += salesAmount * .12;
+            commission += salesAmount * .12;
         }
         return commission;
     }

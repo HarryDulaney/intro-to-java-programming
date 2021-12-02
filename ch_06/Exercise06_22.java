@@ -26,7 +26,6 @@ public class Exercise06_22 {
         }
     }
 
-
     public static double sqrt(long n) {
         double lastGuess = 2;
         double nextGuess = (lastGuess + n / lastGuess) / 2;

@@ -9,9 +9,9 @@ package ch_06;
  * @author Harry D.
  */
 public class Exercise06_24 {
+
     static int daysElapsedCurrentYear;
     static int getDaysElapsedCurrentMonth;
-
 
     public static void main(String[] args) {
         String time = getCurrentTime(System.currentTimeMillis());
@@ -73,7 +73,6 @@ public class Exercise06_24 {
         return month;
 
     }
-
 
     public static int getNumberOfDaysInMonth(int year, int month) {
         if (month == 1 || month == 3 || month == 5 || month == 7 ||
