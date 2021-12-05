@@ -86,7 +86,6 @@ public class Exercise20_02 extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-
     }
 
     private void refreshUI(LinkedList<Integer> numbers) {
