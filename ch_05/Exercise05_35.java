@@ -1,7 +1,5 @@
 package ch_05;
 
-import java.util.*;
-
 /**
  * *5.35 (Summation) Write a program to compute the following summation.
  * <p>

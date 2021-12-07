@@ -16,9 +16,8 @@ public class Exercise05_34 {
 
         while (userWins != compWins * 2 && compWins != userWins * 2 || userWins == 0 && compWins == 0) {
             int computerHand = (int) (Math.random() * 3);
-
-
             Scanner input = new Scanner(System.in);
+
             System.out.print("Enter 0 for scissor, 1 for rock, 2 for paper: ");
             int playerHand = input.nextInt();
 

@@ -5,12 +5,9 @@ import java.util.*;
 /**
  * **5.36 (Business application: checking ISBN ) Use loops to simplify Programming
  * Exercise 3.9:
- * <p>
- * {@code
  * Write a program that prompts the user to enter the first 9 digits and
  * displays the 10-digit ISBN (including leading zeros). Your program should
  * read the input as an integer.}
- * By: Harry Dulaney
  */
 public class Exercise05_36 {
     public static void main(String[] args) {
