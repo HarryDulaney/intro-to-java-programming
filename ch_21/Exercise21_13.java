@@ -22,7 +22,7 @@ import java.util.Scanner;
  * Girl name Emily is ranked #1 in year 2001
  * Enter another inquiry? N
  */
-public class Exercise12_13 {
+public class Exercise21_13 {
     static ArrayList<HashMap<String, String>> boysNames = new ArrayList<>();
     static ArrayList<HashMap<String, String>> girlsNames = new ArrayList<>();
 
@@ -43,7 +43,7 @@ public class Exercise12_13 {
     }
 
     public static void main(String[] args) {
-        Exercise12_13 context = new Exercise12_13();
+        Exercise21_13 context = new Exercise21_13();
         Scanner in = new Scanner(System.in);
         try {
             context.populateRankings(boysNames, BOY);
