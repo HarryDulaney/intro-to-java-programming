@@ -39,7 +39,6 @@ public class Exercise08_36 {
         char[][] chars = new char[numRows][numRows];
 
         int upperBoundChar = minChar + numRows - 1; //Upper Bound for the range from 'A' -> ('A' + userInput)
-
         System.out.println("\nEnter " + numRows + " rows of capital letters separated by spaces: ");
         try {
             for (int r = 0; r < chars.length; r++) {
@@ -54,7 +53,7 @@ public class Exercise08_36 {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getLocalizedMessage());
-            notALSq();
+            System.out.println("The input array is not a Latin Square.");
             System.exit(0);
         }
 
@@ -78,7 +77,7 @@ public class Exercise08_36 {
 
                 } else if (rowTracker.size() != 0) {
                     if (rowTracker.contains(charValue)) {
-                        notALSq();
+                        System.out.println("The input array is not a Latin Square.");
                         result = false;
                         break ROW;
                     }
@@ -99,7 +98,7 @@ public class Exercise08_36 {
 
                     if (colTracker.size() > 0) {
                         if (colTracker.contains(value)) {
-                            notALSq();
+                            System.out.println("The input array is not a Latin Square.");
                             break OUTER;
                         }
                     }
@@ -108,13 +107,5 @@ public class Exercise08_36 {
             }
         }
         in.close();
-    }
-
-    static void notALSq() {
-        System.out.println("The input array is not a Latin Square.");
-    }
-
-    static void aLsq() {
-        System.out.println("The input array is a Latin Square.");
     }
 }

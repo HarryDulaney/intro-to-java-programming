@@ -13,6 +13,7 @@ public class Exercise07_02 {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter ten space-separated integers: ");
+
         int[] arr = new int[10];
 
         for (int i = 0; i < 10; i++) {
