@@ -13,7 +13,9 @@ import java.util.Scanner;
  * Enter a string: abcabcdgabmnsxy
  * abmnsxy
  * <p>
- * _____________________________________________
+ * __________________________________________________________________________________________
+ * ----------------------------- Time Complexity Analysis -----------------------------------
+ * __________________________________________________________________________________________
  * If input string is length 20:
  * ---- T(n) = 20 * (input string loop) * (substring loop) = O(n^2) -----
  * Time complexity is O(n^2).
@@ -39,7 +41,6 @@ public class Exercise22_01 {
             }
         }
         System.out.println(maxSub);
-
         input.close();
     }
 
