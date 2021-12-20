@@ -3,7 +3,7 @@ package ch_18;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-import static org.junit.Assert.*;
+import static resources.lib.UnitTest.*;
 
 /**
  * *18.1 (Factorial) Using the BigInteger class introduced in Section 10.9, you can

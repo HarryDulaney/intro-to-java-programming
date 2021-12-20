@@ -1,8 +1,5 @@
 package ch_08;
 
-import org.junit.Test;
-
-import java.awt.*;
 import java.util.*;
 
 /**
