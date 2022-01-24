@@ -12,7 +12,7 @@ import java.util.Scanner;
  * __________________________________________________________________________________________
  * ----------------------------- Time Complexity Analysis -----------------------------------
  * __________________________________________________________________________________________
- * Linear Growth Rate (Linear Algorithm)
+ * Time complexity is: O(n) (Linear Time)
  * For example:
  * If input string is length 20:
  * ---- T(n) = 20 * (input string loop) = O(n) -----
