@@ -8,10 +8,10 @@ import java.util.Arrays;
  * first, middle, and last elements in the list.
  */
 public class Exercise23_04 {
-    public static void main(String[] args) {
-        int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
-        quickSort(list);
-        System.out.println("Sorted List: \n" + Arrays.toString(list));
+    public static void quickSort(int[] list) {
+        /* Exercise 23.4 */
+        int medianIdx = indexOfMedian(list);
+        quickSort(list, medianIdx, list.length - 1);
     }
 
     public static void quickSort(int[] list, int first, int last) {
@@ -22,18 +22,12 @@ public class Exercise23_04 {
         }
     }
 
-    public static void quickSort(int[] list) {
-        quickSort(list, 0, list.length - 1);
-    }
-
     /**
      * Partition the array list[first..last]
      */
     public static int partition(int[] list, int first, int last) {
-        /* Exercise 23_04 */
-        int pivotIdx = findMedian(list, first, last);
-        int pivot = list[pivotIdx];
-        int low = first; // Index for forward search
+        int pivot = list[first]; // Choose the first element as the pivot
+        int low = first + 1; // Index for forward search
         int high = last; // Index for backward search
 
         while (high > low) {
@@ -58,33 +52,40 @@ public class Exercise23_04 {
 
         // Swap pivot with list[high]
         if (pivot > list[high]) {
-            list[pivotIdx] = list[high];
+            list[first] = list[high];
             list[high] = pivot;
             return high;
         } else {
-            return pivotIdx;
+            return first;
         }
     }
 
     /**
-     * Exercise 23.04 solution
      *
-     * @param list  current list
-     * @param first current left index
-     * @param last  current right index
-     * @return index of the median between first, last, and mid index values
+     * @param list int array to find median of first, middle and last nums
+     * @return the index of the median value
      */
-    static int findMedian(int[] list, int first, int last) {
-        int midIdx = (first + last) / 2;
-        int firstVal = list[first];
-        int lastVal = list[last];
-        int midVal = list[midIdx];
-        int max = Math.max(Math.max(firstVal, lastVal), midVal);
-        int min = Math.min(Math.min(firstVal, lastVal), midVal);
-        if (midVal != min && midVal != max) return midIdx;
-        else if (lastVal != min && lastVal != max) return last;
-        else return first;
+    static int indexOfMedian(int[] list) {
+        int[] temp = {list[0], list[list.length / 2], list[list.length - 1]};
+        Arrays.sort(temp);
+        if (list[0] == temp[1]) {
+            return 0;
+        }
+        else if (list[list.length / 2] == temp[1]) {
+            return list.length / 2;
+        }
 
+        return list.length - 1;
+    }
+
+    /**
+     * A test method
+     */
+    public static void main(String[] args) {
+        int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
+        quickSort(list);
+        for (int i = 0; i < list.length; i++)
+            System.out.print(list[i] + " ");
     }
 }
 
