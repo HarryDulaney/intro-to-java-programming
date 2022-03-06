@@ -28,8 +28,7 @@ import java.util.Scanner;
  * So, Time complexity is O(n) because
  * as the length of the input grows, the time will increase at a linear rate
  * based on the size of s1.
- * The size of s2 is not relevant since we are only check that the string have the same starting char
- * and then if they do checking for equality of s1 substring and s2;
+ * The size of s2 is not relevant to time complexity because we iterate based on the length of s1.
  *
  * --------------------------------- Additional efficiency ---------------------------------
  * This could be made more efficient by utilizing the constraint of neighboring characters must be
