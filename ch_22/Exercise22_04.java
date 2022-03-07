@@ -4,7 +4,7 @@ package ch_22;
 import java.util.Scanner;
 
 /**
- * (Pattern matching) Write a program that prompts the user to enter two strings
+ * *22.4 (Pattern matching) Write a program that prompts the user to enter two strings
  * and tests whether the second string is a substring of the first string. (Don’t use
  * the indexOf method in the String class.) Analyze the time complexity of
  * your algorithm. Here is a sample run of the program:
