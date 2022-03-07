@@ -1,7 +1,5 @@
 package ch_22;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -11,22 +9,14 @@ import java.util.Scanner;
  * Enter a series of numbers ending with 0:
  * 2 4 4 8 8 8 8 2 4 4 0
  * The longest same number sequence starts at index 3 with 4 values of 8
- * <p>
- * __________________________________________________________________________________________
- * ----------------------------- Time Complexity Analysis -----------------------------------
- * __________________________________________________________________________________________
- * Time complexity is:
  */
 public class Exercise22_05 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    private void findSubsequence(String[] tokens) {
         int longest = 0;
         int longestStartIndex = 0;
         int count = 1;
         int value = 0;
         int startIndex = 0;
-        System.out.println("Enter a series of numbers ending with 0:");
-        String[] tokens = input.nextLine().split("\\s+");
 
         for (int i = 0; i < tokens.length - 1; i++) {
             int curr = Integer.parseInt(tokens[i]);
@@ -45,10 +35,18 @@ public class Exercise22_05 {
             }
 
         }
-        input.close();
-
         System.out.println("The longest same number sequence starts at index " + longestStartIndex +
                 " with " + longest + " values " + "of " + value);
+
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a series of numbers ending with 0:");
+        String[] tokens = input.nextLine().split("\\s+");
+        new Exercise22_05().findSubsequence(tokens);
+
+        input.close();
 
     }
 }
