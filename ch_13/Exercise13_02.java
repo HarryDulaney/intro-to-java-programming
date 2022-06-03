@@ -32,7 +32,7 @@ public class Exercise13_02 {
 
     public static void shuffle(ArrayList<Number> list) {
         for (int i = 0; i < list.size(); i++) {
-            int randIdx = new Random().nextInt(99);
+            int randIdx = new Random().nextInt(list.size());
             Number numberFromCurrIdx = list.get(i);
             Number randomRemovedNumber = list.get(randIdx);
             //Swap Numbers
