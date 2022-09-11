@@ -5,12 +5,12 @@ import ch_13.exercise13_10.GeometricObject;
 //__________________________UML DIAGRAM_____________________________*
 /*																	|
  * 						/GeometricObject/							|
- *-------------------------------------------------------------------|
+ *------------------------------------------------------------------|
  * -color: String													|
  * -filled: boolean													|
- * -dateCreated : java.util.Date										|
+ * -dateCreated : java.util.Date								    |
  *																	|
- *-------------------------------------------------------------------|
+ *------------------------------------------------------------------|
  * 	 #GeometricObject()												|
  * 	 #GeometricObject(color:String,filled:boolean)					|
  * 	 																|
@@ -20,11 +20,11 @@ import ch_13.exercise13_10.GeometricObject;
  * 	+isFilled(): boolean											|
  * 	+setFilled(filled: boolean): void								|
  * 	+getDateCreated(): java.util.Date								|
- *  																	|
- *  	+toString(): String												|
+ *  															    |
+ *  	+toString(): String											|
  * 	/+getArea()/: double/											|
  * 	/+getPerimeter(): double/										|
- * __________________________________________________________________| */
+ * _________________________________________________________________| */
 /*							  ^
 					   		  ^
 							  ^
@@ -38,8 +38,8 @@ import ch_13.exercise13_10.GeometricObject;
 * 	   -side3: double	      										| 	  	    		
 * _________________________________________________________________|
 *																	|
-* 		+Triangle2D()											|
-*		+Triangle2D(side1:double,side2:double,side3:double)		|
+* 		+Triangle2D()											    |
+*		+Triangle2D(side1:double,side2:double,side3:double)		    |
 * 		+getSide1(): double											|
 * 		+setSide1(side1: double): void								|
 * 		+getSide2(): double											|
