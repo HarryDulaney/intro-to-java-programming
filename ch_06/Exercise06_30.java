@@ -48,7 +48,7 @@ public class Exercise06_30 {
                     System.out.println("You Win!");
                     break;
                 } else if (rolling == 7) {
-                    System.out.println("You loose!");
+                    System.out.println("You lose!");
                     break;
                 }
             }
