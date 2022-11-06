@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 /**
+ * The prime number for Exercise 22 08 are stored in a file as bytes, so in order to
+ * evaluate the contents of the file we use this Test program to read the file and print the results.
+ * <p>
  * Integration Test will print out the prime numbers from PrimeNumbers.dat
  */
 public class Test {
