@@ -1,6 +1,6 @@
 package ch_24.exercise24_01;
 
-import java.util.Iterator;
+import ch_24.resources.MyAbstractList;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
 

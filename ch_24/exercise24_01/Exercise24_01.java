@@ -1,5 +1,7 @@
 package ch_24.exercise24_01;
 
+import ch_24.resources.MyList;
+
 /**
  * 24.1 (Add set operations in MyList) Define the following methods in MyList and
  * implement them in MyAbstractList:
@@ -38,7 +40,6 @@ public class Exercise24_01 {
         System.out.println("List 1 and List 2 initial values: ");
         System.out.println("list1: " + list1);
         System.out.println("list2: " + list2);
-
 
         System.out.println("list1.addAll(list2) result: ");
         list1.addAll(list2);
