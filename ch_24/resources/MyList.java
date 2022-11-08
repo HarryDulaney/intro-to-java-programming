@@ -1,4 +1,4 @@
-package ch_24.exercise24_01;
+package ch_24.resources;
 
 public interface MyList<E> extends java.lang.Iterable<E> {
     /**
