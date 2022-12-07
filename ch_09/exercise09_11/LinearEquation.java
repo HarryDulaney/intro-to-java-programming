@@ -4,15 +4,15 @@ package ch_09.exercise09_11;
 //|_____________________________UML Diagram_____________________________________|
 /*																				|
  * 					   		   Linear Equation							   	    |
- * ______________________________________________________________________________|
+ * _____________________________________________________________________________|
  * 																				|
- *       +a:double																|
- *       +b:double    									           				|
- * 	    +c:double		  														|
- * 	    +d:double		                                            			|
- * 		+e:double																|
- * 		+f:double																|
- * ______________________________________________________________________________|
+ *      -a:double																|
+ *      -b:double    									           				|
+ * 	    -c:double		  														|
+ * 	    -d:double		                                            			|
+ * 		-e:double																|
+ * 		-f:double																|
+ * _____________________________________________________________________________|
  *		LinearEquation(double:a,double:b,double:c,double:d,double:e,double:f)	|
  *		getA(): void															|
  *		getB(): void															|
@@ -57,14 +57,14 @@ public class LinearEquation {
     private double f;
 
 
-    public LinearEquation(double A, double B, double C, double D, double E, double F) {
+    public LinearEquation(double a, double b, double c, double d, double e, double f) {
 
-        a = A;
-        b = B;
-        c = C;
-        d = D;
-        e = E;
-        f = F;
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
 
     }
 
