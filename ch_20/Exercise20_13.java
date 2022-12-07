@@ -256,7 +256,7 @@ public class Exercise20_13 extends Application {
     }
 
     private int reduceToValue(int value) {
-        /* get value regardless of suite */
+        /* get value regardless of suit */
         while (value > 13) {
             value -= 13;
         }
