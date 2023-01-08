@@ -1,9 +1,6 @@
 package ch_16.exercise16_09;
 
 
-import javafx.geometry.Point2D;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 
 
@@ -21,21 +18,18 @@ public class RectangleExt extends javafx.scene.shape.Rectangle {
         super(0, 0, 1, 1);
         this.center = new Pt();
         this.bottomRight = new Pt();
-//        setPropertyListeners();
     }
 
     public RectangleExt(double centerX, double centerY, double height, double width) {
         super(centerX - width / 2, centerY + height / 2, width, height);
         this.center = new Pt(centerX, centerY);
         resetByCenter(center);
-//        setPropertyListeners();
     }
 
     public RectangleExt(double width, double height, Paint fill) {
         super(width, height, fill);
         this.center = new Pt();
         this.bottomRight = new Pt();
-//        setPropertyListeners();
     }
 
 
