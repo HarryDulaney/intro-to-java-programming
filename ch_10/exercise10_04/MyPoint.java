@@ -16,9 +16,9 @@ package ch_10.exercise10_04;
  * 					+distance(int,int):double						|
  *  																|
  * 																	|
- * 	                      +getX() : int	    						|
+ * 	                      +getCenterX() : int	    						|
  * 			    													|
- * 	                      +getY() : int   							|
+ * 	                      +getCenterY() : int   							|
  * 	 																|
  * 																	|
  *__________________________________________________________________|  */
