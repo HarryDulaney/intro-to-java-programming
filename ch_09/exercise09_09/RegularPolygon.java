@@ -18,10 +18,10 @@ package ch_09.exercise09_09;
  * 	    setSide(side: double) :void												|
  *		getNumSides(): double													|
  * 		setNumSides(numSides:int) :void											|
- * 		setX(newX:int) :void													|
- * 		getX(): double															|
- * 		setY(newY:int) :void													|
- * 		getY(): double															|
+ * 		setCenterX(newX:int) :void													|
+ * 		getCenterX(): double															|
+ * 		setTopLeftY(newY:int) :void													|
+ * 		getCenterY(): double															|
  *  	getPerimeter()															|
  * 		getArea() : double														|
  * 																				|

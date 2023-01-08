@@ -21,8 +21,8 @@ package ch_09.exercise09_11;
  *		getE(): void															|
  *		getF(): void															|
  *		isSolvable(): boolean													|
- * 		getX(): double															|
- * 		getY(): double															|
+ * 		getCenterX(): double															|
+ * 		getCenterY(): double															|
  * 																				|
  *______________________________________________________________________________*/
 
@@ -43,7 +43,7 @@ package ch_09.exercise09_11;
  * A method named isSolvable() that returns true if ad minus bc is not 0.
  * <p>
  * <p>
- * Methods getX() and getY() that return the solution for the equation.
+ * Methods getCenterX() and getCenterY() that return the solution for the equation.
  * <p>
  * Draw the UML diagram for the class and then implement the class.
  */
