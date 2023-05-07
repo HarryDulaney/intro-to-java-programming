@@ -17,9 +17,8 @@ public class Exercise22_10 {
     private static final String PATH = packageParts[0] + File.separator + packageParts[1] + File.separator + "PrimeNumbers.dat";
 
     public static void main(String[] args) {
-        try {
-            File dataFile = new File(PATH);
-            RandomAccessFile randomAccessFile = new RandomAccessFile(dataFile, "r");
+        File dataFile = new File(PATH);
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(dataFile, "r")) {
             long count = 0;
             long interval = 10;
             long nextPrime;
