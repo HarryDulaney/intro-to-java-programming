@@ -55,9 +55,11 @@ public class Exercise22_11 {
 
         double[][] points = new double[numPoints][2];
         System.out.print("Enter " + numPoints + " points: ");
+
         for (int i = 0; i < points.length; i++) {
-            points[i][0] = scanner.nextDouble();
-            points[i][1] = scanner.nextDouble();
+            for (int j = 0; j < 2; j++) {
+                points[i][j] = scanner.nextDouble();
+            }
         }
         List<MyPoint> result = getConvexHull(points);
         System.out.println("The convex hull is: ");
@@ -69,11 +71,11 @@ public class Exercise22_11 {
         double yMin = s[0][1];
         int minPos = 0;
         // Find the bottom most point
-        for (int i = 1; i < s[0].length; i++) {
+        for (int i = 1; i < s.length; i++) {
             double y = s[i][1];
             // Pick the bottom-most or chose the right
             // most point in case of tie
-            if ((y < yMin) || (yMin == y && s[i][0] < s[minPos][0])) {
+            if ((y < yMin) || (yMin == y && s[i][0] > s[minPos][0])) {
                 yMin = s[i][1];
                 minPos = i;
 
@@ -161,8 +163,7 @@ public class Exercise22_11 {
      * A utility function to find next to top in a stack
      */
     static MyPoint nextToTop(Stack<MyPoint> s) {
-        MyPoint p = s.peek();
-        s.pop();
+        MyPoint p = s.pop();
         MyPoint res = s.peek();
         s.push(p);
         return res;
@@ -194,7 +195,7 @@ public class Exercise22_11 {
             // Find orientation
             int orientation = orientation(rightMostLowestPoint, this, o);
             if (orientation == 0) {
-                return (distSq(rightMostLowestPoint, o) >= distSq(rightMostLowestPoint, this)) ? -1 : 1;
+                return distSq(rightMostLowestPoint, o) >= distSq(rightMostLowestPoint, this) ? -1 : 1;
             }
             return (orientation == 2) ? -1 : 1;
         }

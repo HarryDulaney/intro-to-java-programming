@@ -1,10 +1,17 @@
 package ch_22.exercise22_08;
 
+import ch_22.Exercise22_12;
+
 import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
+/**
+ * PrimeStorage class is used to store prime numbers in a file.
+ * Used in {@link Exercise22_08} and {@link Exercise22_12 } to read/write/evaluate prime numbers
+ * from the filesystem.
+ */
 public class PrimeStorage {
     protected File dataFile;
     private boolean firstRun;

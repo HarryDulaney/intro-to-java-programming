@@ -40,7 +40,12 @@ public class Exercise22_09 {
             }
         }
         scanner.close();
-        System.out.println("The convex hull is " + getConvexHull(points));
+        List<Point2D> convexHull = getConvexHull(points);
+        System.out.println("The convex hull is: ");
+        for (Point2D point : convexHull) {
+            System.out.print("(" + point.getX() + ", " + point.getY() + ") ");
+        }
+
 
     }
 
