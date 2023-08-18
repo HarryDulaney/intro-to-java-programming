@@ -3,7 +3,8 @@ package ch_18;
 import java.util.Scanner;
 
 /**
- * *18.2 (Fibonacci numbers) Rewrite the fib method in Listing 18.2 using iterations.
+ * *18.2 (Fibonacci numbers) Rewrite the fib method in Listing 18.2 using
+ * iterations.
  * Hint: To compute fib(n) without recursion, you need to obtain fib(n - 2)
  * and fib(n - 1) first. Let f0 and f1 denote the two previous Fibonacci
  * numbers. The current Fibonacci number would then be f0 + f1.
@@ -53,17 +54,12 @@ public class Exercise18_02 {
         in.close();
     }
 
-    static long fib(int idx) {
-        long f0 = 0;
-        long f1 = 1;
-        long result = 0;
-        for (int i = 1; i < idx; i++) {
-            result = f0 + f1;
-            f0 = f1;
-            f1 = result;
-        }
-        return result;
-    }
+    // we can solve the linear recurrence relation of the fibonacci
+    // i.e.,(fibo(n)=fibo(n-1)+fibo(n-2))
+    // get the exact formula for the nth index
+    static long fib(long n) {
+        return (long) ((Math.pow(((1 + Math.sqrt(5)) / 2), n) - Math.pow(((1 - Math.sqrt(5)) / 2), n)) / Math.sqrt(5));
 
+    }
 
 }
