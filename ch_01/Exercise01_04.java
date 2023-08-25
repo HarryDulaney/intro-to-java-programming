@@ -8,6 +8,7 @@ package ch_01;
  * 3 9 27
  * 4 16 64
  */
+// for a general case we can put the below snippet inside a method.
 public class Exercise01_04 {
 
     public static void main(String[] args) {
