@@ -1,6 +1,7 @@
 package ch_23.exercise23_05;
 
 /**
+ * Exercise23_05 - Generic heap sort
  * A binary heap for inserting and deleting keys while maintaining
  * the sorted order
  * <p>

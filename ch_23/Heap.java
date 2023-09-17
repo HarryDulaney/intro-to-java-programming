@@ -1,7 +1,7 @@
-package ch_23.resources;
+package ch_23;
 
 /**
- * Listing 23.9 Heap.java, head class provides operations for manipulating
+ * Listing 23.9 Heap.java, heap class provides operations for manipulating
  * a heap
  *
  * @param <E> Type of Heap nodes

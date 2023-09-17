@@ -1,4 +1,4 @@
-package ch_24.resources;
+package ch_24;
 
 public interface MyList<E> extends java.lang.Iterable<E> {
     /**
