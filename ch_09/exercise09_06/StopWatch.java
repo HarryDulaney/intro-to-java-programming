@@ -48,14 +48,14 @@ public class StopWatch {
     /**
      * ■ A method named start() that resets the startTime to the current time.
      */
-    void start() {
+    public void start() {
         startTime = System.currentTimeMillis();
     }
 
     /**
      * ■ A method named stop() that sets the endTime to the current time.
      */
-    void stop() {
+    public void stop() {
         endTime = System.currentTimeMillis();
     }
 
