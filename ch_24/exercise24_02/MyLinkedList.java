@@ -1,6 +1,6 @@
 package ch_24.exercise24_02;
 
-import ch_24.resources.MyAbstractList;
+import ch_24.MyAbstractList;
 
 /**
  * *24.2 (Implement MyLinkedList) The implementations of the methods

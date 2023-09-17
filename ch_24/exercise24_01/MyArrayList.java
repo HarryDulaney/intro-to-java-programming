@@ -1,6 +1,6 @@
 package ch_24.exercise24_01;
 
-import ch_24.resources.MyAbstractList;
+import ch_24.MyAbstractList;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
 

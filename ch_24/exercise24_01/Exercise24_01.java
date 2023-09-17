@@ -1,6 +1,6 @@
 package ch_24.exercise24_01;
 
-import ch_24.resources.MyList;
+import ch_24.MyList;
 
 /**
  * 24.1 (Add set operations in MyList) Define the following methods in MyList and
