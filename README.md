@@ -1,6 +1,6 @@
 # INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_
 
-<img style="width:auto; height:auto; max-height: 348px" src="./resources/coverpicture.png" alt="header-img-book-cover">
+<img style="width:auto; height:auto;" src="./resources/coverpicture.png" alt="header-img-book-cover">
 
 ### This repo contains my solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
