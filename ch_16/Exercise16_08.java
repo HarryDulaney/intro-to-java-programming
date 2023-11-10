@@ -30,7 +30,6 @@ public class Exercise16_08 extends Application {
     private Circle circle2;
     private Rectangle rectangle;
     private Pane circlePane;
-
     private TextField c1XTextfield;
     private TextField c1YTextfield;
     private TextField c1RTextfield;
