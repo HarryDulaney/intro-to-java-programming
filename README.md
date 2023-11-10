@@ -1,5 +1,3 @@
-<div style="text-align: center;">
-
 # INTRODUCTION TO JAVA PROGRAMMING 10TH EDITION  <br> _Exercise Solutions_
 
 <img style="width:auto; height:auto; max-height: 30vh" src="./resources/coverpicture.png" alt="header-img-book-cover">
@@ -43,7 +41,6 @@ ____
 
 ## Contribution Guide:
 
-<div style="text-align: left;">
 
 ### <em id="prs">Pull requests:</em>
 
@@ -65,13 +62,11 @@ ____
     - To request a change to an existing solution.
     - You find an error in an existing solution.
 
-</div>
 
 ____
 
 <h1>Exercise Solutions:</h1>
 <h6>Quick Links to navigate these solutions by chapter</h6>
-<div style="text-align: left;">
 <ul>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_01"><strong
 >Chapter 1</strong></a> - Introduction to Computers, Programs, and Java </li><br>
@@ -124,7 +119,6 @@ ____
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 32</strong><!--</a>--> - Java Database Programming</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
-</div>
 
 ____
 
@@ -255,5 +249,3 @@ ____
 ##### <a href="https://liveexample-ppe.pearsoncmg.com/selftest/selftestapcs?chapter=14&username=liangapcs">Chapter 14 Self-Check Quiz</a>
 
 ____
-
-</div>
