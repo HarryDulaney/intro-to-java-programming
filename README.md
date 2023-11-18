@@ -111,12 +111,12 @@ ____
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_24"><strong>Chapter 24</strong></a> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 26</strong><!--</a>--> - AVL Trees </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 27</strong><!--</a>--> - Hashing</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 28</strong><!--</a>--> - Graphs and Applications</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 29</strong><!--</a>--> - Weighted Graphs and Applications </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 30</strong><!--</a>--> - Multithreading and Parallel Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 31</strong><!--</a>--> - Networking </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 32</strong><!--</a>--> - Java Database Programming</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_27"><strong>Chapter 27</strong></a> - Hashing</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_28"><strong>Chapter 28</strong></a> - Graphs and Applications</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_29"><strong>Chapter 29</strong></a> - Weighted Graphs and Applications </li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_30"><strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_31"><strong>Chapter 31</strong></a> - Networking </li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32"><strong>Chapter 32</strong></a> - Java Database Programming</li><br>
 		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
 
