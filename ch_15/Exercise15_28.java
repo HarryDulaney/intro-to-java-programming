@@ -26,7 +26,6 @@ public class Exercise15_28 extends Application {
     @Override
     public void start(Stage primaryStage) {
         FanPane fan = new FanPane();
-
         HBox hBox = new HBox(5);
         Button btPause = new Button("Pause");
         Button btResume = new Button("Resume");
@@ -56,66 +55,71 @@ public class Exercise15_28 extends Application {
         btReverse.setOnAction(e -> fan.reverse());
     }
 
-}
+    static class FanPane extends Pane {
+        private double w = 200;
+        private double h = 200;
+        private double radius = Math.min(w, h) * 0.45;
+        private Arc arc[] = new Arc[4];
+        private double startAngle = 30;
+        private Circle circle = new Circle(w / 2, h / 2, radius);
 
-class FanPane extends Pane {
-    private double w = 200;
-    private double h = 200;
-    private double radius = Math.min(w, h) * 0.45;
-    private Arc arc[] = new Arc[4];
-    private double startAngle = 30;
-    private Circle circle = new Circle(w / 2, h / 2, radius);
+        public FanPane() {
+            circle.setStroke(Color.BLACK);
+            circle.setFill(Color.WHITE);
+            getChildren().add(circle);
 
-    public FanPane() {
-        circle.setStroke(Color.BLACK);
-        circle.setFill(Color.WHITE);
-        getChildren().add(circle);
+            for (int i = 0; i < 4; i++) {
+                arc[i] = new Arc(w / 2,
+                        h / 2,
+                        radius * 0.9,
+                        radius * 0.9,
+                        startAngle + i * 90,
+                        35);
+                arc[i].setFill(Color.RED);
+                arc[i].setType(ArcType.ROUND);
+                getChildren().addAll(arc[i]);
+            }
+        }
 
-        for (int i = 0; i < 4; i++) {
-            arc[i] = new Arc(w / 2, h / 2, radius * 0.9, radius * 0.9, startAngle + i * 90, 35);
-            arc[i].setFill(Color.RED);
-            arc[i].setType(ArcType.ROUND);
-            getChildren().addAll(arc[i]);
+        private double increment = 5;
+
+        public void reverse() {
+            increment = -increment;
+        }
+
+        public void move() {
+            setStartAngle(startAngle + increment);
+        }
+
+        public void setStartAngle(double angle) {
+            startAngle = angle;
+            setValues();
+        }
+
+        public void setValues() {
+            radius = Math.min(w, h) * 0.45;
+            circle.setRadius(radius);
+            circle.setCenterX(w / 2);
+            circle.setCenterY(h / 2);
+
+            for (int i = 0; i < 4; i++) {
+                arc[i].setRadiusX(radius * 0.9);
+                arc[i].setRadiusY(radius * 0.9);
+                arc[i].setCenterX(w / 2);
+                arc[i].setCenterY(h / 2);
+                arc[i].setStartAngle(startAngle + i * 90);
+            }
+        }
+
+        public void setW(double w) {
+            this.w = w;
+            setValues();
+        }
+
+        public void setH(double h) {
+            this.h = h;
+            setValues();
         }
     }
 
-    private double increment = 5;
-
-    public void reverse() {
-        increment = -increment;
-    }
-
-    public void move() {
-        setStartAngle(startAngle + increment);
-    }
-
-    public void setStartAngle(double angle) {
-        startAngle = angle;
-        setValues();
-    }
-
-    public void setValues() {
-        radius = Math.min(w, h) * 0.45;
-        circle.setRadius(radius);
-        circle.setCenterX(w / 2);
-        circle.setCenterY(h / 2);
-
-        for (int i = 0; i < 4; i++) {
-            arc[i].setRadiusX(radius * 0.9);
-            arc[i].setRadiusY(radius * 0.9);
-            arc[i].setCenterX(w / 2);
-            arc[i].setCenterY(h / 2);
-            arc[i].setStartAngle(startAngle + i * 90);
-        }
-    }
-
-    public void setW(double w) {
-        this.w = w;
-        setValues();
-    }
-
-    public void setH(double h) {
-        this.h = h;
-        setValues();
-    }
 }
