@@ -2,9 +2,9 @@
 
 <img style="width:25%; height:25%;" src="./resources/coverpicture.png" alt="header-img-book-cover">
 
-### This repo contains my solutions to the end-of-chapter exercise’s from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
+### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-### I've included links below to all the freely accessible compainion material and quick links to navigate through my solutions by chapter.
+### I've included links below to all the freely accessible companion material and quick links to navigate through my solutions by chapter.
 
 ### If you would like to contribute, please see: <a href="#contribute">Ways to Contribute</a>
 
@@ -63,7 +63,7 @@ ____
 
 ____
 
-<h1>Exercise Solutions:</h1>
+<h1 id="exercise-solutions-shortcut">Exercise Solutions:</h1>
 <h5>Quick Links to navigate these solutions by chapter</h5>
 <h6>
 <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
