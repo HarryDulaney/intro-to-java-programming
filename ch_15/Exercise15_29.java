@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -23,141 +24,120 @@ import javafx.util.Duration;
  */
 public class Exercise15_29 extends Application {
 
-    private final double WIDTH = 600;
-    private final double HEIGHT = 100;
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        RacingPane pane = new RacingPane(WIDTH, HEIGHT);
-        pane.start();
-        pane.setOnMousePressed(e -> pane.pause());
-        pane.setOnMouseReleased(e -> pane.play());
+        CarPane car = new CarPane();
 
-        pane.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.UP) {
-                pane.increaseSpeed();
-            } else if (e.getCode() == KeyCode.DOWN) {
-                pane.decreaseSpeed();
-            }
-        });
-
-        Scene scene = new Scene(pane, WIDTH, HEIGHT);
+        Scene scene = new Scene(car, 200, 200);
         primaryStage.setTitle(getClass().getName());
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        pane.requestFocus();
-    }
+        scene.widthProperty().addListener(e -> car.setW(car.getWidth()));
+        scene.heightProperty().addListener(e -> car.setH(car.getHeight()));
 
-}
+        car.setOnMousePressed(e -> car.pause());
+        car.setOnMouseReleased(e -> car.play());
 
-class RacingPane extends Pane {
-    private double x;
-    private double y;
-    private CarShape car;
-    private Timeline animation;
-
-    /**
-     * Construct and animate a default CarPane
-     */
-    RacingPane(double width, double height) {
-        setHeight(height);
-        setWidth(width);
-        car = new CarShape(x, y, 5, this);
-        x = 0;
-        y = 100;
-        animation = new Timeline(
-                new KeyFrame(Duration.millis(50), e -> car.moveCar(x, y, this)));
-        animation.setCycleCount(Timeline.INDEFINITE);
-    }
-
-
-    void start() {
-        animation.play();
-    }
-
-
-    /**
-     * Pause animation
-     */
-    public void pause() {
-        animation.pause();
-    }
-
-    /**
-     * Play animation
-     */
-    public void play() {
-        animation.play();
-    }
-
-    /**
-     * Increase rate by 1
-     */
-    public void increaseSpeed() {
-        animation.setRate(animation.getRate() + 1);
-    }
-
-    /**
-     * decrease rate by 1
-     */
-    public void decreaseSpeed() {
-        animation.setRate(animation.getRate() > 0 ? animation.getRate() - 1 : 0);
-    }
-
-    class CarShape {
-        private double wheelRadius;
-        private Rectangle lowerBody;
-        private Polygon topBody;
-        private Circle wheel1;
-        private Circle wheel2;
-
-        public CarShape(double x, double y, double wheelRadius, Pane pane) {
-            this.wheelRadius = wheelRadius;
-            drawAndRender(x, y, pane);
-        }
-
-        void drawAndRender(double x, double y, Pane pane) {
-            if (!pane.getChildren().isEmpty()) {
-                pane.getChildren().clear();
+        car.requestFocus();
+        car.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.UP) {
+                car.increaseSpeed();
+            } else if (e.getCode() == KeyCode.DOWN) {
+                car.decreaseSpeed();
             }
+        });
+        car.play();
+    }
 
-            lowerBody = new Rectangle(x, y - 20, 50, 10);
-            topBody = new Polygon(x + 10, y - 20, x + 20, y - 30, x + 30,
-                    y - 30, x + 40, y - 20);
-            wheel1 = new Circle(x + 15, y - 5, wheelRadius);
-            wheel2 = new Circle(x + 35, y - 5, wheelRadius);
-            pane.getChildren().addAll(getLowerBody(), getWheel1(), getWheel2(), getTopBody());
+
+    class CarPane extends Pane {
+        private double w = 200;
+        private double h = 200;
+        private double baseX = 0;
+        private double baseY = h;
+        private Circle c1 = new Circle(baseX + 10 + 5, baseY - 10 + 5, 5);
+        private Circle c2 = new Circle(baseX + 30 + 5, baseY - 10 + 5, 5);
+        private double animationRate = 0.8;
+
+        private Rectangle carBody = new Rectangle(baseX, baseY - 20, 50, 10);
+        private Polygon carTop = new Polygon(baseX + 10, baseY - 20,
+                baseX + 20, baseY - 30, baseX + 30, baseY - 30,
+                baseX + 40, baseY - 20);
+        private Timeline animation;
+
+        public CarPane() {
+            carBody.setFill(Color.BLACK);
+            carTop.setFill(Color.BLACK);
+            animation = new Timeline(
+                    new KeyFrame(Duration.millis(50), e -> move()));
+            animation.setCycleCount(Timeline.INDEFINITE);
+            animation.setRate(animationRate);
+            this.getChildren().addAll(c1, c2, carBody, carTop);
+            move();
         }
 
         /**
-         * Calculate new x position and draw car
-         *
-         * @param x    the current x position
-         * @param y    the current y position
-         * @param pane the pane to render the car on
+         * Pause animation
          */
-        protected void moveCar(double x, double y, Pane pane) {
-                x += 1;
-
-
-            drawAndRender(x, y, pane);
+        public void pause() {
+            animation.pause();
         }
 
-        public Rectangle getLowerBody() {
-            return lowerBody;
+        /**
+         * Play animation
+         */
+        public void play() {
+            animation.play();
         }
 
-        public Polygon getTopBody() {
-            return topBody;
+        /**
+         * Increase rate by 1
+         */
+        public void increaseSpeed() {
+            animation.setRate(animation.getRate() + 0.01);
         }
 
-        public Circle getWheel1() {
-            return wheel1;
+        /**
+         * decrease rate by 1
+         */
+        public void decreaseSpeed() {
+            animation.setRate(animation.getRate() > 0.01 ? animation.getRate() - 0.01 : 0.01);
         }
 
-        public Circle getWheel2() {
-            return wheel2;
+        public void move() {
+            if (baseX > w)
+                baseX = -20;
+            else
+                baseX += 1;
+
+            setValues();
+        }
+
+        public void setValues() {
+            c1.setCenterX(baseX + 10 + 5);
+            c1.setCenterY(baseY - 10 + 5);
+            c2.setCenterX(baseX + 30 + 5);
+            c2.setCenterY(baseY - 10 + 5);
+
+            carBody.setX(baseX);
+            carBody.setY(baseY - 20);
+
+            carTop.getPoints().clear();
+            carTop.getPoints().addAll(baseX + 10, baseY - 20,
+                    baseX + 20, baseY - 30, baseX + 30, baseY - 30,
+                    baseX + 40, baseY - 20);
+        }
+
+        public void setW(double w) {
+            this.w = w;
+            setValues();
+        }
+
+        public void setH(double h) {
+            this.h = h;
+            baseY = h;
+            setValues();
         }
     }
 }
