@@ -1,106 +1,92 @@
 package ch_31.exercise31_02;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.HPos;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
-
 public class Exercise31_02Client extends Application {
-    private TextField weightTextInput = new TextField();
-    private TextField heightTextInput = new TextField();
-    private TextArea displayResultTextArea = new TextArea();
+    DataOutputStream toServer = null;
+    DataInputStream fromServer = null;
 
-    private Button submitButton = new Button("Submit");
+    // Text fields for BMI information
+    private TextField tfWeight = new TextField();
+    private TextField tfHeight = new TextField();
 
-    // Host name or ip
-    String host = "localhost";
-
-    private ObjectOutputStream toServer;
-    private DataInputStream fromServer;
-
-    public Exercise31_02Client() {
-        System.out.println("##-_-_--_--_--__-_-- Starting: Exercise31_02Client --_-__--__--__--_--_--##");
-    }
-
-    @Override
+    @Override // Override the start method in the Application class
     public void start(Stage primaryStage) {
-        Stage stage = new Stage();
-        GridPane pane = new GridPane();
-        pane.add(new Label("Weight in pounds"), 0, 0);
-        pane.add(weightTextInput, 1, 0);
-        pane.add(new Label("Height in inches"), 0, 1);
-        pane.add(heightTextInput, 1, 1);
-        pane.add(submitButton, 1, 3);
-        pane.add(displayResultTextArea, 1, 4);
-        GridPane.setHalignment(submitButton, HPos.RIGHT);
-        GridPane.setValignment(displayResultTextArea, VPos.BOTTOM);
-        pane.setAlignment(Pos.CENTER);
-        weightTextInput.setPrefColumnCount(15);
-        heightTextInput.setPrefColumnCount(15);
-        submitButton.setOnAction(new ButtonListener());
+        // Main pane
+        BorderPane pane = new BorderPane();
 
-        Scene scene = new Scene(pane, 450, 200);
-        stage.setTitle("BMI Client");
-        stage.setScene(scene);
-        stage.show();
+        // Set text field alignment right
+        tfWeight.setAlignment(Pos.BASELINE_RIGHT);
+        tfHeight.setAlignment(Pos.BASELINE_RIGHT);
 
-        try (Socket socket = new Socket(host, 8000)) {
-            // Create an output stream to the server
-            toServer = new ObjectOutputStream(socket.getOutputStream());
-            // Create an input stream from the server
-            fromServer = new DataInputStream(socket.getInputStream());
-        } catch (IOException ex) {
-            System.out.println("##----------- Client Error: IOException: " + ex.getMessage() + " -----------##");
-        }
-    }
+        // Create button to send BMI info to server
+        Button btSubmit = new Button("Submit");
 
-    /**
-     * Custom event handler for the submit button
-     */
-    private class ButtonListener implements EventHandler<ActionEvent> {
-        @Override
-        public void handle(ActionEvent e) {
+        // Pane to hold BMI information and submit button
+        GridPane paneForBmiInfo = new GridPane();
+        paneForBmiInfo.add(new Label("Weight in pounds"), 0, 0);
+        paneForBmiInfo.add(tfWeight, 1, 0);
+        paneForBmiInfo.add(new Label("Height in inches"), 0, 1);
+        paneForBmiInfo.add(tfHeight, 1, 1);
+        paneForBmiInfo.add(btSubmit, 2, 1);
+
+        // Text Area to display contents
+        TextArea ta = new TextArea();
+        pane.setTop(paneForBmiInfo);
+        pane.setCenter(new ScrollPane(ta));
+
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(pane, 400, 200);
+        primaryStage.setTitle("Exercise31_01Client"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
+
+        btSubmit.setOnAction(e -> {
             try {
-                // Get weight and height from the text fields
-                double weight = Double.parseDouble(weightTextInput.getText().trim());
-                double height = Double.parseDouble(heightTextInput.getText().trim());
-                // Create a BmiDto and send to the server
-                BmiDto s = new BmiDto(weight, height);
-                toServer.writeObject(s);
+                // Get the weight and height from the text fields
+                double weight = Double.parseDouble(tfWeight.getText().trim());
+                double height = Double.parseDouble(tfHeight.getText().trim());
+
+                // Send the BMI information to the server
+                toServer.writeDouble(weight);
+                toServer.writeDouble(height);
                 toServer.flush();
-                // Get resulting BMI from the server
-                double bmi = fromServer.readDouble();
-                // Display to the text area
-                displayResultTextArea.setText("Weight: " + weight + "\nHeight: " + height + "\nBMI is: " + bmi
-                        + "\n" + getCategory(bmi));
-            } catch (IOException ex) {
-                System.out.println("##----------- Client Error: IOException: " + ex.getMessage() + " -----------##");
+
+                // Get string from the server
+                String bmi = fromServer.readUTF();
+
+                // Display to text area
+                ta.appendText("Weight: " + weight + '\n');
+                ta.appendText("Height: " + height + '\n');
+                ta.appendText(bmi + '\n');
             }
+            catch (IOException ex) {
+                System.err.println(ex);
+            }
+        });
+
+        try {
+            // Create a socket to connect to the server
+            Socket socket = new Socket("localhost", 8000);
+
+            // Create an input stream to receive data from the server
+            fromServer = new DataInputStream(socket.getInputStream());
+
+            // Create an output stream to send data to the server
+            toServer = new DataOutputStream(socket.getOutputStream());
+        }
+        catch (IOException ex) {
+            ta.appendText(ex.toString() + '\n');
         }
     }
-
-    private String getCategory(double bmi) {
-        if (bmi < 18.5) {
-            return "Underweight";
-        } else if (bmi < 25) {
-            return "Normal";
-        } else if (bmi < 30) {
-            return "Overweight";
-        } else {
-            return "Obese";
-        }
-    }
-
 }
