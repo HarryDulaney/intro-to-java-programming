@@ -41,7 +41,6 @@ ____
 
 ## Contribution Guide:
 
-
 ### <em id="prs">Pull requests:</em>
 
 - _When to use Pull Requests_
@@ -62,62 +61,126 @@ ____
     - To request a change to an existing solution.
     - You find an error in an existing solution.
 
-
 ____
 
 <h1>Exercise Solutions:</h1>
-<h6>Quick Links to navigate these solutions by chapter</h6>
+<h5>Quick Links to navigate these solutions by chapter</h5>
+<h6>
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+Indicates 100% completion of all exercises for that chapter
+</h6>
 <ul>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_01"><strong
->Chapter 1</strong></a> - Introduction to Computers, Programs, and Java </li><br>
+>Chapter 1</strong></a> - Introduction to Computers, Programs, and Java 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/></li>
+<br>	
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_02"><strong
->Chapter 2</strong></a> - Elementary Programming </li><br>
+>Chapter 2</strong></a> - Elementary Programming
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_03"><strong
->Chapter 3</strong></a> - Selections </li><br>
+>Chapter 3</strong></a> - Selections 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+ </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_04"><strong
->Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings </li><br>
+>Chapter 4</strong></a> - Mathematical Functions, Characters, and Strings
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_05"><strong
->Chapter 5</strong></a> - Loops </li><br>
+>Chapter 5</strong></a> - Loops 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_06"><strong
->Chapter 6</strong></a> - Methods </li><br>
+>Chapter 6</strong></a> - Methods 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_07"><strong
->Chapter 7</strong></a> - Single-Dimensional Arrays </li><br>
+>Chapter 7</strong></a> - Single-Dimensional Arrays
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_08"><strong
->Chapter 8</strong></a> - MultiDimensional Arrays </li><br>
+>Chapter 8</strong></a> - MultiDimensional Arrays 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_09"><strong
->Chapter 9</strong></a> - Objects and Classes </li><br>
+>Chapter 9</strong></a> - Objects and Classes
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_10"><strong
->Chapter 10</strong></a> - Object-Oriented Thinking </li><br>
+>Chapter 10</strong></a> - Object-Oriented Thinking
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_11"><strong
->Chapter 11</strong></a> - Inheritance and Polymorphism </li><br>
+>Chapter 11</strong></a> - Inheritance and Polymorphism
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_12"><strong
->Chapter 12</strong></a> - Exception Handling and Text I/O </li><br>
+>Chapter 12</strong></a> - Exception Handling and Text I/O
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_13"><strong
->Chapter 13</strong></a> - Abstract Classes and Interfaces  </li><br>
+>Chapter 13</strong></a> - Abstract Classes and Interfaces 
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_14"><strong>Chapter 
-14</strong></a> - JavaFx Basics </li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15</strong></a> - Event-Driven Programming and Animations</li><br>
+14</strong></a> - JavaFx Basics 
+<h6>
+Exercises Needed: 27, 29
+</h6>
+</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15
+</strong></a> - Event-Driven Programming and Animations
+<h6>
+Exercises Needed: 23, 25, 27,31,33,35
+</h6>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_16"><strong>Chapter
-		 16</strong></a> - JavaFx UI Controls and Multimedia</li><br>
+		 16</strong></a> - JavaFx UI Controls and Multimedia
+
+<h6>
+Exercises Needed: 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
+</h6>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_17"><strong>Chapter 
-17</strong></a> - Binary I/O </li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_18"><strong>Chapter 18</strong></a> - Recursion</li><br>
+17</strong></a> - Binary I/O
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_18"><strong>Chapter 18
+</strong></a> - Recursion
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_19"><strong>Chapter 
-19</strong></a> - Generics </li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_21"><strong>Chapter 21</strong></a> - Sets and Maps</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_22"><strong>Chapter 22</strong></a> - Developing Efficient Algorithms</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_23"><strong>Chapter 23</strong></a> - Sorting</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_24"><strong>Chapter 24</strong></a> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
-		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_25"><strong>Chapter 25</strong></a> - Binary Search Trees </li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 26</strong><!--</a>--> - AVL Trees </li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_27"><strong>Chapter 27</strong></a> - Hashing</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_28"><strong>Chapter 28</strong></a> - Graphs and Applications</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_29"><strong>Chapter 29</strong></a> - Weighted Graphs and Applications </li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_30"><strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_31"><strong>Chapter 31</strong></a> - Networking </li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32"><strong>Chapter 32</strong></a> - Java Database Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">--><strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
+19</strong></a> - Generics
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20
+</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_21"><strong>Chapter 21
+</strong></a> - Sets and Maps</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_22"><strong>Chapter 22
+</strong></a> - Developing Efficient Algorithms</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_23"><strong>Chapter 23
+</strong></a> - Sorting</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_24">
+<strong>Chapter 24</strong></a> - Implementing Lists, Stacks, Queues, and Priority Queues</li><br>
+		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_25"><strong>Chapter 25
+</strong></a> - Binary Search Trees </li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">-->
+<strong>Chapter 26</strong><!--</a>--> - AVL Trees </li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_27">
+<strong>Chapter 27</strong></a> - Hashing</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_28">
+<strong>Chapter 28</strong></a> - Graphs and Applications</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_29">
+<strong>Chapter 29</strong></a> - Weighted Graphs and Applications </li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_30">
+<strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_31">
+<strong>Chapter 31</strong></a> - Networking </li><br>
+		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32">
+<strong>Chapter 32</strong></a> - Java Database Programming</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">-->
+<strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
 
 ____
