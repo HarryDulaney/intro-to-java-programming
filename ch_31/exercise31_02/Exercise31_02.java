@@ -15,7 +15,10 @@ public class Exercise31_02 extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         System.out.println("##-_-_--_--_--__-_-- Starting: Exercise31_02 --_-__--__--__--_--_--##");
-        Platform.runLater(() -> new Exercise31_02Server().start(new Stage()));
-        Platform.runLater(() -> new Exercise31_02Client().start(new Stage()));
+        new Thread(() -> {
+            Platform.runLater(() -> new Exercise31_02Server().start(new Stage()));
+            Platform.runLater(() -> new Exercise31_02Client().start(new Stage()));
+        }).start();
+
     }
 }

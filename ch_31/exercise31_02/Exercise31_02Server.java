@@ -11,19 +11,11 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicBoolean;
+
 
 public class Exercise31_02Server extends Application {
     private static final double KILOGRAMS_PER_POUND = 0.45359237;
     private static final double METERS_PER_INCH = 0.0254;
-
-    private AtomicBoolean isRunning = new AtomicBoolean(true);
-
-    public Exercise31_02Server() {
-        System.out.println("##-_-_--_--_--__-_-- Starting: Exercise31_02Server --_-__--__--__--_--_--##");
-    }
-
 
     @Override
     public void start(Stage primaryStage) {
@@ -32,46 +24,51 @@ public class Exercise31_02Server extends Application {
         primaryStage.setTitle("TicTacToeServer");
         primaryStage.setScene(scene);
         primaryStage.show();
-        new Thread(() -> runServer(displayLogTextArea)).start();
-    }
+        new Thread(() -> {
+            try {
+                ServerSocket serverSocket = new ServerSocket(8000);
+                Platform.runLater(() ->
+                        displayLogTextArea.appendText("Exercise31_02Server started at "
+                                + new Date() + '\n'));
 
-    private void runServer(TextArea displayLogTextArea) {
-        /* Create a server socket. Use try with resources to close the socket automatically */
-        try (ServerSocket serverSocket = new ServerSocket(8000)) {
-            // Listen for a connection request
-            Socket socket = socket = serverSocket.accept();
-            // Create data input and output streams
-            try (ObjectInputStream inputFromClient = new ObjectInputStream(
-                    socket.getInputStream())) {
-                try (DataOutputStream outputToClient = new DataOutputStream(
-                        socket.getOutputStream())) {
+                Socket socket = serverSocket.accept();
+                DataInputStream inputFromClient = new DataInputStream(
+                        socket.getInputStream());
+                DataOutputStream outputToClient = new DataOutputStream(
+                        socket.getOutputStream());
 
-                    Platform.runLater(() -> displayLogTextArea.appendText(new Date() +
-                            ": Server started at socket 8000\n"));
-                    while (true) {
-                        if (!isRunning.get()) {
-                            break;
-                        }
-                        if (inputFromClient.available() > 0) {
-                            // Receive Object from the client
-                            Object object = inputFromClient.readObject();
-                            if (Objects.nonNull(object) && object instanceof BmiDto) {
-                                BmiDto bmiDto = (BmiDto) object;
-                                double weight = bmiDto.getWeight();
-                                double height = bmiDto.getHeight();
-                                double bmi = calculateBmi(weight, height);
-                                // Send area back to the client
-                                outputToClient.writeDouble(bmi);
-                            }
-                        }
+                while (true) {
+                    Date date = new Date();
+                    double weight = inputFromClient.readDouble();
+                    double height = inputFromClient.readDouble();
+                    double weightInKilograms = weight * KILOGRAMS_PER_POUND;
+                    double heightInMeters = height * METERS_PER_INCH;
+                    double bmi = calculateBmi(weightInKilograms, heightInMeters);
+                    StringBuilder bmiString = new StringBuilder("BMI is " +
+                            String.format("%.2f", bmi) + ". ");
 
+                    if (bmi < 18.5) {
+                        bmiString.append("Underweight");
+                    } else if (bmi < 25) {
+                        bmiString.append("Normal");
+                    } else if (bmi < 30) {
+                        bmiString.append("Overweight");
+                    } else {
+                        bmiString.append("Obese");
                     }
-                }
-            }
+                    outputToClient.writeUTF(bmiString.toString());
 
-        } catch (ClassNotFoundException | IOException ex) {
-            System.out.println("##----------- Server Error: Exception: " + ex.getMessage() + " -----------##");
-        }
+                    Platform.runLater(() -> {
+                        displayLogTextArea.appendText("Connected to a client at " + date + '\n');
+                        displayLogTextArea.appendText("Weight: " + weight + '\n');
+                        displayLogTextArea.appendText("Height: " + height + '\n');
+                        displayLogTextArea.appendText(bmiString.toString() + '\n');
+                    });
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }).start();
     }
 
     private double calculateBmi(double weight, double height) {
