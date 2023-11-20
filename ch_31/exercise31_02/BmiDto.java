@@ -6,7 +6,8 @@ package ch_31.exercise31_02;
  * This class is used to transfer data from the client to the server.
  * For Exercise31_02, the client sends the weight and height for a person to the server.
  */
-public class BmiDto {
+public class BmiDto implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
     private double weight;
     private double height;
 
