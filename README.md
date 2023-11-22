@@ -123,10 +123,7 @@ Indicates 100% completion of all exercises for that chapter
 <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_14"><strong>Chapter 
-14</strong></a> - JavaFx Basics 
-<h6>
-Exercises Needed: 27, 29
-</h6>
+14</strong></a> - JavaFx Basics <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15
 </strong></a> - Event-Driven Programming and Animations

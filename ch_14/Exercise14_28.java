@@ -95,9 +95,8 @@ class CustomClockPane extends Pane {
         return secondHandVisible;
     }
 
-    public CustomClockPane setSecondHandVisible(boolean secondHandVisible) {
+    public void setSecondHandVisible(boolean secondHandVisible) {
         this.secondHandVisible = secondHandVisible;
-        return this;
     }
 
 
