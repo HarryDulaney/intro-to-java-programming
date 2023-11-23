@@ -32,7 +32,7 @@ object-oriented, GUI programming, advanced GUI and Web programming using Java...
 
 ### <a href='#checkpoint-answers'>Checkpoint Answers</a>
 
-### <a href='https://media.pearsoncmg.com/ph/esm/ecs_liang_java_13e/downloads/even_numbered_exercise_UML_diagram/EvenNumberedExerciseUMLDiagram.html'>UML Diagrams for Chapter 9 - 13</a>
+### <a href='https://github.com/HarryDulaney/intro-to-java-programming/blob/eeaf93fe6d01d8313fcc5f420118d80ae5badd8a/resources/uml-diagrams/EvenNumberedExerciseUMLDiagram.pdf'>UML Diagrams for Chapter 9 - 13</a>
 
 ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/ExampleByChapters.html">Example Programs By Chapter</a>
 
