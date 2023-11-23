@@ -28,7 +28,7 @@ public class Exercise14_29 extends Application {
     }
 
     static class BeanMachinePane extends Pane {
-        private final int triangleSize;
+        private final int numberOfPins;
         private final int numberOfSlots;
         private Circle[] pins;
 
@@ -36,7 +36,7 @@ public class Exercise14_29 extends Application {
             setWidth(width);
             setHeight(height);
             this.numberOfSlots = numberOfSlots;
-            this.triangleSize = circleCount(numberOfSlots);
+            this.numberOfPins = getNumberOfPins(numberOfSlots);
             paint();
         }
 
@@ -49,7 +49,7 @@ public class Exercise14_29 extends Application {
                     paneHeight * 0.8);
 
             double distance = (lowerLine.getEndX() - lowerLine.getStartX()) / numberOfSlots;
-            pins = new Circle[triangleSize];
+            pins = new Circle[numberOfPins];
             int index = 0;
             for (int i = 1; i < numberOfSlots; i++) {
                 double x = lowerLine.getStartX() + (i * distance * 0.50) + distance / 2;
@@ -97,12 +97,18 @@ public class Exercise14_29 extends Application {
             getChildren().addAll(outlineShape);
         }
 
-        private int circleCount(int slots) {
-            int count = 0;
-            while (slots-- > 1) {
-                count += slots;
-            }
-            return count;
+        /**
+         * @param slots the number of slots in the bean machine
+         * @return the number of pins in the bean machine
+         */
+        int getNumberOfPins(int slots) {
+            int numPins = 0;
+            do {
+                slots--;
+                numPins += slots;
+            } while (slots > 1);
+
+            return numPins;
         }
 
     }

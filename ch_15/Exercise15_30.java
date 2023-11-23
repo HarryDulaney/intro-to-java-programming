@@ -33,9 +33,8 @@ public class Exercise15_30 extends Application {
     public void start(Stage primaryStage) {
         Image[] image = new Image[26];
 
-        for (int i = 1; i <= 25; i++) {
-            String imagePath = "resources" + File.separator + "images" +
-                    File.separator + "card" + File.separator + i + ".png";
+        for (int i = 0; i < 25; i++) {
+            String imagePath = "resources" + File.separator + "images" + File.separator + "slide" + i + ".jpg";
             image[i] = new Image(imagePath);
         }
 

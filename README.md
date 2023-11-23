@@ -20,21 +20,25 @@ object-oriented, GUI programming, advanced GUI and Web programming using Java...
 <h1 style="text-align: center">Companion Content</h1>
 <h6>Additional online learning material that came with the books</h6>
 
-#### <a href="http://liveexample.pearsoncmg.com/liang/intro10e">10th Edition Companion Website</a>
+### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_11/cw/#web-chapters">Bonus Chapters Online</a>
 
-#### <a href="#self-check-quizs">Self-Check Chapter Quiz's</a>
+### <a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a>
 
-#### <a href="https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01">Exercise Check Tool</a>
+### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_java_13e/cw/#videonotes">Video Notes</a>
 
-#### <a href="https://liveexample.pearsoncmg.com/javarevel2e.html">Hints to Quizzes and Programming Projects</a>
+### <a href="#self-check-quizs">Self-Check Chapter Quiz's</a>
 
-#### <a href='#checkpoint-answers'>Checkpoint Answers</a>
+### <a href="https://liveexample.pearsoncmg.com/javarevel2e.html">Hints to Quizzes and Programming Projects</a>
 
-#### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/ExampleByChapters.html">Example Programs By Chapter</a>
+### <a href='#checkpoint-answers'>Checkpoint Answers</a>
 
-#### <a href="http://liveexample.pearsoncmg.com/liang/animation/animation.html">Algorithm Animations</a>
+### <a href='https://media.pearsoncmg.com/ph/esm/ecs_liang_java_13e/downloads/even_numbered_exercise_UML_diagram/EvenNumberedExerciseUMLDiagram.html'>UML Diagrams for Chapter 9 - 13</a>
 
-#### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/supplement/Supplement1dcodingguidelines.html">Java Coding Style Guidelines</a>
+### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/ExampleByChapters.html">Example Programs By Chapter</a>
+
+### <a href="http://liveexample.pearsoncmg.com/liang/animation/animation.html">Algorithm Animations</a>
+
+### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/supplement/Supplement1dcodingguidelines.html">Java Coding Style Guidelines</a>
 
 ____
 <span id="contribute"><span/>
@@ -174,9 +178,9 @@ Exercises Needed: 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
 <strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_31">
 <strong>Chapter 31</strong></a> - Networking </li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32">
-<strong>Chapter 32</strong></a> - Java Database Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">-->
+		<li><!-- <a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32"> -->
+<strong>Chapter 32</strong><!-- </a> --> - Java Database Programming</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_33">-->
 <strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
 

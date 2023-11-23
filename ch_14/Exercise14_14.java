@@ -22,7 +22,6 @@ public class Exercise14_14 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         Pane pane = new Pane();
         /* Create the bottomLeftAlg 2D-rectangle part of the cube */
         Rectangle bottomLeftAlignedRectangle = new Rectangle(0, 0);
