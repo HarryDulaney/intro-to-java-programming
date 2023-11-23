@@ -178,9 +178,9 @@ Exercises Needed: 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
 <strong>Chapter 30</strong></a> - Multithreading and Parallel Programming</li><br>
 		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_31">
 <strong>Chapter 31</strong></a> - Networking </li><br>
-		<li><a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32">
-<strong>Chapter 32</strong></a> - Java Database Programming</li><br>
-		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/">-->
+		<li><!-- <a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_32"> -->
+<strong>Chapter 32</strong><!-- </a> --> - Java Database Programming</li><br>
+		<li><!--<a href="https://github.com/HarryDulaney/java-programming-daniel-liang-10th/tree/master/ch_33">-->
 <strong>Chapter 33</strong><!--</a>--> - Java Server Faces</li><br>
 </ul>
 
