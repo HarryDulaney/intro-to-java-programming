@@ -6,7 +6,7 @@
 
 ### I've included links below to all the freely accessible companion material and quick links to navigate through my solutions by chapter.
 
-### If you would like to contribute, please see: <a href="#contribute">Ways to Contribute</a>
+### See <a href="#contribute">Contribution Guide</a> for coding guidelines and information on how to contribute.
 
 ____
 
@@ -41,9 +41,35 @@ object-oriented, GUI programming, advanced GUI and Web programming using Java...
 ### <a href="https://media.pearsoncmg.com/ph/esm/ecs_liang_ijp_10/supplement/Supplement1dcodingguidelines.html">Java Coding Style Guidelines</a>
 
 ____
-<span id="contribute"><span/>
 
-## Contribution Guide:
+<span id="contribute"><span/>
+## How to Contribute
+
+### _Coding Guidelines_
+- #### Solution must use Java 8 SE, as this is the version used by the book.
+  - #### Every solution should have a java file containing a public main method for testing it.
+  - #### Naming convention is: ExerciseCC_EE.java where CC is the chapter number and EE is the exercise number.
+  - #### The public Exercise class containing the main method must include a JavaDoc comment on the class with original exercise question.
+  - #### Each solution should be its own self-contained program with minimal dependencies on other files. If you need multiple files please create a package for the exercise.
+    - #### ch_XX/exercise22_07/Exercise22_07.java
+    - #### This allows us to utilize the Exercise Checking Tool [Exercise Checking Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01) to verify solutions.
+- ### Example exercise solution:
+```java
+package ch_01;
+/**
+* 1.1 (Display three messages) Write a program that displays Welcome to Java,
+* Welcome to Computer Science, and Programming is fun.
+  */
+  public class Exercise01_01 {
+  public static void main(String[] args) {
+  System.out.println("Welcome to Java");
+  System.out.println("Welcome to Computer Science");
+  System.out.println("Programming is fun");
+  }
+
+}
+```
+
 
 ### <em id="prs">Pull requests:</em>
 
@@ -132,7 +158,7 @@ Indicates 100% completion of all exercises for that chapter
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15
 </strong></a> - Event-Driven Programming and Animations
 <h6>
-Exercises Needed: 23, 25, 27,31,33,35
+Exercises Needed: 25,27,31,33,35
 </h6>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_16"><strong>Chapter
