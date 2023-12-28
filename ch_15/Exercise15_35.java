@@ -1,6 +1,8 @@
 package ch_15;
 
 import javafx.application.Application;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,28 +12,26 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * ***15.34 (Simulation: self-avoiding random walk) A self-avoiding walk in a lattice is a
- * path from one point to another that does not visit the same point twice.
- * Self-avoiding walks have applications in physics, chemistry, and mathematics. They
- * can be used to model chain-like entities such as solvents and polymers. Write
- * a program that displays a random path that starts from the center and ends at a
- * point on the boundary, as shown in Figure 15.37a or ends at a dead-end point
- * (i.e., surrounded by four points that have already been visited), as shown in
- * Figure 15.37b. Assume the size of the lattice is 16 by 16.
+ * ***15.35 (Animation: self-avoiding random walk) Revise the preceding exercise to display
+ * the walk step by step in an animation, as shown in Figure 15.37c and  d.
  */
-public class Exercise15_34 extends Application {
+public class Exercise15_35 extends Application {
     private double paneWidth = 300;
     private double paneHeight = 250;
+    private StringProperty buttonLabel = new SimpleStringProperty("Start");
 
     @Override
     public void start(Stage primaryStage) {
         Lattice lattice = new Lattice();
-
         BorderPane borderPane = new BorderPane();
         borderPane.setCenter(lattice);
-        Button btStart = new Button("Start");
-        btStart.setOnAction(e -> lattice.getAPath());
+        Button btStart = new Button();
+        btStart.textProperty().bind(buttonLabel);
+        btStart.setOnAction(e -> lattice.actionButtonPressed());
         borderPane.setBottom(btStart);
         BorderPane.setAlignment(btStart, Pos.CENTER);
 
@@ -47,14 +47,17 @@ public class Exercise15_34 extends Application {
         private double hGap = paneWidth / N;
         private double vGap = paneHeight / N;
 
+        private List<Line> steps = new ArrayList<>();
+        private int stepIndex = 0;
+
         public Lattice() {
-            drawLines();
+            drawGrid();
         }
 
         /**
          * Draw lines
          */
-        public void drawLines() {
+        public void drawGrid() {
             // Draw lattice lines
             for (int i = 1; i < N + 1; i++) {
                 Line line1 = new Line(0, i * vGap, paneWidth, i * vGap);
@@ -66,11 +69,11 @@ public class Exercise15_34 extends Application {
         }
 
         /**
-         * Draw a path
+         * Build the steps of the path and store in a Line array
          */
-        public void drawPath() {
+        public void createPathSteps() {
             getChildren().clear();
-            drawLines();
+            drawGrid();
 
             // Start from the center point in the lattice (i, j)
             int i = (N + 1) / 2;
@@ -79,9 +82,21 @@ public class Exercise15_34 extends Application {
             while (lattice[i][j] != null) {
                 Point p = lattice[i][j];
                 Line line = new Line(i * hGap, j * vGap, p.x * hGap, p.y * vGap);
-                getChildren().add(line);
+                steps.add(line);
                 i = p.x;
                 j = p.y;
+            }
+        }
+
+        void drawNextStep() {
+            if (stepIndex == 0) {
+                buttonLabel.setValue("Next");
+            }
+
+            if (stepIndex < steps.size()) {
+                getChildren().add(steps.get(stepIndex++));
+            } else {
+                buttonLabel.setValue("Restart");
             }
         }
 
@@ -119,7 +134,22 @@ public class Exercise15_34 extends Application {
                 }
             }
 
-            drawPath();
+            createPathSteps();
+        }
+
+        public void actionButtonPressed() {
+            if (buttonLabel.getValue().equals("Start")) {
+                getAPath();
+                drawNextStep();
+            } else if (buttonLabel.getValue().equals("Next")) {
+                drawNextStep();
+            } else if (buttonLabel.getValue().equals("Restart")) {
+                getChildren().clear();
+                steps.clear();
+                stepIndex = 0;
+                drawGrid();
+                buttonLabel.setValue("Start");
+            }
         }
 
         class Point {
