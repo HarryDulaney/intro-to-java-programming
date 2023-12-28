@@ -158,7 +158,7 @@ Indicates 100% completion of all exercises for that chapter
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15
 </strong></a> - Event-Driven Programming and Animations
 <h6>
-Exercises Needed: 33,35
+Exercises Needed: 33
 </h6>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_16"><strong>Chapter
