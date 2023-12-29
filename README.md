@@ -43,33 +43,36 @@ object-oriented, GUI programming, advanced GUI and Web programming using Java...
 ____
 
 <span id="contribute"><span/>
+
 ## How to Contribute
 
 ### _Coding Guidelines_
+
 - #### Solution must use Java 8 SE, as this is the version used by the book.
-  - #### Every solution should have a java file containing a public main method for testing it.
-  - #### Naming convention is: ExerciseCC_EE.java where CC is the chapter number and EE is the exercise number.
-  - #### The public Exercise class containing the main method must include a JavaDoc comment on the class with original exercise question.
-  - #### Each solution should be its own self-contained program with minimal dependencies on other files. If you need multiple files please create a package for the exercise.
-    - #### ch_XX/exercise22_07/Exercise22_07.java
-    - #### This allows us to utilize the Exercise Checking Tool [Exercise Checking Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01) to verify solutions.
+    - #### Every solution should have a java file containing a public main method for testing it.
+    - #### Naming convention is: ExerciseCC_EE.java where CC is the chapter number and EE is the exercise number.
+    - #### The public Exercise class containing the main method must include a JavaDoc comment on the class with original exercise question.
+    - #### Each solution should be its own self-contained program with minimal dependencies on other files. If you need multiple files please create a package for the exercise.
+        - #### ch_XX/exercise22_07/Exercise22_07.java
+        - #### This allows us to utilize the Exercise Checking Tool [Exercise Checking Tool](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml?chapter=1&programName=Exercise01_01) to verify solutions.
 - ### Example exercise solution:
+
 ```java
 package ch_01;
+
 /**
-* 1.1 (Display three messages) Write a program that displays Welcome to Java,
-* Welcome to Computer Science, and Programming is fun.
-  */
-  public class Exercise01_01 {
-  public static void main(String[] args) {
-  System.out.println("Welcome to Java");
-  System.out.println("Welcome to Computer Science");
-  System.out.println("Programming is fun");
-  }
+ * 1.1 (Display three messages) Write a program that displays Welcome to Java,
+ * Welcome to Computer Science, and Programming is fun.
+ */
+public class Exercise01_01 {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Java");
+        System.out.println("Welcome to Computer Science");
+        System.out.println("Programming is fun");
+    }
 
 }
 ```
-
 
 ### <em id="prs">Pull requests:</em>
 
@@ -156,10 +159,8 @@ Indicates 100% completion of all exercises for that chapter
 14</strong></a> - JavaFx Basics <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_15"><strong>Chapter 15
-</strong></a> - Event-Driven Programming and Animations
-<h6>
-Exercises Needed: 33
-</h6>
+</strong></a> - Event-Driven Programming and Animations <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_16"><strong>Chapter
 		 16</strong></a> - JavaFx UI Controls and Multimedia
