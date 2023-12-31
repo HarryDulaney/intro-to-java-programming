@@ -166,7 +166,7 @@ Indicates 100% completion of all exercises for that chapter
 		 16</strong></a> - JavaFx UI Controls and Multimedia
 
 <h6>
-Exercises Needed: 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
+Exercises Needed: 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
 </h6>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_17"><strong>Chapter 
