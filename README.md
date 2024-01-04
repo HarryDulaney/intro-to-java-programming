@@ -182,9 +182,13 @@ Exercises Needed: 13, 15, 17, 19, 21, 23, 25, 27, 29, 31
 <img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
 </li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_20"><strong>Chapter 20
-</strong></a> - Lists, Stacks, Queues, and Priority Queues</li><br>
+</strong></a> - Lists, Stacks, Queues, and Priority Queues
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_21"><strong>Chapter 21
-</strong></a> - Sets and Maps</li><br>
+</strong></a> - Sets and Maps
+<img src="./resources/images/icons8-complete-26.png" alt="complete-check-img"/>
+</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_22"><strong>Chapter 22
 </strong></a> - Developing Efficient Algorithms</li><br>
 		<li><a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/master/ch_23"><strong>Chapter 23
