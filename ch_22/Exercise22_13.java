@@ -3,48 +3,11 @@ package ch_22;
 import java.util.*;
 
 /**
- * **22.11 (Geometry: Graham’s algorithm for finding a convex hull) Section  22.10.2
- * introduced Graham’s algorithm for finding a convex hull for a set of points.
- * Assume that the Java’s coordinate system is used for the points.
- * Implement the algorithm using the following method:
- * <p>
- * <code>
- * /** Return the points that form a convex hull *\/ <br>
- * public static ArrayList<MyPoint> getConvexHull(double[][]s) <br>
- * // MyPoint is a static inner class defined as follows: <br>
- * private static class MyPoint implements Comparable<MyPoint> {<br>
- * double x, y;<br>
- * MyPoint rightMostLowestPoint;<br>
- * MyPoint(double x, double y) {<br>
- * this.x = x;<br>
- * this.y = y;<br>
- * }<br>
- * public void setRightMostLowestPoint(MyPoint p) {<br>
- * rightMostLowestPoint = p;<br>
- * }<br>
- * \@Override public int compareTo(MyPoint o) {<br>
- * // Implement it to compare this point with point o<br>
- * // angularly along the x-axis with rightMostLowestPoint<br>
- * // as the center, as shown in Figure 22.10b. By implementing<br>
- * // the Comparable interface, you can use the Array.sort<br>
- * // method to sort the points to simplify coding.<br>
- * }<br>
- * }<br>
- * </code>
- * <br>
- * Write a test program that prompts the user to enter the set size and the points
- * and displays the points that form a convex hull.Here is a sample run:
- * How many points are in the set? 6
- * Enter 6 points: 1 2.4 2.5 2 1.5 34.5 5.5 6 6 2.4 5.5 9
- * The convex hull is
- * (1.5,34.5)(5.5,9.0)(6.0,2.4)(2.5,2.0)(1.0,2.4)
- *
- * <p>
- * <b>Helpful resources:</b>
- * <a href="https://iq.opengenus.org/graham-scan-convex-hull/">Grahams Algorithm with animations</a>
- * </p>
+ * **22.13 (Geometry: convex hull animation) Programming Exercise 22.11 finds a convex hull for a set of points
+ * entered from the console. Write a program that enables the user to add/remove points by clicking the left/right
+ * mouse button, and displays a convex hull, as shown in Figure 22.8c.
  */
-public class Exercise22_11 {
+public class Exercise22_13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("How many points are in the set? ");
