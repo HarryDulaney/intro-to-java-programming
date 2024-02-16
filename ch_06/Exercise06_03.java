@@ -26,15 +26,14 @@ public class Exercise06_03 {
         }
     }
 
-    public static int reverse(int number) {
-        String temp = "";
-        while (number > 0) {
-            int t = number % 10;
-            number /= 10;
-            temp += t;
-
-        }
-        return Integer.parseInt(temp);
+    public static int reverse(int n) {
+         int num1 = 0;
+       while( n != 0){
+           num1 =num1 *10;
+          num1 += n % 10 ;
+          n = n / 10;
+       }
+       return num1;
     }
 
     public static boolean isPalindrome(int number) {
