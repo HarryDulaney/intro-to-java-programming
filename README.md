@@ -4,12 +4,7 @@
 
 ### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-# No AI or autofill was used to solve these.(I'm not saying don't use AI,you should. Just don't use it for this.)
-
-### 1.ITS WAY MORE FUN!
-### 2. THE MAJORITY OF SOLUTIONS PREDATE THE EXISTENCE OF COPILOTS.
-### 3.THE GOAL HERE IS TO PERSIST LONG-TERM LEARNING OF ALGORITHMS, DATA STRUCTURES AND DOMAIN KNOWLEDGE OF JAVA PROGRAMING LANGUAGE FOR A HUMAN USER. 
-### 4. I SOLVED THESE WITHOUT AI AND I BELIEVE THAT EXPERIENCE LED TO MY SUCCESS TODAY. COPILOT WASNT AVAILABLE YET BUT I COULD HAVE EASILY GOOGLED SOLUTIONS.
+# No AI was used for solving these exercises. We want you to enjoy the experience of studying this book as it was designed to be studied. 
 
 
 ### I challenge you to let yourself experience creating your own solutions to these. By letting yourself struggle through the more difficult problems I believe you too will gain valuable experience and confidence in your skills. 
