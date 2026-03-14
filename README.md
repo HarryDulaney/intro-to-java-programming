@@ -4,7 +4,7 @@
 
 ### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-# No
+# No AI or autofill was used to solve these.(I'm not saying don't use AI,you should. Just don't use it for this.)
 
 ### 1.ITS WAY MORE FUN!
 ### 2. THE MAJORITY OF SOLUTIONS PREDATE THE EXISTENCE OF COPILOTS.
