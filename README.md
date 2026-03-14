@@ -4,12 +4,15 @@
 
 ### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-## NO AI IS USED FOR THIS PROJECT. WHY? 
-### 1. THE MAJORITY OF SOLUTIONS PREDATE THE EXISTENCE OF COPILOTS
-### 2. THE GOAL HERE IS TO PERSIST LONG-TERM LEANRING OF ALGORITHMS, DATA STRUCTURES AND DOMAIN KNOWLEDGE OF JAVA PROGRAMING LANGUAGE FOR A HUMAN USER. 
-### 3. I SOLVED THESE WITHOUT AI AND THAT EXPERIENCE LED TO MY SUCCESS AS A SENIOR SOFTWARE ENGINEER TODAY. COPILOT WASNT AVAILABLE YET BUT I COULD HAVE EASILY GOOGLED SOLUTIONS.
+# No
 
-### I challenge you to let yourself experience creating your own solutions to these. By letting yourself struggle through the more difficult problems I believe you too will gain the results and benefits that have led me to succeed in my own experience as a learner and software engineer. 
+### 1.ITS WAY MORE FUN!
+### 2. THE MAJORITY OF SOLUTIONS PREDATE THE EXISTENCE OF COPILOTS.
+### 3.THE GOAL HERE IS TO PERSIST LONG-TERM LEARNING OF ALGORITHMS, DATA STRUCTURES AND DOMAIN KNOWLEDGE OF JAVA PROGRAMING LANGUAGE FOR A HUMAN USER. 
+### 4. I SOLVED THESE WITHOUT AI AND I BELIEVE THAT EXPERIENCE LED TO MY SUCCESS TODAY. COPILOT WASNT AVAILABLE YET BUT I COULD HAVE EASILY GOOGLED SOLUTIONS.
+
+
+### I challenge you to let yourself experience creating your own solutions to these. By letting yourself struggle through the more difficult problems I believe you too will gain valuable experience and confidence in your skills. 
 
 
 
