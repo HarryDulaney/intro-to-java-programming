@@ -4,9 +4,8 @@
 
 ### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-#### No AI was used for solving these exercises. Largely because most of these were committed before it was available. We had to struggle through some of these exercises without a (correct) answer available. Was truly uncomfortable and frustrating sometimes but it made solving one so much more rewarding. I can only recommend what worked for me and struggling through hard coding problems gave me the confidence and knowledge base to build a career in software engineering.
-
-#### That doesn't mean you can't use AI tools or Agents on this project. For example someone could clone this repo and then ask Claude to validate all the solutions in chapter 17. That is totally cool and appreciated! If you find issues you could either create and issue to request that the issue be fixed or you could fix it yourself and then make a pull request explaining what was the error and how you fixed it!
+<a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/AI_POLICY.md><strong
+>AI POLICY PLEASE READ BEFORE COMMITTING</strong>
 
 ### I've included links below to all the freely accessible companion material and quick links to navigate through my solutions by chapter.
 
