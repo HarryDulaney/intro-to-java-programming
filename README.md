@@ -4,7 +4,8 @@
 
 ### This repo contains <a href="#exercise-solutions-shortcut">my solutions to the end-of-chapter exercise’s</a> from <a href="https://www.amazon.com/Intro-Java-Programming-Comprehensive-Version/dp/0133761312">Y. Daniel Liang’s Intro to Java Programming (10th Edition)</a>
 
-<a href="https://github.com/HarryDulaney/intro-to-java-programming/tree/AI_POLICY.md"><strong>AI POLICY PLEASE READ BEFORE COMMITTING</strong></a>
+<h2>
+<a href="https://github.com/HarryDulaney/intro-to-java-programming/blob/ee9370b44bd2c1b9ad421a985d541283aa6b621f/AI_POLICY.md"><strong>AI POLICY PLEASE READ BEFORE COMMITTING</strong></a></h2>
 
 ### I've included links below to all the freely accessible companion material and quick links to navigate through my solutions by chapter.
 
